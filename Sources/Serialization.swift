@@ -1,4 +1,4 @@
-import SemVer
+@_exported import struct SemVer.Version
 
 public struct SerializationOptions: OptionSet {
    public typealias RawValue = Int
@@ -156,7 +156,7 @@ public extension String {
       let encodingAttribute = "encoding=" + options.quotes.quoted(attributeString: encoding.attributeValue)
       self = "<?xml \(versionAttribute) \(encodingAttribute)?>"
          + options.lineSeparator
-         + String(xml: root)
+         + String(xml: root, options: options)
    }
    
    public init(xml: Element, options: SerializationOptions = []) {
