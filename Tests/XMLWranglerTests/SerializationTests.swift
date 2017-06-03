@@ -111,5 +111,6 @@ class SerializationTests: XCTestCase {
       ("testEscapeableContentEquality", testEscapeableContentEquality),
       ("testEscapingStrings", testEscapingStrings),
       ("testXMLSerialization", testXMLSerialization),
+      ("testXMLDocumentSerialization", testXMLDocumentSerialization),
    ]
 }
