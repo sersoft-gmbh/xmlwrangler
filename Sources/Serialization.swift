@@ -138,6 +138,12 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
    }
 }
 
+fileprivate extension Version {
+   var xmlVersionString: String {
+      return "\(major).\(minor)"
+   }
+}
+
 public extension String {
    public func escaped(content: EscapableContent) -> String {
       return content.replacements.reduce(self) {
@@ -152,7 +158,7 @@ public extension String {
 
 public extension String {
     public init(xmlDocumentRoot root: Element, version: Version = Version(major: 1), encoding: DocumentEncoding = .utf8, options: SerializationOptions = []) {
-      let versionAttribute = "version=" + options.quotes.quoted(attributeString: version.versionString())
+      let versionAttribute = "version=" + options.quotes.quoted(attributeString: version.xmlVersionString)
       let encodingAttribute = "encoding=" + options.quotes.quoted(attributeString: encoding.attributeValue)
       self = "<?xml \(versionAttribute) \(encodingAttribute)?>"
          + options.lineSeparator
