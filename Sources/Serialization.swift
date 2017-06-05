@@ -1,5 +1,6 @@
 @_exported import struct SemVer.Version
 
+/// Represents options to use for serializing xml elements.
 public struct SerializationOptions: OptionSet {
    public typealias RawValue = Int
    
@@ -10,7 +11,10 @@ public struct SerializationOptions: OptionSet {
 }
 
 public extension SerializationOptions {
+   /// Use pretty formatting (by adding newlines between elements).
    public static let pretty: SerializationOptions = .init(rawValue: 1 << 0)
+   
+   /// Use single quotes (') instead of double quotes (") for attribute values.
    public static let singleQuoteAttributes: SerializationOptions = .init(rawValue: 1 << 1)
 }
 
@@ -24,6 +28,7 @@ fileprivate extension SerializationOptions {
    }
 }
 
+/// The encoding of an XML document.
 public enum DocumentEncoding: Hashable, CustomStringConvertible {
    case utf8
    case utf16
@@ -46,6 +51,7 @@ public enum DocumentEncoding: Hashable, CustomStringConvertible {
    }
 }
 
+/// Represents a type of content that can be escaped.
 public enum EscapableContent: Equatable, CustomStringConvertible {
    fileprivate typealias Replacement = (unescaped: String, escaped: String)
    
@@ -145,18 +151,33 @@ fileprivate extension Version {
 }
 
 public extension String {
+   /// Returns a string which is escaped following the rules for the EscapableContent passed in.
+   ///
+   /// - Parameter content: The type of content for which the escaped string is to be used.
+   /// - Returns: An escaped string following the escaping rules for `content`.
    public func escaped(content: EscapableContent) -> String {
       return content.replacements.reduce(self) {
          $0.replacingOccurrences(of: $1.unescaped, with: $1.escaped)
       }
    }
    
+   /// Escapes the receiver following the rules for the EscapableContent passed in.
+   ///
+   /// - Parameter content: The type of content for which the escaped string is to be used.
    public mutating func escape(content: EscapableContent) {
       self = escaped(content: content)
    }
 }
 
 public extension String {
+    /// Creates a String by serializing an xml element as root and adding the <?xml ...?> document header.
+    ///
+    /// - Parameters:
+    ///   - root: The root object for the xml document.
+    ///   - version: The version of the xml document. Only major and minor are used since XML only supports these. Defaults to 1.0.
+    ///   - encoding: The encoding for the document. Defaults to utf-8.
+    ///   - options: The options to use for serializing. Defaults to empty options.
+    /// - SeeAlso: `String.init(xml:options:)`
     public init(xmlDocumentRoot root: Element, version: Version = Version(major: 1), encoding: DocumentEncoding = .utf8, options: SerializationOptions = []) {
       let versionAttribute = "version=" + options.quotes.quoted(attributeString: version.xmlVersionString)
       let encodingAttribute = "encoding=" + options.quotes.quoted(attributeString: encoding.attributeValue)
@@ -165,6 +186,11 @@ public extension String {
          + String(xml: root, options: options)
    }
    
+   /// Creates a String by serializing an xml element.
+   ///
+   /// - Parameters:
+   ///   - xml: The xml element to serialize.
+   ///   - options: The options to use for serializing. Defaults to empty options.
    public init(xml: Element, options: SerializationOptions = []) {
       let attributes = xml.attributes.isEmpty ? "" : " " + xml.attributes.map {
          $0.key + "=" + options.quotes.quoted(attributeString: $0.value)
