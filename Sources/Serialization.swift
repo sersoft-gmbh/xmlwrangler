@@ -176,9 +176,7 @@ public extension String {
          self = start + "/>"
       case .string(let str):
          self = start + ">"
-            + options.lineSeparator
             + str.escaped(content: .text)
-            + options.lineSeparator
             + end
       case .objects(let objs):
          self = start + ">"
