@@ -47,7 +47,12 @@ public final class Parser: ParserDelegate {
    
    fileprivate func parser(_ parser: XMLParser, foundCharacters string: String) {
       guard var currentElem = elementStack.popLast() else { return }
-      currentElem.content.append(string: string, convertIfNecessary: true)
+      if case .objects(let objs) = currentElem.content, !objs.isEmpty,
+      string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+         // It's only some whitespace and we already have objects. It's not a good idea to convert this now.
+      } else {
+         currentElem.content.append(string: string, convertIfNecessary: true)
+      }
       elementStack.append(currentElem)
    }
    
