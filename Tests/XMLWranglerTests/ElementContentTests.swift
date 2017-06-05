@@ -139,6 +139,29 @@ class ElementContentTests: XCTestCase {
       }
    }
 
+   func testConverting() {
+      let emptyContent = Element.Content.empty
+      let objectsContent = Element.Content.objects([Element(name: "test")])
+      let doubleContent = Element.Content.string("4.2")
+      let intContent = Element.Content.string("42")
+      let versionContent = Element.Content.string("2.1.0")
+
+      let convertedEmptyContent: Int? = emptyContent.converted()
+      let convertedObjectsContent: Int? = objectsContent.converted()
+      let convertedDoubleContent: Double? = doubleContent.converted()
+      let convertedIntContent: Int? = intContent.converted()
+      let convertedVersionContent: Version? = versionContent.converted()
+
+      XCTAssertNil(convertedEmptyContent)
+      XCTAssertNil(convertedObjectsContent)
+      XCTAssertNotNil(convertedDoubleContent)
+      XCTAssertEqual(convertedDoubleContent, 4.2)
+      XCTAssertNotNil(convertedIntContent)
+      XCTAssertEqual(convertedIntContent, 42)
+      XCTAssertNotNil(convertedVersionContent)
+      XCTAssertEqual(convertedVersionContent, Version(major: 2, minor: 1, patch: 0))
+   }
+
    static var allTests = [
       ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
       ("testExpressibleByNilLiteral", testExpressibleByNilLiteral),
@@ -146,6 +169,7 @@ class ElementContentTests: XCTestCase {
       ("testEqualityCheck", testEqualityCheck),
       ("testAppendingString", testAppendingString),
       ("testAppendingObject", testAppendingObject),
-      ("testAppendingObjects", testAppendingObjects)
+      ("testAppendingObjects", testAppendingObjects),
+      ("testConverting", testConverting),
    ]
 }
