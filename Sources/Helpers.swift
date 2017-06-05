@@ -6,7 +6,7 @@
          self.init(stringLiteral: Self.StringLiteralType(extendedGraphemeClusterLiteral: value))
       }
    }
-   
+
    public extension ExpressibleByExtendedGraphemeClusterLiteral where ExtendedGraphemeClusterLiteralType: ExpressibleByUnicodeScalarLiteral,
    ExtendedGraphemeClusterLiteralType.UnicodeScalarLiteralType == UnicodeScalarLiteralType {
       public init(unicodeScalarLiteral value: Self.UnicodeScalarLiteralType) {

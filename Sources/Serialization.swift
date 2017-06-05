@@ -3,7 +3,7 @@
 /// Represents options to use for serializing xml elements.
 public struct SerializationOptions: OptionSet {
    public typealias RawValue = Int
-   
+
    public let rawValue: RawValue
    public init(rawValue: RawValue) {
       self.rawValue = rawValue
@@ -13,7 +13,7 @@ public struct SerializationOptions: OptionSet {
 public extension SerializationOptions {
    /// Use pretty formatting (by adding newlines between elements).
    public static let pretty: SerializationOptions = .init(rawValue: 1 << 0)
-   
+
    /// Use single quotes (') instead of double quotes (") for attribute values.
    public static let singleQuoteAttributes: SerializationOptions = .init(rawValue: 1 << 1)
 }
@@ -22,7 +22,7 @@ fileprivate extension SerializationOptions {
    fileprivate var lineSeparator: String {
       return contains(.pretty) ? "\n" : ""
    }
-   
+
    fileprivate var quotes: EscapableContent.Quotes {
       return contains(.singleQuoteAttributes) ? .single : .double
    }
@@ -33,7 +33,7 @@ public enum DocumentEncoding: Hashable, CustomStringConvertible {
    case utf8
    case utf16
    case ascii
-    
+
    public var description: String {
       switch self {
       case .utf8: return "utf-8"
@@ -41,7 +41,7 @@ public enum DocumentEncoding: Hashable, CustomStringConvertible {
       case .ascii: return "ascii"
       }
    }
-   
+
    fileprivate var attributeValue: String {
       switch self {
       case .utf8: return "UTF-8"
@@ -54,11 +54,11 @@ public enum DocumentEncoding: Hashable, CustomStringConvertible {
 /// Represents a type of content that can be escaped.
 public enum EscapableContent: Equatable, CustomStringConvertible {
    fileprivate typealias Replacement = (unescaped: String, escaped: String)
-   
+
    public enum Quotes: Equatable, CustomStringConvertible {
       case single
       case double
-      
+
       public var description: String {
          switch self {
          case .single:
@@ -67,26 +67,26 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
             return "Double quotes"
          }
       }
-      
+
       private var quoteChar: String {
          switch self {
          case .single: return "'"
          case .double: return "\""
          }
       }
-      
+
       fileprivate func quoted(attributeString string: String) -> String {
          return quoteChar + string.escaped(content: .attribute(quotes: self)) + quoteChar
       }
    }
-   
+
    // See: https://stackoverflow.com/questions/1091945/what-characters-do-i-need-to-escape-in-xml-documents
    case attribute(quotes: Quotes)
    case text
    case cdata
    case comment
    case processingInstruction
-   
+
    public var description: String {
       switch self {
       case .attribute(let quotes):
@@ -101,7 +101,7 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
          return "Processing instruction"
       }
    }
-   
+
    // See: https://en.wikipedia.org/wiki/XML#Escaping
    fileprivate var replacements: [Replacement] {
       let ampersandReplacement = ("&", "&amp;")
@@ -109,7 +109,7 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
       let singleQuoteReplacement = ("'", "&apos;")
       let lessThanReplacement = ("<", "&lt;")
 //      let greaterThanReplacement = (">", "&gt;")
-      
+
       // In each of these, order is very important. & always needs to get escaped first!
       switch self {
       case .attribute(let quotes):
@@ -129,7 +129,7 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
          return []
       }
    }
-   
+
    public static func ==(lhs: EscapableContent, rhs: EscapableContent) -> Bool {
       switch (lhs, rhs) {
       case (.attribute(let lhsQuotes), .attribute(let rhsQuotes)):
@@ -160,7 +160,7 @@ public extension String {
          $0.replacingOccurrences(of: $1.unescaped, with: $1.escaped)
       }
    }
-   
+
    /// Escapes the receiver following the rules for the EscapableContent passed in.
    ///
    /// - Parameter content: The type of content for which the escaped string is to be used.
@@ -185,7 +185,7 @@ public extension String {
          + options.lineSeparator
          + String(xml: root, options: options)
    }
-   
+
    /// Creates a String by serializing an xml element.
    ///
    /// - Parameters:

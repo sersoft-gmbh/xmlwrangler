@@ -21,7 +21,7 @@ class ElementContentTests: XCTestCase {
          XCTFail("Content is not empty!")
       }
    }
-   
+
    func testExpressibleByArrayLiteral() {
       let elem1 = Element(name: "a")
       let elem2 = Element(name: "b", attributes: ["key": "value"])
@@ -36,22 +36,22 @@ class ElementContentTests: XCTestCase {
          XCTFail("Content is not empty!")
       }
    }
-   
+
    func testEqualityCheck() {
       let content1 = Element.Content.empty
       let content2 = Element.Content.empty
-      
+
       let content3 = Element.Content.string("test1")
       let content4 = Element.Content.string("test1")
       let content5 = Element.Content.string("test2")
-      
+
       let elem1 = Element(name: "test1")
       let elem2 = Element(name: "test2")
-      
+
       let content6 = Element.Content.objects([elem1])
       let content7 = Element.Content.objects([elem1])
       let content8 = Element.Content.objects([elem2])
-      
+
       XCTAssertEqual(content1, content2)
       XCTAssertEqual(content3, content4)
       XCTAssertEqual(content6, content7)
@@ -61,16 +61,16 @@ class ElementContentTests: XCTestCase {
       XCTAssertNotEqual(content4, content6)
       XCTAssertNotEqual(content7, content8)
    }
-   
+
    func testAppendingString() {
       var unconvertedContent = Element.Content.empty
       var convertedContent = Element.Content.empty
       var extendedContent = Element.Content.string("test")
-      
+
       unconvertedContent.append(string: "_this")
       convertedContent.append(string: "_this", convertIfNecessary: true)
       extendedContent.append(string: "_this")
-      
+
       if case .empty = unconvertedContent {} else {
          XCTFail("Content must not be converted!")
       }
@@ -85,18 +85,18 @@ class ElementContentTests: XCTestCase {
          XCTFail("This shouldn't happen. Did you initialize it wrong?")
       }
    }
-   
+
    func testAppendingObject() {
       let elem1 = Element(name: "test1")
       let elem2 = Element(name: "test2")
       var unconvertedContent = Element.Content.empty
       var convertedContent = Element.Content.empty
       var extendedContent = Element.Content.objects([elem1])
-      
+
       unconvertedContent.append(object: elem2)
       convertedContent.append(object: elem2, convertIfNecessary: true)
       extendedContent.append(object: elem2)
-      
+
       if case .empty = unconvertedContent {} else {
          XCTFail("Content must not be converted!")
       }
@@ -111,7 +111,7 @@ class ElementContentTests: XCTestCase {
          XCTFail("This shouldn't happen. Did you initialize it wrong?")
       }
    }
-   
+
    func testAppendingObjects() {
       let elem1 = Element(name: "test1")
       let elem2 = Element(name: "test2")
@@ -119,11 +119,11 @@ class ElementContentTests: XCTestCase {
       var unconvertedContent = Element.Content.empty
       var convertedContent = Element.Content.empty
       var extendedContent = Element.Content.objects([elem1])
-      
+
       unconvertedContent.append(contentsOf: [elem2, elem3])
       convertedContent.append(contentsOf: [elem2, elem3], convertIfNecessary: true)
       extendedContent.append(contentsOf: [elem2, elem3])
-      
+
       if case .empty = unconvertedContent {} else {
          XCTFail("Content must not be converted!")
       }
@@ -138,7 +138,7 @@ class ElementContentTests: XCTestCase {
          XCTFail("This shouldn't happen. Did you initialize it wrong?")
       }
    }
-   
+
    static var allTests = [
       ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
       ("testExpressibleByNilLiteral", testExpressibleByNilLiteral),
