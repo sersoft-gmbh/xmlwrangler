@@ -72,7 +72,7 @@ Both initializers can take an additional parameter `options` which contains a se
 
 ### Type safety
 
-XMLWrangler will always extract all content and attributes as `String`. This is because XML itself does not differentiate between types like e.g. JSON does. There is one extension on `Element.Content` defining a `convert()` func, though, which should cover the most basic types. The easiest way to convert the content to your type is to make your type conform to `LosslessStringConvertible`. For convenience, we made `Int` conform to `LosslessStringConvertible` by calling `Int.init(_ text: String, radix: Int = default)` with a `radix` of 10.
+XMLWrangler will always extract all content and attributes as `String`. This is because XML itself does not differentiate between types like e.g. JSON does. There is one extension on `Element.Content` defining a `converted()` func, though, which should cover the most basic types. The easiest way to convert the content to your type is to make your type conform to `LosslessStringConvertible`. For convenience, we made `Int` conform to `LosslessStringConvertible` by calling `Int.init(_ text: String, radix: Int = default)` with a `radix` of 10.
 However, you can always add an extension to `Element.Content` to make extracting other types easier:
 
 ```swift
