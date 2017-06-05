@@ -5,4 +5,5 @@ XCTMain([
     testCase(ElementTests.allTests),
     testCase(ElementContentTests.allTests),
     testCase(SerializationTests.allTests),
+    testCase(ParserTests.allTests),
 ])
