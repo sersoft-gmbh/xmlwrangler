@@ -29,9 +29,6 @@ public extension Element {
 
 public extension Element {
    public enum Content: Equatable, ExpressibleByNilLiteral, ExpressibleByArrayLiteral, ExpressibleByStringLiteral {
-      public typealias UnicodeScalarLiteralType = StringLiteralType
-      public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
-      
       case empty
       case string(String)
       // TODO: Do we need a CDATA case, too?

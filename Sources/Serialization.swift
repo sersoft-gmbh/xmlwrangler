@@ -178,7 +178,7 @@ public extension String {
     ///   - encoding: The encoding for the document. Defaults to utf-8.
     ///   - options: The options to use for serializing. Defaults to empty options.
     /// - SeeAlso: `String.init(xml:options:)`
-    public init(xmlDocumentRoot root: Element, version: Version = Version(major: 1), encoding: DocumentEncoding = .utf8, options: SerializationOptions = []) {
+   public init(xmlDocumentRoot root: XMLWrangler.Element, version: Version = Version(major: 1), encoding: DocumentEncoding = .utf8, options: SerializationOptions = []) {
       let versionAttribute = "version=" + options.quotes.quoted(attributeString: version.xmlVersionString)
       let encodingAttribute = "encoding=" + options.quotes.quoted(attributeString: encoding.attributeValue)
       self = "<?xml \(versionAttribute) \(encodingAttribute)?>"
@@ -191,7 +191,7 @@ public extension String {
    /// - Parameters:
    ///   - xml: The xml element to serialize.
    ///   - options: The options to use for serializing. Defaults to empty options.
-   public init(xml: Element, options: SerializationOptions = []) {
+   public init(xml: XMLWrangler.Element, options: SerializationOptions = []) {
       let attributes = xml.attributes.isEmpty ? "" : " " + xml.attributes.map {
          $0.key + "=" + options.quotes.quoted(attributeString: $0.value)
       }.joined(separator: " ")
