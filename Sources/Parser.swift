@@ -1,4 +1,7 @@
-import Foundation
+import class Foundation.NSObject
+import class Foundation.XMLParser
+import protocol Foundation.XMLParserDelegate
+import struct Foundation.Data
 
 public final class Parser: ParserDelegate {
    private let xmlParser: XMLParser

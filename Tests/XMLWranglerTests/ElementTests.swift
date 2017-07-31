@@ -19,9 +19,34 @@ class ElementTests: XCTestCase {
       XCTAssertNotEqual(elem1, elem3)
       XCTAssertNotEqual(elem4, elem5)
    }
+   
+   func testConvertingAttributes() {
+      let attrs = [
+         "key1": "str",
+         "key2": "10",
+         "key3": "12.5"
+      ]
+      let element = Element(name: "test", attributes: attrs)
+      
+      let extracted1: String? = element.convertedAttribute(forKey: "key1")
+      let extracted2: Int? = element.convertedAttribute(forKey: "key2")
+      let extracted3: Double? = element.convertedAttribute(forKey: "key3")
+      let extracted4: Int? = element.convertedAttribute(forKey: "key1")
+      let extracted5: Int? = element.convertedAttribute(forKey: "wrong_key")
+      
+      XCTAssertNotNil(extracted1)
+      XCTAssertNotNil(extracted2)
+      XCTAssertNotNil(extracted3)
+      XCTAssertNil(extracted4)
+      XCTAssertNil(extracted5)
+      XCTAssertEqual(extracted1, "str")
+      XCTAssertEqual(extracted2, 10)
+      XCTAssertEqual(extracted3, 12.5)
+   }
 
    static var allTests = [
       ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
       ("testEqualityCheck", testEqualityCheck),
+      ("testConvertingAttributes", testConvertingAttributes),
    ]
 }
