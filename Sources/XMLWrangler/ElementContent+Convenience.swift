@@ -62,7 +62,7 @@ public extension Element.Content {
    ///   - predicate: The predicate to apply on elements until it returns `true`.
    /// - Returns: The first element for which `predicate` returned `true`. `nil` if no element matched.
    /// - Throws: Any error that is thrown by the `predicate`.
-   /// - Note: If `recursive` is `true`, recursion nevertheless happens lazliy.
+   /// - Note: If `recursive` is `true`, recursion nevertheless happens lazily.
    ///         This means that one level is searched completely before recursing down into the next deeper level.
    /// - Note: For `.empty` and `.string(_)`, this always returns `nil`.
    internal func findFirst(recursive: Bool = false, elementMatching predicate: (Element) throws -> Bool) rethrows -> Element? {
@@ -87,7 +87,7 @@ public extension Element.Content {
    ///   - predicate: The predicate to apply on elements starting at the end until it returns `true`.
    /// - Returns: The last element for which `predicate` returned `true`. `nil` if no element matched.
    /// - Throws: Any error that is thrown by the `predicate`.
-   /// - Note: If `recursive` is `true`, recursion nevertheless happens lazliy.
+   /// - Note: If `recursive` is `true`, recursion nevertheless happens lazily.
    ///         This means that one level is searched completely before recursing down into the next deeper level.
    /// - Note: For `.empty` and `.string(_)`, this always returns `nil`.
    internal func findLast(recursive: Bool = false, elementMatching predicate: (Element) throws -> Bool) rethrows -> Element? {
@@ -123,7 +123,7 @@ public extension Element.Content {
    ///   - name: The name with which to search for the first element.
    ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
    /// - Returns: The first element that's been found. `nil` if no element was found.
-   /// - Note: If `recursive` is `true`, recursion nevertheless happens lazliy.
+   /// - Note: If `recursive` is `true`, recursion nevertheless happens lazily.
    ///         This means that one level is searched completely before recursing down into the next deeper level.
    /// - Note: For `.empty` and `.string(_)`, this always returns `nil`.
    public func findFirst(elementNamed name: String, recursive: Bool = false) -> Element? {
@@ -136,7 +136,7 @@ public extension Element.Content {
    ///   - name: The name with which to search for the last element.
    ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
    /// - Returns: The first element that's been found. `nil` if no element was found.
-   /// - Note: If `recursive` is `true`, recursion nevertheless happens lazliy.
+   /// - Note: If `recursive` is `true`, recursion nevertheless happens lazily.
    ///         This means that one level is searched completely before recursing down into the next deeper level.
    /// - Note: For `.empty` and `.string(_)`, this always returns `nil`.
    public func findLast(elementNamed name: String, recursive: Bool = false) -> Element? {
@@ -145,11 +145,13 @@ public extension Element.Content {
 }
 
 fileprivate extension Sequence {
-   fileprivate func mapFirst<T>(where filter: (Iterator.Element) throws -> T?) rethrows -> T? {
-      var result: T? = nil
-      for elem in self where result == nil {
-         result = try filter(elem)
-      }
-      return result
+   /// Returns the result of a closure for the first element that the closure returns a non-nil result.
+   ///
+   /// - Parameter predicate: The predicate applied to the elements in self.
+   /// - Returns: The result of `predicate` for the first element where `predicate` returned a non-nil result. Or nil if that never happens.
+   /// - Throws: Any error thrown by `predicate`.
+   fileprivate func mapFirst<T>(where predicate: (Element) throws -> T?) rethrows -> T? {
+      for elem in self { if let result = try predicate(elem) { return result } }
+      return nil
    }
 }
