@@ -18,11 +18,18 @@ Both, serializing and parsing XMLs with XMLWrangler relies on `Element`.
 
 Parsing existing XMLs can be done using the `Parser` class. You can instantiate a parser with either a given `Data` object or a `String` containing the XML. The latter might return `nil` if the String can't be converted to a `Data` object.
 
-Once you have a parser ready, you can call `parse()` on it, and it'll try to parse the XML. If that succeeds, it'll return the parsed root object. Otherwise it throws whatever error happend along the way. Errors thrown are the once `Foundation.XMLParser` produces.
+Once you have a parser ready, you can call `parse()` on it, and it'll try to parse the XML. If that succeeds, it'll return the parsed root object. Otherwise it throws whatever error happend along the way. Errors thrown are the ones created by `Foundation.XMLParser`.
 
 ```swift
-let xml = "<?xml version='1.0' encoding='UTF-8'?><root myattr='myvalue'><child1/><child2>some text</child2></root>"
-guard let parser = Parser(string: xml) else { fatalError("Check your xml string. And please don't use `fatalError` ;)") }
+let xml = """
+          <?xml version='1.0' encoding='UTF-8'?>
+          <root myattr='myvalue'>
+              <child1/>
+              <child2>some text</child2>
+          </root>
+          """
+guard let parser = Parser(string: xml)
+    else { fatalError("Check your xml string. And please don't use `fatalError` ;)") }
 do {
     let rootElement = try parser.parse()
 } catch {
