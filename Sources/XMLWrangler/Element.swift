@@ -1,6 +1,4 @@
 public struct Element: Equatable, ExpressibleByStringLiteral {
-   public typealias UnicodeScalarLiteralType = StringLiteralType
-   public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
    
    public let name: String
    public var attributes: Dictionary<String, String> = [:]

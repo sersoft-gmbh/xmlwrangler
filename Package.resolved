@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SemVer",
+        "repositoryURL": "https://github.com/sersoft-gmbh/semver.git",
+        "state": {
+          "branch": null,
+          "revision": "ea00e4b1439f9f019f76ff5fcd0d5e2bdc659ec4",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
