@@ -1,10 +1,10 @@
 import XCTest
 @testable import XMLWrangler
 
-class ParserTests: XCTestCase {
+final class ParserTests: XCTestCase {
 
    private let testRoot: Element = {
-      var root = Element(name: "root", attributes: ["some": "key"], content: .objects([]))
+      var root = Element(name: "root", attributes: ["some": "key"])
       root.content.append(object: "first")
       root.content.append(object: Element(name: "second", content: "something"))
       root.content.append(object: Element(name: "third", content: [

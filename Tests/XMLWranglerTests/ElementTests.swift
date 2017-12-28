@@ -1,7 +1,7 @@
 import XCTest
 @testable import XMLWrangler
 
-class ElementTests: XCTestCase {
+final class ElementTests: XCTestCase {
    func testExpressibleByStringLiteral() {
       let element: Element = "test"
       XCTAssertEqual(element.name, "test")
@@ -21,18 +21,18 @@ class ElementTests: XCTestCase {
    }
    
    func testConvertingAttributes() {
-      let attrs = [
+      let attrs: Element.Attributes = [
          "key1": "str",
          "key2": "10",
          "key3": "12.5"
       ]
       let element = Element(name: "test", attributes: attrs)
       
-      let extracted1: String? = element.convertedAttribute(forKey: "key1")
-      let extracted2: Int? = element.convertedAttribute(forKey: "key2")
-      let extracted3: Double? = element.convertedAttribute(forKey: "key3")
-      let extracted4: Int? = element.convertedAttribute(forKey: "key1")
-      let extracted5: Int? = element.convertedAttribute(forKey: "wrong_key")
+      let extracted1: String? = element.convertedAttribute(for: "key1")
+      let extracted2: Int? = element.convertedAttribute(for: "key2")
+      let extracted3: Double? = element.convertedAttribute(for: "key3")
+      let extracted4: Int? = element.convertedAttribute(for: "key1")
+      let extracted5: Int? = element.convertedAttribute(for: "wrong_key")
       
       XCTAssertNotNil(extracted1)
       XCTAssertNotNil(extracted2)

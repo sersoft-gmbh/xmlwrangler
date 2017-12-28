@@ -1,7 +1,7 @@
 import XCTest
 @testable import XMLWrangler
 
-class SerializationTests: XCTestCase {
+final class SerializationTests: XCTestCase {
 
    func testEscapeableContentEquality() {
       let content1: EscapableContent = .attribute(quotes: .single)
@@ -58,7 +58,7 @@ class SerializationTests: XCTestCase {
    }
 
    private let testRoot: Element = {
-      var root = Element(name: "root", attributes: ["some": "key"], content: .objects([]))
+      var root = Element(name: "root", attributes: ["some": "key"])
       root.content.append(object: "first")
       root.content.append(object: Element(name: "second", content: "something"))
       root.content.append(object: Element(name: "third", content: [

@@ -34,14 +34,14 @@ public final class Parser: ParserDelegate {
 
    // MARK: - ParserDelegate
    fileprivate func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String]) {
-      let elem = Element(name: elementName, attributes: attributeDict)
+      let elem = Element(name: elementName, attributes: attributeDict.asAttributes)
       elementStack.append(elem)
    }
 
    fileprivate func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
       guard let lastElem = elementStack.popLast() else { return } // This shouldn't happen
       if var parent = elementStack.popLast() {
-         parent.content.append(object: lastElem, convertIfNecessary: true)
+         parent.content.append(object: lastElem)
          elementStack.append(parent)
       } else {
          parsedRoot = lastElem
@@ -49,20 +49,16 @@ public final class Parser: ParserDelegate {
    }
 
    fileprivate func parser(_ parser: XMLParser, foundCharacters string: String) {
+      guard !string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
       guard var currentElem = elementStack.popLast() else { return }
-      if case .objects(let objs) = currentElem.content,
-        !objs.isEmpty && string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-         // It's only some whitespace and we already have objects. It's not a good idea to convert this now.
-      } else {
-         currentElem.content.append(string: string, convertIfNecessary: true)
-      }
+      currentElem.content.append(string: string)
       elementStack.append(currentElem)
    }
 
    fileprivate func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
       guard let string = String(data: CDATABlock, encoding: .utf8) else { return }
       guard var currentElem = elementStack.popLast() else { return }
-      currentElem.content.append(string: string, convertIfNecessary: true)
+      currentElem.content.append(string: string)
       elementStack.append(currentElem)
    }
 }
@@ -81,20 +77,26 @@ fileprivate extension Parser {
    fileprivate final class Delegate: NSObject, XMLParserDelegate {
       weak var delegate: ParserDelegate?
 
-      func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
+      @objc dynamic func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
          delegate?.parser(parser, didStartElement: elementName, namespaceURI: namespaceURI, qualifiedName: qName, attributes: attributeDict)
       }
 
-      func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+      @objc dynamic func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
          delegate?.parser(parser, didEndElement: elementName, namespaceURI: namespaceURI, qualifiedName: qName)
       }
 
-      func parser(_ parser: XMLParser, foundCharacters string: String) {
+      @objc dynamic func parser(_ parser: XMLParser, foundCharacters string: String) {
          delegate?.parser(parser, foundCharacters: string)
       }
 
-      func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
+      @objc dynamic func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
          delegate?.parser(parser, foundCDATA: CDATABlock)
       }
    }
+}
+
+fileprivate extension Dictionary where Key == XMLWrangler.Element.AttributeKey.RawValue {
+    var asAttributes: [XMLWrangler.Element.AttributeKey: Value] {
+        return .init(uniqueKeysWithValues: map { (.init(rawValue: $0.key), $0.value) })
+    }
 }

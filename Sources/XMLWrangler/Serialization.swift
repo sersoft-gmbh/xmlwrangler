@@ -182,8 +182,7 @@ public extension String {
       let versionAttribute = "version=" + options.quotes.quoted(attributeString: version.xmlVersionString)
       let encodingAttribute = "encoding=" + options.quotes.quoted(attributeString: encoding.attributeValue)
       self = "<?xml \(versionAttribute) \(encodingAttribute)?>"
-         + options.lineSeparator
-         + String(xml: root, options: options)
+         + String(xml: root, preprendLineSeparator: true, options: options)
    }
 
    /// Creates a String by serializing an xml element.
@@ -192,24 +191,36 @@ public extension String {
    ///   - xml: The xml element to serialize.
    ///   - options: The options to use for serializing. Defaults to empty options.
    public init(xml: XMLWrangler.Element, options: SerializationOptions = []) {
+      self.init(xml: xml, preprendLineSeparator: false, options: options)
+   }
+
+   private init(xml: XMLWrangler.Element, preprendLineSeparator: Bool, options: SerializationOptions) {
       let attributes = xml.attributes.isEmpty ? "" : " " + xml.attributes.map {
-         $0.key + "=" + options.quotes.quoted(attributeString: $0.value)
-      }.joined(separator: " ")
-      let start = "<\(xml.name)\(attributes)"
-      let end = "</\(xml.name)>"
-      switch xml.content {
-      case .empty:
+         $0.key.rawValue + "=" + options.quotes.quoted(attributeString: $0.value)
+         }.joined(separator: " ")
+      let start = (preprendLineSeparator ? options.lineSeparator : "") + "<\(xml.name)\(attributes)"
+      let content = xml.content.map { String(xmlContent: $0, options: options) }.joined()
+      if content.isEmpty {
          self = start + "/>"
-      case .string(let str):
+      } else {
          self = start + ">"
-            + str.escaped(content: .text)
-            + end
-      case .objects(let objs):
-         self = start + ">"
-            + options.lineSeparator
-            + objs.map { String(xml: $0, options: options) }.joined()
-            + end
+            + content
+            + "</\(xml.name)>"
       }
       self += options.lineSeparator
+   }
+
+   /// Creates a String by serializing an xml content.
+   ///
+   /// - Parameters:
+   ///   - content: The xml content to serialize.
+   ///   - options: The options to use for serializing. Defaults to empty options.
+   public init(xmlContent content: XMLWrangler.Element.Content, options: SerializationOptions = []) {
+      switch content {
+      case .string(let str):
+         self = str.escaped(content: .text)
+      case .objects(let objs):
+         self = objs.enumerated().map { String(xml: $0.element, preprendLineSeparator: $0.offset == 0, options: options) }.joined()
+      }
    }
 }

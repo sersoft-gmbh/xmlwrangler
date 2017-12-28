@@ -1,24 +1,13 @@
 import XCTest
 @testable import XMLWrangler
 
-class ElementContentTests: XCTestCase {
-   func testExpressibleByNilLiteral() {
-      let content: Element.Content = nil
-      if case .empty = content {} else {
-         XCTFail("Content is not empty!")
-      }
-   }
-
+final class ElementContentTests: XCTestCase {
    func testExpressibleByStringLiteral() {
       let content1: Element.Content = "test"
-      let content2: Element.Content = ""
       if case .string(let str) = content1 {
          XCTAssertEqual(str, "test")
       } else {
          XCTFail("Content is not string!")
-      }
-      if case .empty = content2 {} else {
-         XCTFail("Content is not empty!")
       }
    }
 
@@ -27,90 +16,87 @@ class ElementContentTests: XCTestCase {
       let elem2 = Element(name: "b", attributes: ["key": "value"])
     
       let content1: Element.Content = [elem1, elem2]
-      let content2: Element.Content = []
-    
+
       if case .objects(let objs) = content1 {
          XCTAssertEqual(objs, [elem1, elem2])
       } else {
          XCTFail("Content is not objects!")
       }
-      if case .empty = content2 {} else {
-         XCTFail("Content is not empty!")
-      }
    }
 
    func testEqualityCheck() {
-      let content1 = Element.Content.empty
-      let content2 = Element.Content.empty
-
-      let content3 = Element.Content.string("test1")
-      let content4 = Element.Content.string("test1")
-      let content5 = Element.Content.string("test2")
+      let content1 = Element.Content.string("test1")
+      let content2 = Element.Content.string("test1")
+      let content3 = Element.Content.string("test2")
 
       let elem1 = Element(name: "test1")
       let elem2 = Element(name: "test2")
 
-      let content6 = Element.Content.objects([elem1])
-      let content7 = Element.Content.objects([elem1])
-      let content8 = Element.Content.objects([elem2])
+      let content4 = Element.Content.objects([elem1])
+      let content5 = Element.Content.objects([elem1])
+      let content6 = Element.Content.objects([elem2])
 
       XCTAssertEqual(content1, content2)
-      XCTAssertEqual(content3, content4)
-      XCTAssertEqual(content6, content7)
+      XCTAssertEqual(content4, content5)
       XCTAssertNotEqual(content1, content3)
       XCTAssertNotEqual(content1, content6)
-      XCTAssertNotEqual(content4, content5)
+      XCTAssertNotEqual(content2, content3)
       XCTAssertNotEqual(content4, content6)
-      XCTAssertNotEqual(content7, content8)
    }
 
    func testAppendingString() {
-      var unconvertedContent = Element.Content.empty
-      var convertedContent = Element.Content.empty
+      var unconvertedContent = Element.Content.objects(["testObj"])
       var extendedContent = Element.Content.string("test")
 
       unconvertedContent.append(string: "_this")
-      convertedContent.append(string: "_this", convertIfNecessary: true)
       extendedContent.append(string: "_this")
 
-      if case .empty = unconvertedContent {} else {
-         XCTFail("Content must not be converted!")
-      }
-      if case .string(let str) = convertedContent {
-         XCTAssertEqual(str, "_this")
-      } else {
-         XCTFail("Content must be converted!")
+      if case .objects(_) = unconvertedContent {} else {
+         XCTFail("Content must not be changed!")
       }
       if case .string(let str) = extendedContent {
          XCTAssertEqual("test_this", str)
       } else {
-         XCTFail("This shouldn't happen. Did you initialize it wrong?")
+         XCTFail("Content must not be changed!")
       }
    }
 
    func testAppendingObject() {
       let elem1 = Element(name: "test1")
       let elem2 = Element(name: "test2")
-      var unconvertedContent = Element.Content.empty
-      var convertedContent = Element.Content.empty
+      var unconvertedContent = Element.Content.string("testStr")
       var extendedContent = Element.Content.objects([elem1])
 
       unconvertedContent.append(object: elem2)
-      convertedContent.append(object: elem2, convertIfNecessary: true)
       extendedContent.append(object: elem2)
 
-      if case .empty = unconvertedContent {} else {
-         XCTFail("Content must not be converted!")
-      }
-      if case .objects(let objs) = convertedContent {
-         XCTAssertEqual(objs, [elem2])
-      } else {
-         XCTFail("Content must be converted!")
+      if case .string(_) = unconvertedContent {} else {
+         XCTFail("Content must not be changed!")
       }
       if case .objects(let objs) = extendedContent {
          XCTAssertEqual(objs, [elem1, elem2])
       } else {
-         XCTFail("This shouldn't happen. Did you initialize it wrong?")
+         XCTFail("Content must not be changed!")
+      }
+   }
+
+   func testAppendingContentOfSequence() {
+      let elem1 = Element(name: "test1")
+      let elem2 = Element(name: "test2")
+      let elem3 = Element(name: "test3")
+      var unconvertedContent = Element.Content.string("testStr")
+      var extendedContent = Element.Content.objects([elem1])
+
+      unconvertedContent.append(contentsOf: [elem2, elem3])
+      extendedContent.append(contentsOf: [elem2, elem3])
+
+      if case .string(_) = unconvertedContent {} else {
+         XCTFail("Content must not be changed!")
+      }
+      if case .objects(let objs) = extendedContent {
+         XCTAssertEqual(objs, [elem1, elem2, elem3])
+      } else {
+         XCTFail("Content must not be changed!")
       }
    }
 
@@ -118,43 +104,33 @@ class ElementContentTests: XCTestCase {
       let elem1 = Element(name: "test1")
       let elem2 = Element(name: "test2")
       let elem3 = Element(name: "test3")
-      var unconvertedContent = Element.Content.empty
-      var convertedContent = Element.Content.empty
+      var unconvertedContent = Element.Content.string("testStr")
       var extendedContent = Element.Content.objects([elem1])
 
-      unconvertedContent.append(contentsOf: [elem2, elem3])
-      convertedContent.append(contentsOf: [elem2, elem3], convertIfNecessary: true)
-      extendedContent.append(contentsOf: [elem2, elem3])
+      unconvertedContent.append(objects: elem2, elem3)
+      extendedContent.append(objects: elem2, elem3)
 
-      if case .empty = unconvertedContent {} else {
-         XCTFail("Content must not be converted!")
-      }
-      if case .objects(let objs) = convertedContent {
-         XCTAssertEqual(objs, [elem2, elem3])
-      } else {
-         XCTFail("Content must be converted!")
+      if case .string(_) = unconvertedContent {} else {
+         XCTFail("Content must not be changed!")
       }
       if case .objects(let objs) = extendedContent {
          XCTAssertEqual(objs, [elem1, elem2, elem3])
       } else {
-         XCTFail("This shouldn't happen. Did you initialize it wrong?")
+         XCTFail("Content must not be changed!")
       }
    }
 
    func testConverting() {
-      let emptyContent = Element.Content.empty
       let objectsContent = Element.Content.objects([Element(name: "test")])
       let doubleContent = Element.Content.string("4.2")
       let intContent = Element.Content.string("42")
       let versionContent = Element.Content.string("2.1.0")
 
-      let convertedEmptyContent: Int? = emptyContent.converted()
       let convertedObjectsContent: Int? = objectsContent.converted()
       let convertedDoubleContent: Double? = doubleContent.converted()
       let convertedIntContent: Int? = intContent.converted()
       let convertedVersionContent: Version? = versionContent.converted()
 
-      XCTAssertNil(convertedEmptyContent)
       XCTAssertNil(convertedObjectsContent)
       XCTAssertNotNil(convertedDoubleContent)
       XCTAssertEqual(convertedDoubleContent, 4.2)
@@ -165,7 +141,7 @@ class ElementContentTests: XCTestCase {
    }
    
    func testFindingObjectsShallow() {
-      let empty:  Element.Content = .empty
+      let string: Element.Content = .string("testStr")
       let source: Element.Content = .objects([
          Element(name: "test"),
          Element(name: "test_something"),
@@ -176,12 +152,12 @@ class ElementContentTests: XCTestCase {
          Element(name: "test_something"),
          ])
       
-      let emptyResult = empty.find(elementsNamed: "something")
+      let stringResult = string.find(elementsNamed: "something")
       let cannotFind = source.find(elementsNamed: "not_existent")
       let testResult = source.find(elementsNamed: "test")
       let whateverResult = source.find(elementsNamed: "whatever")
       
-      XCTAssertTrue(emptyResult.isEmpty)
+      XCTAssertTrue(stringResult.isEmpty)
       XCTAssertTrue(cannotFind.isEmpty)
       XCTAssertEqual(testResult.count, 2)
       XCTAssertEqual(whateverResult.count, 1)
@@ -190,7 +166,7 @@ class ElementContentTests: XCTestCase {
    }
    
    func testFindingFirstObjectShallow() {
-      let empty:  Element.Content = .empty
+      let string: Element.Content = .string("testStr")
       let source: Element.Content = .objects([
          Element(name: "test", content: "value"),
          Element(name: "test_something"),
@@ -201,21 +177,21 @@ class ElementContentTests: XCTestCase {
          Element(name: "test_something"),
          ])
       
-      let emptyResult = empty.findFirst(elementNamed: "something")
+      let stringResult = string.findFirst(elementNamed: "something")
       let cannotFind = source.findFirst(elementNamed: "not_existent")
       let testResult = source.findFirst(elementNamed: "test")
       let whateverResult = source.findFirst(elementNamed: "whatever")
       
-      XCTAssertNil(emptyResult)
+      XCTAssertNil(stringResult)
       XCTAssertNil(cannotFind)
       XCTAssertNotNil(testResult)
       XCTAssertNotNil(whateverResult)
-      XCTAssertEqual(testResult?.content, "value")
-      XCTAssertEqual(whateverResult?.content, .empty)
+      XCTAssertEqual(testResult?.content ?? [], ["value"])
+      XCTAssertTrue(whateverResult?.content.isEmpty ?? false)
    }
    
    func testFindingLastObjectShallow() {
-      let empty:  Element.Content = .empty
+      let string: Element.Content = .string("testStr")
       let source: Element.Content = .objects([
          Element(name: "test"),
          Element(name: "test_something"),
@@ -226,21 +202,21 @@ class ElementContentTests: XCTestCase {
          Element(name: "test_something"),
          ])
       
-      let emptyResult = empty.findLast(elementNamed: "something")
+      let stringResult = string.findLast(elementNamed: "something")
       let cannotFind = source.findLast(elementNamed: "not_existent")
       let testResult = source.findLast(elementNamed: "test")
       let whateverResult = source.findLast(elementNamed: "whatever")
       
-      XCTAssertNil(emptyResult)
+      XCTAssertNil(stringResult)
       XCTAssertNil(cannotFind)
       XCTAssertNotNil(testResult)
       XCTAssertNotNil(whateverResult)
-      XCTAssertEqual(testResult?.content, "value")
-      XCTAssertEqual(whateverResult?.content, .empty)
+      XCTAssertEqual(testResult?.content ?? [], ["value"])
+      XCTAssertTrue(whateverResult?.content.isEmpty ?? false)
    }
    
    func testFindingObjectsRecursive() {
-      let empty:  Element.Content = .empty
+      let string: Element.Content = .string("testStr")
       let source: Element.Content = .objects([
          Element(name: "test_something", content: [
             Element(name: "test", content: "value"),
@@ -264,12 +240,12 @@ class ElementContentTests: XCTestCase {
          Element(name: "test_something"),
          ])
       
-      let emptyResult = empty.find(elementsNamed: "something", recursive: true)
+      let stringResult = string.find(elementsNamed: "something", recursive: true)
       let cannotFind = source.find(elementsNamed: "not_existent", recursive: true)
       let testResult = source.find(elementsNamed: "test", recursive: true)
       let whateverResult = source.find(elementsNamed: "whatever", recursive: true)
       
-      XCTAssertTrue(emptyResult.isEmpty)
+      XCTAssertTrue(stringResult.isEmpty)
       XCTAssertTrue(cannotFind.isEmpty)
       XCTAssertEqual(testResult.count, 2)
       XCTAssertEqual(whateverResult.count, 1)
@@ -278,7 +254,7 @@ class ElementContentTests: XCTestCase {
    }
    
    func testFindingFirstObjectRecursive() {
-      let empty:  Element.Content = .empty
+      let string: Element.Content = .string("testStr")
       let source: Element.Content = .objects([
          Element(name: "test_something", content: [
             Element(name: "test", content: "value"),
@@ -303,22 +279,22 @@ class ElementContentTests: XCTestCase {
          Element(name: "test_something"),
          ])
       
-      let emptyResult = empty.findFirst(elementNamed: "something", recursive: true)
+      let stringResult = string.findFirst(elementNamed: "something", recursive: true)
       let cannotFind = source.findFirst(elementNamed: "not_existent", recursive: true)
       let testResult = source.findFirst(elementNamed: "test", recursive: true)
       let whateverResult = source.findFirst(elementNamed: "whatever", recursive: true)
       
-      XCTAssertNil(emptyResult)
+      XCTAssertNil(stringResult)
       XCTAssertNil(cannotFind)
       XCTAssertNotNil(testResult)
       XCTAssertNotNil(whateverResult)
-      XCTAssertEqual(testResult?.content, "value")
+      XCTAssertEqual(testResult?.content ?? [], ["value"])
       // Make sure we only recurse lazily. We don't want to go into the deepest abyss if we can stay in shallower waters.
-      XCTAssertEqual(whateverResult?.content, "not so deep")
+      XCTAssertEqual(whateverResult?.content ?? [], ["not so deep"])
    }
    
    func testFindingLastObjectRecursive() {
-      let empty:  Element.Content = .empty
+      let string: Element.Content = .string("testStr")
       let source: Element.Content = .objects([
          Element(name: "test_something", content: [
             Element(name: "test", content: "value"),
@@ -344,23 +320,22 @@ class ElementContentTests: XCTestCase {
          Element(name: "test_something"),
          ])
       
-      let emptyResult = empty.findLast(elementNamed: "something", recursive: true)
+      let stringResult = string.findLast(elementNamed: "something", recursive: true)
       let cannotFind = source.findLast(elementNamed: "not_existent", recursive: true)
       let testResult = source.findLast(elementNamed: "test", recursive: true)
       let whateverResult = source.findLast(elementNamed: "whatever", recursive: true)
       
-      XCTAssertNil(emptyResult)
+      XCTAssertNil(stringResult)
       XCTAssertNil(cannotFind)
       XCTAssertNotNil(testResult)
       XCTAssertNotNil(whateverResult)
-      XCTAssertEqual(testResult?.content, .empty)
+      XCTAssertTrue(testResult?.content.isEmpty ?? false)
       // Make sure we only recurse lazily. We don't want to go into the deepest abyss if we can stay in shallower waters.
-      XCTAssertEqual(whateverResult?.content, "not so deep")
+      XCTAssertEqual(whateverResult?.content ?? [], ["not so deep"])
    }
 
    static var allTests = [
       ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
-      ("testExpressibleByNilLiteral", testExpressibleByNilLiteral),
       ("testExpressibleByArrayLiteral", testExpressibleByArrayLiteral),
       ("testEqualityCheck", testEqualityCheck),
       ("testAppendingString", testAppendingString),
