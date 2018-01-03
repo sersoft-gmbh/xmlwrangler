@@ -1,6 +1,7 @@
+import struct Foundation.CharacterSet
 @_exported import struct SemVer.Version
 
-/// Represents options to use for serializing xml elements.
+/// Represents options to use for serializing XML elements.
 public struct SerializationOptions: OptionSet {
    public typealias RawValue = Int
 
@@ -61,10 +62,8 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
 
       public var description: String {
          switch self {
-         case .single:
-            return "Single quotes"
-         case .double:
-            return "Double quotes"
+         case .single: return "Single quotes"
+         case .double: return "Double quotes"
          }
       }
 
@@ -90,7 +89,7 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
    public var description: String {
       switch self {
       case .attribute(let quotes):
-         return "Attribute enclosed in \(quotes)"
+         return "Attribute enclosed in \(String(describing: quotes).lowercased())"
       case .text:
          return "Text"
       case .cdata:
@@ -170,11 +169,11 @@ public extension String {
 }
 
 public extension String {
-    /// Creates a String by serializing an xml element as root and adding the <?xml ...?> document header.
+    /// Creates a String by serializing an XML element as root and adding the <?xml ...?> document header.
     ///
     /// - Parameters:
-    ///   - root: The root object for the xml document.
-    ///   - version: The version of the xml document. Only major and minor are used since XML only supports these. Defaults to 1.0.
+    ///   - root: The root object for the XML document.
+    ///   - version: The version of the XML document. Only major and minor are used since XML only supports these. Defaults to 1.0.
     ///   - encoding: The encoding for the document. Defaults to utf-8.
     ///   - options: The options to use for serializing. Defaults to empty options.
     /// - SeeAlso: `String.init(xml:options:)`
@@ -182,45 +181,48 @@ public extension String {
       let versionAttribute = "version=" + options.quotes.quoted(attributeString: version.xmlVersionString)
       let encodingAttribute = "encoding=" + options.quotes.quoted(attributeString: encoding.attributeValue)
       self = "<?xml \(versionAttribute) \(encodingAttribute)?>"
-         + String(xml: root, preprendLineSeparator: true, options: options)
+         + options.lineSeparator
+         + String(xml: root, options: options)
    }
 
-   /// Creates a String by serializing an xml element.
+   /// Creates a String by serializing an XML element.
    ///
    /// - Parameters:
-   ///   - xml: The xml element to serialize.
+   ///   - xml: The XML element to serialize.
    ///   - options: The options to use for serializing. Defaults to empty options.
    public init(xml: XMLWrangler.Element, options: SerializationOptions = []) {
-      self.init(xml: xml, preprendLineSeparator: false, options: options)
-   }
-
-   private init(xml: XMLWrangler.Element, preprendLineSeparator: Bool, options: SerializationOptions) {
       let attributes = xml.attributes.isEmpty ? "" : " " + xml.attributes.map {
          $0.key.rawValue + "=" + options.quotes.quoted(attributeString: $0.value)
          }.joined(separator: " ")
-      let start = (preprendLineSeparator ? options.lineSeparator : "") + "<\(xml.name)\(attributes)"
-      let content = xml.content.map { String(xmlContent: $0, options: options) }.joined()
+      let start = "<\(xml.name.rawValue)\(attributes)"
+      let content = String(xmlContent: xml.content, options: options)
       if content.isEmpty {
          self = start + "/>"
       } else {
          self = start + ">"
             + content
-            + "</\(xml.name)>"
+            + "</\(xml.name.rawValue)>"
       }
-      self += options.lineSeparator
    }
 
-   /// Creates a String by serializing an xml content.
+   /// Creates a String by serializing an XML content.
    ///
    /// - Parameters:
-   ///   - content: The xml content to serialize.
+   ///   - content: A collection of Element.Content to serialize.
    ///   - options: The options to use for serializing. Defaults to empty options.
-   public init(xmlContent content: XMLWrangler.Element.Content, options: SerializationOptions = []) {
-      switch content {
-      case .string(let str):
-         self = str.escaped(content: .text)
-      case .objects(let objs):
-         self = objs.enumerated().map { String(xml: $0.element, preprendLineSeparator: $0.offset == 0, options: options) }.joined()
-      }
+   public init<Content>(xmlContent content: Content, options: SerializationOptions = [])
+      where Content: MutableCollection & RangeReplaceableCollection, Content.Element == XMLWrangler.Element.Content {
+         let (contentStr, didContainObjectsOrMultilineStrings) = content.compressed().reduce(into: ("", false)) {
+            switch $1 {
+            case .string(let str):
+               let hasNewlines = !CharacterSet(charactersIn: str).isDisjoint(with: .newlines)
+               $0.1 = $0.1 || hasNewlines
+               $0.0 += str.escaped(content: .text) + (hasNewlines ? options.lineSeparator : "")
+            case .object(let obj):
+               $0.1 = true
+               $0.0 += String(xml: obj, options: options) + options.lineSeparator
+            }
+         }
+         self = didContainObjectsOrMultilineStrings ? options.lineSeparator + contentStr : contentStr
    }
 }

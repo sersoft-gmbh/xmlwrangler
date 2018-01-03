@@ -61,7 +61,7 @@ final class SerializationTests: XCTestCase {
       var root = Element(name: "root", attributes: ["some": "key"])
       root.content.append(object: "first")
       root.content.append(object: Element(name: "second", content: "something"))
-      root.content.append(object: Element(name: "third", content: [
+      root.content.append(object: Element(name: "third", objects: [
          "third_one",
          Element(name: "third_two", attributes: ["third_some": "value"]),
          Element(name: "third_three", attributes: ["third_some": "value"], content: "test this right")
@@ -69,18 +69,27 @@ final class SerializationTests: XCTestCase {
       return root
    }()
 
+   private let mixedContentRoot = Element(name: "root",
+                                          content: [
+                                             .string("Some text is here to check.\nWhich even contains newlines."),
+                                             .object(Element(name: "child", content: "I'm not of much relevance")),
+                                             .object(Element(name: "child")),
+                                             .string("Again we have some more text here.\nLet's see how this will end."),
+                                             .object(Element(name: "other"))
+      ])
+
    func testXMLSerialization() {
       let str1 = String(xml: testRoot)
       let expected1 = "<root some=\"key\"><first/><second>something</second><third><third_one/><third_two third_some=\"value\"/><third_three third_some=\"value\">test this right</third_three></third></root>"
 
       let str2 = String(xml: testRoot, options: [.pretty])
-      let expected2 = "<root some=\"key\">\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some=\"value\"/>\n<third_three third_some=\"value\">test this right</third_three>\n</third>\n</root>\n"
+      let expected2 = "<root some=\"key\">\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some=\"value\"/>\n<third_three third_some=\"value\">test this right</third_three>\n</third>\n</root>"
 
       let str3 = String(xml: testRoot, options: [.singleQuoteAttributes])
       let expected3 = "<root some='key'><first/><second>something</second><third><third_one/><third_two third_some='value'/><third_three third_some='value'>test this right</third_three></third></root>"
 
       let str4 = String(xml: testRoot, options: [.pretty, .singleQuoteAttributes])
-      let expected4 = "<root some='key'>\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some='value'/>\n<third_three third_some='value'>test this right</third_three>\n</third>\n</root>\n"
+      let expected4 = "<root some='key'>\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some='value'/>\n<third_three third_some='value'>test this right</third_three>\n</third>\n</root>"
 
       XCTAssertEqual(str1, expected1)
       XCTAssertEqual(str2, expected2)
@@ -93,13 +102,40 @@ final class SerializationTests: XCTestCase {
       let expected1 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root some=\"key\"><first/><second>something</second><third><third_one/><third_two third_some=\"value\"/><third_three third_some=\"value\">test this right</third_three></third></root>"
 
       let str2 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf8, options: [.pretty])
-      let expected2 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root some=\"key\">\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some=\"value\"/>\n<third_three third_some=\"value\">test this right</third_three>\n</third>\n</root>\n"
+      let expected2 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root some=\"key\">\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some=\"value\"/>\n<third_three third_some=\"value\">test this right</third_three>\n</third>\n</root>"
 
       let str3 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf8, options: [.singleQuoteAttributes])
       let expected3 = "<?xml version='1.0' encoding='UTF-8'?><root some='key'><first/><second>something</second><third><third_one/><third_two third_some='value'/><third_three third_some='value'>test this right</third_three></third></root>"
 
       let str4 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf8, options: [.pretty, .singleQuoteAttributes])
-      let expected4 = "<?xml version='1.0' encoding='UTF-8'?>\n<root some='key'>\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some='value'/>\n<third_three third_some='value'>test this right</third_three>\n</third>\n</root>\n"
+      let expected4 = "<?xml version='1.0' encoding='UTF-8'?>\n<root some='key'>\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some='value'/>\n<third_three third_some='value'>test this right</third_three>\n</third>\n</root>"
+
+      let str5 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf16)
+      let expected5 = "<?xml version=\"1.0\" encoding=\"UTF-16\"?><root some=\"key\"><first/><second>something</second><third><third_one/><third_two third_some=\"value\"/><third_three third_some=\"value\">test this right</third_three></third></root>"
+
+      let str6 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .ascii)
+      let expected6 = "<?xml version=\"1.0\" encoding=\"ASCII\"?><root some=\"key\"><first/><second>something</second><third><third_one/><third_two third_some=\"value\"/><third_three third_some=\"value\">test this right</third_three></third></root>"
+
+      XCTAssertEqual(str1, expected1)
+      XCTAssertEqual(str2, expected2)
+      XCTAssertEqual(str3, expected3)
+      XCTAssertEqual(str4, expected4)
+      XCTAssertEqual(str5, expected5)
+      XCTAssertEqual(str6, expected6)
+   }
+
+   func testMixedContentSerialization() {
+      let str1 = String(xml: mixedContentRoot)
+      let expected1 = "<root>Some text is here to check.\nWhich even contains newlines.<child>I'm not of much relevance</child><child/>Again we have some more text here.\nLet's see how this will end.<other/></root>"
+
+      let str2 = String(xml: mixedContentRoot, options: [.pretty])
+      let expected2 = "<root>\nSome text is here to check.\nWhich even contains newlines.\n<child>I'm not of much relevance</child>\n<child/>\nAgain we have some more text here.\nLet's see how this will end.\n<other/>\n</root>"
+
+      let str3 = String(xml: mixedContentRoot, options: [.singleQuoteAttributes])
+      let expected3 = "<root>Some text is here to check.\nWhich even contains newlines.<child>I'm not of much relevance</child><child/>Again we have some more text here.\nLet's see how this will end.<other/></root>"
+
+      let str4 = String(xml: mixedContentRoot, options: [.pretty, .singleQuoteAttributes])
+      let expected4 = "<root>\nSome text is here to check.\nWhich even contains newlines.\n<child>I'm not of much relevance</child>\n<child/>\nAgain we have some more text here.\nLet's see how this will end.\n<other/>\n</root>"
 
       XCTAssertEqual(str1, expected1)
       XCTAssertEqual(str2, expected2)
@@ -112,5 +148,6 @@ final class SerializationTests: XCTestCase {
       ("testEscapingStrings", testEscapingStrings),
       ("testXMLSerialization", testXMLSerialization),
       ("testXMLDocumentSerialization", testXMLDocumentSerialization),
+      ("testMixedContentSerialization", testMixedContentSerialization),
    ]
 }

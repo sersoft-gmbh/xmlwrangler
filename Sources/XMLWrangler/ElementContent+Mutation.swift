@@ -1,43 +1,92 @@
-public extension Element.Content {
-   public mutating func append(string: String) {
-      guard case .string(let str) = self else { return }
-      self = .string(str + string)
-   }
-
-   public mutating func append(object: Element) {
-      guard case .objects(let objs) = self else { return }
-      self = .objects(objs + [object])
-   }
-
-   public mutating func append(objects: Element...) {
-      append(contentsOf: objects)
-   }
-
-   public mutating func append<S: Sequence>(contentsOf objects: S) where S.Element == Element {
-      guard case .objects(let objs) = self else { return }
-      self = .objects(objs + Array(objects))
-   }
-}
-
 public extension RangeReplaceableCollection where Self: MutableCollection, Element == XMLWrangler.Element.Content {
-   private var lastIndex: Index { return index(endIndex, offsetBy: -1) }
-
+   /// Appends either a new `.string` element, or if the last one is already `.string`, appends `string` to the last one.
+   ///
+   /// - Parameter string: The string to append.
    public mutating func append(string: String) {
-      guard !isEmpty && self[lastIndex].isString else { return append(.string(string)) }
-      self[lastIndex].append(string: string)
+      let lastIndex = index(endIndex, offsetBy: -1)
+      guard !isEmpty, case .string(let str) = self[lastIndex]
+         else { return append(.string(string)) }
+      self[lastIndex] = .string(str + string)
    }
 
+   /// Appends an element wrapped as `.object`.
+   ///
+   /// - Parameter object: The element to append wrapped in `.object`.
    public mutating func append(object: XMLWrangler.Element) {
-      guard !isEmpty && self[lastIndex].isObjects else { return append([object]) }
-      self[lastIndex].append(object: object)
+      append(.object(object))
    }
 
+   /// Appends the contents of a sequcence of elements wrapped as `.object`.
+   ///
+   /// - Parameter objects: The sequence of elements to append wrapped in `.object`.
+   public mutating func append<S: Sequence>(contentsOf objects: S) where S.Element == XMLWrangler.Element {
+      append(contentsOf: objects.map { .object($0) })
+   }
+
+   /// Appends the one or more elements wrapped as `.object`.
+   ///
+   /// - Parameter objects: The elements to append wrapped in `.object`.
    public mutating func append(objects: XMLWrangler.Element...) {
       append(contentsOf: objects)
    }
 
-   public mutating func append<S: Sequence>(contentsOf objects: S) where S.Element == XMLWrangler.Element {
-      guard !isEmpty && self[lastIndex].isObjects else { return append(.objects(Array(objects))) }
-      self[lastIndex].append(contentsOf: objects)
+   /// Merges consecutive `.string` objects into one.
+   public mutating func compress() {
+      var currentIndex = startIndex
+      while var nextIndex = index(currentIndex, offsetBy: 1, limitedBy: endIndex) {
+         defer { currentIndex = nextIndex }
+         guard case .string(let currentStr) = self[currentIndex] else { continue }
+         var newStr = currentStr
+         while nextIndex < endIndex, case .string(let nextStr) = self[nextIndex] {
+            newStr += nextStr
+            remove(at: nextIndex)
+         }
+         self[currentIndex] = .string(newStr)
+      }
+   }
+
+   /// Returns a compressed version of `self`, where all consecutive `.string` objects were merged into one.
+   ///
+   /// - Returns: A compressed version of `self`.
+   /// - SeeAlso: `compress()`
+   public func compressed() -> Self {
+      var compressed = self
+      compressed.compress()
+      return compressed
+   }
+}
+
+
+public extension Element {
+   /// Appends a string to the content.
+   ///
+   /// - Parameter string: The string to append to the content.
+   /// - SeeAlso: RangeReplacableCollection.append(string:)
+   public mutating func append(string: String) {
+      content.append(string: string)
+   }
+
+   /// Appends an element to the content.
+   ///
+   /// - Parameter object: The element to append to the content.
+   /// - SeeAlso: RangeReplacableCollection.append(object:)
+   public mutating func append(object: Element) {
+      content.append(object: object)
+   }
+
+   /// Appends the contents of a sequence of elements to the content.
+   ///
+   /// - Parameter objects: The sequence of elements to append to the content.
+   /// - SeeAlso: RangeReplacableCollection.append(contentsOf:)
+   public mutating func append<S: Sequence>(contentsOf objects: S) where S.Element == Element {
+      content.append(contentsOf: objects)
+   }
+
+   /// Appends one or more objects to the content.
+   ///
+   /// - Parameter objects: The objects to append to the content.
+   /// - SeeAlso: RangeReplacableCollection.append(objects:)
+   public mutating func append(objects: Element...) {
+      append(contentsOf: objects)
    }
 }

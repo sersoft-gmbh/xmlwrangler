@@ -3,6 +3,7 @@ import class Foundation.NSObject
 import class Foundation.XMLParser
 import protocol Foundation.XMLParserDelegate
 
+/// Responsible for parsing XMLs.
 public final class Parser: ParserDelegate {
    private let xmlParser: XMLParser
    private let delegate = Delegate()
@@ -10,17 +11,28 @@ public final class Parser: ParserDelegate {
    private var parsedRoot: Element?
    private var elementStack: [Element] = []
 
+   /// Creates a new instance using the given `Data`.
+   ///
+   /// - Parameter data: The XML data to parse.
    public init(data: Data) {
       xmlParser = XMLParser(data: data)
       delegate.delegate = self
       xmlParser.delegate = delegate
    }
 
+   /// Tries to create a new instance using the given string.
+   ///
+   /// - Parameter string: An XML string.
+   /// - Note: This returns `nil` if `string` could not be converted to `Data` using UTF-8 encoding.
    public convenience init?(string: String) {
       guard let data = string.data(using: .utf8) else { return nil }
       self.init(data: data)
    }
 
+   /// Tries to parse the associated XML data. The parsing is only performed once.
+   ///
+   /// - Returns: The parsed element.
+   /// - Throws: Any error reported by `Foundation.XMLParser`.
    public func parse() throws -> Element {
       // We only parse things once...
       if let object = parsedRoot { return object }
@@ -34,14 +46,14 @@ public final class Parser: ParserDelegate {
 
    // MARK: - ParserDelegate
    fileprivate func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String]) {
-      let elem = Element(name: elementName, attributes: attributeDict.asAttributes)
+      let elem = Element(name: .init(rawValue: elementName), attributes: attributeDict.asAttributes)
       elementStack.append(elem)
    }
 
    fileprivate func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
       guard let lastElem = elementStack.popLast() else { return } // This shouldn't happen
       if var parent = elementStack.popLast() {
-         parent.content.append(object: lastElem)
+         parent.append(object: lastElem)
          elementStack.append(parent)
       } else {
          parsedRoot = lastElem
@@ -49,16 +61,19 @@ public final class Parser: ParserDelegate {
    }
 
    fileprivate func parser(_ parser: XMLParser, foundCharacters string: String) {
-      guard !string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+      // We currently ignore whitespace only text. Let's hope we never miss something important this way. :)
+      let strippedString = string.trimmingCharacters(in: .whitespacesAndNewlines)
+      guard !strippedString.isEmpty else { return }
       guard var currentElem = elementStack.popLast() else { return }
-      currentElem.content.append(string: string)
+      currentElem.append(string: strippedString)
       elementStack.append(currentElem)
    }
 
    fileprivate func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
+      // TODO: Do we need to support CDATA seperately?
       guard let string = String(data: CDATABlock, encoding: .utf8) else { return }
       guard var currentElem = elementStack.popLast() else { return }
-      currentElem.content.append(string: string)
+      currentElem.append(string: string)
       elementStack.append(currentElem)
    }
 }

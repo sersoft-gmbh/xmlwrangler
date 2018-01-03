@@ -7,9 +7,9 @@ Easily deal with XMLs in Swift.
 ### Element
 
 Every element in an XML is represented by the `Element` struct. It has three properties, `name` which reflects the element's tag name, `attributes` which contains all attributes of the element as a Dictionary and `content` which describes the content of the element.
-The content is an array of a `Content` enum. The enum has two cases: `.string` and `.objects`. The order in the array is the order in which the content has been found. So if an element first contains some text, then contains some child elements and finally again some text, the `content` array will contain a `.string` whose associated `String` is the first text. Next there would be a `.objects` whose associated `Array<Element>` contains all the objects. Finally, there would be another `.string` with the last text.
+The content is an array of a `Content` enum. The enum has two cases: `.string` and `.object`. The order in the array is the order in which the content has been found. So if an element first contains some text, then contains a child element and finally again some text, the `content` array will contain a `.string` whose associated `String` is the first text. Next there would be a `.object` whose associated `Element` would be the child element. Finally, there would be another `.string` with the last text.
 
-While you can create an `Element` with a content of `[.string("abc"), .string("def"), .objects(["test"]), .objects(["another_test"])]`, and it would also lead to valid XML, it could be cleaned up to `[.string("abcdef"), .objects(["test", "another_test"])]`. To achieve that, it's recommended to use the various `append` funcs when you can't assure that the content is cleaned upon creation. If your element was created with an empty content (`[]`), and you'd append each of the content elements above, the `append` funcs make sure that they append the "def" string to the first "abc" string instead of adding another `.string` to the content array.
+While you can create an `Element` with a content of `[.string("abc"), .string("def"), .object("test")]`, and it would also lead to valid XML, it could be cleaned up to `[.string("abcdef"), .object("test")]`. To achieve that, it's recommended to use the various `append` funcs on `Element.content` or even `Element` directly when you can't assure that the content is cleaned upon creation. If your element was created with an empty content (`[]`), and you append each of the content elements above, the `append` funcs make sure that they append the "def" string to the first "abc" string instead of adding another `.string` to the content array. If for some reason you still end up with a situation where your content has consecutive `.string` elements, there's a convenience function `compress()` (or it's non-mutating sibling `compressed()`), which merges these `.string` elements into one.
 
 An `Element` can be compared to another element and is considered equal if all three properties (`name`, `attributes` and `content`) are equal. This means that for a big tree, all children of the root element will be compared. So be careful when comparing big trees and fall back to manually comparing `name` and/or `attributes` if necessary.
 
@@ -38,13 +38,13 @@ do {
 }
 ```
 
-In this example, `root.name` would of course be `"root"`. `rootElement.content` would be an array containing one `.objects` and have two objects in its associated array. The first would have a `name` of `"child1"` and a `content` which is an empty array. The `name` of second one would be `"child2"` and its content would contain one `.string` with `"some text"` as associated String. `root.attributes` would contain the value `"myvalue"` for the key `"myattr"`.
+In this example, `root.name.rawValue` would of course be `"root"`. `rootElement.content` would be an array containing two `.object`. The first would have a associated `Element` with a `name` of `"child1"` and a `content` which is an empty array. The `name` of `Element` of the second `.object` would be `"child2"` and its content would contain one `.string` with `"some text"` as associated String. `root.attributes` would contain the value `"myvalue"` for the key `"myattr"`.
 
 
 ### Serializing Elements
 
 Since you can parse XMLs, you can also convert an `Element` to a String. For this, there are two initializers on `String` added in XMLWrangler.
-The first one just converts an `Element` into a `String`. This happens by creating an opening and ending tag (where the beginning tag contains the `attributes` if availble) and putting the `content` of the element in between. If `content` is empty, then no ending tag is created and the opening tag is directly closed with `/>`.
+The first one just converts an `Element` into a `String`. This happens by creating an opening and ending tag (where the beginning tag contains the `attributes` if available) and putting the `content` of the element in between. If `content` is empty, then no ending tag is created and the opening tag is directly closed with `/>`. Also, `content` is compressed (using the aforementioned `compress` function) before being serialized.
 
 ```swift
 var root = Element(name: "root", attributes: ["myattr": "myvalue"])
@@ -80,22 +80,26 @@ Both initializers can take an additional parameter `options` which contains a se
 
 ### Type safety
 
-XMLWrangler will always extract all content and attributes as `String`. This is because XML itself does not differentiate between types like e.g. JSON does. There is an extension on `Element.Content` defining a `converted()` func, though, which should cover the most basic types. The easiest way to convert the content to your type is to make your type conform to `LosslessStringConvertible`.
-However, you can always add an extension to `Element.Content` to make extracting other types easier:
+XMLWrangler will always extract all content and attributes as `String`. This is because XML itself does not differentiate between types like e.g. JSON does.
+However, there are many helper functions to safely look up and convert content and attributes of an `Element`:
 
-```swift
-extension Element.Content {
-    func convertedToMyType() -> MyType? {
-        guard case .string(let str) = self else { return nil }
-        return MyType(str) // Create `MyType` from `str`.
-    }
-}
-```
+- First, there are helpers to extract all child elements with a given name: `Element.elements(named:)`
+- Next, there are helpers to extract an element at a given path: `Element.element(at:)`
+- Another helper allows to extract attributes of an element: `Element.attribute(for:)`.
+- It is then also possible to convert those attributes (for some types like e.g. `RawRepresentable` you don't need to pass a `converter`): `Element.convertedAttribute(for:converter:)`
+- Last but not least you can extract the string content of an Element: `Element.stringContent()`
+- And of course as you can with attributes, you can also convert string content: `Element.convertedStringContent(converter:)`
+
+There are also mixtures of all of these, so that you can e.g. extract and convert an attribute of a child element at a given path: `Element.convertedAttribute(for:ofElementAt:converter:)`
+
+All these methods throw an error (`LookupError`) when something went wrong instead of returning optionals. If you prefern an optional, you can always use `try?`.
+For more information also check the header docs which describe these methods a little closer.
 
 ## Possible Features
 
 While not yet integrated, the following features might provide added value and could make it into XMLWrangler in the future:
 
+- Indention support for serializing and parsing.
 - Extracting "KeyPaths": It could be useful to directly extract a path. It would not be necessary to extract every single element then.
 
 ## Contributing

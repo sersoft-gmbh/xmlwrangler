@@ -4,7 +4,7 @@ import XCTest
 final class ElementTests: XCTestCase {
    func testExpressibleByStringLiteral() {
       let element: Element = "test"
-      XCTAssertEqual(element.name, "test")
+      XCTAssertEqual(element.name, .init(rawValue: "test"))
    }
 
    func testEqualityCheck() {
@@ -19,34 +19,55 @@ final class ElementTests: XCTestCase {
       XCTAssertNotEqual(elem1, elem3)
       XCTAssertNotEqual(elem4, elem5)
    }
-   
-   func testConvertingAttributes() {
-      let attrs: Element.Attributes = [
-         "key1": "str",
-         "key2": "10",
-         "key3": "12.5"
-      ]
-      let element = Element(name: "test", attributes: attrs)
+
+   func testAppendingString() {
+      var element = Element(name: "test")
+      var element2 = Element(name: "test2", content: "hello")
+
+      element.append(string: "_this")
+      element2.append(string: " world")
+
+      XCTAssertEqual(element.content, [.string("_this")])
+      XCTAssertEqual(element2.content, [.string("hello world")])
+   }
+
+   func testAppendingObject() {
+      var element = Element(name: "test")
+      let child = Element(name: "_this")
+
+      element.append(object: child)
+
+      XCTAssertEqual(element.content, [.object(child)])
+   }
+
+   func testAppendingContentOfSequence() {
+      var element = Element(name: "test")
+      let child1 = Element(name: "_this1")
+      let child2 = Element(name: "_this2")
+      let child3 = Element(name: "_this3")
+
+      element.append(contentsOf: [child1, child2, child3])
+
+      XCTAssertEqual(element.content, [.object(child1), .object(child2), .object(child3)])
+   }
+
+   func testAppendingObjects() {
+      var element = Element(name: "test")
+      let child1 = Element(name: "_this1")
+      let child2 = Element(name: "_this2")
+      let child3 = Element(name: "_this3")
       
-      let extracted1: String? = element.convertedAttribute(for: "key1")
-      let extracted2: Int? = element.convertedAttribute(for: "key2")
-      let extracted3: Double? = element.convertedAttribute(for: "key3")
-      let extracted4: Int? = element.convertedAttribute(for: "key1")
-      let extracted5: Int? = element.convertedAttribute(for: "wrong_key")
+      element.append(objects: child1, child2, child3)
       
-      XCTAssertNotNil(extracted1)
-      XCTAssertNotNil(extracted2)
-      XCTAssertNotNil(extracted3)
-      XCTAssertNil(extracted4)
-      XCTAssertNil(extracted5)
-      XCTAssertEqual(extracted1, "str")
-      XCTAssertEqual(extracted2, 10)
-      XCTAssertEqual(extracted3, 12.5)
+      XCTAssertEqual(element.content, [.object(child1), .object(child2), .object(child3)])
    }
 
    static var allTests = [
       ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
       ("testEqualityCheck", testEqualityCheck),
-      ("testConvertingAttributes", testConvertingAttributes),
+      ("testAppendingString", testAppendingString),
+      ("testAppendingObject", testAppendingObject),
+      ("testAppendingContentOfSequence", testAppendingContentOfSequence),
+      ("testAppendingObjects", testAppendingObjects),
    ]
 }

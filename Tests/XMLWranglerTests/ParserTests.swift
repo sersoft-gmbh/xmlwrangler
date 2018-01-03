@@ -5,9 +5,9 @@ final class ParserTests: XCTestCase {
 
    private let testRoot: Element = {
       var root = Element(name: "root", attributes: ["some": "key"])
-      root.content.append(object: "first")
-      root.content.append(object: Element(name: "second", content: "something"))
-      root.content.append(object: Element(name: "third", content: [
+      root.append(object: "first")
+      root.append(object: Element(name: "second", content: "something"))
+      root.append(object: Element(name: "third", objects: [
          "third_one",
          Element(name: "third_two", attributes: ["third_some": "value"]),
          Element(name: "third_three", attributes: ["third_some": "value"], content: "test this right")
@@ -40,8 +40,33 @@ final class ParserTests: XCTestCase {
       XCTAssertEqual(try parser4.parse(), testRoot)
    }
 
+   func testMixedContentParsing() {
+      let mixedContentXML = """
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <root>
+                            Some text is here to check.
+                            Which even contains newlines.
+                            <child>I'm not of much relevance</child>
+                            <child/>
+                            Again we have some more text here.
+                            Let's see how this will end.
+                            <other/>
+                            </root>
+                            """
+      let expectedElement = Element(name: "root", content: [
+         .string("Some text is here to check.\nWhich even contains newlines."),
+         .object(Element(name: "child", content: "I'm not of much relevance")),
+         .object(Element(name: "child")),
+         .string("Again we have some more text here.\nLet's see how this will end."),
+         .object(Element(name: "other"))
+         ])
+      guard let parser = Parser(string: mixedContentXML) else { XCTFail("Parser is nil!"); return }
+      XCTAssertEqual(try parser.parse(), expectedElement)
+   }
+
    static var allTests = [
       ("testParserCreationFromString", testParserCreationFromString),
       ("testSuccessfulParsing", testSuccessfulParsing),
-      ]
+      ("testMixedContentParsing", testMixedContentParsing),
+   ]
 }
