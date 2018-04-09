@@ -1,12 +1,12 @@
 public extension Sequence where Element == XMLWrangler.Element.Content {
    /// Returns the elements of all `.object(_)`s in the sequence.
    public var allObjects: [XMLWrangler.Element] {
-      return flatMap { $0.object }
+      return compactMap { $0.object }
    }
 
    /// Returns the strings of all `.string(_)`s in the sequence.
    public var allStrings: [String] {
-      return flatMap { $0.string }
+      return compactMap { $0.string }
    }
 }
 
