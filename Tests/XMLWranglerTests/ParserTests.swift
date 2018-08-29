@@ -29,10 +29,10 @@ final class ParserTests: XCTestCase {
    }
 
    func testSuccessfulParsing() {
-      guard let parser1 = Parser(string: xml1) else { XCTFail("Parser is nil!"); return }
-      guard let parser2 = Parser(string: xml2) else { XCTFail("Parser is nil!"); return }
-      guard let parser3 = Parser(string: xml3) else { XCTFail("Parser is nil!"); return }
-      guard let parser4 = Parser(string: xml4) else { XCTFail("Parser is nil!"); return }
+      let parser1 = Parser(string: xml1)
+      let parser2 = Parser(string: xml2)
+      let parser3 = Parser(string: xml3)
+      let parser4 = Parser(string: xml4)
 
       XCTAssertEqual(try parser1.parse(), testRoot)
       XCTAssertEqual(try parser2.parse(), testRoot)
@@ -60,7 +60,7 @@ final class ParserTests: XCTestCase {
          .string("Again we have some more text here.\nLet's see how this will end."),
          .object(Element(name: "other"))
          ])
-      guard let parser = Parser(string: mixedContentXML) else { XCTFail("Parser is nil!"); return }
+      let parser = Parser(string: mixedContentXML)
       XCTAssertEqual(try parser.parse(), expectedElement)
    }
 
