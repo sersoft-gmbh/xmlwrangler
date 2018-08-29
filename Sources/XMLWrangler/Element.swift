@@ -29,10 +29,6 @@ public struct Element: Equatable, ExpressibleByStringLiteral {
    public init(stringLiteral value: Name.StringLiteralType) {
       self.init(name: .init(stringLiteral: value))
    }
-   
-   public static func ==(lhs: Element, rhs: Element) -> Bool {
-      return lhs.name == rhs.name && lhs.attributes == rhs.attributes && lhs.content == rhs.content
-   }
 }
 
 public extension Element {
@@ -41,7 +37,6 @@ public extension Element {
       public typealias StringLiteralType = RawValue
 
       public let rawValue: RawValue
-      public var hashValue: Int { return rawValue.hashValue }
 
       public init(rawValue: RawValue) { self.rawValue = rawValue }
       public init(stringLiteral value: StringLiteralType) { self.init(rawValue: value) }
@@ -52,7 +47,6 @@ public extension Element {
       public typealias StringLiteralType = RawValue
 
       public let rawValue: RawValue
-      public var hashValue: Int { return rawValue.hashValue }
 
       public init(rawValue: RawValue) { self.rawValue = rawValue }
       public init(stringLiteral value: StringLiteralType) { self.init(rawValue: value) }
@@ -65,14 +59,6 @@ public extension Element {
 
       public init(stringLiteral value: String) {
          self = .string(value)
-      }
-      
-      public static func ==(lhs: Content, rhs: Content) -> Bool {
-         switch (lhs, rhs) {
-         case (.string(let lhsStr), .string(let rhsStr)): return lhsStr == rhsStr
-         case (.object(let lhsObj), .object(let rhsObj)): return lhsObj == rhsObj
-         default: return false
-         }
       }
    }
 }
