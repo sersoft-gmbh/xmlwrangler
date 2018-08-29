@@ -20,13 +20,12 @@ public final class Parser: ParserDelegate {
       xmlParser.delegate = delegate
    }
 
-   /// Tries to create a new instance using the given string.
+   /// Creates a new instance using the given string.
    ///
    /// - Parameter string: An XML string.
-   /// - Note: This returns `nil` if `string` could not be converted to `Data` using UTF-8 encoding.
-   public convenience init?(string: String) {
-      guard let data = string.data(using: .utf8) else { return nil }
-      self.init(data: data)
+   @inlinable
+   public convenience init(string: String) {
+      self.init(data: Data(string.utf8))
    }
 
    /// Tries to parse the associated XML data. The parsing is only performed once.
@@ -70,10 +69,9 @@ public final class Parser: ParserDelegate {
    }
 
    fileprivate func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
-      // TODO: Do we need to support CDATA seperately?
-      guard let string = String(data: CDATABlock, encoding: .utf8) else { return }
       guard var currentElem = elementStack.popLast() else { return }
-      currentElem.append(string: string)
+      // TODO: Do we need to support CDATA seperately?
+      currentElem.append(string: String(decoding: CDATABlock, as: UTF8.self))
       elementStack.append(currentElem)
    }
 }
