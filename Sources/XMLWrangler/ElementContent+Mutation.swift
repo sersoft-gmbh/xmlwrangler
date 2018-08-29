@@ -4,14 +4,17 @@ public extension RangeReplaceableCollection where Self: MutableCollection, Eleme
    /// - Parameter string: The string to append.
    public mutating func append(string: String) {
       let lastIndex = index(endIndex, offsetBy: -1)
-      guard !isEmpty, case .string(let str) = self[lastIndex]
-         else { return append(.string(string)) }
-      self[lastIndex] = .string(str + string)
+      if !isEmpty, case .string(let str) = self[lastIndex] {
+         self[lastIndex] = .string(str + string)
+      } else {
+         append(.string(string))
+      }
    }
 
    /// Appends an element wrapped as `.object`.
    ///
    /// - Parameter object: The element to append wrapped in `.object`.
+   @inlinable
    public mutating func append(object: XMLWrangler.Element) {
       append(.object(object))
    }
@@ -19,6 +22,7 @@ public extension RangeReplaceableCollection where Self: MutableCollection, Eleme
    /// Appends the contents of a sequcence of elements wrapped as `.object`.
    ///
    /// - Parameter objects: The sequence of elements to append wrapped in `.object`.
+   @inlinable
    public mutating func append<S: Sequence>(contentsOf objects: S) where S.Element == XMLWrangler.Element {
       append(contentsOf: objects.map { .object($0) })
    }
@@ -26,6 +30,7 @@ public extension RangeReplaceableCollection where Self: MutableCollection, Eleme
    /// Appends the one or more elements wrapped as `.object`.
    ///
    /// - Parameter objects: The elements to append wrapped in `.object`.
+   @inlinable
    public mutating func append(objects: XMLWrangler.Element...) {
       append(contentsOf: objects)
    }
@@ -39,7 +44,7 @@ public extension RangeReplaceableCollection where Self: MutableCollection, Eleme
          var newStr = currentStr
          while nextIndex < endIndex, case .string(let nextStr) = self[nextIndex] {
             newStr += nextStr
-            remove(at: nextIndex)
+            remove(at: nextIndex) // TODO: this might be a performance problem
          }
          self[currentIndex] = .string(newStr)
       }
@@ -62,6 +67,7 @@ public extension Element {
    ///
    /// - Parameter string: The string to append to the content.
    /// - SeeAlso: RangeReplacableCollection.append(string:)
+   @inlinable
    public mutating func append(string: String) {
       content.append(string: string)
    }
@@ -70,6 +76,7 @@ public extension Element {
    ///
    /// - Parameter object: The element to append to the content.
    /// - SeeAlso: RangeReplacableCollection.append(object:)
+   @inlinable
    public mutating func append(object: Element) {
       content.append(object: object)
    }
@@ -78,6 +85,7 @@ public extension Element {
    ///
    /// - Parameter objects: The sequence of elements to append to the content.
    /// - SeeAlso: RangeReplacableCollection.append(contentsOf:)
+   @inlinable
    public mutating func append<S: Sequence>(contentsOf objects: S) where S.Element == Element {
       content.append(contentsOf: objects)
    }
@@ -86,6 +94,7 @@ public extension Element {
    ///
    /// - Parameter objects: The objects to append to the content.
    /// - SeeAlso: RangeReplacableCollection.append(objects:)
+   @inlinable
    public mutating func append(objects: Element...) {
       append(contentsOf: objects)
    }

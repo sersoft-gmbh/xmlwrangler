@@ -31,9 +31,7 @@ fileprivate extension SerializationOptions {
 
 /// The encoding of an XML document.
 public enum DocumentEncoding: Hashable, CustomStringConvertible {
-   case utf8
-   case utf16
-   case ascii
+   case utf8, utf16, ascii
 
    public var description: String {
       switch self {
@@ -57,8 +55,7 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
    fileprivate typealias Replacement = (unescaped: String, escaped: String)
 
    public enum Quotes: Equatable, CustomStringConvertible {
-      case single
-      case double
+      case single, double
 
       public var description: String {
          switch self {
@@ -126,19 +123,6 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
          return []
       case .processingInstruction:
          return []
-      }
-   }
-
-   public static func ==(lhs: EscapableContent, rhs: EscapableContent) -> Bool {
-      switch (lhs, rhs) {
-      case (.attribute(let lhsQuotes), .attribute(let rhsQuotes)):
-         return lhsQuotes == rhsQuotes
-      case (.text, .text),
-           (.cdata, .cdata),
-           (.comment, .comment):
-         return true
-      default:
-         return false
       }
    }
 }

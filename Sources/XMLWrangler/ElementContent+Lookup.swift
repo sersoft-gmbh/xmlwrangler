@@ -1,10 +1,12 @@
 public extension Sequence where Element == XMLWrangler.Element.Content {
    /// Returns the elements of all `.object(_)`s in the sequence.
+   @inlinable
    public var allObjects: [XMLWrangler.Element] {
       return compactMap { $0.object }
    }
 
    /// Returns the strings of all `.string(_)`s in the sequence.
+   @inlinable
    public var allStrings: [String] {
       return compactMap { $0.string }
    }
@@ -19,6 +21,7 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    /// - Returns: The elements for which the `predicate` returned `true`. May be empty if the `predicate` never returned `true`.
    /// - Throws: Any error that is thrown by the `predicate`.
    /// - Note: `.string(_)` content elements are skipped.
+   @usableFromInline
    internal func find(recursive: Bool = false, elementsMatching predicate: (XMLWrangler.Element) throws -> Bool) rethrows -> [XMLWrangler.Element] {
       let objects = allObjects
       let matches = try objects.filter(predicate)
@@ -39,6 +42,7 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    /// - Note: If `recursive` is `true`, recursion nevertheless happens lazily.
    ///         This means that one level is searched completely before recursing down into the next deeper level.
    /// - Note: `.string(_)` content elements are skipped.
+   @usableFromInline
    internal func findFirst(recursive: Bool = false, elementMatching predicate: (XMLWrangler.Element) throws -> Bool) rethrows -> XMLWrangler.Element? {
       let objects = allObjects
       let match = try objects.first(where: predicate)
@@ -59,6 +63,7 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    /// - Note: If `recursive` is `true`, recursion nevertheless happens lazily.
    ///         This means that one level is searched completely before recursing down into the next deeper level.
    /// - Note: `.string(_)` content elements are skipped.
+   @usableFromInline
    internal func findLast(recursive: Bool = false, elementMatching predicate: (XMLWrangler.Element) throws -> Bool) rethrows -> XMLWrangler.Element? {
       let objects = allObjects.reversed()
       let match = try objects.first(where: predicate)
@@ -76,6 +81,7 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
    /// - Returns: The found elements in the order they were found in the tree. May be empty if nothing was found.
    /// - Note: `.string(_)` content elements are skipped.
+   @inlinable
    public func find(elementsNamed name: XMLWrangler.Element.Name, recursive: Bool = false) -> [XMLWrangler.Element] {
       return find(recursive: recursive) { $0.name == name }
    }
@@ -89,6 +95,7 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    /// - Note: If `recursive` is `true`, recursion nevertheless happens lazily.
    ///         This means that one level is searched completely before recursing down into the next deeper level.
    /// - Note: `.string(_)` content elements are skipped.
+   @inlinable
    public func findFirst(elementNamed name: XMLWrangler.Element.Name, recursive: Bool = false) -> XMLWrangler.Element? {
       return findFirst(recursive: recursive) { $0.name == name }
    }
@@ -102,6 +109,7 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    /// - Note: If `recursive` is `true`, recursion nevertheless happens lazily.
    ///         This means that one level is searched completely before recursing down into the next deeper level.
    /// - Note: `.string(_)` content elements are skipped.
+   @inlinable
    public func findLast(elementNamed name: XMLWrangler.Element.Name, recursive: Bool = false) -> XMLWrangler.Element? {
       return findLast(recursive: recursive) { $0.name == name }
    }

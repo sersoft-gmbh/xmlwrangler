@@ -48,7 +48,7 @@ final class ElementContent_LookupTests: XCTestCase {
       XCTAssertNil(cannotFind)
       XCTAssertNotNil(testResult)
       XCTAssertNotNil(whateverResult)
-      XCTAssertEqual(testResult?.content ?? [], ["value"])
+      XCTAssertEqual(testResult?.content, ["value"])
       XCTAssertTrue(whateverResult?.content.isEmpty ?? false)
    }
 
@@ -73,7 +73,7 @@ final class ElementContent_LookupTests: XCTestCase {
       XCTAssertNil(cannotFind)
       XCTAssertNotNil(testResult)
       XCTAssertNotNil(whateverResult)
-      XCTAssertEqual(testResult?.content ?? [], ["value"])
+      XCTAssertEqual(testResult?.content, ["value"])
       XCTAssertTrue(whateverResult?.content.isEmpty ?? false)
    }
 
@@ -148,9 +148,9 @@ final class ElementContent_LookupTests: XCTestCase {
       XCTAssertNil(cannotFind)
       XCTAssertNotNil(testResult)
       XCTAssertNotNil(whateverResult)
-      XCTAssertEqual(testResult?.content ?? [], ["value"])
+      XCTAssertEqual(testResult?.content, ["value"])
       // Make sure we only recurse lazily. We don't want to go into the deepest abyss if we can stay in shallower waters.
-      XCTAssertEqual(whateverResult?.content ?? [], ["not so deep"])
+      XCTAssertEqual(whateverResult?.content, ["not so deep"])
    }
 
    func testFindingLastObjectRecursive() {
@@ -188,7 +188,7 @@ final class ElementContent_LookupTests: XCTestCase {
       XCTAssertNotNil(whateverResult)
       XCTAssertTrue(testResult?.content.isEmpty ?? false)
       // Make sure we only recurse lazily. We don't want to go into the deepest abyss if we can stay in shallower waters.
-      XCTAssertEqual(whateverResult?.content ?? [], ["not so deep"])
+      XCTAssertEqual(whateverResult?.content, ["not so deep"])
    }
 
    static var allTests = [
@@ -198,6 +198,5 @@ final class ElementContent_LookupTests: XCTestCase {
       ("testFindingObjectsRecursive", testFindingObjectsRecursive),
       ("testFindingFirstObjectRecursive", testFindingFirstObjectRecursive),
       ("testFindingLastObjectRecursive", testFindingLastObjectRecursive),
-      ]
+   ]
 }
-
