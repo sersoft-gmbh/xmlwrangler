@@ -8,7 +8,7 @@ Easily deal with XMLs in Swift.
 
 Add the following dependency to your `Package.swift`:
 ```swift
-.package(url: "https://github.com/sersoft-gmbh/xmlwrangler.git", from: "2.0.0"),
+.package(url: "https://github.com/sersoft-gmbh/xmlwrangler.git", from: "3.0.0"),
 ```
 
 ## Usage
