@@ -90,6 +90,7 @@ fileprivate extension Parser {
    fileprivate final class Delegate: NSObject, XMLParserDelegate {
       weak var delegate: ParserDelegate?
 
+      #if !os(Linux)
       @objc dynamic func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
          delegate?.parser(parser, didStartElement: elementName, namespaceURI: namespaceURI, qualifiedName: qName, attributes: attributeDict)
       }
@@ -105,6 +106,23 @@ fileprivate extension Parser {
       @objc dynamic func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
          delegate?.parser(parser, foundCDATA: CDATABlock)
       }
+      #else
+      func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
+         delegate?.parser(parser, didStartElement: elementName, namespaceURI: namespaceURI, qualifiedName: qName, attributes: attributeDict)
+      }
+
+      func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+         delegate?.parser(parser, didEndElement: elementName, namespaceURI: namespaceURI, qualifiedName: qName)
+      }
+
+      func parser(_ parser: XMLParser, foundCharacters string: String) {
+         delegate?.parser(parser, foundCharacters: string)
+      }
+
+      func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
+         delegate?.parser(parser, foundCDATA: CDATABlock)
+      }
+      #endif
    }
 }
 
