@@ -91,7 +91,7 @@ XMLWrangler will always extract all content and attributes as `String`. This is 
 However, there are many helper functions to safely look up and convert content and attributes of an `Element`:
 
 -   First, there are helpers to extract all child elements with a given name: `Element.elements(named:)`
--  Next, there are helpers to extract an element at a given path: `Element.element(at:)`
+-   Next, there are helpers to extract an element at a given path: `Element.element(at:)`
 -   Another helper allows to extract attributes of an element: `Element.attribute(for:)`.
 -   It is then also possible to convert those attributes (for some types like e.g. `RawRepresentable` you don't need to pass a `converter`): `Element.convertedAttribute(for:converter:)`
 -   Last but not least you can extract the string content of an Element: `Element.stringContent()`
