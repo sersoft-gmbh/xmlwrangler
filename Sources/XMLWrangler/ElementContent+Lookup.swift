@@ -126,4 +126,3 @@ fileprivate extension Sequence {
       return nil
    }
 }
-
