@@ -1,6 +1,6 @@
 # XMLWrangler
 ![GitHub release](https://img.shields.io/github/release/sersoft-gmbh/XMLWrangler.svg?style=flat)
-![CI Status](https://travis-ci.com/sersoft-gmbh/XMLWrangler.svg?branch=master)
+![CI Status](https://travis-ci.com/sersoft-gmbh/XMLWrangler.svg?branch=master)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c997088f35484726bb1bc6167f074cc4)](https://www.codacy.com/app/ffried/XMLWrangler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/XMLWrangler&amp;utm_campaign=Badge_Grade)
 
 Easily deal with XMLs in Swift.
 
@@ -48,7 +48,6 @@ do {
 
 In this example, `root.name.rawValue` would of course be `"root"`. `rootElement.content` would be an array containing two `.object`. The first would have a associated `Element` with a `name` of `"child1"` and a `content` which is an empty array. The `name` of `Element` of the second `.object` would be `"child2"` and its content would contain one `.string` with `"some text"` as associated String. `root.attributes` would contain the value `"myvalue"` for the key `"myattr"`.
 
-
 ### Serializing Elements
 
 Since you can parse XMLs, you can also convert an `Element` to a String. For this, there are two initializers on `String` added in XMLWrangler.
@@ -76,27 +75,26 @@ let xml = String(xmlDocumentRoot: root, version: Version(major: 1), encoding: .u
 For more information on `Version` see [SemVer](https://github.com/sersoft-gmbh/semver) but note that only `major` and `minor` are used for XMLs.
 Please note that currently XMLWrangler only supports serializing documents for the following encodings:
 
-- UTF-8
-- UTF-16
-- ASCII
+-   UTF-8
+-   UTF-16
+-   ASCII
 
 Both initializers can take an additional parameter `options` which contains a set of options to control the serialization behaviour. Currently the following options are possible:
 
-- `.pretty`: Use pretty formatting. This adds newlines around the tags to make the resulting XML more readable. This is usually not needed for processing XML.
-- `.singleQuoteAttributes`: When this option is present, then attributes of elements will be enclosed in single quotes (') instead of double quotes (").
-
+-   `.pretty`: Use pretty formatting. This adds newlines around the tags to make the resulting XML more readable. This is usually not needed for processing XML.
+-   `.singleQuoteAttributes`: When this option is present, then attributes of elements will be enclosed in single quotes (') instead of double quotes (").
 
 ### Type safety
 
 XMLWrangler will always extract all content and attributes as `String`. This is because XML itself does not differentiate between types like e.g. JSON does.
 However, there are many helper functions to safely look up and convert content and attributes of an `Element`:
 
-- First, there are helpers to extract all child elements with a given name: `Element.elements(named:)`
-- Next, there are helpers to extract an element at a given path: `Element.element(at:)`
-- Another helper allows to extract attributes of an element: `Element.attribute(for:)`.
-- It is then also possible to convert those attributes (for some types like e.g. `RawRepresentable` you don't need to pass a `converter`): `Element.convertedAttribute(for:converter:)`
-- Last but not least you can extract the string content of an Element: `Element.stringContent()`
-- And of course as you can with attributes, you can also convert string content: `Element.convertedStringContent(converter:)`
+-   First, there are helpers to extract all child elements with a given name: `Element.elements(named:)`
+-  Next, there are helpers to extract an element at a given path: `Element.element(at:)`
+-   Another helper allows to extract attributes of an element: `Element.attribute(for:)`.
+-   It is then also possible to convert those attributes (for some types like e.g. `RawRepresentable` you don't need to pass a `converter`): `Element.convertedAttribute(for:converter:)`
+-   Last but not least you can extract the string content of an Element: `Element.stringContent()`
+-   And of course as you can with attributes, you can also convert string content: `Element.convertedStringContent(converter:)`
 
 There are also mixtures of all of these, so that you can e.g. extract and convert an attribute of a child element at a given path: `Element.convertedAttribute(for:ofElementAt:converter:)`
 
@@ -107,17 +105,16 @@ For more information also check the header docs which describe these methods a l
 
 While not yet integrated, the following features might provide added value and could make it into XMLWrangler in the future:
 
-- Indention support for serializing and parsing.
-- Extracting "KeyPaths": It could be useful to directly extract a path. It would not be necessary to extract every single element then.
+-   Indention support for serializing and parsing.
+-   Extracting "KeyPaths": It could be useful to directly extract a path. It would not be necessary to extract every single element then.
 
 ## Contributing
 
 If you find a bug / like to see a new feature in XMLWrangler there are a few ways of helping out:
 
-- If you can fix the bug / implement the feature yourself please do and open a PR.
-- If you know how to code (which you probably do), please add a (failing) test and open a PR. We'll try to get your test green ASAP.
-- If you can't do neither, then open an issue. While this might be the easiest way, it will likely take the longest for the bug to be fixed / feature to be implemented.
-
+-   If you can fix the bug / implement the feature yourself please do and open a PR.
+-   If you know how to code (which you probably do), please add a (failing) test and open a PR. We'll try to get your test green ASAP.
+-   If you can't do neither, then open an issue. While this might be the easiest way, it will likely take the longest for the bug to be fixed / feature to be implemented.
 
 ## License
 
