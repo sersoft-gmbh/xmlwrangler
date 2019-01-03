@@ -27,8 +27,12 @@ final class ParserTests: XCTestCase {
       let parser = Parser(string: invalidXML)
 
       XCTAssertThrowsError(try parser.parse()) {
-         let nsError = $0 as NSError
-         XCTAssertEqual(nsError.domain, XMLParser.errorDomain)
+         switch $0 {
+         case is Parser.UnknownError:
+            XCTAssertTrue($0 is Parser.UnknownError)
+         case let nsError as NSError:
+            XCTAssertEqual(nsError.domain, XMLParser.errorDomain)
+         }
       }
    }
 

@@ -36,8 +36,8 @@ public final class Parser: ParserDelegate {
       // We only parse things once...
       if let object = parsedRoot { return object }
 
-      if !xmlParser.parse(), let error = xmlParser.parserError {
-         throw error
+      if !xmlParser.parse() {
+         throw xmlParser.parserError ?? UnknownError()
       }
       guard let obj = parsedRoot else { fatalError("Wow, we parsed successfully, but have no object?!") }
       return obj
@@ -73,6 +73,15 @@ public final class Parser: ParserDelegate {
       // TODO: Do we need to support CDATA seperately?
       currentElem.append(string: String(decoding: CDATABlock, as: UTF8.self))
       elementStack.append(currentElem)
+   }
+}
+
+// MARK: - Unknown Parsing Error
+public extension Parser {
+   /// Describes an unknown error.
+   /// Used if parsing fails, but the XMLParser of Foundation does not report an error.
+   public struct UnknownError: Error, CustomStringConvertible {
+      public var description: String { return "An unknown parsing error occurred!" }
    }
 }
 
