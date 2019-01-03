@@ -23,13 +23,15 @@ final class ParserTests: XCTestCase {
 
 
    func testParsingError() {
-      let invalidXML = "Totally not XML"
+      let invalidXML = "<>Totally not valid XML<!>"
       let parser = Parser(string: invalidXML)
 
       XCTAssertThrowsError(try parser.parse()) {
          switch $0 {
          case is Parser.UnknownError:
             XCTAssertTrue($0 is Parser.UnknownError)
+         case is Parser.MissingObjectError:
+            XCTAssertTrue($0 is Parser.MissingObjectError)
          case let nsError as NSError:
             XCTAssertEqual(nsError.domain, XMLParser.errorDomain)
          }

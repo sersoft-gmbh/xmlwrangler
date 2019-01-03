@@ -6,7 +6,7 @@ import protocol Foundation.XMLParserDelegate
 /// Responsible for parsing XMLs.
 public final class Parser: ParserDelegate {
    private let xmlParser: XMLParser
-   private let delegate = Delegate()
+   private lazy var delegate = Delegate(delegate: self)
 
    private var parsedRoot: Element?
    private var elementStack: [Element] = []
@@ -16,7 +16,6 @@ public final class Parser: ParserDelegate {
    /// - Parameter data: The XML data to parse.
    public init(data: Data) {
       xmlParser = XMLParser(data: data)
-      delegate.delegate = self
       xmlParser.delegate = delegate
    }
 
@@ -36,10 +35,12 @@ public final class Parser: ParserDelegate {
       // We only parse things once...
       if let object = parsedRoot { return object }
 
-      if !xmlParser.parse() {
+      guard xmlParser.parse() else {
          throw xmlParser.parserError ?? UnknownError()
       }
-      guard let obj = parsedRoot else { fatalError("Wow, we parsed successfully, but have no object?!") }
+      guard let obj = parsedRoot else {
+         throw MissingObjectError()
+      }
       return obj
    }
 
@@ -83,6 +84,12 @@ public extension Parser {
    public struct UnknownError: Error, CustomStringConvertible {
       public var description: String { return "An unknown parsing error occurred!" }
    }
+
+   /// Describes a failure that caused no object to be parsed.
+   /// Used if parsing succeeds, but no object was parsed.
+   public struct MissingObjectError: Error, CustomStringConvertible {
+      public var description: String { return "Parsing did not yield an object! Please check that the XML is valid!" }
+   }
 }
 
 // MARK: - Delegate forwarding
@@ -98,6 +105,10 @@ fileprivate protocol ParserDelegate: class {
 fileprivate extension Parser {
    fileprivate final class Delegate: NSObject, XMLParserDelegate {
       weak var delegate: ParserDelegate?
+
+      init(delegate: ParserDelegate? = nil) {
+         self.delegate = delegate
+      }
 
       #if !os(Linux)
       @objc dynamic func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
