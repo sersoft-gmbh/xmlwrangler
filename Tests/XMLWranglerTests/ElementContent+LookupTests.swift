@@ -190,13 +190,4 @@ final class ElementContent_LookupTests: XCTestCase {
       // Make sure we only recurse lazily. We don't want to go into the deepest abyss if we can stay in shallower waters.
       XCTAssertEqual(whateverResult?.content, ["not so deep"])
    }
-
-   static var allTests = [
-      ("testFindingObjectsShallow", testFindingObjectsShallow),
-      ("testFindingFirstObjectShallow", testFindingFirstObjectShallow),
-      ("testFindingLastObjectShallow", testFindingLastObjectShallow),
-      ("testFindingObjectsRecursive", testFindingObjectsRecursive),
-      ("testFindingFirstObjectRecursive", testFindingFirstObjectRecursive),
-      ("testFindingLastObjectRecursive", testFindingLastObjectRecursive),
-   ]
 }

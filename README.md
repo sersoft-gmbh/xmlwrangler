@@ -115,7 +115,7 @@ If you find a bug / like to see a new feature in XMLWrangler there are a few way
 
 -   If you can fix the bug / implement the feature yourself please do and open a PR.
 -   If you know how to code (which you probably do), please add a (failing) test and open a PR. We'll try to get your test green ASAP.
--   If you can't do neither, then open an issue. While this might be the easiest way, it will likely take the longest for the bug to be fixed / feature to be implemented.
+-   If you can do neither, then open an issue. While this might be the easiest way, it will likely take the longest for the bug to be fixed / feature to be implemented.
 
 ## License
 

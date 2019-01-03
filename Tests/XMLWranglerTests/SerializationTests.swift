@@ -142,12 +142,4 @@ final class SerializationTests: XCTestCase {
       XCTAssertEqual(str3, expected3)
       XCTAssertEqual(str4, expected4)
    }
-
-   static var allTests = [
-      ("testEscapeableContentEquality", testEscapeableContentEquality),
-      ("testEscapingStrings", testEscapingStrings),
-      ("testXMLSerialization", testXMLSerialization),
-      ("testXMLDocumentSerialization", testXMLDocumentSerialization),
-      ("testMixedContentSerialization", testMixedContentSerialization),
-   ]
 }

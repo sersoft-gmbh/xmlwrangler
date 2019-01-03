@@ -61,13 +61,4 @@ final class ElementTests: XCTestCase {
       
       XCTAssertEqual(element.content, [.object(child1), .object(child2), .object(child3)])
    }
-
-   static var allTests = [
-      ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
-      ("testEqualityCheck", testEqualityCheck),
-      ("testAppendingString", testAppendingString),
-      ("testAppendingObject", testAppendingObject),
-      ("testAppendingContentOfSequence", testAppendingContentOfSequence),
-      ("testAppendingObjects", testAppendingObjects),
-   ]
 }

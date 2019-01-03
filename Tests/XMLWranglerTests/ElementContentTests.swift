@@ -145,15 +145,4 @@ final class ElementContentTests: XCTestCase {
       XCTAssertNil(objContent.string)
       XCTAssertEqual(objContent.object, "some_element")
    }
-
-   static var allTests = [
-      ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
-      ("testEqualityCheck", testEqualityCheck),
-      ("testAppendingString", testAppendingString),
-      ("testAppendingObject", testAppendingObject),
-      ("testAppendingContentOfSequence", testAppendingContentOfSequence),
-      ("testAppendingObjects", testAppendingObjects),
-      ("testCompression", testCompression),
-      ("testInternalHelpers", testInternalHelpers),
-   ]
 }
