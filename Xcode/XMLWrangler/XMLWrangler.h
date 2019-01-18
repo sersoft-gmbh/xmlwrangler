@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double XMLWranglerVersionNumber;
 FOUNDATION_EXPORT const unsigned char XMLWranglerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <XMLWrangler/PublicHeader.h>
-
-
