@@ -8,7 +8,7 @@ language: swift
 
 env:
   global:
-    - XCODE_PROJECT="Xcode/XMLWrangler.xcodeproj"
+    - XCODE_WORKSPACE="Xcode/XMLWrangler.xcworkspace"
     - XCODE_SCHEME=XMLWrangler
     - SWIFT_VERSION=4.2.1
 
