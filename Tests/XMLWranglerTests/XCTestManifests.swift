@@ -68,6 +68,8 @@ extension Element_LookupTests {
         ("testFailedExistingStringContentConversion", testFailedExistingStringContentConversion),
         ("testFailedExistingStringContentConversionAtPath", testFailedExistingStringContentConversionAtPath),
         ("testFailedExistingStringContentConversionAtVariadicPath", testFailedExistingStringContentConversionAtVariadicPath),
+        ("testFailedRawRepresentableAttributeConversion", testFailedRawRepresentableAttributeConversion),
+        ("testFailedRawRepresentableExistingStringContentConversion", testFailedRawRepresentableExistingStringContentConversion),
         ("testLosslessStringConvertibleAttributeConversion", testLosslessStringConvertibleAttributeConversion),
         ("testLosslessStringConvertibleAttributeConversionAtPath", testLosslessStringConvertibleAttributeConversionAtPath),
         ("testLosslessStringConvertibleAttributeConversionAtVariadicPath", testLosslessStringConvertibleAttributeConversionAtVariadicPath),
