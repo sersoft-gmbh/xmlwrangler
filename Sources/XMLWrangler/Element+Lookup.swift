@@ -14,6 +14,14 @@ fileprivate func convert<Input, Output, Error>(_ input: Input,
       return converted
 }
 
+extension RawRepresentable where RawValue: LosslessStringConvertible {
+   @usableFromInline
+   init?(rawValueDescription: String) {
+      guard let rawValue = RawValue(rawValueDescription) else { return nil }
+      self.init(rawValue: rawValue)
+   }
+}
+
 // MARK: - Lookup
 public extension Element {
    // MARK: Single element
@@ -35,6 +43,7 @@ public extension Element {
    /// - Parameter path: A list of element names which represent the path to extract the element from.
    /// - Returns: The element at the given path.
    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
+   @inlinable
    public func element(at path: Name...) throws -> Element {
       return try element(at: path)
    }
@@ -45,6 +54,7 @@ public extension Element {
    /// - Parameter elementName: The element name for which to look for.
    /// - Returns: All elements found with the given name. Might be empty.
    /// - Throws: Currently, no error is thrown. The method is annotated as `throws` for consistency and because it might throw in the future.
+   @inlinable
    public func elements(named elementName: Name) throws -> [Element] {
       return content.find(elementsNamed: elementName)
    }
@@ -57,6 +67,7 @@ public extension Element {
    /// - Returns: All elements found with the given name. Might be empty.
    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
    /// - SeeAlso: `Element.element(at:)` and `Element.elements(named:)`
+   @inlinable
    public func elements<Path: Collection>(named elementName: Name, inElementAt path: Path) throws -> [Element] where Path.Element == Name {
       return try element(at: path).elements(named: elementName)
    }
@@ -69,6 +80,7 @@ public extension Element {
    /// - Returns: All elements found with the given name. Might be empty.
    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
    /// - SeeAlso: `Element.element(at:)` and `Element.elements(named:)`
+   @inlinable
    public func elements(named elementName: Name, inElementAt path: Name...) throws -> [Element] {
       return try elements(named: elementName, inElementAt: path)
    }
@@ -142,14 +154,15 @@ public extension Element {
                          throwing: LookupError.cannotConvertAttribute(element: self, key: key, type: T.self))
    }
 
-   /// Returns the result of initializing a RawRepresentable type with the value for a given attribute key.
+   /// Returns the result of initializing a RawRepresentable type with the value for a given attribute key
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
    ///
    /// - Parameter key: The key for which to get the attribute value.
-   /// - Returns: An instance of the RawRepresentable type initialized with the attribute value.
-   /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type returns nil.
-   /// - SeeAlso: `Element.convertedAttribute(for:converter:)` and `RawRepresentable.init?(rawValue:)`
+   /// - Returns: An instance of the RawRepresentable type initialized with the attribute value passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedAttribute(for:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
-   public func convertedAttribute<T: RawRepresentable>(for key: AttributeKey) throws -> T where T.RawValue == Element.Attributes.Value {
+   public func convertedAttribute<T: RawRepresentable>(for key: AttributeKey) throws -> T where T.RawValue: LosslessStringConvertible {
       return try convertedAttribute(for: key, converter: T.init)
    }
 
@@ -162,6 +175,19 @@ public extension Element {
    @inlinable
    public func convertedAttribute<T: LosslessStringConvertible>(for key: AttributeKey) throws -> T {
       return try convertedAttribute(for: key, converter: T.init)
+   }
+
+   /// Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the value for a given attribute key
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
+   ///
+   /// - Parameter key: The key for which to get the attribute value.
+   /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the attribute value passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedAttribute(for:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+   /// - Note: This overload will prefer the RawRepresentable initializer.
+   @inlinable
+   public func convertedAttribute<T: RawRepresentable & LosslessStringConvertible>(for key: AttributeKey) throws -> T where T.RawValue: LosslessStringConvertible {
+      return try convertedAttribute(for: key, converter: T.init(rawValueDescription:))
    }
 
    /// Returns the result of converting the attribute value for a given attribute key of a child element at a given path.
@@ -192,17 +218,18 @@ public extension Element {
       return try element(at: path).convertedAttribute(for: key, converter: converter)
    }
 
-   /// Returns the result of initializing a RawRepresentable type with the value for a given attribute key of a child element at a given path.
+   /// Returns the result of initializing a RawRepresentable type with the value for a given attribute key of a child element at a given path
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
    ///
    /// - Parameters:
    ///   - key: The key for which to get the attribute value.
    ///   - path: The path of the element from which to get the attribute value.
-   /// - Returns: An instance of the RawRepresentable type initialized with the attribute value.
-   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type returns nil.
-   /// - SeeAlso: `Element.convertedAttribute(for:ofElementAt:converter:)` and `RawRepresentable.init?(rawValue:)`
+   /// - Returns: An instance of the RawRepresentable type initialized with the attribute value passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedAttribute(for:ofElementAt:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
-   public func convertedAttribute<Path: Collection, T: RawRepresentable>(for key: AttributeKey, ofElementAt path: Path) throws -> T where Path.Element == Name, T.RawValue == Element.Attributes.Value {
-      return try convertedAttribute(for: key, ofElementAt: path, converter: T.init)
+   public func convertedAttribute<Path: Collection, T: RawRepresentable>(for key: AttributeKey, ofElementAt path: Path) throws -> T where Path.Element == Name, T.RawValue: LosslessStringConvertible {
+      return try element(at: path).convertedAttribute(for: key)
    }
 
    /// Returns the result of initializing a LosslessStringConvertible type with the value for a given attribute key of a child element at a given path.
@@ -215,7 +242,24 @@ public extension Element {
    /// - SeeAlso: `Element.convertedAttribute(for:ofElementAt:converter:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
    public func convertedAttribute<Path: Collection, T: LosslessStringConvertible>(for key: AttributeKey, ofElementAt path: Path) throws -> T where Path.Element == Name {
-      return try convertedAttribute(for: key, ofElementAt: path, converter: T.init)
+      return try element(at: path).convertedAttribute(for: key)
+   }
+
+   /// Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the value for a given attribute key of a child element at a given path
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
+   ///
+   /// - Parameters:
+   ///   - key: The key for which to get the attribute value.
+   ///   - path: The path of the element from which to get the attribute value.
+   /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the attribute value passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedAttribute(for:ofElementAt:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+   /// - Note: This overload will prefer the RawRepresentable initializer.
+   @inlinable
+   public func convertedAttribute<Path: Collection, T: RawRepresentable & LosslessStringConvertible>(for key: AttributeKey, ofElementAt path: Path) throws -> T
+      where Path.Element == Name, T.RawValue: LosslessStringConvertible
+   {
+      return try element(at: path).convertedAttribute(for: key)
    }
 
    /// Returns the result of converting the attribute value for a given attribute key of a child element at a given path.
@@ -246,17 +290,18 @@ public extension Element {
       return try element(at: path).convertedAttribute(for: key, converter: converter)
    }
 
-   /// Returns the result of initializing a RawRepresentable type with the value for a given attribute key of a child element at a given path.
+   /// Returns the result of initializing a RawRepresentable type with the value for a given attribute key of a child element at a given path
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
    ///
    /// - Parameters:
    ///   - key: The key for which to get the attribute value.
    ///   - path: The path of the element from which to get the attribute value.
-   /// - Returns: An instance of the RawRepresentable type initialized with the attribute value.
-   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type returns nil.
-   /// - SeeAlso: `Element.convertedAttribute(for:ofElementAt:converter:)` and `RawRepresentable.init?(rawValue:)`
+   /// - Returns: An instance of the RawRepresentable type initialized with the attribute value passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedAttribute(for:ofElementAt:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
-   public func convertedAttribute<T: RawRepresentable>(for key: AttributeKey, ofElementAt path: Name...) throws -> T where T.RawValue == Element.Attributes.Value {
-      return try convertedAttribute(for: key, ofElementAt: path, converter: T.init)
+   public func convertedAttribute<T: RawRepresentable>(for key: AttributeKey, ofElementAt path: Name...) throws -> T where T.RawValue: LosslessStringConvertible {
+      return try convertedAttribute(for: key, ofElementAt: path)
    }
 
    /// Returns the result of initializing a LosslessStringConvertible type with the value for a given attribute key of a child element at a given path.
@@ -269,7 +314,22 @@ public extension Element {
    /// - SeeAlso: `Element.convertedAttribute(for:ofElementAt:converter:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
    public func convertedAttribute<T: LosslessStringConvertible>(for key: AttributeKey, ofElementAt path: Name...) throws -> T {
-      return try convertedAttribute(for: key, ofElementAt: path, converter: T.init)
+      return try convertedAttribute(for: key, ofElementAt: path)
+   }
+
+   /// Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the value for a given attribute key of a child element at a given path
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
+   ///
+   /// - Parameters:
+   ///   - key: The key for which to get the attribute value.
+   ///   - path: The path of the element from which to get the attribute value.
+   /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the attribute value passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedAttribute(for:ofElementAt:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+   /// - Note: This overload will prefer the RawRepresentable initializer.
+   @inlinable
+   public func convertedAttribute<T: RawRepresentable & LosslessStringConvertible>(for key: AttributeKey, ofElementAt path: Name...) throws -> T where T.RawValue: LosslessStringConvertible {
+      return try convertedAttribute(for: key, ofElementAt: path)
    }
 }
 
@@ -330,13 +390,13 @@ public extension Element {
                          throwing: LookupError.cannotConvertContent(element: self, content: content, type: T.self))
    }
 
-   /// Returns the result of initializing a RawRepresentable type with the combined string content.
+   /// Returns the result of initializing a RawRepresentable type with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
    ///
-   /// - Returns: An instance of the RawRepresentable type initialized with the combined string content.
-   /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type returns nil.
-   /// - SeeAlso: `Element.convertedStringContent(converter:)` and `RawRepresentable.init?(rawValue:)`
+   /// - Returns: An instance of the RawRepresentable type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedStringContent(converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
-   public func convertedStringContent<T: RawRepresentable>() throws -> T where T.RawValue == String {
+   public func convertedStringContent<T: RawRepresentable>() throws -> T where T.RawValue: LosslessStringConvertible {
       return try convertedStringContent(converter: T.init)
    }
 
@@ -345,8 +405,20 @@ public extension Element {
    /// - Returns: An instance of the LosslessStringConvertible type initialized with the combined string content.
    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the LosslessStringConvertible type returns nil.
    /// - SeeAlso: `Element.convertedStringContent(converter:)` and `LosslessStringConvertible.init?(_:)`
+   @inlinable
    public func convertedStringContent<T: LosslessStringConvertible>() throws -> T {
       return try convertedStringContent(converter: T.init)
+   }
+
+   /// Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
+   ///
+   /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedStringContent(converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+   /// - Note: This overload will prefer the RawRepresentable initializer.
+   @inlinable
+   public func convertedStringContent<T: RawRepresentable & LosslessStringConvertible>() throws -> T where T.RawValue: LosslessStringConvertible {
+      return try convertedStringContent(converter: T.init(rawValueDescription:))
    }
 
    /// Returns the result of converting the combined string content of a child element at a given path.
@@ -375,15 +447,16 @@ public extension Element {
       return try element(at: path).convertedStringContent(converter: converter)
    }
 
-   /// Returns the result of initializing a RawRepresentable type with the combined string content of a child element at a given path.
+   /// Returns the result of initializing a RawRepresentable type with the combined string content of a child element at a given path
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
    ///
    /// - Parameter path: The path of the element from which to get the string content value.
-   /// - Returns: An instance of the RawRepresentable type initialized with the combined string content.
-   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type returns nil.
-   /// - SeeAlso: `Element.convertedStringContent(ofElementAt:converter:)` and `RawRepresentable.init?(rawValue:)`
+   /// - Returns: An instance of the RawRepresentable type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedStringContent(ofElementAt:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
-   public func convertedStringContent<Path: Collection, T: RawRepresentable>(ofElementAt path: Path) throws -> T where Path.Element == Name, T.RawValue == String {
-      return try convertedStringContent(ofElementAt: path, converter: T.init)
+   public func convertedStringContent<Path: Collection, T: RawRepresentable>(ofElementAt path: Path) throws -> T where Path.Element == Name, T.RawValue: LosslessStringConvertible {
+      return try element(at: path).convertedStringContent()
    }
 
    /// Returns the result of initializing a LosslessStringConvertible type with the combined string content of a child element at a given path.
@@ -394,7 +467,22 @@ public extension Element {
    /// - SeeAlso: `Element.convertedStringContent(ofElementAt:converter:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
    public func convertedStringContent<Path: Collection, T: LosslessStringConvertible>(ofElementAt path: Path) throws -> T where Path.Element == Name {
-      return try convertedStringContent(ofElementAt: path, converter: T.init)
+      return try element(at: path).convertedStringContent()
+   }
+
+   /// Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the combined string content of a child element at a given path
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
+   ///
+   /// - Parameter path: The path of the element from which to get the string content value.
+   /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedStringContent(ofElementAt:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+   /// - Note: This overload will prefer the RawRepresentable initializer.
+   @inlinable
+   public func convertedStringContent<Path: Collection, T: RawRepresentable & LosslessStringConvertible>(ofElementAt path: Path) throws -> T
+      where Path.Element == Name, T.RawValue: LosslessStringConvertible
+   {
+      return try element(at: path).convertedStringContent()
    }
 
    /// Returns the result of converting the combined string content of a child element at a given path.
@@ -423,15 +511,16 @@ public extension Element {
       return try element(at: path).convertedStringContent(converter: converter)
    }
 
-   /// Returns the result of initializing a RawRepresentable type with the combined string content of a child element at a given path.
+   /// Returns the result of initializing a RawRepresentable type with the combined string content of a child element at a given path
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
    ///
    /// - Parameter path: The path of the element from which to get the string content value.
-   /// - Returns: An instance of the RawRepresentable type initialized with the combined string content.
-   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type returns nil.
-   /// - SeeAlso: `Element.convertedStringContent(ofElementAt:converter:)` and `RawRepresentable.init?(rawValue:)`
+   /// - Returns: An instance of the RawRepresentable type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedStringContent(ofElementAt:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
-   public func convertedStringContent<T: RawRepresentable>(ofElementAt path: Name...) throws -> T where T.RawValue == String {
-      return try convertedStringContent(ofElementAt: path, converter: T.init)
+   public func convertedStringContent<T: RawRepresentable>(ofElementAt path: Name...) throws -> T where T.RawValue: LosslessStringConvertible {
+      return try convertedStringContent(ofElementAt: path)
    }
 
    /// Returns the result of initializing a LosslessStringConvertible type with the combined string content of a child element at a given path.
@@ -442,6 +531,19 @@ public extension Element {
    /// - SeeAlso: `Element.convertedStringContent(ofElementAt:converter:)` and `LosslessStringConvertible.init?(_:)`
    @inlinable
    public func convertedStringContent<T: LosslessStringConvertible>(ofElementAt path: Name...) throws -> T {
-      return try convertedStringContent(ofElementAt: path, converter: T.init)
+      return try convertedStringContent(ofElementAt: path)
+   }
+
+   /// Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the combined string content of a child element at a given path
+   /// passed into the RawValue's LosslessStringConvertible-initializer.
+   ///
+   /// - Parameter path: The path of the element from which to get the string content value.
+   /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
+   /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
+   /// - SeeAlso: `Element.convertedStringContent(ofElementAt:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+   /// - Note: This overload will prefer the RawRepresentable initializer.
+   @inlinable
+   public func convertedStringContent<T: RawRepresentable & LosslessStringConvertible>(ofElementAt path: Name...) throws -> T where T.RawValue: LosslessStringConvertible {
+      return try convertedStringContent(ofElementAt: path)
    }
 }

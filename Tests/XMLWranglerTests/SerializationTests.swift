@@ -3,18 +3,24 @@ import XCTest
 
 final class SerializationTests: XCTestCase {
 
-   func testEscapeableContentEquality() {
-      let content1: EscapableContent = .attribute(quotes: .single)
-      let content2: EscapableContent = .attribute(quotes: .single)
-      let content3: EscapableContent = .attribute(quotes: .double)
-      let content4: EscapableContent = .comment
-      let content5: EscapableContent = .comment
+   func testDocumentEncodingDescription() {
+      XCTAssertEqual(String(describing: DocumentEncoding.ascii), "ascii")
+      XCTAssertEqual(String(describing: DocumentEncoding.utf8), "utf-8")
+      XCTAssertEqual(String(describing: DocumentEncoding.utf16), "utf-16")
+   }
 
-      XCTAssertEqual(content1, content2)
-      XCTAssertEqual(content4, content5)
-      XCTAssertNotEqual(content2, content3)
-      XCTAssertNotEqual(content1, content3)
-      XCTAssertNotEqual(content3, content5)
+   func testEscapableContentQuotesDescription() {
+      XCTAssertEqual(String(describing: EscapableContent.Quotes.single), "Single quotes")
+      XCTAssertEqual(String(describing: EscapableContent.Quotes.double), "Double quotes")
+   }
+
+   func testEscapableContentDescription() {
+      XCTAssertEqual(String(describing: EscapableContent.attribute(quotes: .single)), "Attribute enclosed in single quotes")
+      XCTAssertEqual(String(describing: EscapableContent.attribute(quotes: .double)), "Attribute enclosed in double quotes")
+      XCTAssertEqual(String(describing: EscapableContent.text), "Text")
+      XCTAssertEqual(String(describing: EscapableContent.cdata), "CDATA")
+      XCTAssertEqual(String(describing: EscapableContent.comment), "Comment")
+      XCTAssertEqual(String(describing: EscapableContent.processingInstruction), "Processing instruction")
    }
 
    func testEscapingStrings() {

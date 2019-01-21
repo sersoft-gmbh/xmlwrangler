@@ -13,6 +13,14 @@ extension ElementContentTests {
     ]
 }
 
+@available(*, deprecated, message: "Tests deprecated API")
+extension ElementContent_DeprecatedTests {
+    static let __allTests = [
+        ("testElementContentAppend", testElementContentAppend),
+        ("testElementContentConverted", testElementContentConverted),
+    ]
+}
+
 extension ElementContent_LookupTests {
     static let __allTests = [
         ("testFindingFirstObjectRecursive", testFindingFirstObjectRecursive),
@@ -86,9 +94,23 @@ extension Element_LookupTests {
         ("testRawRepresentableAttributeConversion", testRawRepresentableAttributeConversion),
         ("testRawRepresentableAttributeConversionAtPath", testRawRepresentableAttributeConversionAtPath),
         ("testRawRepresentableAttributeConversionAtVariadicPath", testRawRepresentableAttributeConversionAtVariadicPath),
+        ("testRawRepresentableLosslessStringConvertibleAttributeConversion", testRawRepresentableLosslessStringConvertibleAttributeConversion),
+        ("testRawRepresentableLosslessStringConvertibleAttributeConversionAtPath", testRawRepresentableLosslessStringConvertibleAttributeConversionAtPath),
+        ("testRawRepresentableLosslessStringConvertibleAttributeConversionAtVariadicPath", testRawRepresentableLosslessStringConvertibleAttributeConversionAtVariadicPath),
+        ("testRawRepresentableLosslessStringConvertibleStringContentConversion", testRawRepresentableLosslessStringConvertibleStringContentConversion),
+        ("testRawRepresentableLosslessStringConvertibleStringContentConversionAtPath", testRawRepresentableLosslessStringConvertibleStringContentConversionAtPath),
+        ("testRawRepresentableLosslessStringConvertibleStringContentConversionAtVariadicPath", testRawRepresentableLosslessStringConvertibleStringContentConversionAtVariadicPath),
         ("testRawRepresentableStringContentConversion", testRawRepresentableStringContentConversion),
         ("testRawRepresentableStringContentConversionAtPath", testRawRepresentableStringContentConversionAtPath),
         ("testRawRepresentableStringContentConversionAtVariadicPath", testRawRepresentableStringContentConversionAtVariadicPath),
+    ]
+}
+
+extension ErrorsTests {
+    static let __allTests = [
+        ("testLookupErrorDescription", testLookupErrorDescription),
+        ("testParserMissingObjectError", testParserMissingObjectError),
+        ("testParserUnknownError", testParserUnknownError),
     ]
 }
 
@@ -103,7 +125,9 @@ extension ParserTests {
 
 extension SerializationTests {
     static let __allTests = [
-        ("testEscapeableContentEquality", testEscapeableContentEquality),
+        ("testDocumentEncodingDescription", testDocumentEncodingDescription),
+        ("testEscapableContentDescription", testEscapableContentDescription),
+        ("testEscapableContentQuotesDescription", testEscapableContentQuotesDescription),
         ("testEscapingStrings", testEscapingStrings),
         ("testMixedContentSerialization", testMixedContentSerialization),
         ("testXMLDocumentSerialization", testXMLDocumentSerialization),
@@ -115,9 +139,11 @@ extension SerializationTests {
 public func __allTests() -> [XCTestCaseEntry] {
     return [
         testCase(ElementContentTests.__allTests),
+        testCase(ElementContent_DeprecatedTests.__allTests),
         testCase(ElementContent_LookupTests.__allTests),
         testCase(ElementTests.__allTests),
         testCase(Element_LookupTests.__allTests),
+        testCase(ErrorsTests.__allTests),
         testCase(ParserTests.__allTests),
         testCase(SerializationTests.__allTests),
     ]
