@@ -41,6 +41,33 @@ final class Element_LookupTests: XCTestCase {
       init(_ description: String) { self.description = description }
    }
 
+   private enum StringConvertibleAndRepresentable: RawRepresentable, LosslessStringConvertible, Equatable {
+      case rawValue(String)
+      case description(String)
+
+      var stringValue: String {
+         switch self {
+         case .rawValue(let rawValue): return rawValue
+         case .description(let description): return description
+         }
+      }
+
+      var rawValue: String { return stringValue }
+      var description: String { return stringValue }
+
+      init(rawValue: String) { self = .rawValue(rawValue) }
+      init(_ description: String) { self = .description(description) }
+   }
+
+   private struct StringRepresentableWithNotConvertibleRawValue: RawRepresentable, Equatable {
+      struct RawValue: LosslessStringConvertible, Equatable {
+         var description: String { return "How on earth did you get here?" }
+         init?(_ description: String) { return nil }
+      }
+      let rawValue: RawValue
+      init(rawValue: RawValue) { self.rawValue = rawValue }
+   }
+
    let sut = Element(name: "root", attributes: ["version": "2.3.4"], objects: [
       Element(name: "member", objects: [Element(name: "kind", content: "value")]),
       Element(name: "empty_member", attributes: ["active": "true", "id": "5"]),
@@ -210,6 +237,12 @@ final class Element_LookupTests: XCTestCase {
       }
    }
 
+   func testFailedRawRepresentableAttributeConversion() {
+      XCTAssertThrowsError(try sut.convertedAttribute(for: "version", converter: StringRepresentableWithNotConvertibleRawValue.init)) {
+         assert($0, is: .cannotConvertAttribute(element: sut, key: "version", type: StringRepresentableWithNotConvertibleRawValue.self))
+      }
+   }
+
    func testRawRepresentableAttributeConversion() throws {
       let attribute: StringRepresentable = try sut.convertedAttribute(for: "version")
       XCTAssertEqual(attribute, StringRepresentable(rawValue: "2.3.4"))
@@ -218,6 +251,11 @@ final class Element_LookupTests: XCTestCase {
    func testLosslessStringConvertibleAttributeConversion() throws {
       let attribute: StringConvertible = try sut.convertedAttribute(for: "version")
       XCTAssertEqual(attribute, StringConvertible("2.3.4"))
+   }
+
+   func testRawRepresentableLosslessStringConvertibleAttributeConversion() throws {
+      let attribute: StringConvertibleAndRepresentable = try sut.convertedAttribute(for: "version")
+      XCTAssertEqual(attribute, .rawValue("2.3.4"))
    }
 
    func testNonExistingAttributeConversionAtPath() {
@@ -247,6 +285,11 @@ final class Element_LookupTests: XCTestCase {
       XCTAssertEqual(attribute, StringConvertible("124.56"))
    }
 
+   func testRawRepresentableLosslessStringConvertibleAttributeConversionAtPath() throws {
+      let attribute: StringConvertibleAndRepresentable = try sut.convertedAttribute(for: "value", ofElementAt: ["bigger", "again_not_much"])
+      XCTAssertEqual(attribute, .rawValue("124.56"))
+   }
+
    func testNonExistingAttributeConversionAtVariadicPath() {
       XCTAssertThrowsError(try sut.convertedAttribute(for: "nope", ofElementAt: "bigger", "again_not_much", converter: StringInitializable.init)) {
          assert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
@@ -272,6 +315,11 @@ final class Element_LookupTests: XCTestCase {
    func testLosslessStringConvertibleAttributeConversionAtVariadicPath() throws {
       let attribute: StringConvertible = try sut.convertedAttribute(for: "value", ofElementAt: "bigger", "again_not_much")
       XCTAssertEqual(attribute, StringConvertible("124.56"))
+   }
+
+   func testRawRepresentableLosslessStringConvertibleAttributeConversionAtVariadicPath() throws {
+      let attribute: StringConvertibleAndRepresentable = try sut.convertedAttribute(for: "value", ofElementAt: "bigger", "again_not_much")
+      XCTAssertEqual(attribute, .rawValue("124.56"))
    }
 
    // MARK: - String Content
@@ -327,6 +375,12 @@ final class Element_LookupTests: XCTestCase {
       }
    }
 
+   func testFailedRawRepresentableExistingStringContentConversion() {
+      XCTAssertThrowsError(try stringContentSUT.convertedStringContent(converter: StringRepresentableWithNotConvertibleRawValue.init)) {
+         assert($0, is: .cannotConvertContent(element: stringContentSUT, content: "we have content", type: StringRepresentableWithNotConvertibleRawValue.self))
+      }
+   }
+
    func testRawRepresentableStringContentConversion() throws {
       let content: StringRepresentable = try stringContentSUT.convertedStringContent()
       XCTAssertEqual(content, StringRepresentable(rawValue: "we have content"))
@@ -335,6 +389,11 @@ final class Element_LookupTests: XCTestCase {
    func testLosslessStringConvertibleStringContentConversion() throws {
       let content: StringConvertible = try stringContentSUT.convertedStringContent()
       XCTAssertEqual(content, StringConvertible("we have content"))
+   }
+
+   func testRawRepresentableLosslessStringConvertibleStringContentConversion() throws {
+      let content: StringConvertibleAndRepresentable = try stringContentSUT.convertedStringContent()
+      XCTAssertEqual(content, .rawValue("we have content"))
    }
 
    func testNonExistingStringContentConversionAtPath() {
@@ -369,6 +428,11 @@ final class Element_LookupTests: XCTestCase {
       XCTAssertEqual(content, StringConvertible("Some textMore text"))
    }
 
+   func testRawRepresentableLosslessStringConvertibleStringContentConversionAtPath() throws {
+      let content: StringConvertibleAndRepresentable = try sut.convertedStringContent(ofElementAt: ["bigger", "stringy"])
+      XCTAssertEqual(content, .rawValue("Some textMore text"))
+   }
+
    func testNonExistingStringContentConversionAtVariadicPath() {
       XCTAssertThrowsError(try sut.convertedStringContent(ofElementAt: "bigger", "not_stringy", converter: StringInitializable.init)) {
          assert($0, is: .missingContent(element: Element(name: "not_stringy")))
@@ -399,5 +463,10 @@ final class Element_LookupTests: XCTestCase {
    func testLosslessStringConvertibleStringContentConversionAtVariadicPath() throws {
       let content: StringConvertible = try sut.convertedStringContent(ofElementAt: "bigger", "stringy")
       XCTAssertEqual(content, StringConvertible("Some textMore text"))
+   }
+
+   func testRawRepresentableLosslessStringConvertibleStringContentConversionAtVariadicPath() throws {
+      let content: StringConvertibleAndRepresentable = try sut.convertedStringContent(ofElementAt: "bigger", "stringy")
+      XCTAssertEqual(content, .rawValue("Some textMore text"))
    }
 }

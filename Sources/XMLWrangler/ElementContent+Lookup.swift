@@ -25,11 +25,8 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    internal func find(recursive: Bool = false, elementsMatching predicate: (XMLWrangler.Element) throws -> Bool) rethrows -> [XMLWrangler.Element] {
       let objects = allObjects
       let matches = try objects.filter(predicate)
-      if recursive {
-         return try matches + objects.flatMap { try $0.content.find(recursive: recursive, elementsMatching: predicate) }
-      } else {
-         return matches
-      }
+      guard recursive else { return matches }
+      return try matches + objects.flatMap { try $0.content.find(recursive: recursive, elementsMatching: predicate) }
    }
 
    /// Finds the first occurence of an element that matches a given predicate.
@@ -46,11 +43,8 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    internal func findFirst(recursive: Bool = false, elementMatching predicate: (XMLWrangler.Element) throws -> Bool) rethrows -> XMLWrangler.Element? {
       let objects = allObjects
       let match = try objects.first(where: predicate)
-      if recursive {
-         return try match ?? objects.mapFirst { try $0.content.findFirst(recursive: recursive, elementMatching: predicate) }
-      } else {
-         return match
-      }
+      guard recursive else { return match }
+      return try match ?? objects.mapFirst { try $0.content.findFirst(recursive: recursive, elementMatching: predicate) }
    }
 
    /// Finds the last occurence of an element that matches a given predicate.
@@ -67,11 +61,8 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    internal func findLast(recursive: Bool = false, elementMatching predicate: (XMLWrangler.Element) throws -> Bool) rethrows -> XMLWrangler.Element? {
       let objects = allObjects.reversed()
       let match = try objects.first(where: predicate)
-      if recursive {
-         return try match ?? objects.mapFirst { try $0.content.findLast(recursive: recursive, elementMatching: predicate) }
-      } else {
-         return match
-      }
+      guard recursive else { return match }
+      return try match ?? objects.mapFirst { try $0.content.findLast(recursive: recursive, elementMatching: predicate) }
    }
 
    /// Searches for elements with a given name. Optionally also recursive.
