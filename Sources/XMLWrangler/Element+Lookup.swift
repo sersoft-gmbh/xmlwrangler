@@ -94,7 +94,7 @@ public extension Element {
    /// - Parameter key: The key for which to get the attribute value.
    /// - Returns: The attribute value for the given key.
    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key.
-   public func attribute(for key: AttributeKey) throws -> Element.Attributes.Value {
+   public func attribute(for key: AttributeKey) throws -> Attributes.Value {
       guard let attribute = attributes[key] else {
          throw LookupError.missingAttribute(element: self, key: key)
       }
@@ -110,7 +110,7 @@ public extension Element {
    /// - Throws: `LookupError.missingChild` if the path contains an inexistent element or `LookupError.missingAttribute` in case no attribute exists for the given key.
    /// - SeeAlso: `Element.element(at:)` and `Element.attribute(for:)`.
    @inlinable
-   public func attribute<Path: Collection>(for key: AttributeKey, ofElementAt path: Path) throws -> Element.Attributes.Value where Path.Element == Name {
+   public func attribute<Path: Collection>(for key: AttributeKey, ofElementAt path: Path) throws -> Attributes.Value where Path.Element == Name {
       return try element(at: path).attribute(for: key)
    }
 
@@ -123,7 +123,7 @@ public extension Element {
    /// - Throws: `LookupError.missingChild` if the path contains an inexistent element or `LookupError.missingAttribute` in case no attribute exists for the given key.
    /// - SeeAlso: `Element.element(at:)` and `Element.attribute(for:)`.
    @inlinable
-   public func attribute(for key: AttributeKey, ofElementAt path: Name...) throws -> Element.Attributes.Value {
+   public func attribute(for key: AttributeKey, ofElementAt path: Name...) throws -> Attributes.Value {
       return try attribute(for: key, ofElementAt: path)
    }
 
@@ -137,7 +137,7 @@ public extension Element {
    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `converter`.
    /// - SeeAlso: `Element.attribute(for:)`
    @inlinable
-   public func convertedAttribute<T>(for key: AttributeKey, converter: (Element.Attributes.Value) throws -> T) throws -> T {
+   public func convertedAttribute<T>(for key: AttributeKey, converter: (Attributes.Value) throws -> T) throws -> T {
       return try converter(attribute(for: key))
    }
 
@@ -149,7 +149,7 @@ public extension Element {
    /// - Returns: The converted value.
    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key, `LookupError.cannotConvertAttribute` when `converter` returns nil or any error thrown by `converter`.
    /// - SeeAlso: `Element.attribute(for:)`
-   public func convertedAttribute<T>(for key: AttributeKey, converter: (Element.Attributes.Value) throws -> T?) throws -> T {
+   public func convertedAttribute<T>(for key: AttributeKey, converter: (Attributes.Value) throws -> T?) throws -> T {
       return try convert(attribute(for: key), using: converter,
                          throwing: LookupError.cannotConvertAttribute(element: self, key: key, type: T.self))
    }
@@ -200,7 +200,7 @@ public extension Element {
    /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `converter`.
    /// - SeeAlso: `Element.element(at:)` and `Element.convertedAttribute(for:converter:)`
    @inlinable
-   public func convertedAttribute<Path: Collection, T>(for key: AttributeKey, ofElementAt path: Path, converter: (Element.Attributes.Value) throws -> T) throws -> T where Path.Element == Name {
+   public func convertedAttribute<Path: Collection, T>(for key: AttributeKey, ofElementAt path: Path, converter: (Attributes.Value) throws -> T) throws -> T where Path.Element == Name {
       return try element(at: path).convertedAttribute(for: key, converter: converter)
    }
 
@@ -214,7 +214,7 @@ public extension Element {
    /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key, `LookupError.cannotConvertAttribute` when `converter` returns nil or any error thrown by `converter`.
    /// - SeeAlso: `Element.element(at:)` and `Element.convertedAttribute(for:converter:)`
    @inlinable
-   public func convertedAttribute<Path: Collection, T>(for key: AttributeKey, ofElementAt path: Path, converter: (Element.Attributes.Value) throws -> T?) throws -> T where Path.Element == Name {
+   public func convertedAttribute<Path: Collection, T>(for key: AttributeKey, ofElementAt path: Path, converter: (Attributes.Value) throws -> T?) throws -> T where Path.Element == Name {
       return try element(at: path).convertedAttribute(for: key, converter: converter)
    }
 
@@ -272,7 +272,7 @@ public extension Element {
    /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `converter`.
    /// - SeeAlso: `Element.element(at:)` and `Element.convertedAttribute(for:converter:)`
    @inlinable
-   public func convertedAttribute<T>(for key: AttributeKey, ofElementAt path: Name..., converter: (Element.Attributes.Value) throws -> T) throws -> T {
+   public func convertedAttribute<T>(for key: AttributeKey, ofElementAt path: Name..., converter: (Attributes.Value) throws -> T) throws -> T {
       return try element(at: path).convertedAttribute(for: key, converter: converter)
    }
 
@@ -286,7 +286,7 @@ public extension Element {
    /// - Throws: `LookupError.missingChild` if the path contains an inexistent element, `LookupError.missingAttribute` in case no attribute exists for the given key, `LookupError.cannotConvertAttribute` when `converter` returns nil or any error thrown by `converter`.
    /// - SeeAlso: `Element.element(at:)` and `Element.convertedAttribute(for:converter:)`
    @inlinable
-   public func convertedAttribute<T>(for key: AttributeKey, ofElementAt path: Name..., converter: (Element.Attributes.Value) throws -> T?) throws -> T {
+   public func convertedAttribute<T>(for key: AttributeKey, ofElementAt path: Name..., converter: (Attributes.Value) throws -> T?) throws -> T {
       return try element(at: path).convertedAttribute(for: key, converter: converter)
    }
 

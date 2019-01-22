@@ -11,26 +11,6 @@ final class ElementContentTests: XCTestCase {
       }
    }
 
-   func testEqualityCheck() {
-      let content1 = Element.Content.string("test1")
-      let content2 = Element.Content.string("test1")
-      let content3 = Element.Content.string("test2")
-
-      let elem1 = Element(name: "test1")
-      let elem2 = Element(name: "test2")
-
-      let content4 = Element.Content.object(elem1)
-      let content5 = Element.Content.object(elem1)
-      let content6 = Element.Content.object(elem2)
-
-      XCTAssertEqual(content1, content2)
-      XCTAssertEqual(content4, content5)
-      XCTAssertNotEqual(content1, content3)
-      XCTAssertNotEqual(content1, content6)
-      XCTAssertNotEqual(content2, content3)
-      XCTAssertNotEqual(content4, content6)
-   }
-
    func testAppendingString() {
       var content: [Element.Content] = []
       var content2: [Element.Content] = ["hello"]

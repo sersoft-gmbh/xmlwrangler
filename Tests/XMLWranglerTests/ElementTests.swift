@@ -7,19 +7,6 @@ final class ElementTests: XCTestCase {
       XCTAssertEqual(element.name, .init(rawValue: "test"))
    }
 
-   func testEqualityCheck() {
-      let elem1 = Element(name: "test")
-      let elem2 = Element(name: "test")
-      let elem3 = Element(name: "test", attributes: ["key": "value"])
-      let elem4 = Element(name: "test", attributes: ["key": "value"])
-      let elem5 = Element(name: "test", attributes: ["key": "value"], content: "whatever")
-
-      XCTAssertEqual(elem1, elem2)
-      XCTAssertEqual(elem3, elem4)
-      XCTAssertNotEqual(elem1, elem3)
-      XCTAssertNotEqual(elem4, elem5)
-   }
-
    func testAppendingString() {
       var element = Element(name: "test")
       var element2 = Element(name: "test2", content: "hello")
