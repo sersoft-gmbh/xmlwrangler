@@ -11,6 +11,8 @@
 		07426D7321DE610100393E78 /* SemVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07426D7221DE610100393E78 /* SemVer.framework */; };
 		0774CFC921F639B500C3D5CB /* ErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774CFC721F6398C00C3D5CB /* ErrorsTests.swift */; };
 		0774CFCC21F63D1300C3D5CB /* ElementContent+DeprecatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774CFCA21F63CF200C3D5CB /* ElementContent+DeprecatedTests.swift */; };
+		0774CFCE21F72C7700C3D5CB /* Element+MutationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774CFCD21F72C7700C3D5CB /* Element+MutationTests.swift */; };
+		0774CFD121F7308E00C3D5CB /* LookupErrorHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774CFD021F7308E00C3D5CB /* LookupErrorHelpers.swift */; };
 		07783CF521F2366700585133 /* ElementContent+Mutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07783CEC21F2366700585133 /* ElementContent+Mutation.swift */; };
 		07783CF621F2366700585133 /* Element+Lookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07783CED21F2366700585133 /* Element+Lookup.swift */; };
 		07783CF721F2366700585133 /* ElementContent+DeprecatedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07783CEE21F2366700585133 /* ElementContent+DeprecatedAPI.swift */; };
@@ -45,6 +47,8 @@
 		07426D7221DE610100393E78 /* SemVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SemVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0774CFC721F6398C00C3D5CB /* ErrorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsTests.swift; sourceTree = "<group>"; };
 		0774CFCA21F63CF200C3D5CB /* ElementContent+DeprecatedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementContent+DeprecatedTests.swift"; sourceTree = "<group>"; };
+		0774CFCD21F72C7700C3D5CB /* Element+MutationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+MutationTests.swift"; sourceTree = "<group>"; };
+		0774CFD021F7308E00C3D5CB /* LookupErrorHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupErrorHelpers.swift; sourceTree = "<group>"; };
 		07783CEC21F2366700585133 /* ElementContent+Mutation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ElementContent+Mutation.swift"; sourceTree = "<group>"; };
 		07783CED21F2366700585133 /* Element+Lookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Element+Lookup.swift"; sourceTree = "<group>"; };
 		07783CEE21F2366700585133 /* ElementContent+DeprecatedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ElementContent+DeprecatedAPI.swift"; sourceTree = "<group>"; };
@@ -114,6 +118,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0774CFCF21F7307F00C3D5CB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0774CFD021F7308E00C3D5CB /* LookupErrorHelpers.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		07783CEB21F2366700585133 /* XMLWrangler */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +156,9 @@
 		07783D1221F236BE00585133 /* XMLWranglerTests */ = {
 			isa = PBXGroup;
 			children = (
+				0774CFCF21F7307F00C3D5CB /* Helpers */,
 				07783D1621F236BE00585133 /* Element+LookupTests.swift */,
+				0774CFCD21F72C7700C3D5CB /* Element+MutationTests.swift */,
 				0774CFCA21F63CF200C3D5CB /* ElementContent+DeprecatedTests.swift */,
 				07783D1321F236BE00585133 /* ElementContent+LookupTests.swift */,
 				07783D1721F236BE00585133 /* ElementContentTests.swift */,
@@ -294,11 +308,13 @@
 			files = (
 				07783D1A21F236BE00585133 /* ElementContent+LookupTests.swift in Sources */,
 				07783D1D21F236BE00585133 /* Element+LookupTests.swift in Sources */,
+				0774CFCE21F72C7700C3D5CB /* Element+MutationTests.swift in Sources */,
 				07783D2021F236BE00585133 /* ElementTests.swift in Sources */,
 				0774CFCC21F63D1300C3D5CB /* ElementContent+DeprecatedTests.swift in Sources */,
 				07783D1C21F236BE00585133 /* ParserTests.swift in Sources */,
 				07783D1F21F236BE00585133 /* SerializationTests.swift in Sources */,
 				07783D1E21F236BE00585133 /* ElementContentTests.swift in Sources */,
+				0774CFD121F7308E00C3D5CB /* LookupErrorHelpers.swift in Sources */,
 				0774CFC921F639B500C3D5CB /* ErrorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

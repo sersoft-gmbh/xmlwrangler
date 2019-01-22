@@ -1,26 +1,6 @@
 import XCTest
 @testable import XMLWrangler
 
-// Only equatable for testing
-extension LookupError: Equatable {
-   public static func ==(lhs: LookupError, rhs: LookupError) -> Bool {
-      switch (lhs, rhs) {
-      case (.missingAttribute(let lhsElement, let lhsKey), .missingAttribute(let rhsElement, let rhsKey)):
-         return lhsElement == rhsElement && lhsKey == rhsKey
-      case (.cannotConvertAttribute(let lhsElement, let lhsKey, let lhsTargetType), .cannotConvertAttribute(let rhsElement, let rhsKey, let rhsTargetType)):
-         return lhsElement == rhsElement && lhsKey == rhsKey && lhsTargetType == rhsTargetType
-      case (.missingContent(let lhsElement), .missingContent(let rhsElement)):
-         return lhsElement == rhsElement
-      case (.missingChild(let lhsElement, let lhsChildElementName), .missingChild(let rhsElement, let rhsChildElementName)):
-         return lhsElement == rhsElement && lhsChildElementName == rhsChildElementName
-      case (.cannotConvertContent(let lhsElement, let lhsContent, let lhsTargetType), .cannotConvertContent(let rhsElement, let rhsContent, let rhsTargetType)):
-         return lhsElement == rhsElement && lhsContent == rhsContent && lhsTargetType == rhsTargetType
-      default:
-         return false
-      }
-   }
-}
-
 final class Element_LookupTests: XCTestCase {
    private struct StringInitializable: Equatable {
       let strValue: String
@@ -112,12 +92,6 @@ final class Element_LookupTests: XCTestCase {
    let stringContentSUT = Element(name: "string_content", content: "we have content")
    let noStringContentSUT = Element(name: "no_string_content")
 
-   // MARK: - Helpers
-   private func assert(_ error: Error, is expectedError: LookupError, file: StaticString = #file, line: UInt = #line) {
-      XCTAssertTrue(error is LookupError, "\(error) is no \(LookupError.self)", file: file, line: line)
-      XCTAssertEqual(error as? LookupError, expectedError, file: file, line: line)
-   }
-
    // MARK: - Lookup
    // MARK: Single element
    func testExistingElementLookupAtPath() throws {
@@ -127,7 +101,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingElementLookupAtPath() {
       XCTAssertThrowsError(try sut.element(at: ["simple", "simple_child", "nope"])) {
-         assert($0, is: .missingChild(element: "simple_child", childElementName: "nope"))
+         XCTAssert($0, is: .missingChild(element: "simple_child", childElementName: "nope"))
       }
    }
 
@@ -138,7 +112,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingElementLookupAtVariadicPath() {
       XCTAssertThrowsError(try sut.element(at: "simple", "simple_child", "nope")) {
-         assert($0, is: .missingChild(element: "simple_child", childElementName: "nope"))
+         XCTAssert($0, is: .missingChild(element: "simple_child", childElementName: "nope"))
       }
    }
 
@@ -193,7 +167,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingAttributeLookup() {
       XCTAssertThrowsError(try sut.attribute(for: "nope")) {
-         assert($0, is: .missingAttribute(element: sut, key: "nope"))
+         XCTAssert($0, is: .missingAttribute(element: sut, key: "nope"))
       }
    }
 
@@ -204,7 +178,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingAttributeLookupAtPath() {
       XCTAssertThrowsError(try sut.attribute(for: "nope", ofElementAt: ["bigger", "again_not_much"])) {
-         assert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
+         XCTAssert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
       }
    }
 
@@ -215,14 +189,14 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingAttributeLookupAtVariadicPath() {
       XCTAssertThrowsError(try sut.attribute(for: "nope", ofElementAt: "bigger", "again_not_much")) {
-         assert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
+         XCTAssert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
       }
    }
 
    // MARK: Conversion
    func testNonExistingAttributeConversion() {
       XCTAssertThrowsError(try sut.convertedAttribute(for: "nope", converter: StringInitializable.init)) {
-         assert($0, is: .missingAttribute(element: sut, key: "nope"))
+         XCTAssert($0, is: .missingAttribute(element: sut, key: "nope"))
       }
    }
 
@@ -233,13 +207,13 @@ final class Element_LookupTests: XCTestCase {
 
    func testFailedExistingAttributeConversion() {
       XCTAssertThrowsError(try sut.convertedAttribute(for: "version", converter: NotStringInitializable.init)) {
-         assert($0, is: .cannotConvertAttribute(element: sut, key: "version", type: NotStringInitializable.self))
+         XCTAssert($0, is: .cannotConvertAttribute(element: sut, key: "version", type: NotStringInitializable.self))
       }
    }
 
    func testFailedRawRepresentableAttributeConversion() {
       XCTAssertThrowsError(try sut.convertedAttribute(for: "version", converter: StringRepresentableWithNotConvertibleRawValue.init)) {
-         assert($0, is: .cannotConvertAttribute(element: sut, key: "version", type: StringRepresentableWithNotConvertibleRawValue.self))
+         XCTAssert($0, is: .cannotConvertAttribute(element: sut, key: "version", type: StringRepresentableWithNotConvertibleRawValue.self))
       }
    }
 
@@ -260,7 +234,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingAttributeConversionAtPath() {
       XCTAssertThrowsError(try sut.convertedAttribute(for: "nope", ofElementAt: ["bigger", "again_not_much"], converter: StringInitializable.init)) {
-         assert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
+         XCTAssert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
       }
    }
 
@@ -271,7 +245,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testFailedExistingAttributeConversionAtPath() {
       XCTAssertThrowsError(try sut.convertedAttribute(for: "value", ofElementAt: ["bigger", "again_not_much"], converter: NotStringInitializable.init)) {
-         assert($0, is: .cannotConvertAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "value", type: NotStringInitializable.self))
+         XCTAssert($0, is: .cannotConvertAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "value", type: NotStringInitializable.self))
       }
    }
 
@@ -292,7 +266,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingAttributeConversionAtVariadicPath() {
       XCTAssertThrowsError(try sut.convertedAttribute(for: "nope", ofElementAt: "bigger", "again_not_much", converter: StringInitializable.init)) {
-         assert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
+         XCTAssert($0, is: .missingAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "nope"))
       }
    }
 
@@ -303,7 +277,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testFailedExistingAttributeConversionAtVariadicPath() {
       XCTAssertThrowsError(try sut.convertedAttribute(for: "value", ofElementAt: "bigger", "again_not_much", converter: NotStringInitializable.init)) {
-         assert($0, is: .cannotConvertAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "value", type: NotStringInitializable.self))
+         XCTAssert($0, is: .cannotConvertAttribute(element: Element(name: "again_not_much", attributes: ["value": "124.56"]), key: "value", type: NotStringInitializable.self))
       }
    }
 
@@ -326,7 +300,7 @@ final class Element_LookupTests: XCTestCase {
    // MARK: Retrieval
    func testNonExistingStringContentLookup() {
       XCTAssertThrowsError(try noStringContentSUT.stringContent()) {
-         assert($0, is: .missingContent(element: noStringContentSUT))
+         XCTAssert($0, is: .missingContent(element: noStringContentSUT))
       }
    }
 
@@ -337,7 +311,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingStringContentLookupAtPath() {
       XCTAssertThrowsError(try sut.stringContent(ofElementAt: ["bigger", "not_stringy"])) {
-         assert($0, is: .missingContent(element: Element(name: "not_stringy")))
+         XCTAssert($0, is: .missingContent(element: Element(name: "not_stringy")))
       }
    }
 
@@ -348,7 +322,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingStringContentLookupAtVariadicPath() {
       XCTAssertThrowsError(try sut.stringContent(ofElementAt: "bigger", "not_stringy")) {
-         assert($0, is: .missingContent(element: Element(name: "not_stringy")))
+         XCTAssert($0, is: .missingContent(element: Element(name: "not_stringy")))
       }
    }
 
@@ -360,7 +334,7 @@ final class Element_LookupTests: XCTestCase {
    // MARK: Conversion
    func testNonExistingStringContentConversion() {
       XCTAssertThrowsError(try noStringContentSUT.convertedStringContent(converter: StringInitializable.init)) {
-         assert($0, is: .missingContent(element: noStringContentSUT))
+         XCTAssert($0, is: .missingContent(element: noStringContentSUT))
       }
    }
 
@@ -371,13 +345,13 @@ final class Element_LookupTests: XCTestCase {
 
    func testFailedExistingStringContentConversion() {
       XCTAssertThrowsError(try stringContentSUT.convertedStringContent(converter: NotStringInitializable.init)) {
-         assert($0, is: .cannotConvertContent(element: stringContentSUT, content: "we have content", type: NotStringInitializable.self))
+         XCTAssert($0, is: .cannotConvertContent(element: stringContentSUT, content: "we have content", type: NotStringInitializable.self))
       }
    }
 
    func testFailedRawRepresentableExistingStringContentConversion() {
       XCTAssertThrowsError(try stringContentSUT.convertedStringContent(converter: StringRepresentableWithNotConvertibleRawValue.init)) {
-         assert($0, is: .cannotConvertContent(element: stringContentSUT, content: "we have content", type: StringRepresentableWithNotConvertibleRawValue.self))
+         XCTAssert($0, is: .cannotConvertContent(element: stringContentSUT, content: "we have content", type: StringRepresentableWithNotConvertibleRawValue.self))
       }
    }
 
@@ -398,7 +372,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingStringContentConversionAtPath() {
       XCTAssertThrowsError(try sut.convertedStringContent(ofElementAt: ["bigger", "not_stringy"], converter: StringInitializable.init)) {
-         assert($0, is: .missingContent(element: Element(name: "not_stringy")))
+         XCTAssert($0, is: .missingContent(element: Element(name: "not_stringy")))
       }
    }
 
@@ -409,12 +383,12 @@ final class Element_LookupTests: XCTestCase {
 
    func testFailedExistingStringContentConversionAtPath() {
       XCTAssertThrowsError(try sut.convertedStringContent(ofElementAt: ["bigger", "stringy"], converter: NotStringInitializable.init)) {
-         assert($0, is: .cannotConvertContent(element: Element(name: "stringy",
-                                                               content: [.string("Some text"),
-                                                                         .object(Element(name: "an_object")),
-                                                                         .string("More text")]),
-                                              content: "Some textMore text",
-                                              type: NotStringInitializable.self))
+         XCTAssert($0, is: .cannotConvertContent(element: Element(name: "stringy",
+                                                                  content: [.string("Some text"),
+                                                                            .object(Element(name: "an_object")),
+                                                                            .string("More text")]),
+                                                 content: "Some textMore text",
+                                                 type: NotStringInitializable.self))
       }
    }
 
@@ -435,7 +409,7 @@ final class Element_LookupTests: XCTestCase {
 
    func testNonExistingStringContentConversionAtVariadicPath() {
       XCTAssertThrowsError(try sut.convertedStringContent(ofElementAt: "bigger", "not_stringy", converter: StringInitializable.init)) {
-         assert($0, is: .missingContent(element: Element(name: "not_stringy")))
+         XCTAssert($0, is: .missingContent(element: Element(name: "not_stringy")))
       }
    }
 
@@ -446,12 +420,12 @@ final class Element_LookupTests: XCTestCase {
 
    func testFailedExistingStringContentConversionAtVariadicPath() {
       XCTAssertThrowsError(try sut.convertedStringContent(ofElementAt: "bigger", "stringy", converter: NotStringInitializable.init)) {
-         assert($0, is: .cannotConvertContent(element: Element(name: "stringy",
-                                                               content: [.string("Some text"),
-                                                                         .object(Element(name: "an_object")),
-                                                                         .string("More text")]),
-                                              content: "Some textMore text",
-                                              type: NotStringInitializable.self))
+         XCTAssert($0, is: .cannotConvertContent(element: Element(name: "stringy",
+                                                                  content: [.string("Some text"),
+                                                                            .object(Element(name: "an_object")),
+                                                                            .string("More text")]),
+                                                 content: "Some textMore text",
+                                                 type: NotStringInitializable.self))
       }
    }
 

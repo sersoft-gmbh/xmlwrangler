@@ -40,8 +40,7 @@ public extension RangeReplaceableCollection where Self: MutableCollection, Eleme
       var currentIndex = startIndex
       while var nextIndex = index(currentIndex, offsetBy: 1, limitedBy: endIndex) {
          defer { currentIndex = nextIndex }
-         guard case .string(let currentStr) = self[currentIndex] else { continue }
-         var newStr = currentStr
+         guard case .string(var newStr) = self[currentIndex] else { continue }
          while nextIndex < endIndex, case .string(let nextStr) = self[nextIndex] {
             newStr += nextStr
             remove(at: nextIndex) // TODO: this might be a performance problem
@@ -97,5 +96,33 @@ public extension Element {
    @inlinable
    public mutating func append(objects: Element...) {
       append(contentsOf: objects)
+   }
+}
+
+public extension Element {
+   public mutating func withMutatingAccess<Path: Collection, T>(toElementAt path: Path, do work: (inout Element) throws -> T) throws -> T where Path.Element == Name {
+      guard !path.isEmpty else { return try work(&self) }
+      guard let index = content.firstIndex(where: { $0.object?.name == path[path.startIndex] }),
+         var object = content[index].object // This one should always succeed.
+         else {
+         throw LookupError.missingChild(element: self, childElementName: path[path.startIndex])
+      }
+      defer { content[index] = .object(object) }
+      return try object.withMutatingAccess(toElementAt: path.dropFirst(), do: work)
+   }
+
+   @inlinable
+   public mutating func withMutatingAccess<T>(toElementAt path: Name..., do work: (inout Element) throws -> T) throws -> T {
+      return try withMutatingAccess(toElementAt: path, do: work)
+   }
+
+   @inlinable
+   public mutating func replace<Path: Collection>(elementAtPath path: Path, with newElement: Element) throws where Path.Element == Name {
+      try withMutatingAccess(toElementAt: path, do: { $0 = newElement })
+   }
+
+   @inlinable
+   public mutating func replace(elementAtPath path: Name..., with newElement: Element) throws {
+      try replace(elementAtPath: path, with: newElement)
    }
 }

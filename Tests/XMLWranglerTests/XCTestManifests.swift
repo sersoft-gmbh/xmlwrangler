@@ -7,7 +7,6 @@ extension ElementContentTests {
         ("testAppendingObjects", testAppendingObjects),
         ("testAppendingString", testAppendingString),
         ("testCompression", testCompression),
-        ("testEqualityCheck", testEqualityCheck),
         ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
         ("testInternalHelpers", testInternalHelpers),
     ]
@@ -38,7 +37,6 @@ extension ElementTests {
         ("testAppendingObject", testAppendingObject),
         ("testAppendingObjects", testAppendingObjects),
         ("testAppendingString", testAppendingString),
-        ("testEqualityCheck", testEqualityCheck),
         ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
     ]
 }
@@ -108,6 +106,16 @@ extension Element_LookupTests {
     ]
 }
 
+extension Element_MutationTests {
+    static let __allTests = [
+        ("testMutatingAccessToElementAtInvalidPathThrows", testMutatingAccessToElementAtInvalidPathThrows),
+        ("testMutatingAccessToElementAtPath", testMutatingAccessToElementAtPath),
+        ("testMutatingAccessToElementAtVariadicPath", testMutatingAccessToElementAtVariadicPath),
+        ("testReplacingElementAtPath", testReplacingElementAtPath),
+        ("testReplacingElementAtVariadicPath", testReplacingElementAtVariadicPath),
+    ]
+}
+
 extension ErrorsTests {
     static let __allTests = [
         ("testLookupErrorDescription", testLookupErrorDescription),
@@ -145,6 +153,7 @@ public func __allTests() -> [XCTestCaseEntry] {
         testCase(ElementContent_LookupTests.__allTests),
         testCase(ElementTests.__allTests),
         testCase(Element_LookupTests.__allTests),
+        testCase(Element_MutationTests.__allTests),
         testCase(ErrorsTests.__allTests),
         testCase(ParserTests.__allTests),
         testCase(SerializationTests.__allTests),
