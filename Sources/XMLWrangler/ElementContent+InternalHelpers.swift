@@ -1,4 +1,4 @@
-internal extension Element.Content {
+extension Element.Content {
    /// Returns `true` if `self` is `.string`, `false` otherwise.
    @usableFromInline
    internal var isString: Bool {

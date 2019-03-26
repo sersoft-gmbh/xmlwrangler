@@ -31,7 +31,7 @@ public struct Element: Equatable, ExpressibleByStringLiteral {
    }
 }
 
-public extension Element {
+extension Element {
    public struct Name: RawRepresentable, Hashable, ExpressibleByStringLiteral {
       public typealias RawValue = String
       public typealias StringLiteralType = RawValue

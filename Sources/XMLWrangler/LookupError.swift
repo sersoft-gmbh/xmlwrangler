@@ -9,16 +9,16 @@ public enum LookupError: Error, CustomStringConvertible {
    public var description: String {
       switch self {
       case .missingAttribute(let element, let key):
-         return "Element \"\(element.name.rawValue)\" has no attribute \"\(key.rawValue)\"!\nAttributes: \(element.attributes)"
+         return "Element '\(element.name.rawValue)' has no attribute '\(key.rawValue)'!\nAttributes: \(element.attributes)"
       case .cannotConvertAttribute(let element, let key, let targetType):
-         return "Could not convert attribute \"\(key.rawValue)\" of element \"\(element.name.rawValue)\" to \(targetType)!\nAttribute value: \(element.attributes[key] ?? "nil")"
+         return "Could not convert attribute '\(key.rawValue)' of element '\(element.name.rawValue)' to \(targetType)!\nAttribute value: \(element.attributes[key] ?? "nil")"
 
       case .missingContent(let element):
-         return "Element \"\(element.name.rawValue)\" has no content!"
+         return "Element '\(element.name.rawValue)' has no content!"
       case .missingChild(let element, let childElementName):
-         return "Element \"\(element.name.rawValue)\" has no child named \"\(childElementName.rawValue)\""
+         return "Element '\(element.name.rawValue)' has no child named '\(childElementName.rawValue)'"
       case .cannotConvertContent(let element, let content, let targetType):
-         return "Could not convert content of element \"\(element.name.rawValue)\" to \(targetType)!\nContent: \(content)"
+         return "Could not convert content of element '\(element.name.rawValue)' to \(targetType)!\nContent: \(content)"
       }
    }
 }

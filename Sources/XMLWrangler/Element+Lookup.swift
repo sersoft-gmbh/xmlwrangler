@@ -23,7 +23,7 @@ extension RawRepresentable where RawValue: LosslessStringConvertible {
 }
 
 // MARK: - Lookup
-public extension Element {
+extension Element {
    // MARK: Single element
    /// Looks up a single child element at a given path of element names.
    ///
@@ -87,7 +87,7 @@ public extension Element {
 }
 
 // MARK: - Attributes
-public extension Element {
+extension Element {
    // MARK: Retrieval
    /// Returns the value for a given attribute key if present.
    ///
@@ -334,7 +334,7 @@ public extension Element {
 }
 
 // MARK: - String Content
-public extension Element {
+extension Element {
    // MARK: Retrieval
    /// Returns the combined string content of the element.
    ///

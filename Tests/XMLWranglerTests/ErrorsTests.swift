@@ -16,15 +16,15 @@ final class ErrorsTests: XCTestCase {
       let cannotConvertContent = LookupError.cannotConvertContent(element: testElement, content: testContent, type: testType)
 
       XCTAssertEqual(String(describing: missingAttribute),
-                     "Element \"\(testElement.name.rawValue)\" has no attribute \"\(testKey.rawValue)\"!\nAttributes: \(testElement.attributes)")
+                     "Element '\(testElement.name.rawValue)' has no attribute '\(testKey.rawValue)'!\nAttributes: \(testElement.attributes)")
       XCTAssertEqual(String(describing: cannotConvertAttribute),
-                     "Could not convert attribute \"\(testKey.rawValue)\" of element \"\(testElement.name.rawValue)\" to \(testType)!\nAttribute value: \(testElement.attributes[testKey] ?? "nil")")
+                     "Could not convert attribute '\(testKey.rawValue)' of element '\(testElement.name.rawValue)' to \(testType)!\nAttribute value: \(testElement.attributes[testKey] ?? "nil")")
       XCTAssertEqual(String(describing: missingContent),
-                     "Element \"\(testElement.name.rawValue)\" has no content!")
+                     "Element '\(testElement.name.rawValue)' has no content!")
       XCTAssertEqual(String(describing: missingChild),
-                     "Element \"\(testElement.name.rawValue)\" has no child named \"\(testName.rawValue)\"")
+                     "Element '\(testElement.name.rawValue)' has no child named '\(testName.rawValue)'")
       XCTAssertEqual(String(describing: cannotConvertContent),
-                     "Could not convert content of element \"\(testElement.name.rawValue)\" to \(testType)!\nContent: \(testContent)")
+                     "Could not convert content of element '\(testElement.name.rawValue)' to \(testType)!\nContent: \(testContent)")
    }
 
    func testParserUnknownError() {

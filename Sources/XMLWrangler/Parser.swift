@@ -78,7 +78,7 @@ public final class Parser: ParserDelegate {
 }
 
 // MARK: - Unknown Parsing Error
-public extension Parser {
+extension Parser {
    /// Describes an unknown error.
    /// Used if parsing fails, but the XMLParser of Foundation does not report an error.
    public struct UnknownError: Error, CustomStringConvertible {
@@ -102,7 +102,7 @@ fileprivate protocol ParserDelegate: class {
 //   func parser(_ parser: XMLParser, validationErrorOccurred validationError: Error)
 }
 
-fileprivate extension Parser {
+extension Parser {
    fileprivate final class Delegate: NSObject, XMLParserDelegate {
       weak var delegate: ParserDelegate?
 

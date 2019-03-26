@@ -1,4 +1,4 @@
-public extension Element.Content {
+extension Element.Content {
    @available(*, deprecated, message: "Use conversion methods on Element")
    public func converted<T: LosslessStringConvertible>() -> T? {
       return string.flatMap(T.init)

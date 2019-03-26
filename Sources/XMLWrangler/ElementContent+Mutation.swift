@@ -1,4 +1,4 @@
-public extension RangeReplaceableCollection where Self: MutableCollection, Element == XMLWrangler.Element.Content {
+extension RangeReplaceableCollection where Self: MutableCollection, Element == XMLWrangler.Element.Content {
    /// Appends either a new `.string` element, or if the last one is already `.string`, appends `string` to the last one.
    ///
    /// - Parameter string: The string to append.
@@ -61,7 +61,7 @@ public extension RangeReplaceableCollection where Self: MutableCollection, Eleme
 }
 
 
-public extension Element {
+extension Element {
    /// Appends a string to the content.
    ///
    /// - Parameter string: The string to append to the content.
@@ -99,7 +99,7 @@ public extension Element {
    }
 }
 
-public extension Element {
+extension Element {
    public mutating func withMutatingAccess<Path: Collection, T>(toElementAt path: Path, do work: (inout Element) throws -> T) throws -> T where Path.Element == Name {
       guard !path.isEmpty else { return try work(&self) }
       guard let index = content.firstIndex(where: { $0.object?.name == path[path.startIndex] }),

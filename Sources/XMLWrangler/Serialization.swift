@@ -11,7 +11,7 @@ public struct SerializationOptions: OptionSet {
    }
 }
 
-public extension SerializationOptions {
+extension SerializationOptions {
    /// Use pretty formatting (by adding newlines between elements).
    public static let pretty: SerializationOptions = .init(rawValue: 1 << 0)
 
@@ -19,7 +19,7 @@ public extension SerializationOptions {
    public static let singleQuoteAttributes: SerializationOptions = .init(rawValue: 1 << 1)
 }
 
-fileprivate extension SerializationOptions {
+extension SerializationOptions {
    fileprivate var lineSeparator: String {
       return contains(.pretty) ? "\n" : ""
    }
@@ -133,7 +133,7 @@ fileprivate extension Version {
    }
 }
 
-public extension String {
+extension String {
    /// Returns a string which is escaped following the rules for the EscapableContent passed in.
    ///
    /// - Parameter content: The type of content for which the escaped string is to be used.
@@ -152,7 +152,7 @@ public extension String {
    }
 }
 
-public extension String {
+extension String {
     /// Creates a String by serializing an XML element as root and adding the <?xml ...?> document header.
     ///
     /// - Parameters:

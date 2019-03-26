@@ -1,4 +1,4 @@
-public extension Sequence where Element == XMLWrangler.Element.Content {
+extension Sequence where Element == XMLWrangler.Element.Content {
    /// Returns the elements of all `.object(_)`s in the sequence.
    @inlinable
    public var allObjects: [XMLWrangler.Element] {
@@ -12,7 +12,7 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    }
 }
 
-public extension Sequence where Element == XMLWrangler.Element.Content {
+extension Sequence where Element == XMLWrangler.Element.Content {
    /// Searches for elements which match a given predicate. Optionally also recursive.
    ///
    /// - Parameters:
@@ -106,7 +106,7 @@ public extension Sequence where Element == XMLWrangler.Element.Content {
    }
 }
 
-fileprivate extension Sequence {
+extension Sequence {
    /// Returns the result of a closure for the first element that the closure returns a non-nil result.
    ///
    /// - Parameter predicate: The predicate applied to the elements in self.
