@@ -15,6 +15,9 @@ fileprivate func convert<Input, Output, Error>(_ input: Input,
 }
 
 extension RawRepresentable where RawValue: LosslessStringConvertible {
+   /// Creates an instance of self from the description of the RawValue. Returns nil if nil is returned by RawValue.init(_:)
+   ///
+   /// - Parameter rawValueDescription: The description of the RawValue to use to try to create an instance.
    @usableFromInline
    init?(rawValueDescription: String) {
       guard let rawValue = RawValue(rawValueDescription) else { return nil }

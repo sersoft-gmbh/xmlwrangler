@@ -22,4 +22,30 @@ final class ElementContent_DeprecatedTests: XCTestCase {
       XCTAssertEqual(strContent, .string("TestAgain"))
       XCTAssertEqual(objContent, .object(testElement))
    }
+
+   func testElementRemoveAtPath() throws {
+      var testElement = Element(
+         name: "Root",
+         objects: [
+            Element(name: "Child1", attributes: ["some": "value"], objects: Element(name: "Child1.1")),
+            Element(name: "Child2", objects: Element(name: "Child2.1", attributes: ["other": "value"])),
+         ])
+      var expectedResult = testElement
+      try expectedResult.replace(elementAt: ["Child1", "Child1.1"], with: Element(name: "NEW"))
+      try testElement.replace(elementAtPath: ["Child1", "Child1.1"], with: Element(name: "NEW"))
+      XCTAssertEqual(expectedResult, testElement)
+   }
+
+   func testElementRemoveAtVariadicPath() throws {
+      var testElement = Element(
+         name: "Root",
+         objects: [
+            Element(name: "Child1", attributes: ["some": "value"], objects: Element(name: "Child1.1")),
+            Element(name: "Child2", objects: Element(name: "Child2.1", attributes: ["other": "value"])),
+         ])
+      var expectedResult = testElement
+      try expectedResult.replace(elementAt: "Child1", "Child1.1", with: Element(name: "NEW"))
+      try testElement.replace(elementAtPath: "Child1", "Child1.1", with: Element(name: "NEW"))
+      XCTAssertEqual(expectedResult, testElement)
+   }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07305ACB2268A09800A57C21 /* Element+Mutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305ACA2268A09800A57C21 /* Element+Mutation.swift */; };
 		07426D4221DE5D6A00393E78 /* XMLWrangler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07426D3821DE5D6A00393E78 /* XMLWrangler.framework */; };
 		07426D7321DE610100393E78 /* SemVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07426D7221DE610100393E78 /* SemVer.framework */; };
 		0774CFC921F639B500C3D5CB /* ErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774CFC721F6398C00C3D5CB /* ErrorsTests.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07305ACA2268A09800A57C21 /* Element+Mutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+Mutation.swift"; sourceTree = "<group>"; };
 		07426D3821DE5D6A00393E78 /* XMLWrangler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMLWrangler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07426D4121DE5D6A00393E78 /* XMLWranglerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMLWranglerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07426D7221DE610100393E78 /* SemVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SemVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 			children = (
 				07783CEF21F2366700585133 /* Element.swift */,
 				07783CED21F2366700585133 /* Element+Lookup.swift */,
+				07305ACA2268A09800A57C21 /* Element+Mutation.swift */,
 				07783CF321F2366700585133 /* ElementContent+InternalHelpers.swift */,
 				07783CF021F2366700585133 /* ElementContent+Lookup.swift */,
 				07783CEC21F2366700585133 /* ElementContent+Mutation.swift */,
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07783CF821F2366700585133 /* Element.swift in Sources */,
+				07305ACB2268A09800A57C21 /* Element+Mutation.swift in Sources */,
 				07783CFA21F2366700585133 /* LookupError.swift in Sources */,
 				07783CF621F2366700585133 /* Element+Lookup.swift in Sources */,
 				07783CFC21F2366700585133 /* ElementContent+InternalHelpers.swift in Sources */,
