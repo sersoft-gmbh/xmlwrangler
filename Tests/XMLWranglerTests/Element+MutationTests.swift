@@ -49,14 +49,38 @@ final class Element_MutationTests: XCTestCase {
    func testReplacingElementAtPath() throws {
       var expectedResult: Element = sut
       expectedResult.content[0]._object.content[0]._object = Element(name: "Test")
-      try sut.replace(elementAtPath: ["Child1", "Child1.1"], with: Element(name: "Test"))
+      try sut.replace(elementAt: ["Child1", "Child1.1"], with: Element(name: "Test"))
       XCTAssertEqual(sut, expectedResult)
    }
 
    func testReplacingElementAtVariadicPath() throws {
       var expectedResult: Element = sut
       expectedResult.content[0]._object.content[0]._object = Element(name: "Test")
-      try sut.replace(elementAtPath: "Child1", "Child1.1", with: Element(name: "Test"))
+      try sut.replace(elementAt: "Child1", "Child1.1", with: Element(name: "Test"))
       XCTAssertEqual(sut, expectedResult)
+   }
+
+   func testRemovingElementAtEmptyPath() {
+      XCTAssertNil(try sut.remove(elementAt: []))
+   }
+
+   func testRemovingInexistentElementAtPath() {
+      XCTAssertNil(try sut.remove(elementAt: ["Child1", "DoesNotExist"]))
+   }
+
+   func testRemovingElementAtPath() throws {
+      var expectedResult: Element = sut
+      let expectedReturnValue = expectedResult.content[0]._object.content.remove(at: 0)._object
+      let removed = try sut.remove(elementAt: ["Child1", "Child1.1"])
+      XCTAssertEqual(sut, expectedResult)
+      XCTAssertEqual(removed, expectedReturnValue)
+   }
+
+   func testRemovingElementAtVariadicPath() throws {
+      var expectedResult: Element = sut
+      let expectedReturnValue = expectedResult.content[0]._object.content.remove(at: 0)._object
+      let removed = try sut.remove(elementAt: "Child1", "Child1.1")
+      XCTAssertEqual(sut, expectedResult)
+      XCTAssertEqual(removed, expectedReturnValue)
    }
 }

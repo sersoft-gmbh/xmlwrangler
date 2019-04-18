@@ -14,14 +14,17 @@ public struct Element: Equatable, ExpressibleByStringLiteral {
       self.content = content
    }
 
+   @inlinable
    public init(name: Name, attributes: Attributes = [:], content: Content...) {
       self.init(name: name, attributes: attributes, content: content)
    }
 
+   @inlinable
    public init(name: Name, attributes: Attributes = [:], objects: [Element]) {
       self.init(name: name, attributes: attributes, content: objects.map { .object($0) })
    }
 
+   @inlinable
    public init(name: Name, attributes: Attributes = [:], objects: Element...) {
       self.init(name: name, attributes: attributes, objects: objects)
    }
