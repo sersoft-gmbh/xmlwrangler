@@ -23,6 +23,8 @@ extension ElementContent_DeprecatedTests {
     static let __allTests__ElementContent_DeprecatedTests = [
         ("testElementContentAppend", testElementContentAppend),
         ("testElementContentConverted", testElementContentConverted),
+        ("testElementRemoveAtPath", testElementRemoveAtPath),
+        ("testElementRemoveAtVariadicPath", testElementRemoveAtVariadicPath),
     ]
 }
 
