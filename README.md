@@ -4,6 +4,7 @@
 [![CI Status](https://travis-ci.com/sersoft-gmbh/XMLWrangler.svg?branch=master)](https://travis-ci.com/sersoft-gmbh/XMLWrangler)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c997088f35484726bb1bc6167f074cc4)](https://www.codacy.com/app/ffried/XMLWrangler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/XMLWrangler&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/sersoft-gmbh/XMLWrangler/branch/master/graph/badge.svg)](https://codecov.io/gh/sersoft-gmbh/XMLWrangler)
+[![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/XMLWrangler/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/XMLWrangler)
 
 Easily deal with XMLs in Swift.
 
@@ -110,6 +111,10 @@ While not yet integrated, the following features might provide added value and c
 
 -   Indention support for serializing and parsing.
 -   Extracting "KeyPaths": It could be useful to directly extract a path. It would not be necessary to extract every single element then.
+
+## Documentation
+
+The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an [online version](https://sersoft-gmbh.github.io/XMLWrangler) available for you.
 
 ## Contributing
 

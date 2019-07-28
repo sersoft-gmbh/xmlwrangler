@@ -1,0 +1,19 @@
+clean: true
+
+theme: fullwidth
+
+output: docs
+source_directory: Sources
+readme: README.md
+
+xcodebuild_arguments:
+  -  -workspace
+  -  ../Xcode/XMLWrangler.xcworkspace
+  - -scheme
+  - XMLWrangler
+module: XMLWrangler
+undocumented_text: ""
+github_url: https://github.com/sersoft-gmbh/XMLWrangler
+
+author: ser.soft GmbH
+author_url: https://sersoft.de
