@@ -1,4 +1,7 @@
 import XCTest
+#if canImport(FoundationXML)
+import FoundationXML
+#endif
 @testable import XMLWrangler
 
 final class ParserTests: XCTestCase {
