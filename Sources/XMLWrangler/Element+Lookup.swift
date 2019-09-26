@@ -9,7 +9,8 @@
 fileprivate func convert<Input, Output, Error>(_ input: Input,
                                                using converter: (Input) throws -> Output?,
                                                throwing error: @autoclosure () -> Error) throws -> Output
-   where Error: Swift.Error {
+   where Error: Swift.Error
+{
       guard let converted = try converter(input) else { throw error() }
       return converted
 }
