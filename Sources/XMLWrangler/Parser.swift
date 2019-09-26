@@ -1,7 +1,12 @@
 import struct Foundation.Data
 import class Foundation.NSObject
+#if canImport(FoundationXML)
+import class FoundationXML.XMLParser
+import protocol FoundationXML.XMLParserDelegate
+#else
 import class Foundation.XMLParser
 import protocol Foundation.XMLParserDelegate
+#endif
 
 /// Responsible for parsing XMLs.
 public final class Parser: ParserDelegate {
