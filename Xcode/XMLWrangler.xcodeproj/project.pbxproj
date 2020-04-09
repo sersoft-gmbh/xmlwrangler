@@ -30,6 +30,7 @@
 		07A6E70622EDFEFD001C7770 /* ElementContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6FA22EDFEFD001C7770 /* ElementContentTests.swift */; };
 		07A6E70722EDFEFD001C7770 /* SerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6FB22EDFEFD001C7770 /* SerializationTests.swift */; };
 		07A6E70822EDFEFD001C7770 /* ElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6E6FC22EDFEFD001C7770 /* ElementTests.swift */; };
+		07CBBFB4243F8C7600F405EE /* GitHubIssueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBBFB2243F8C4900F405EE /* GitHubIssueTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		07A6E6FA22EDFEFD001C7770 /* ElementContentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementContentTests.swift; sourceTree = "<group>"; };
 		07A6E6FB22EDFEFD001C7770 /* SerializationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationTests.swift; sourceTree = "<group>"; };
 		07A6E6FC22EDFEFD001C7770 /* ElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementTests.swift; sourceTree = "<group>"; };
+		07CBBFB2243F8C4900F405EE /* GitHubIssueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubIssueTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,16 +154,17 @@
 			isa = PBXGroup;
 			children = (
 				07A6E6F522EDFEFD001C7770 /* Supporting Files */,
-				07A6E6F022EDFEFD001C7770 /* LookupErrorHelpers.swift */,
-				07A6E6F122EDFEFD001C7770 /* ElementContent+LookupTests.swift */,
-				07A6E6F322EDFEFD001C7770 /* ErrorsTests.swift */,
-				07A6E6F422EDFEFD001C7770 /* Element+MutationTests.swift */,
-				07A6E6F722EDFEFD001C7770 /* ParserTests.swift */,
-				07A6E6F822EDFEFD001C7770 /* ElementContent+DeprecatedTests.swift */,
 				07A6E6F922EDFEFD001C7770 /* Element+LookupTests.swift */,
+				07A6E6F422EDFEFD001C7770 /* Element+MutationTests.swift */,
+				07A6E6F822EDFEFD001C7770 /* ElementContent+DeprecatedTests.swift */,
+				07A6E6F122EDFEFD001C7770 /* ElementContent+LookupTests.swift */,
 				07A6E6FA22EDFEFD001C7770 /* ElementContentTests.swift */,
-				07A6E6FB22EDFEFD001C7770 /* SerializationTests.swift */,
 				07A6E6FC22EDFEFD001C7770 /* ElementTests.swift */,
+				07A6E6F322EDFEFD001C7770 /* ErrorsTests.swift */,
+				07CBBFB2243F8C4900F405EE /* GitHubIssueTests.swift */,
+				07A6E6F022EDFEFD001C7770 /* LookupErrorHelpers.swift */,
+				07A6E6F722EDFEFD001C7770 /* ParserTests.swift */,
+				07A6E6FB22EDFEFD001C7770 /* SerializationTests.swift */,
 			);
 			name = XMLWranglerTests;
 			path = ../Tests/XMLWranglerTests;
@@ -311,6 +314,7 @@
 				07A6E6FD22EDFEFD001C7770 /* LookupErrorHelpers.swift in Sources */,
 				07A6E70422EDFEFD001C7770 /* ElementContent+DeprecatedTests.swift in Sources */,
 				07A6E70522EDFEFD001C7770 /* Element+LookupTests.swift in Sources */,
+				07CBBFB4243F8C7600F405EE /* GitHubIssueTests.swift in Sources */,
 				07A6E70622EDFEFD001C7770 /* ElementContentTests.swift in Sources */,
 				07A6E70822EDFEFD001C7770 /* ElementTests.swift in Sources */,
 			);
