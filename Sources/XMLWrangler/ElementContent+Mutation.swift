@@ -25,7 +25,7 @@ extension RangeReplaceableCollection where Self: MutableCollection, Element == X
    /// - Parameter objects: The sequence of elements to append wrapped in `.object`.
    @inlinable
    public mutating func append<S: Sequence>(contentsOf objects: S) where S.Element == XMLWrangler.Element {
-      append(contentsOf: objects.map { .object($0) })
+      append(contentsOf: objects.lazy.map { .object($0) })
    }
 
    /// Appends the one or more elements wrapped as `.object`.
