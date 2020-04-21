@@ -1,7 +1,7 @@
 # XMLWrangler
 
 [![GitHub release](https://img.shields.io/github/release/sersoft-gmbh/XMLWrangler.svg?style=flat)](https://github.com/sersoft-gmbh/XMLWrangler/releases/latest)
-[![CI Status](https://travis-ci.com/sersoft-gmbh/XMLWrangler.svg?branch=master)](https://travis-ci.com/sersoft-gmbh/XMLWrangler)
+![Tests](https://github.com/sersoft-gmbh/XMLWrangler/workflows/Tests/badge.svg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c997088f35484726bb1bc6167f074cc4)](https://www.codacy.com/app/ffried/XMLWrangler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/XMLWrangler&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/sersoft-gmbh/XMLWrangler/branch/master/graph/badge.svg)](https://codecov.io/gh/sersoft-gmbh/XMLWrangler)
 [![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/XMLWrangler/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/XMLWrangler)
