@@ -62,6 +62,8 @@ jobs:
     steps:
       - run: sudo xcode-select -s /Applications/Xcode_11.4.app/Contents/Developer
       - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
       - uses: sersoft-gmbh/xcodebuild-action@v1
         with:
           project: Xcode/XMLWrangler.xcodeproj
