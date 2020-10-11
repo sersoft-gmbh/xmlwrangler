@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "xml-wrangler",
+    name: "xmlwrangler",
     products: [
         .library(name: "XMLWrangler", targets: ["XMLWrangler"]),
     ],
