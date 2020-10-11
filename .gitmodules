@@ -1,3 +1,0 @@
-[submodule "Xcode/Submodules/SemVer"]
-	path = Xcode/Submodules/SemVer
-	url = https://github.com/sersoft-gmbh/semver.git

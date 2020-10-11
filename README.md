@@ -12,7 +12,7 @@ Easily deal with XMLs in Swift.
 
 Add the following dependency to your `Package.swift`:
 ```swift
-.package(url: "https://github.com/sersoft-gmbh/xmlwrangler.git", from: "3.0.0"),
+.package(url: "https://github.com/sersoft-gmbh/xmlwrangler.git", from: "4.0.0"),
 ```
 
 ## Usage
@@ -99,8 +99,6 @@ However, there are many helper functions to safely look up and convert content a
 -   It is then also possible to convert those attributes (for some types like e.g. `RawRepresentable` you don't need to pass a `converter`): `Element.convertedAttribute(for:converter:)`
 -   Last but not least you can extract the string content of an Element: `Element.stringContent()`
 -   And of course as you can with attributes, you can also convert string content: `Element.convertedStringContent(converter:)`
-
-There are also mixtures of all of these, so that you can e.g. extract and convert an attribute of a child element at a given path: `Element.convertedAttribute(for:ofElementAt:converter:)`
 
 All these methods throw an error (`LookupError`) when something went wrong instead of returning optionals. If you prefern an optional, you can always use `try?`.
 For more information also check the header docs which describe these methods a little closer.
