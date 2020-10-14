@@ -6,23 +6,23 @@ extension XMLElement.Content.Element {
         return false
     }
 
-    /// Returns `true` if `self` is `.object`, `false` otherwise.
+    /// Returns `true` if `self` is `.element`, `false` otherwise.
     @inlinable
-    internal var isObject: Bool {
-        if case .object(_) = self { return true }
+    internal var isElement: Bool {
+        if case .element(_) = self { return true }
         return false
     }
 
-    /// Returns the associated `Element` if `self` is `.object`, `nil` otherwise.
+    /// Returns the associated `XMLElement` if `self` is `.element`, `nil` otherwise.
     @inlinable
-    internal var object: XMLElement? {
-        guard case .object(let obj) = self else { return nil }
+    internal var element: XMLElement? {
+        guard case .element(let obj) = self else { return nil }
         return obj
     }
 
     /// Returns the associated `String` if `self` is `.string`, `nil` otherwise.
     @inlinable
-    internal var string: String? {
+    internal var string: StringPart? {
         guard case .string(let str) = self else { return nil }
         return str
     }

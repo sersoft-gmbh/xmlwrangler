@@ -28,6 +28,7 @@ extension RawRepresentable where RawValue: LosslessStringConvertible {
 }
 
 extension Dictionary where Key == XMLElement.Attributes.Key.RawValue, Value == XMLElement.Attributes.Content.RawValue {
+    /// Converts the receiver to the `XMLElement.Attributes` type.
     @inlinable
     var asAttributes: XMLElement.Attributes {
         .init(storage: .init(uniqueKeysWithValues: lazy.map { (.init(rawValue: $0.key), .init(rawValue: $0.value)) }))
@@ -35,6 +36,7 @@ extension Dictionary where Key == XMLElement.Attributes.Key.RawValue, Value == X
 }
 
 extension RandomAccessCollection {
+    /// Returns the last safe subscript index.
     @inlinable
     var indexBeforeEndIndex: Index { index(before: endIndex) }
 }

@@ -135,7 +135,7 @@ extension String {
     /// Creates a String by serializing an XML element as root and adding the <?xml ...?> document header.
     ///
     /// - Parameters:
-    ///   - root: The root object for the XML document.
+    ///   - root: The root element for the XML document.
     ///   - version: The version of the XML document. Only major and minor are used since XML only supports these. Defaults to 1.0.
     ///   - encoding: The encoding for the document. Defaults to `utf8`.
     ///   - options: The options to use for serializing. Defaults to empty options.
@@ -203,20 +203,20 @@ extension String {
     /// Creates a String by serializing an XML content.
     ///
     /// - Parameters:
-    ///   - content: A collection of Element.Content to serialize.
+    ///   - content: An `Element.Content` instance to serialize.
     ///   - options: The options to use for serializing. Defaults to empty options.
     public init(xmlContent content: XMLElement.Content, options: SerializationOptions = []) {
-        let (contentStr, didContainObjectsOrMultilineStrings) = content.compressed().reduce(into: ("", false)) {
+        let (contentStr, didContainElementsOrMultilineStrings) = content.compressed().reduce(into: ("", false)) {
             switch $1 {
             case .string(let str):
                 let hasNewlines = !CharacterSet(charactersIn: str).isDisjoint(with: .newlines)
                 $0.1 = $0.1 || hasNewlines
                 $0.0 += str.escaped(content: .text) + (hasNewlines ? options.lineSeparator : "")
-            case .object(let obj):
+            case .element(let obj):
                 $0.1 = true
                 $0.0 += String(xml: obj, options: options) + options.lineSeparator
             }
         }
-        self = didContainObjectsOrMultilineStrings ? options.lineSeparator + contentStr : contentStr
+        self = didContainElementsOrMultilineStrings ? options.lineSeparator + contentStr : contentStr
     }
 }

@@ -1,12 +1,12 @@
 // MARK: - Lookup
-extension Element {
+extension XMLElement {
     // MARK: Single element
     /// Looks up a single child element at a given path of element names.
     ///
     /// - Parameter path: A collection of element names which represent the path to extract the element from.
     /// - Returns: The element at the given path.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
-    public func element<Path: Collection>(at path: Path) throws -> Element where Path.Element == Name {
+    public func element<Path: Collection>(at path: Path) throws -> XMLElement where Path.Element == Name {
         guard !path.isEmpty else { return self }
         guard let nextElement = content.findFirst(elementNamed: path[path.startIndex], recursive: false) else {
             throw LookupError.missingChild(element: self, childElementName: path[path.startIndex])
@@ -20,7 +20,7 @@ extension Element {
     /// - Returns: The element at the given path.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
     @inlinable
-    public func element(at path: Name...) throws -> Element {
+    public func element(at path: Name...) throws -> XMLElement {
         try element(at: path)
     }
 
@@ -31,13 +31,13 @@ extension Element {
     /// - Returns: All elements found with the given name. Might be empty.
     /// - Throws: Currently, no error is thrown. The method is annotated as `throws` for consistency and because it might throw in the future.
     @inlinable
-    public func elements(named elementName: Name) throws -> [Element] {
+    public func elements(named elementName: Name) throws -> [XMLElement] {
         content.find(elementsNamed: elementName)
     }
 }
 
 // MARK: - Attributes
-extension Element {
+extension XMLElement {
     // MARK: Retrieval
     /// Returns the value for a given attribute key if present.
     ///
@@ -120,12 +120,12 @@ extension Element {
 }
 
 // MARK: - String Content
-extension Element {
+extension XMLElement {
     // MARK: Retrieval
     /// Returns the combined string content of the element.
     ///
     /// - Returns: All `.string` contents joined together into one string.
-    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects.
+    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements.
     public func stringContent() throws -> String {
         let stringContent = content.allStrings
         guard !stringContent.isEmpty else { throw LookupError.missingContent(element: self) }
@@ -137,7 +137,7 @@ extension Element {
     ///
     /// - Parameter converter: The converter to use for the conversion.
     /// - Returns: The converted content.
-    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects or any error thrown by `converter`.
+    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements or any error thrown by `converter`.
     /// - SeeAlso: `Element.stringContent()`
     @inlinable
     public func convertedStringContent<T>(converter: (String) throws -> T) throws -> T {
@@ -148,7 +148,7 @@ extension Element {
     ///
     /// - Parameter converter: The converter to use for the conversion.
     /// - Returns: The converted content.
-    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` if the `converter` returns nil or any error thrown by `converter`.
+    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements, `LookupError.cannotConvertContent` if the `converter` returns nil or any error thrown by `converter`.
     /// - SeeAlso: `Element.stringContent()`
     public func convertedStringContent<T>(converter: (String) throws -> T?) throws -> T {
         let content = try stringContent()
@@ -159,7 +159,7 @@ extension Element {
     /// Returns the result of initializing a RawRepresentable type with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
     ///
     /// - Returns: An instance of the RawRepresentable type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
-    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
+    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
     /// - SeeAlso: `Element.convertedStringContent(converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
     @inlinable
     public func convertedStringContent<T: RawRepresentable>() throws -> T where T.RawValue: LosslessStringConvertible {
@@ -169,7 +169,7 @@ extension Element {
     /// Returns the result of initializing a LosslessStringConvertible type with the combined string content.
     ///
     /// - Returns: An instance of the LosslessStringConvertible type initialized with the combined string content.
-    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the LosslessStringConvertible type returns nil.
+    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements, `LookupError.cannotConvertContent` when the initializer of the LosslessStringConvertible type returns nil.
     /// - SeeAlso: `Element.convertedStringContent(converter:)` and `LosslessStringConvertible.init?(_:)`
     @inlinable
     public func convertedStringContent<T: LosslessStringConvertible>() throws -> T {
@@ -179,7 +179,7 @@ extension Element {
     /// Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
     ///
     /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
-    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` objects, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
+    /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
     /// - SeeAlso: `Element.convertedStringContent(converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
     /// - Note: This overload will prefer the RawRepresentable initializer.
     @inlinable
@@ -191,7 +191,7 @@ extension Element {
 }
 
 // MARK: - Element Content
-extension Element {
+extension XMLElement {
     /// Returns the result of converting the receiver to the given `ExpressibleByXMLElement` target.
     /// - Parameter target: The target type to convert to. Defaults to `Target.self`.
     /// - Throws: Any error thrown by `ExpressibleByXMLElement.init(xml:)` of `Target`.

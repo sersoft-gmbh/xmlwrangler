@@ -1,42 +1,42 @@
-extension Element {
+extension XMLElement {
     /// Appends a string to the content.
     ///
     /// - Parameter string: The string to append to the content.
-    /// - SeeAlso: RangeReplacableCollection.append(string:)
+    /// - SeeAlso: `XMLElement.Contents.append(string:)`
     @inlinable
-    public mutating func append(string: String) {
+    public mutating func append(string: Content.Element.StringPart) {
         content.append(string: string)
     }
 
     /// Appends an element to the content.
     ///
-    /// - Parameter object: The element to append to the content.
-    /// - SeeAlso: RangeReplacableCollection.append(object:)
+    /// - Parameter element: The element to append to the content.
+    /// - SeeAlso: `XMLElement.Content.append(element:)`
     @inlinable
-    public mutating func append(object: Element) {
-        content.append(object: object)
+    public mutating func append(element: XMLElement) {
+        content.append(element: element)
     }
 
     /// Appends the contents of a sequence of elements to the content.
     ///
-    /// - Parameter objects: The sequence of elements to append to the content.
-    /// - SeeAlso: RangeReplacableCollection.append(contentsOf:)
+    /// - Parameter elements: The sequence of elements to append to the content.
+    /// - SeeAlso: `XMLElement.Content.append(contentsOf:)`
     @inlinable
-    public mutating func append<S: Sequence>(contentsOf objects: S) where S.Element == Element {
-        content.append(contentsOf: objects)
+    public mutating func append<S: Sequence>(contentsOf elements: S) where S.Element == XMLElement {
+        content.append(contentsOf: elements)
     }
 
-    /// Appends one or more objects to the content.
+    /// Appends one or more elements to the content.
     ///
-    /// - Parameter objects: The objects to append to the content.
-    /// - SeeAlso: RangeReplacableCollection.append(objects:)
+    /// - Parameter elements: The elements to append to the content.
+    /// - SeeAlso: `XMLElement.Content.append(elements:)`
     @inlinable
-    public mutating func append(objects: Element...) {
-        append(contentsOf: objects)
+    public mutating func append(elements: XMLElement...) {
+        append(contentsOf: elements)
     }
 }
 
-extension Element {
+extension XMLElement {
     /// Gives mutating access to an element at a given path.
     ///
     /// - Parameters:
@@ -44,17 +44,17 @@ extension Element {
     ///   - work: The closure which is provided with mutating access to the element at the given path.
     /// - Returns: The value returned by `work`.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point. Or any error thrown by `work`
-    public mutating func withMutatingAccess<Path: Collection, T>(toElementAt path: Path, do work: (inout Element) throws -> T) throws -> T
+    public mutating func withMutatingAccess<Path: Collection, T>(toElementAt path: Path, do work: (inout XMLElement) throws -> T) throws -> T
     where Path.Element == Name
     {
         guard !path.isEmpty else { return try work(&self) }
-        guard let index = content.firstIndex(where: { $0.object?.name == path[path.startIndex] }),
-              var object = content[index].object // This one should always succeed.
+        guard let index = content.firstIndex(where: { $0.element?.name == path[path.startIndex] }),
+              var element = content[index].element // This one should always succeed.
         else {
             throw LookupError.missingChild(element: self, childElementName: path[path.startIndex])
         }
-        defer { content[index] = .object(object) }
-        return try object.withMutatingAccess(toElementAt: path.dropFirst(), do: work)
+        defer { content[index] = .element(element) }
+        return try element.withMutatingAccess(toElementAt: path.dropFirst(), do: work)
     }
 
     /// Gives mutating access to an element at a given path.
@@ -65,7 +65,7 @@ extension Element {
     /// - Returns: The value returned by `work`.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point. Or any error thrown by `work`
     @inlinable
-    public mutating func withMutatingAccess<T>(toElementAt path: Name..., do work: (inout Element) throws -> T) throws -> T {
+    public mutating func withMutatingAccess<T>(toElementAt path: Name..., do work: (inout XMLElement) throws -> T) throws -> T {
         try withMutatingAccess(toElementAt: path, do: work)
     }
 
@@ -76,7 +76,7 @@ extension Element {
     ///   - newElement: The element insert in place of the element at `path`.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
     @inlinable
-    public mutating func replace<Path: Collection>(elementAt path: Path, with newElement: Element) throws
+    public mutating func replace<Path: Collection>(elementAt path: Path, with newElement: XMLElement) throws
     where Path.Element == Name
     {
         try withMutatingAccess(toElementAt: path) { $0 = newElement }
@@ -89,7 +89,7 @@ extension Element {
     ///   - newElement: The element insert in place of the element at `path`.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
     @inlinable
-    public mutating func replace(elementAt path: Name..., with newElement: Element) throws {
+    public mutating func replace(elementAt path: Name..., with newElement: XMLElement) throws {
         try replace(elementAt: path, with: newElement)
     }
 
@@ -100,11 +100,11 @@ extension Element {
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
     ///           The only exception here is the last path element. If it not present, nil is returned instead.
     @discardableResult
-    public mutating func remove<Path: Collection>(elementAt path: Path) throws -> Element? where Path.Element == Name {
+    public mutating func remove<Path: Collection>(elementAt path: Path) throws -> XMLElement? where Path.Element == Name {
         guard !path.isEmpty else { return nil } // We cannot remove anything at a non-existent path.
         let name = path[path.index(path.endIndex, offsetBy: -1)]
         return try withMutatingAccess(toElementAt: path.dropLast()) { elem in
-            elem.content.firstIndex { $0.object?.name == name }.flatMap { elem.content.remove(at: $0).object }
+            elem.content.firstIndex { $0.element?.name == name }.flatMap { elem.content.remove(at: $0).element }
         }
     }
 
@@ -116,7 +116,7 @@ extension Element {
     ///           The only exception here is the last path element. If it not present, nil is returned instead.
     @inlinable
     @discardableResult
-    public mutating func remove(elementAt path: Name...) throws -> Element? {
+    public mutating func remove(elementAt path: Name...) throws -> XMLElement? {
         try remove(elementAt: path)
     }
 }

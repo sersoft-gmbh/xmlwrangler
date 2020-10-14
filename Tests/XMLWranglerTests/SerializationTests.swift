@@ -63,26 +63,26 @@ final class SerializationTests: XCTestCase {
         XCTAssertEqual(processingInstructions, expectedProcessingInstruction)
     }
     
-    private let testRoot: Element = {
-        var root = Element(name: "root", attributes: ["some": "key"])
-        root.content.append(object: Element(name: "first"))
-        root.content.append(object: Element(name: "second", content: "something"))
-        root.content.append(object: Element(name: "third", objects: [
-            Element(name: "third_one"),
-            Element(name: "third_two", attributes: ["third_some": "value"]),
-            Element(name: "third_three", attributes: ["third_some": "value"], content: "test this right"),
+    private let testRoot: XWElement = {
+        var root = XWElement(name: "root", attributes: ["some": "key"])
+        root.content.append(element: XWElement(name: "first"))
+        root.content.append(element: XWElement(name: "second", content: "something"))
+        root.content.append(element: XWElement(name: "third", elements: [
+            XWElement(name: "third_one"),
+            XWElement(name: "third_two", attributes: ["third_some": "value"]),
+            XWElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right"),
         ]))
         return root
     }()
     
-    private let mixedContentRoot = Element(name: "root",
-                                           content: [
-                                            .string("Some text is here to check.\nWhich even contains newlines."),
-                                            .object(Element(name: "child", content: "I'm not of much relevance")),
-                                            .object(Element(name: "child")),
-                                            .string("Again we have some more text here.\nLet's see how this will end."),
-                                            .object(Element(name: "other")),
-                                           ])
+    private let mixedContentRoot = XWElement(name: "root",
+                                             content: [
+                                                .string("Some text is here to check.\nWhich even contains newlines."),
+                                                .element(XWElement(name: "child", content: "I'm not of much relevance")),
+                                                .element(XWElement(name: "child")),
+                                                .string("Again we have some more text here.\nLet's see how this will end."),
+                                                .element(XWElement(name: "other")),
+                                             ])
     
     func testXMLSerialization() {
         let str1 = String(xml: testRoot)
@@ -150,7 +150,7 @@ final class SerializationTests: XCTestCase {
     }
 
     private struct Convertible: XMLElementConvertible {
-        let xml: Element
+        let xml: XWElement
     }
 
     func testConvertibleSerialization() {

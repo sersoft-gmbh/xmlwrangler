@@ -1,5 +1,5 @@
 /// Represents an element in an XML structure.
-public struct Element: Equatable {
+public struct XMLElement: Equatable {
     /// The name of the element.
     public let name: Name
     /// The attributes of the element.
@@ -19,22 +19,22 @@ public struct Element: Equatable {
     }
 
     @inlinable
-    public init(name: Name, attributes: Attributes = [:], objects: [Element]) {
-        self.init(name: name, attributes: attributes, content: .init(storage: objects.map { .object($0) }))
+    public init(name: Name, attributes: Attributes = [:], elements: [XMLElement]) {
+        self.init(name: name, attributes: attributes, content: .init(storage: elements.map { .element($0) }))
     }
 
     @inlinable
-    public init(name: Name, attributes: Attributes = [:], objects: Element...) {
-        self.init(name: name, attributes: attributes, objects: objects)
+    public init(name: Name, attributes: Attributes = [:], elements: XMLElement...) {
+        self.init(name: name, attributes: attributes, elements: elements)
     }
 
     @inlinable
-    public init(name: Name, attributes: Attributes = [:], stringContent: String) {
+    public init(name: Name, attributes: Attributes = [:], stringContent: Content.Element.StringPart) {
         self.init(name: name, attributes: attributes, content: .string(stringContent))
     }
 }
 
-extension Element {
+extension XMLElement {
     /// Represents the name of an element.
     @frozen
     public struct Name: RawRepresentable, Hashable, Codable, ExpressibleByStringLiteral {
@@ -57,5 +57,6 @@ extension Element {
     }
 }
 
-/// A typealias for `XMLWrangler.Element`.
-public typealias XMLElement = Element
+/// A typealias for `XMLWrangler.XWElement`.
+/// Use this if you run into conflicts with `Foundation.XMLElement`.
+public typealias XWElement = XMLElement

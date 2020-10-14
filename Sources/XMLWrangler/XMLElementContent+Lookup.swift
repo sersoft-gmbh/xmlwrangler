@@ -1,22 +1,22 @@
 extension XMLElement.Content {
-    /// Returns the elements of all `.object(_)`s in the sequence.
+    /// Returns the elements of all `.element(_)`s in the receiver.
     @inlinable
-    public var allObjects: [XMLElement] { storage.compactMap(\.object) }
+    public var allElements: [XMLElement] { storage.compactMap(\.element) }
 
-    /// Returns the strings of all `.string(_)`s in the sequence.
+    /// Returns the strings of all `.string(_)`s in the receiver.
     @inlinable
-    public var allStrings: [String] { storage.compactMap(\.string) }
+    public var allStrings: [Element.StringPart] { storage.compactMap(\.string) }
 
     @usableFromInline
     internal typealias LazyStorageAllSequence<T> = LazyMapSequence<LazyFilterSequence<LazyMapSequence<Storage, Optional<T>>>, T>
 
     @inlinable
-    internal var lazyAllObjects: LazyStorageAllSequence<XMLElement> {
-        storage.lazy.compactMap(\.object)
+    internal var lazyAllElements: LazyStorageAllSequence<XMLElement> {
+        storage.lazy.compactMap(\.element)
     }
 
     @inlinable
-    internal var lazyAllString: LazyStorageAllSequence<String> {
+    internal var lazyAllString: LazyStorageAllSequence<Element.StringPart> {
         storage.lazy.compactMap(\.string)
     }
 
@@ -30,10 +30,10 @@ extension XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func find(recursive: Bool = false, elementsMatching predicate: (XMLElement) throws -> Bool) rethrows -> [XMLElement] {
-        let objects = lazyAllObjects
-        let matches = try objects.filter(predicate)
+        let elements = lazyAllElements
+        let matches = try elements.filter(predicate)
         guard recursive else { return matches }
-        return try matches + objects.flatMap { try $0.content.find(recursive: recursive, elementsMatching: predicate) }
+        return try matches + elements.flatMap { try $0.content.find(recursive: recursive, elementsMatching: predicate) }
     }
 
     /// Finds the first occurence of an element that matches a given predicate.
@@ -48,10 +48,10 @@ extension XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func findFirst(recursive: Bool = false, elementMatching predicate: (XMLElement) throws -> Bool) rethrows -> XMLElement? {
-        let objects = lazyAllObjects
-        let match = try objects.first(where: predicate)
+        let elements = lazyAllElements
+        let match = try elements.first(where: predicate)
         guard recursive else { return match }
-        return try match ?? objects.mapFirst { try $0.content.findFirst(recursive: recursive, elementMatching: predicate) }
+        return try match ?? elements.mapFirst { try $0.content.findFirst(recursive: recursive, elementMatching: predicate) }
     }
 
     /// Finds the last occurence of an element that matches a given predicate.
@@ -66,10 +66,10 @@ extension XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func findLast(recursive: Bool = false, elementMatching predicate: (XMLElement) throws -> Bool) rethrows -> XMLElement? {
-        let objects = lazyAllObjects.reversed()
-        let match = try objects.first(where: predicate)
+        let elements = lazyAllElements.reversed()
+        let match = try elements.first(where: predicate)
         guard recursive else { return match }
-        return try match ?? objects.mapFirst { try $0.content.findLast(recursive: recursive, elementMatching: predicate) }
+        return try match ?? elements.mapFirst { try $0.content.findLast(recursive: recursive, elementMatching: predicate) }
     }
 
     /// Searches for elements with a given name. Optionally also recursive.

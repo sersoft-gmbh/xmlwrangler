@@ -3,9 +3,9 @@ import XCTest
 
 final class ErrorsTests: XCTestCase {
     func testLookupErrorDescription() {
-        let testElement = Element(name: "Root")
-        let testKey = Element.Attributes.Key(rawValue: "TestKey")
-        let testName = Element.Name(rawValue: "TestName")
+        let testElement = XWElement(name: "Root")
+        let testKey = XWElement.Attributes.Key(rawValue: "TestKey")
+        let testName = XWElement.Name(rawValue: "TestName")
         let testContent = "Test Content"
         let testType = Int32.self
         
@@ -31,7 +31,7 @@ final class ErrorsTests: XCTestCase {
         XCTAssertEqual(String(describing: Parser.UnknownError()), "An unknown parsing error occurred!")
     }
     
-    func testParserMissingObjectError() {
-        XCTAssertEqual(String(describing: Parser.MissingObjectError()), "Parsing did not yield an object! Please check that the XML is valid!")
+    func testParserMissingRootElementError() {
+        XCTAssertEqual(String(describing: Parser.MissingRootElementError()), "Parsing did not yield an element! Please check that the XML is valid!")
     }
 }

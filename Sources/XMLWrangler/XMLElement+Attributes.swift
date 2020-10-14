@@ -20,7 +20,7 @@ extension RawRepresentable where RawValue == XMLElement.Attributes.Content.RawVa
     public var xmlAttributeContent: XMLElement.Attributes.Content { .init(rawValue) }
 }
 
-extension Element {
+extension XMLElement {
     @frozen
     public struct Attributes: Equatable {
         @frozen
@@ -154,14 +154,14 @@ extension Dictionary where Key == XMLElement.Attributes.Key, Value == XMLElement
     }
 }
 
-extension Element.Attributes: ExpressibleByDictionaryLiteral {
+extension XMLElement.Attributes: ExpressibleByDictionaryLiteral {
     @inlinable
     public init(dictionaryLiteral elements: (Key, XMLAttributeContentConvertible)...) {
         self.init(storage: .init(uniqueKeysWithValues: elements.lazy.map { ($0, $1.xmlAttributeContent) }))
     }
 }
 
-extension Element.Attributes: Sequence {
+extension XMLElement.Attributes: Sequence {
     public typealias Element = (key: Key, content: Content)
 
     @inlinable
@@ -189,7 +189,7 @@ extension Element.Attributes: Sequence {
     }
 }
 
-extension Element.Attributes: Collection {
+extension XMLElement.Attributes: Collection {
     @frozen
     public struct Index: Comparable {
         @usableFromInline
@@ -227,7 +227,7 @@ extension Element.Attributes: Collection {
     }
 }
 
-extension Element.Attributes {
+extension XMLElement.Attributes {
     @frozen
     public struct Keys: Collection, Equatable {
         public typealias Element = XMLElement.Attributes.Key

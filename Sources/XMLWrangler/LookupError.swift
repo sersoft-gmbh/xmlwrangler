@@ -1,3 +1,4 @@
+/// The error type that is thrown for all lookup operations on `XMLElement`.
 public enum LookupError: Error, CustomStringConvertible {
     case missingAttribute(element: XMLElement, key: XMLElement.Attributes.Key)
     case cannotConvertAttribute(element: XMLElement, key: XMLElement.Attributes.Key, type: Any.Type)

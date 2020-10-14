@@ -1,5 +1,5 @@
-extension Element {
-    /// A collection implementation that represents the content of an XML element.
+extension XMLElement {
+    /// A collection implementation that represents the contents of an XML element.
     @frozen
     public struct Content: Equatable, Collection {
         /// inherited
@@ -21,8 +21,8 @@ extension Element {
 
             /// A raw string
             case string(StringPart)
-            /// An xml object
-            case object(XMLElement)
+            /// An xml element
+            case element(XMLElement)
 
             // TODO: Do we need a CDATA case, too? -> For now we serialize these into Strings
 
@@ -35,7 +35,7 @@ extension Element {
             /// inherited
             @inlinable
             public init(xml: XMLElement) {
-                self = .object(xml)
+                self = .element(xml)
             }
         }
 
@@ -88,7 +88,7 @@ extension Element {
     }
 }
 
-extension Element.Content: BidirectionalCollection {
+extension XMLElement.Content: BidirectionalCollection {
     /// inherited
     @inlinable
     public func index(before i: Index) -> Index {
@@ -96,7 +96,7 @@ extension Element.Content: BidirectionalCollection {
     }
 }
 
-extension Element.Content: RandomAccessCollection {
+extension XMLElement.Content: RandomAccessCollection {
     /// inherited
     @inlinable
     public func index(_ i: Index, offsetBy distance: Int) -> Index {
@@ -110,7 +110,7 @@ extension Element.Content: RandomAccessCollection {
     }
 }
 
-extension Element.Content: RangeReplaceableCollection {
+extension XMLElement.Content: RangeReplaceableCollection {
     /// inherited
     @inlinable
     public mutating func replaceSubrange<C>(_ subrange: Range<Index>, with newElements: C) where C : Collection, Element == C.Element {
@@ -118,9 +118,9 @@ extension Element.Content: RangeReplaceableCollection {
     }
 }
 
-extension Element.Content: MutableCollection {}
+extension XMLElement.Content: MutableCollection {}
 
-extension Element.Content: ExpressibleByArrayLiteral {
+extension XMLElement.Content: ExpressibleByArrayLiteral {
     /// inherited
     public typealias ArrayLiteralElement = Element
 
@@ -131,15 +131,15 @@ extension Element.Content: ExpressibleByArrayLiteral {
     }
 }
 
-extension Element.Content: ExpressibleByXMLElement {
+extension XMLElement.Content: ExpressibleByXMLElement {
     /// inherited
     @inlinable
     public init(xml: XMLElement) {
-        self.init(storage: [.object(xml)])
+        self.init(storage: [.element(xml)])
     }
 }
 
-extension Element.Content: ExpressibleByStringLiteral {
+extension XMLElement.Content: ExpressibleByStringLiteral {
     /// inherited
     public typealias StringLiteralType = Element.StringLiteralType
 
@@ -150,7 +150,7 @@ extension Element.Content: ExpressibleByStringLiteral {
     }
 }
 
-extension Element.Content: ExpressibleByStringInterpolation {
+extension XMLElement.Content: ExpressibleByStringInterpolation {
     /// The interpolation type for `Element.Content`.
     @frozen
     public struct StringInterpolation: StringInterpolationProtocol {
@@ -185,7 +185,7 @@ extension Element.Content: ExpressibleByStringInterpolation {
         /// inherited
         @inlinable
         public mutating func appendInterpolation(_ element: XMLElement) {
-            storage.append(.object(element))
+            storage.append(.element(element))
         }
 
         /// inherited
