@@ -2,11 +2,14 @@ import struct Foundation.CharacterSet
 @_exported import struct SemVer.Version
 
 /// Represents options to use for serializing XML elements.
+@frozen
 public struct SerializationOptions: OptionSet {
-    public typealias RawValue = Int
+    public typealias RawValue = UInt
 
+    /// inherited
     public let rawValue: RawValue
 
+    /// inherited
     public init(rawValue: RawValue) {
         self.rawValue = rawValue
     }
@@ -30,6 +33,7 @@ extension SerializationOptions {
 public enum DocumentEncoding: Hashable, CustomStringConvertible {
     case utf8, utf16, ascii
 
+    /// inherited
     public var description: String {
         switch self {
         case .utf8: return "utf-8"
@@ -51,9 +55,11 @@ public enum DocumentEncoding: Hashable, CustomStringConvertible {
 public enum EscapableContent: Equatable, CustomStringConvertible {
     fileprivate typealias Replacement = (unescaped: String, escaped: String)
 
+    /// Represents the type of quotes to be used for quoting.
     public enum Quotes: Equatable, CustomStringConvertible {
         case single, double
 
+        /// inherited
         public var description: String {
             switch self {
             case .single: return "Single quotes"
@@ -80,6 +86,7 @@ public enum EscapableContent: Equatable, CustomStringConvertible {
     case comment
     case processingInstruction
 
+    /// inherited
     public var description: String {
         switch self {
         case .attribute(let quotes): return "Attribute enclosed in \(String(describing: quotes).lowercased())"
@@ -114,7 +121,6 @@ fileprivate extension Version {
 
 extension String {
     /// Returns a string which is escaped following the rules for the EscapableContent passed in.
-    ///
     /// - Parameter content: The type of content for which the escaped string is to be used.
     /// - Returns: An escaped string following the escaping rules for `content`.
     public func escaped(content: EscapableContent) -> String {
@@ -124,7 +130,6 @@ extension String {
     }
 
     /// Escapes the receiver following the rules for the EscapableContent passed in.
-    ///
     /// - Parameter content: The type of content for which the escaped string is to be used.
     public mutating func escape(content: EscapableContent) {
         self = escaped(content: content)
@@ -133,7 +138,6 @@ extension String {
 
 extension String {
     /// Creates a String by serializing an XML element as root and adding the <?xml ...?> document header.
-    ///
     /// - Parameters:
     ///   - root: The root element for the XML document.
     ///   - version: The version of the XML document. Only major and minor are used since XML only supports these. Defaults to 1.0.
@@ -151,9 +155,9 @@ extension String {
             + String(xml: root, options: options)
     }
 
-    /// Creates a String by serializing the `xml` `Element` of the given `convertible` as root and adding the <?xml ...?> document header.
+    /// Creates a String by serializing the `XMLElement` representation of the given `convertible` as root and adding the <?xml ...?> document header.
     /// - Parameters:
-    ///   - convertible: The type whose `xml` `Element` to use as root element for the serialization.
+    ///   - convertible: The type whose `XMLElement` representation to use as root element for the serialization.
     ///   - version: The version of the XML document. Only major and minor are used since XML only supports these. Defaults to 1.0.
     ///   - encoding: The encoding for the document. Defaults to `utf8`.
     ///   - options: The options to use for serializing. Defaults to empty options.
@@ -169,7 +173,6 @@ extension String {
     }
 
     /// Creates a String by serializing an XML element.
-    ///
     /// - Parameters:
     ///   - xml: The XML element to serialize.
     ///   - options: The options to use for serializing. Defaults to empty options.
@@ -190,7 +193,7 @@ extension String {
 
     /// Creates a String by serializing the XML element of the given `XMLElementConvertible` type.
     /// - Parameters:
-    ///   - convertible: The type whose `xml` `Element` to serialize.
+    ///   - convertible: The type whose `XMLElement` representation to serialize.
     ///   - options: The options to use for serializing. Defaults to empty options.
     /// - SeeAlso: `String.init(xml:options:)` and `XMLElementConvertible`
     @inlinable
@@ -201,9 +204,8 @@ extension String {
     }
 
     /// Creates a String by serializing an XML content.
-    ///
     /// - Parameters:
-    ///   - content: An `Element.Content` instance to serialize.
+    ///   - content: An `XMLElement.Content` instance to serialize.
     ///   - options: The options to use for serializing. Defaults to empty options.
     public init(xmlContent content: XMLElement.Content, options: SerializationOptions = []) {
         let (contentStr, didContainElementsOrMultilineStrings) = content.compressed().reduce(into: ("", false)) {

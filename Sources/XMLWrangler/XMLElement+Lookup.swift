@@ -72,10 +72,23 @@ extension XMLElement {
     ///   - converter: The converter to use for the conversion.
     /// - Returns: The converted value.
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key, `LookupError.cannotConvertAttribute` when `converter` returns nil or any error thrown by `converter`.
-    /// - SeeAlso: `Element.attribute(for:)`
+    /// - SeeAlso: `XMLElement.attribute(for:)`
     public func convertedAttribute<T>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T?) throws -> T {
         try _convert(attribute(for: key), using: converter,
                      failingWith: LookupError.cannotConvertAttribute(element: self, key: key, type: T.self))
+    }
+
+    /// Returns the result of initializing `Convertible` with the attribute for the given key if it exists.
+    /// - Parameters:
+    ///    - convertible: The convertible type. Defaults to `Convertible.self`.
+    ///    - key: The key for which to get the attribute content.
+    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `Convertible.init(xmlAttributeContent:)`.
+    /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
+    /// - SeeAlso: `XMLElement.attribute(for:)` and `ExpressibleByXMLAttributeContent`
+    @inlinable
+    public func convertedAttribute<Convertible: ExpressibleByXMLAttributeContent>(to convertible: Convertible.Type = Convertible.self, for key: Attributes.Key) throws -> Convertible
+    {
+        try convertedAttribute(for: key, converter: convertible.init)
     }
 
     /// Returns the result of initializing a RawRepresentable type with the value for a given attribute key
@@ -84,7 +97,7 @@ extension XMLElement {
     /// - Parameter key: The key for which to get the attribute value.
     /// - Returns: An instance of the RawRepresentable type initialized with the attribute value passed into the RawValue's LosslessStringConvertible-initializer.
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
-    /// - SeeAlso: `Element.convertedAttribute(for:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+    /// - SeeAlso: `XMLElement.convertedAttribute(for:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
     @inlinable
     public func convertedAttribute<T: RawRepresentable>(for key: Attributes.Key) throws -> T
     where T.RawValue: LosslessStringConvertible
@@ -97,7 +110,7 @@ extension XMLElement {
     /// - Parameter key: The key for which to get the attribute value.
     /// - Returns: An instance of the LosslessStringConvertible type initialized with the attribute value.
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the LosslessStringConvertible type returns nil.
-    /// - SeeAlso: `Element.convertedAttribute(for:converter:)` and `LosslessStringConvertible.init?(_:)`
+    /// - SeeAlso: `XMLElement.convertedAttribute(for:converter:)` and `LosslessStringConvertible.init?(_:)`
     @inlinable
     public func convertedAttribute<T: LosslessStringConvertible>(for key: Attributes.Key) throws -> T {
         try convertedAttribute(for: key, converter: { T($0.rawValue) })
@@ -109,7 +122,7 @@ extension XMLElement {
     /// - Parameter key: The key for which to get the attribute value.
     /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the attribute value passed into the RawValue's LosslessStringConvertible-initializer.
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
-    /// - SeeAlso: `Element.convertedAttribute(for:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+    /// - SeeAlso: `XMLElement.convertedAttribute(for:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
     /// - Note: This overload will prefer the RawRepresentable initializer.
     @inlinable
     public func convertedAttribute<T: RawRepresentable & LosslessStringConvertible>(for key: Attributes.Key) throws -> T
@@ -138,7 +151,7 @@ extension XMLElement {
     /// - Parameter converter: The converter to use for the conversion.
     /// - Returns: The converted content.
     /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements or any error thrown by `converter`.
-    /// - SeeAlso: `Element.stringContent()`
+    /// - SeeAlso: `XMLElement.stringContent()`
     @inlinable
     public func convertedStringContent<T>(converter: (String) throws -> T) throws -> T {
         try converter(stringContent())
@@ -149,7 +162,7 @@ extension XMLElement {
     /// - Parameter converter: The converter to use for the conversion.
     /// - Returns: The converted content.
     /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements, `LookupError.cannotConvertContent` if the `converter` returns nil or any error thrown by `converter`.
-    /// - SeeAlso: `Element.stringContent()`
+    /// - SeeAlso: `XMLElement.stringContent()`
     public func convertedStringContent<T>(converter: (String) throws -> T?) throws -> T {
         let content = try stringContent()
         return try _convert(content, using: converter,
@@ -160,7 +173,7 @@ extension XMLElement {
     ///
     /// - Returns: An instance of the RawRepresentable type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
     /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
-    /// - SeeAlso: `Element.convertedStringContent(converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+    /// - SeeAlso: `XMLElement.convertedStringContent(converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
     @inlinable
     public func convertedStringContent<T: RawRepresentable>() throws -> T where T.RawValue: LosslessStringConvertible {
         try convertedStringContent(converter: T.init)
@@ -170,7 +183,7 @@ extension XMLElement {
     ///
     /// - Returns: An instance of the LosslessStringConvertible type initialized with the combined string content.
     /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements, `LookupError.cannotConvertContent` when the initializer of the LosslessStringConvertible type returns nil.
-    /// - SeeAlso: `Element.convertedStringContent(converter:)` and `LosslessStringConvertible.init?(_:)`
+    /// - SeeAlso: `XMLElement.convertedStringContent(converter:)` and `LosslessStringConvertible.init?(_:)`
     @inlinable
     public func convertedStringContent<T: LosslessStringConvertible>() throws -> T {
         try convertedStringContent(converter: T.init)
@@ -180,7 +193,7 @@ extension XMLElement {
     ///
     /// - Returns: An instance of the RawRepresentable & LosslessStringConvertible type initialized with the combined string content passed into the RawValue's LosslessStringConvertible-initializer.
     /// - Throws: `LookupError.missingContent` if `content` contains no `.string` elements, `LookupError.cannotConvertContent` when the initializer of the RawRepresentable type or its RawValue returns nil.
-    /// - SeeAlso: `Element.convertedStringContent(converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
+    /// - SeeAlso: `XMLElement.convertedStringContent(converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
     /// - Note: This overload will prefer the RawRepresentable initializer.
     @inlinable
     public func convertedStringContent<T: RawRepresentable & LosslessStringConvertible>() throws -> T

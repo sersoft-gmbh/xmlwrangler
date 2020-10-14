@@ -70,7 +70,7 @@ extension XMLElement {
         /// inherited
         @inlinable
         public init() {
-            self.init(storage: [])
+            self.init(storage: .init())
         }
 
         /// inherited
@@ -151,7 +151,7 @@ extension XMLElement.Content: ExpressibleByStringLiteral {
 }
 
 extension XMLElement.Content: ExpressibleByStringInterpolation {
-    /// The interpolation type for `Element.Content`.
+    /// The string interpolation type for `Element.Content`.
     @frozen
     public struct StringInterpolation: StringInterpolationProtocol {
         /// inherited
@@ -165,13 +165,15 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
             storage.reserveCapacity(interpolationCount + Swift.min(literalCapacity, 2))
         }
 
-        /// inherited
+        /// Appends a literal to the contents by simply adding a `.string` element with the literal's contents.
+        /// - Parameter literal: The literal to append.
         @inlinable
         public mutating func appendLiteral(_ literal: StringLiteralType) {
             storage.append(.init(stringLiteral: literal))
         }
 
-        /// inherited
+        /// Appends a string element to the contents.
+        /// - Parameter string: The string to append.
         @inlinable
         public mutating func appendInterpolation<S: StringProtocol>(_ string: S) {
             storage.append(.string(String(string)))
@@ -182,25 +184,39 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
 //            storage.append(.string(String(int)))
 //        }
 
-        /// inherited
+        /// Appends the `XMLElement` of a `XMLElementConvertible` type to the contents.
+        /// - Parameter convertible: The convertible whose `xml` to append to the contents.
         @inlinable
-        public mutating func appendInterpolation(_ element: XMLElement) {
-            storage.append(.element(element))
+        public mutating func appendInterpolation<Convertible>(_ convertible: Convertible)
+        where Convertible: XMLElementConvertible
+        {
+            storage.append(.element(convertible.xml))
         }
 
-        /// inherited
+        /// Appends the contents of another sequence of `XMLElement.Content.Element` to the contents.
+        /// - Parameter contents: The sequence to append.
         @inlinable
-        public mutating func appendInterpolation<C: Collection>(_ content: C) where C.Element == XMLElement.Content.Element {
-            storage.append(contentsOf: content)
+        public mutating func appendInterpolation<C: Sequence>(_ contents: C) where C.Element == XMLElement.Content.Element {
+            storage.append(contentsOf: contents)
         }
 
-        /// inherited
+        /// Appends a variadic list of `XMLElement.Content.Element` to the contents.
+        /// - Parameter contents: The variadic list of `XMLElement.Content` to append.
+        @inlinable
+        public mutating func appendInterpolation(_ contents: XMLElement.Content.Element...) {
+            appendInterpolation(contents)
+        }
+
+        /// Appends another `XMLElement.Content` instance.
+        /// - Parameter content: The `XMLElement.Content` whose contents to append.
         @inlinable
         public mutating func appendInterpolation(_ content: XMLElement.Content) {
             appendInterpolation(content.storage)
         }
 
-        /// inherited
+        /// Appends the contents of another `XMLElement`.
+        /// - Parameter element: The `XMLElement` whose `content` to append.
+        /// - Note: This only appends the `content` of `element`, not the `element` itself!
         @inlinable
         public mutating func appendInterpolation(contentOf element: XMLElement) {
             appendInterpolation(element.content.storage)
