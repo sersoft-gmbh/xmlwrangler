@@ -1,10 +1,10 @@
 public enum LookupError: Error, CustomStringConvertible {
-    case missingAttribute(element: Element, key: Element.AttributeKey)
-    case cannotConvertAttribute(element: Element, key: Element.AttributeKey, type: Any.Type)
+    case missingAttribute(element: XMLElement, key: XMLElement.Attributes.Key)
+    case cannotConvertAttribute(element: XMLElement, key: XMLElement.Attributes.Key, type: Any.Type)
 
-    case missingContent(element: Element)
-    case missingChild(element: Element, childElementName: Element.Name)
-    case cannotConvertContent(element: Element, content: String, type: Any.Type)
+    case missingContent(element: XMLElement)
+    case missingChild(element: XMLElement, childElementName: XMLElement.Name)
+    case cannotConvertContent(element: XMLElement, content: XMLElement.Content.Element.StringPart, type: Any.Type)
 
     public var description: String {
         switch self {

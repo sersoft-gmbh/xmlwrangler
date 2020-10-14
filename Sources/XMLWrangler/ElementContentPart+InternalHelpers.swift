@@ -1,4 +1,4 @@
-extension Element.Content {
+extension XMLElement.Content.Element {
     /// Returns `true` if `self` is `.string`, `false` otherwise.
     @inlinable
     internal var isString: Bool {
@@ -15,7 +15,7 @@ extension Element.Content {
 
     /// Returns the associated `Element` if `self` is `.object`, `nil` otherwise.
     @inlinable
-    internal var object: Element? {
+    internal var object: XMLElement? {
         guard case .object(let obj) = self else { return nil }
         return obj
     }

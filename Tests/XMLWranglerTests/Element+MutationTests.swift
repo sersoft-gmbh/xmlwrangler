@@ -1,7 +1,7 @@
 import XCTest
 @testable import XMLWrangler
 
-fileprivate extension Element.Content {
+fileprivate extension Element.Content.Element {
     var _object: Element! {
         get { object }
         set { self = .object(newValue) }
@@ -16,7 +16,7 @@ final class Element_MutationTests: XCTestCase {
         sut = Element(name: "Root",
                       objects: [
                         Element(name: "Child1", attributes: ["some": "value"], objects: Element(name: "Child1.1")),
-                        Element(name: "Child2", objects: Element(name: "Child2.1", attributes: [.init("other"): .init("value")])),
+                        Element(name: "Child2", objects: Element(name: "Child2.1", attributes: [.init("other"): "value"])),
                       ])
     }
     

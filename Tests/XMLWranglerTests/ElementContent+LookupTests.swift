@@ -3,8 +3,8 @@ import XCTest
 
 final class ElementContent_LookupTests: XCTestCase {
     func testFindingObjectsShallow() {
-        let string: [Element.Content] = [.string("testStr")]
-        let source: [Element.Content] = [
+        let string: Element.Content = [.string("testStr")]
+        let source: Element.Content = [
             .object(Element(name: "test")),
             .object(Element(name: "test_something")),
             .object(Element(name: "whatever")),
@@ -23,13 +23,13 @@ final class ElementContent_LookupTests: XCTestCase {
         XCTAssertTrue(cannotFind.isEmpty)
         XCTAssertEqual(testResult.count, 2)
         XCTAssertEqual(whateverResult.count, 1)
-        XCTAssertEqual(testResult, ["test", "test"])
-        XCTAssertEqual(whateverResult, ["whatever"])
+        XCTAssertEqual(testResult, [Element(name: "test"), Element(name: "test")])
+        XCTAssertEqual(whateverResult, [Element(name: "whatever")])
     }
     
     func testFindingFirstObjectShallow() {
-        let string: [Element.Content] = [.string("testStr")]
-        let source: [Element.Content] = [
+        let string: Element.Content = [.string("testStr")]
+        let source: Element.Content = [
             .object(Element(name: "test", content: "value")),
             .object(Element(name: "test_something")),
             .object(Element(name: "whatever")),
@@ -53,8 +53,8 @@ final class ElementContent_LookupTests: XCTestCase {
     }
     
     func testFindingLastObjectShallow() {
-        let string: [Element.Content] = [.string("testStr")]
-        let source: [Element.Content] = [
+        let string: Element.Content = [.string("testStr")]
+        let source: Element.Content = [
             .object(Element(name: "test")),
             .object(Element(name: "test_something")),
             .object(Element(name: "whatever")),
@@ -78,8 +78,8 @@ final class ElementContent_LookupTests: XCTestCase {
     }
     
     func testFindingObjectsRecursive() {
-        let string: [Element.Content] = [.string("testStr")]
-        let source: [Element.Content] = [
+        let string: Element.Content = [.string("testStr")]
+        let source: Element.Content = [
             .object(Element(name: "test_something",
                             objects: Element(name: "test", content: "value"))),
             .object(Element(name: "test_it")),
@@ -110,13 +110,13 @@ final class ElementContent_LookupTests: XCTestCase {
         XCTAssertTrue(cannotFind.isEmpty)
         XCTAssertEqual(testResult.count, 2)
         XCTAssertEqual(whateverResult.count, 1)
-        XCTAssertEqual(testResult, [Element(name: "test", content: "value"), "test"])
-        XCTAssertEqual(whateverResult, ["whatever"])
+        XCTAssertEqual(testResult, [Element(name: "test", content: "value"), Element(name: "test")])
+        XCTAssertEqual(whateverResult, [Element(name: "whatever")])
     }
     
     func testFindingFirstObjectRecursive() {
-        let string: [Element.Content] = [.string("testStr")]
-        let source: [Element.Content] = [
+        let string: Element.Content = [.string("testStr")]
+        let source: Element.Content = [
             .object(Element(name: "test_something",
                             objects: Element(name: "test", content: "value"))),
             .object(Element(name: "test_it")),
@@ -154,8 +154,8 @@ final class ElementContent_LookupTests: XCTestCase {
     }
     
     func testFindingLastObjectRecursive() {
-        let string: [Element.Content] = [.string("testStr")]
-        let source: [Element.Content] = [
+        let string: Element.Content = [.string("testStr")]
+        let source: Element.Content = [
             .object(Element(name: "test_something",
                             objects: Element(name: "test", content: "value"))),
             .object(Element(name: "test_it")),

@@ -1,32 +1,3 @@
-/// Converts a input value into an output value using a given converter. Throws if the converter returns nil (or throws).
-///
-/// - Parameters:
-///   - input: The input value to convert.
-///   - converter: The converter to use for the conversion.
-///   - error: The error to throw in case `converter` returns nil.
-/// - Returns: The output of the converter.
-/// - Throws: `error` in case the `converter` returns nil or any error thrown by `converter`.
-@inlinable
-func _convert<Input, Output, Error>(_ input: Input,
-                                    using converter: (Input) throws -> Output?,
-                                    failingWith error: @autoclosure () -> Error) throws -> Output
-where Error: Swift.Error
-{
-    guard let converted = try converter(input) else { throw error() }
-    return converted
-}
-
-extension RawRepresentable where RawValue: LosslessStringConvertible {
-    /// Creates an instance of self from the description of the RawValue. Returns nil if nil is returned by RawValue.init(_:)
-    ///
-    /// - Parameter rawValueDescription: The description of the RawValue to use to try to create an instance.
-    @usableFromInline
-    init?(rawValueDescription: String) {
-        guard let rawValue = RawValue(rawValueDescription) else { return nil }
-        self.init(rawValue: rawValue)
-    }
-}
-
 // MARK: - Lookup
 extension Element {
     // MARK: Single element
@@ -73,7 +44,7 @@ extension Element {
     /// - Parameter key: The key for which to get the attribute value.
     /// - Returns: The attribute value for the given key.
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key.
-    public func attribute(for key: AttributeKey) throws -> AttributeValue {
+    public func attribute(for key: Attributes.Key) throws -> Attributes.Content {
         guard let attribute = attributes[key] else {
             throw LookupError.missingAttribute(element: self, key: key)
         }
@@ -90,7 +61,7 @@ extension Element {
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `converter`.
     /// - SeeAlso: `Element.attribute(for:)`
     @inlinable
-    public func convertedAttribute<T>(for key: AttributeKey, converter: (AttributeValue) throws -> T) throws -> T {
+    public func convertedAttribute<T>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T) throws -> T {
         try converter(attribute(for: key))
     }
 
@@ -102,7 +73,7 @@ extension Element {
     /// - Returns: The converted value.
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key, `LookupError.cannotConvertAttribute` when `converter` returns nil or any error thrown by `converter`.
     /// - SeeAlso: `Element.attribute(for:)`
-    public func convertedAttribute<T>(for key: AttributeKey, converter: (AttributeValue) throws -> T?) throws -> T {
+    public func convertedAttribute<T>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T?) throws -> T {
         try _convert(attribute(for: key), using: converter,
                      failingWith: LookupError.cannotConvertAttribute(element: self, key: key, type: T.self))
     }
@@ -115,7 +86,7 @@ extension Element {
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the RawRepresentable type or its RawValue returns nil.
     /// - SeeAlso: `Element.convertedAttribute(for:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
     @inlinable
-    public func convertedAttribute<T: RawRepresentable>(for key: AttributeKey) throws -> T
+    public func convertedAttribute<T: RawRepresentable>(for key: Attributes.Key) throws -> T
     where T.RawValue: LosslessStringConvertible
     {
         try convertedAttribute(for: key, converter: { T(rawValueDescription: $0.rawValue) })
@@ -128,7 +99,7 @@ extension Element {
     /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or `LookupError.cannotConvertAttribute` when the initializer of the LosslessStringConvertible type returns nil.
     /// - SeeAlso: `Element.convertedAttribute(for:converter:)` and `LosslessStringConvertible.init?(_:)`
     @inlinable
-    public func convertedAttribute<T: LosslessStringConvertible>(for key: AttributeKey) throws -> T {
+    public func convertedAttribute<T: LosslessStringConvertible>(for key: Attributes.Key) throws -> T {
         try convertedAttribute(for: key, converter: { T($0.rawValue) })
     }
 
@@ -141,7 +112,7 @@ extension Element {
     /// - SeeAlso: `Element.convertedAttribute(for:converter:)`, `RawRepresentable.init?(rawValue:)` and `LosslessStringConvertible.init?(_:)`
     /// - Note: This overload will prefer the RawRepresentable initializer.
     @inlinable
-    public func convertedAttribute<T: RawRepresentable & LosslessStringConvertible>(for key: AttributeKey) throws -> T
+    public func convertedAttribute<T: RawRepresentable & LosslessStringConvertible>(for key: Attributes.Key) throws -> T
     where T.RawValue: LosslessStringConvertible
     {
         try convertedAttribute(for: key, converter: { T(rawValueDescription: $0.rawValue) })

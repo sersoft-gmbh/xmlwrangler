@@ -189,15 +189,3 @@ extension Parser {
         #endif
     }
 }
-
-extension Dictionary where Key == XMLWrangler.Element.AttributeKey.RawValue, Value == XMLWrangler.Element.AttributeValue.RawValue {
-    @inlinable
-    var asAttributes: XMLWrangler.Element.Attributes {
-        .init(uniqueKeysWithValues: lazy.map { (.init(rawValue: $0.key), .init(rawValue: $0.value)) })
-    }
-}
-
-extension RandomAccessCollection {
-    @inlinable
-    var indexBeforeEndIndex: Index { index(before: endIndex) }
-}

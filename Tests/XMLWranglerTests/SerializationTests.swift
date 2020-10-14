@@ -65,10 +65,10 @@ final class SerializationTests: XCTestCase {
     
     private let testRoot: Element = {
         var root = Element(name: "root", attributes: ["some": "key"])
-        root.content.append(object: "first")
+        root.content.append(object: Element(name: "first"))
         root.content.append(object: Element(name: "second", content: "something"))
         root.content.append(object: Element(name: "third", objects: [
-            "third_one",
+            Element(name: "third_one"),
             Element(name: "third_two", attributes: ["third_some": "value"]),
             Element(name: "third_three", attributes: ["third_some": "value"], content: "test this right"),
         ]))

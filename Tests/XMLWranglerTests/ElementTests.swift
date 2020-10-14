@@ -2,11 +2,6 @@ import XCTest
 @testable import XMLWrangler
 
 final class ElementTests: XCTestCase {
-    func testExpressibleByStringLiteral() {
-        let element: Element = "test"
-        XCTAssertEqual(element.name, .init(rawValue: "test"))
-    }
-    
     func testAppendingString() {
         var element = Element(name: "test")
         var element2 = Element(name: "test2", stringContent: "hello")

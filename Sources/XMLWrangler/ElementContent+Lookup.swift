@@ -1,14 +1,25 @@
-extension Sequence where Element == XMLElement.Content {
+extension XMLElement.Content {
     /// Returns the elements of all `.object(_)`s in the sequence.
     @inlinable
-    public var allObjects: [XMLElement] { compactMap(\.object) }
+    public var allObjects: [XMLElement] { storage.compactMap(\.object) }
 
     /// Returns the strings of all `.string(_)`s in the sequence.
     @inlinable
-    public var allStrings: [String] { compactMap(\.string) }
-}
+    public var allStrings: [String] { storage.compactMap(\.string) }
 
-extension Sequence where Element == XMLElement.Content {
+    @usableFromInline
+    internal typealias LazyStorageAllSequence<T> = LazyMapSequence<LazyFilterSequence<LazyMapSequence<Storage, Optional<T>>>, T>
+
+    @inlinable
+    internal var lazyAllObjects: LazyStorageAllSequence<XMLElement> {
+        storage.lazy.compactMap(\.object)
+    }
+
+    @inlinable
+    internal var lazyAllString: LazyStorageAllSequence<String> {
+        storage.lazy.compactMap(\.string)
+    }
+
     /// Searches for elements which match a given predicate. Optionally also recursive.
     ///
     /// - Parameters:
@@ -19,7 +30,7 @@ extension Sequence where Element == XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func find(recursive: Bool = false, elementsMatching predicate: (XMLElement) throws -> Bool) rethrows -> [XMLElement] {
-        let objects = allObjects
+        let objects = lazyAllObjects
         let matches = try objects.filter(predicate)
         guard recursive else { return matches }
         return try matches + objects.flatMap { try $0.content.find(recursive: recursive, elementsMatching: predicate) }
@@ -37,7 +48,7 @@ extension Sequence where Element == XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func findFirst(recursive: Bool = false, elementMatching predicate: (XMLElement) throws -> Bool) rethrows -> XMLElement? {
-        let objects = allObjects
+        let objects = lazyAllObjects
         let match = try objects.first(where: predicate)
         guard recursive else { return match }
         return try match ?? objects.mapFirst { try $0.content.findFirst(recursive: recursive, elementMatching: predicate) }
@@ -55,7 +66,7 @@ extension Sequence where Element == XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func findLast(recursive: Bool = false, elementMatching predicate: (XMLElement) throws -> Bool) rethrows -> XMLElement? {
-        let objects = allObjects.reversed()
+        let objects = lazyAllObjects.reversed()
         let match = try objects.first(where: predicate)
         guard recursive else { return match }
         return try match ?? objects.mapFirst { try $0.content.findLast(recursive: recursive, elementMatching: predicate) }

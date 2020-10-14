@@ -16,12 +16,12 @@ final class ParserTests: XCTestCase {
     
     private let testRoot: Element = {
         var root = Element(name: "root", attributes: ["some": "key"])
-        root.append(object: "first")
-        root.append(object: XMLElement(name: "second", content: "something"))
-        root.append(object: XMLElement(name: "third", objects: [
-            "third_one",
-            XMLElement(name: "third_two", attributes: ["third_some": "value"]),
-            XMLElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right")
+        root.append(object: Element(name: "first"))
+        root.append(object: Element(name: "second", content: "something"))
+        root.append(object: Element(name: "third", objects: [
+            Element(name: "third_one"),
+            Element(name: "third_two", attributes: ["third_some": "value"]),
+            Element(name: "third_three", attributes: ["third_some": "value"], content: "test this right")
         ]))
         root.append(object: XMLElement(name: "fourth", content: "Some <CDATA> value"))
         return root

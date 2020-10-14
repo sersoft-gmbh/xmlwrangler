@@ -109,7 +109,7 @@ final class Element_LookupTests: XCTestCase {
 
     func testNonExistingElementLookupAtPath() {
         XCTAssertThrowsError(try sut.element(at: ["simple", "simple_child", "nope"])) {
-            XCTAssert($0, is: .missingChild(element: "simple_child", childElementName: "nope"))
+            XCTAssert($0, is: .missingChild(element: Element(name: "simple_child"), childElementName: "nope"))
         }
     }
 
@@ -120,7 +120,7 @@ final class Element_LookupTests: XCTestCase {
 
     func testNonExistingElementLookupAtVariadicPath() {
         XCTAssertThrowsError(try sut.element(at: "simple", "simple_child", "nope")) {
-            XCTAssert($0, is: .missingChild(element: "simple_child", childElementName: "nope"))
+            XCTAssert($0, is: .missingChild(element: Element(name: "simple_child"), childElementName: "nope"))
         }
     }
 

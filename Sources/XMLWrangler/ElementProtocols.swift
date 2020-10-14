@@ -14,6 +14,16 @@ public protocol XMLElementConvertible {
 /// A type that can be converted from and to an XML `Element`.
 public typealias XMLElementRepresentable = ExpressibleByXMLElement & XMLElementConvertible
 
+extension Element: XMLElementRepresentable {
+    /// inherited
+    @inlinable
+    public var xml: Element { self }
+
+    /// inherited
+    @inlinable
+    public init(xml: Element) { self = xml }
+}
+
 extension ExpressibleByXMLElement {
     @usableFromInline
     static func _fromContent(of element: Element, converter: (String) -> Self?) throws -> Self {
@@ -49,4 +59,3 @@ extension ExpressibleByXMLElement where Self: LosslessStringConvertible, Self: R
         self = try Self._fromContent(of: xml, converter: Self.init(rawValue:))
     }
 }
-

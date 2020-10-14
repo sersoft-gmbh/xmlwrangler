@@ -1,9 +1,9 @@
 import XCTest
 @testable import XMLWrangler
 
-final class ElementContentTests: XCTestCase {
+final class ElementContentPartTests: XCTestCase {
     func testExpressibleByStringLiteral() {
-        let content1: Element.Content = "test"
+        let content1: Element.Content.Element = "test"
         if case .string(let str) = content1 {
             XCTAssertEqual(str, "test")
         } else {
@@ -12,8 +12,8 @@ final class ElementContentTests: XCTestCase {
     }
 
     func testAppendingString() {
-        var content: [Element.Content] = []
-        var content2: [Element.Content] = ["hello"]
+        var content: Element.Content = []
+        var content2: Element.Content = ["hello"]
 
         content.append(string: "_this")
         content2.append(string: " world")
@@ -23,7 +23,7 @@ final class ElementContentTests: XCTestCase {
     }
 
     func testAppendingObject() {
-        var content: [Element.Content] = []
+        var content: Element.Content = []
         let child = Element(name: "_this")
 
         content.append(object: child)
@@ -32,7 +32,7 @@ final class ElementContentTests: XCTestCase {
     }
 
     func testAppendingContentOfSequence() {
-        var content: [Element.Content] = []
+        var content: Element.Content = []
         let child1 = Element(name: "_this1")
         let child2 = Element(name: "_this2")
         let child3 = Element(name: "_this3")
@@ -43,7 +43,7 @@ final class ElementContentTests: XCTestCase {
     }
 
     func testAppendingObjects() {
-        var content: [Element.Content] = []
+        var content: Element.Content = []
         let child1 = Element(name: "_this1")
         let child2 = Element(name: "_this2")
         let child3 = Element(name: "_this3")
@@ -54,7 +54,7 @@ final class ElementContentTests: XCTestCase {
     }
 
     func testCompression() {
-        var content1: [Element.Content] = [
+        var content1: Element.Content = [
             .string("ABC"),
             .string("DEF"),
             .object(Element(name: "obj1")),
@@ -64,7 +64,7 @@ final class ElementContentTests: XCTestCase {
             .string("JKL"),
             .string("MNO"),
         ]
-        let expectedContent1: [Element.Content] = [
+        let expectedContent1: Element.Content = [
             .string("ABCDEF"),
             .object(Element(name: "obj1")),
             .object(Element(name: "obj2")),
@@ -73,7 +73,7 @@ final class ElementContentTests: XCTestCase {
             .string("JKLMNO"),
         ]
 
-        var content2: [Element.Content] = [
+        var content2: Element.Content = [
             .string("ABC"),
             .string("DEF"),
             .object(Element(name: "obj1")),
@@ -88,7 +88,7 @@ final class ElementContentTests: XCTestCase {
             .object(Element(name: "obj6")),
             .object(Element(name: "obj7")),
         ]
-        let expectedContent2: [Element.Content] = [
+        let expectedContent2: Element.Content = [
             .string("ABCDEF"),
             .object(Element(name: "obj1")),
             .object(Element(name: "obj2")),
@@ -113,8 +113,8 @@ final class ElementContentTests: XCTestCase {
     }
 
     func testInternalHelpers() {
-        let strContent = Element.Content.string("ABC")
-        let objContent = Element.Content.object("some_element")
+        let strContent = Element.Content.Element.string("ABC")
+        let objContent = Element.Content.Element.object(Element(name: "some_element"))
 
         XCTAssertTrue(strContent.isString)
         XCTAssertFalse(strContent.isObject)
@@ -123,6 +123,6 @@ final class ElementContentTests: XCTestCase {
         XCTAssertFalse(objContent.isString)
         XCTAssertTrue(objContent.isObject)
         XCTAssertNil(objContent.string)
-        XCTAssertEqual(objContent.object, "some_element")
+        XCTAssertEqual(objContent.object, Element(name: "some_element"))
     }
 }

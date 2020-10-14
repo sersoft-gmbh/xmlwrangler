@@ -174,7 +174,7 @@ extension String {
     ///   - xml: The XML element to serialize.
     ///   - options: The options to use for serializing. Defaults to empty options.
     public init(xml: XMLElement, options: SerializationOptions = []) {
-        let attributes = xml.attributes.isEmpty ? "" : " " + xml.attributes.map {
+        let attributes = xml.attributes.storage.isEmpty ? "" : " " + xml.attributes.storage.map {
             $0.key.rawValue + "=" + options.quotes.quoted(attributeString: $0.value.rawValue)
         }.joined(separator: " ")
         let start = "<\(xml.name.rawValue)\(attributes)"
@@ -205,9 +205,7 @@ extension String {
     /// - Parameters:
     ///   - content: A collection of Element.Content to serialize.
     ///   - options: The options to use for serializing. Defaults to empty options.
-    public init<Content>(xmlContent content: Content, options: SerializationOptions = [])
-    where Content: MutableCollection & RangeReplaceableCollection, Content.Element == XMLElement.Content
-    {
+    public init(xmlContent content: XMLElement.Content, options: SerializationOptions = []) {
         let (contentStr, didContainObjectsOrMultilineStrings) = content.compressed().reduce(into: ("", false)) {
             switch $1 {
             case .string(let str):
