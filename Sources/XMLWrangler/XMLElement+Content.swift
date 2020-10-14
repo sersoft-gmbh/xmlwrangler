@@ -1,14 +1,7 @@
 extension XMLElement {
     /// A collection implementation that represents the contents of an XML element.
     @frozen
-    public struct Content: Equatable, Collection {
-        /// inherited
-        public typealias Index = Int
-        /// inherited
-        public typealias Indices = DefaultIndices<Self>
-        /// inherited
-        public typealias SubSequence = Slice<Self>
-
+    public struct Content: Equatable {
         @usableFromInline
         typealias Storage = [Element]
 
@@ -42,26 +35,6 @@ extension XMLElement {
         @usableFromInline
         var storage: Storage
 
-        /// inherited
-        @inlinable
-        public var startIndex: Index { storage.startIndex }
-
-        /// inherited
-        @inlinable
-        public var endIndex: Index { storage.endIndex }
-
-        /// inherited
-        @inlinable
-        public var isEmpty: Bool { storage.isEmpty }
-
-        /// inherited
-        @inlinable
-        public var underestimatedCount: Int { storage.underestimatedCount }
-
-        /// inherited
-        @inlinable
-        public var count: Int { storage.count }
-
         @usableFromInline
         init(storage: Storage) {
             self.storage = storage
@@ -72,19 +45,48 @@ extension XMLElement {
         public init() {
             self.init(storage: .init())
         }
+    }
+}
 
-        /// inherited
-        @inlinable
-        public subscript(position: Index) -> Element {
-            get { storage[position] }
-            set { storage[position] = newValue }
-        }
+extension XMLElement.Content: Sequence, Collection, MutableCollection {
+    /// inherited
+    public typealias Index = Int
+    /// inherited
+    public typealias Indices = DefaultIndices<Self>
+    /// inherited
+    public typealias SubSequence = Slice<Self>
 
-        /// inherited
-        @inlinable
-        public func index(after i: Index) -> Index {
-            storage.index(after: i)
-        }
+    /// inherited
+    @inlinable
+    public var startIndex: Index { storage.startIndex }
+
+    /// inherited
+    @inlinable
+    public var endIndex: Index { storage.endIndex }
+
+    /// inherited
+    @inlinable
+    public var isEmpty: Bool { storage.isEmpty }
+
+    /// inherited
+    @inlinable
+    public var underestimatedCount: Int { storage.underestimatedCount }
+
+    /// inherited
+    @inlinable
+    public var count: Int { storage.count }
+
+    /// inherited
+    @inlinable
+    public subscript(position: Index) -> Element {
+        get { storage[position] }
+        set { storage[position] = newValue }
+    }
+
+    /// inherited
+    @inlinable
+    public func index(after i: Index) -> Index {
+        storage.index(after: i)
     }
 }
 
@@ -117,8 +119,6 @@ extension XMLElement.Content: RangeReplaceableCollection {
         storage.replaceSubrange(subrange, with: newElements)
     }
 }
-
-extension XMLElement.Content: MutableCollection {}
 
 extension XMLElement.Content: ExpressibleByArrayLiteral {
     /// inherited
