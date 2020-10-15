@@ -26,7 +26,7 @@ extension XMLElement: XMLElementRepresentable {
 
 extension ExpressibleByXMLElement {
     @usableFromInline
-    static func _fromContent(of element: XMLElement, converter: (String) -> Self?) throws -> Self {
+    static func _fromContent(of element: XMLElement, converter: (XMLElement.Content.Element.StringPart) -> Self?) throws -> Self {
         try element.convertedStringContent(converter: converter)
     }
 

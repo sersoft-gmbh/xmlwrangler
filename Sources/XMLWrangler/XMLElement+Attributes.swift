@@ -8,22 +8,52 @@ public protocol XMLAttributeContentConvertible {
 public protocol ExpressibleByXMLAttributeContent {
     /// Creates a new instance of the conforming type using the given attribute content.
     /// - Parameter xmlAttributeContent: The attribute content from which to create a new instance.
-    init(xmlAttributeContent: XMLElement.Attributes.Content) throws
+    init?(xmlAttributeContent: XMLElement.Attributes.Content)
 }
 
 /// Describes a type that can be converted from and to an `XMLElement.Attributes.Content` instance.
 public typealias XMLAttributeContentRepresentable = ExpressibleByXMLAttributeContent & XMLAttributeContentConvertible
 
-extension String: XMLAttributeContentConvertible {
+extension String: XMLAttributeContentRepresentable {
     /// inherited
     @inlinable
     public var xmlAttributeContent: XMLElement.Attributes.Content { .init(self) }
+
+    /// inherited
+    @inlinable
+    public init(xmlAttributeContent: XMLElement.Attributes.Content) {
+        self = xmlAttributeContent.rawValue
+    }
 }
 
-extension RawRepresentable where RawValue == XMLElement.Attributes.Content.RawValue, Self: XMLAttributeContentConvertible {
+extension XMLAttributeContentConvertible where Self: RawRepresentable, RawValue == XMLElement.Attributes.Content.RawValue {
     /// inherited
     @inlinable
     public var xmlAttributeContent: XMLElement.Attributes.Content { .init(rawValue) }
+}
+
+extension ExpressibleByXMLAttributeContent where Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
+    /// inherited
+    @inlinable
+    public init?(xmlAttributeContent: XMLElement.Attributes.Content) {
+        self.init(rawValueDescription: xmlAttributeContent.rawValue)
+    }
+}
+
+extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible {
+    /// inherited
+    @inlinable
+    public init?(xmlAttributeContent: XMLElement.Attributes.Content) {
+        self.init(xmlAttributeContent.rawValue)
+    }
+}
+
+extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible, Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
+    /// inherited
+    @inlinable
+    public init?(xmlAttributeContent: XMLElement.Attributes.Content) {
+        self.init(rawValueDescription: xmlAttributeContent.rawValue)
+    }
 }
 
 extension XMLElement {
@@ -32,7 +62,7 @@ extension XMLElement {
     public struct Attributes: Equatable {
         /// Represents the key of an attribute.
         @frozen
-        public struct Key: RawRepresentable, Hashable, Codable, ExpressibleByStringLiteral, XMLAttributeContentConvertible {
+        public struct Key: RawRepresentable, Hashable, Codable, ExpressibleByStringLiteral, XMLAttributeContentRepresentable, CustomStringConvertible, CustomDebugStringConvertible {
             /// inherited
             public typealias RawValue = String
             /// inherited
@@ -40,6 +70,12 @@ extension XMLElement {
 
             /// inherited
             public let rawValue: RawValue
+
+            /// inherited
+            public var description: String { rawValue }
+
+            /// inherited
+            public var debugDescription: String { "\(Self.self)(\(rawValue))" }
 
             /// inherited
             public init(rawValue: RawValue) { self.rawValue = rawValue }
@@ -55,15 +91,27 @@ extension XMLElement {
 
         /// Represents the content of an attribute.
         @frozen
-        public struct Content: RawRepresentable, Hashable, ExpressibleByStringLiteral, ExpressibleByStringInterpolation, XMLAttributeContentConvertible {
+        public struct Content: RawRepresentable, Hashable, ExpressibleByStringLiteral, ExpressibleByStringInterpolation, XMLAttributeContentRepresentable, CustomStringConvertible, CustomDebugStringConvertible {
+            /// inherited
             public typealias RawValue = String
+            /// inhertied
             public typealias StringLiteralType = RawValue
 
+            /// inherited
             public let rawValue: RawValue
 
+            /// inherited
             @inlinable
-            public var xmlAttributeValue: Content { self }
+            public var description: String { rawValue }
 
+            /// inherited
+            public var debugDescription: String { "\(Self.self)(\(rawValue))" }
+
+            /// inherited
+            @inlinable
+            public var xmlAttributeContent: Content { self }
+
+            /// inherited
             public init(rawValue: RawValue) { self.rawValue = rawValue }
 
             /// Creates a new key using the given raw value.
@@ -73,6 +121,12 @@ extension XMLElement {
             /// inherited
             @inlinable
             public init(stringLiteral value: StringLiteralType) { self.init(rawValue: value) }
+
+            /// inherited
+            @inlinable
+            public init(xmlAttributeContent: Content) {
+                self = xmlAttributeContent
+            }
         }
 
         @usableFromInline
@@ -132,34 +186,60 @@ extension XMLElement {
         /// Returns / sets the content for the given key.
         /// When setting nil, the content is removed for the given key.
         /// - Parameters key: The key to look up the content for.
-        /// - Returns: The content for the given key. Nil if none is found.
+        /// - Returns: The content for the given key. `nil` if none is found.
         @inlinable
-        public subscript(_ key: Key) -> Content? {
+        public subscript(key: Key) -> Content? {
             get { storage[key] }
             set { storage[key] = newValue }
         }
 
+        /// Returns / sets the content for the given key, using a default if the key does not exist.
+        /// - Parameters:
+        ///   - key: The key to look up the content for.
+        ///   - default: The default value to use if no value exists for the given `key`.
+        /// - Returns: The content for the given key. `default` if none is found.
         @inlinable
-        public subscript<Default: XMLAttributeContentConvertible>(_ key: Key, default defaultValue: @autoclosure () -> Default) -> Content {
+        public subscript<Default: XMLAttributeContentConvertible>(key: Key, default defaultValue: @autoclosure () -> Default) -> Content {
             get { storage[key, default: defaultValue().xmlAttributeContent] }
             set { storage[key, default: defaultValue().xmlAttributeContent] = newValue }
         }
 
+        /// Filters the attributes  using the given predicate closure.
+        /// - Parameter isIncluded: The closure to execute for each element.
+        ///                         Should return `true` for elements that should be in the resulting attributes.
+        /// - Throws: Any error thrown by `isIncluded`.
+        /// - Returns: The filtered attributes. Only elements for which `isIncluded` returned `true` are contained.
         @inlinable
         public func filter(_ isIncluded: (Element) throws -> Bool) rethrows -> Self {
             try .init(storage: storage.filter(isIncluded))
         }
 
+        /// Updates the content element for a given key.
+        /// - Parameters:
+        ///   - content: The new content element to store for `key`.
+        ///   - key: The key for which to update the content element.
+        /// - Returns: The old element of `key`, if there was one. `nil` otherwise.
         @inlinable
+        @discardableResult
         public mutating func updateContent(_ content: Content, forKey key: Key) -> Content? {
             storage.updateValue(content, forKey: key)
         }
 
+        /// Removes the content for a given key.
+        /// - Parameter key: The key for which to remove the content.
+        /// - Returns: The old values of `key`, if there was one. `nil` otherwise.
         @inlinable
+        @discardableResult
         public mutating func removeContent(forKey key: Key) -> Content? {
             storage.removeValue(forKey: key)
         }
 
+        /// Merges another sequence of key-content-pairs into the receiving attributes.
+        /// - Parameters:
+        ///   - other: The sequence of key-content-pairs to merge.
+        ///   - combine: The closure to use for uniquing keys. Called for each key-conflict with both contents.
+        ///              The returned element is used, the other one discarded.
+        /// - Throws: Any error thrown by `combine`.
         @inlinable
         public mutating func merge<S>(_ other: S, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows
         where S: Sequence, S.Element == (Key, Content)
@@ -167,11 +247,24 @@ extension XMLElement {
             try storage.merge(other, uniquingKeysWith: combine)
         }
 
+        /// Merges another attributes list into the receiving attributes.
+        /// - Parameters:
+        ///   - other: The other attributes list to merge.
+        ///   - combine: The closure to use for uniquing keys. Called for each key-conflict with both contents.
+        ///              The returned element is used, the other one discarded.
+        /// - Throws: Any error thrown by `combine`.
         @inlinable
         public mutating func merge(_ other: Self, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows {
             try storage.merge(other.storage, uniquingKeysWith: combine)
         }
 
+        /// Returns the result of merging another sequence of key-content-pairs with the receiving attributes.
+        /// - Parameters:
+        ///   - other: The sequence of key-content-pairs to merge.
+        ///   - combine: The closure to use for uniquing keys. Called for each key-conflict with both contents.
+        ///              The returned element is used, the other one discarded.
+        /// - Throws: Any error thrown by `combine`.
+        /// - Returns: The merged attributes list.
         @inlinable
         public func merging<S>(_ other: S, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows -> Self
         where S: Sequence, S.Element == (Key, Content)
@@ -179,17 +272,33 @@ extension XMLElement {
             try .init(storage: storage.merging(other, uniquingKeysWith: combine))
         }
 
+        /// Returns the result of merging another attributes list into the receiving attributes.
+        /// - Parameters:
+        ///   - other: The other attributes list to merge.
+        ///   - combine: The closure to use for uniquing keys. Called for each key-conflict with both contents.
+        ///              The returned element is used, the other one discarded.
+        /// - Throws: Any error thrown by `combine`.
+        /// - Returns: The merged attributes list.
         @inlinable
         public func merging(_ other: Self, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows -> Self {
             try .init(storage: storage.merging(other.storage, uniquingKeysWith: combine))
+        }
+
+        /// Removes all key-content pairs from the attributes.
+        /// Calling this method invalidates all indices of the attributes.
+        /// - Parameter keepCapacity: Whether the attributes should keep its underlying storage capacity. Defaults to `false`.
+        @inlinable
+        public mutating func removeAll(keepingCapacity keepCapacity: Bool = false) {
+            storage.removeAll(keepingCapacity: keepCapacity)
         }
     }
 }
 
 extension Dictionary where Key == XMLElement.Attributes.Key, Value == XMLElement.Attributes.Content {
     /// Initializes the dictionary using the storage of the given attributes.
+    /// - Parameter attributes: The `XMLElement.Attributes` whose contents should be contained in the dictionary.
     @inlinable
-    public init(_ attributes: XMLElement.Attributes) {
+    public init(elementsOf attributes: XMLElement.Attributes) {
         self = attributes.storage
     }
 }
@@ -207,7 +316,7 @@ extension XMLElement.Attributes: Sequence {
     public typealias Element = (key: Key, content: Content)
 
     /// Casts the `Element` tuple to `Storage.Element`. Uses `unsafeBitCast` since the tuples only differ in labels.
-    @inlinable
+    @usableFromInline
     static func _castElement(_ storageElement: Storage.Element) -> Element {
         unsafeBitCast(storageElement, to: Element.self)
     }
@@ -215,7 +324,8 @@ extension XMLElement.Attributes: Sequence {
     /// The iterator for iterating over attributes.
     @frozen
     public struct Iterator: IteratorProtocol {
-        private var storageIterator: Storage.Iterator
+        @usableFromInline
+        var storageIterator: Storage.Iterator
 
         @usableFromInline
         init(base: Storage.Iterator) {
@@ -223,10 +333,15 @@ extension XMLElement.Attributes: Sequence {
         }
 
         /// inherited
+        @inlinable
         public mutating func next() -> Element? {
             storageIterator.next().map(_castElement)
         }
     }
+
+    /// inherited
+    @inlinable
+    public var underestimatedCount: Int { storage.underestimatedCount }
 
     /// inherited
     @inlinable
@@ -256,6 +371,14 @@ extension XMLElement.Attributes: Collection {
 
     /// inherited
     @inlinable
+    public var isEmpty: Bool { storage.isEmpty }
+
+    /// inherited
+    @inlinable
+    public var count: Int { storage.count }
+
+    /// inherited
+    @inlinable
     public var startIndex: Index {
         .init(base: storage.startIndex)
     }
@@ -279,10 +402,28 @@ extension XMLElement.Attributes: Collection {
     }
 }
 
+extension XMLElement.Attributes: CustomStringConvertible, CustomDebugStringConvertible {
+    public var description: String {
+        """
+        \(Self.self) [\(storage.count) key/content pair(s)] {
+        \(storage.map { "    \($0.key): \($0.value)" }.joined(separator: "\n"))
+        }
+        """
+    }
+
+    public var debugDescription: String {
+        """
+        \(Self.self) [\(storage.count) key/content pair(s)] {
+        \(storage.map { "    \($0.key): \($0.value.debugDescription)" }.joined(separator: "\n"))
+        }
+        """
+    }
+}
+
 extension XMLElement.Attributes {
     /// A collection of keys inside `XMLElement.Attributes`
     @frozen
-    public struct Keys: Collection, Equatable {
+    public struct Keys: Collection, Equatable, CustomStringConvertible, CustomDebugStringConvertible {
         /// inherited
         public typealias Element = XMLElement.Attributes.Key
         /// inherited
@@ -311,6 +452,12 @@ extension XMLElement.Attributes {
 
         @usableFromInline
         let storage: Storage
+
+        /// inherited
+        public var description: String { Array(storage).description }
+
+        /// inherited
+        public var debugDescription: String { Array(storage).debugDescription }
 
         @usableFromInline
         init(storage: Storage) {
@@ -350,7 +497,7 @@ extension XMLElement.Attributes {
 
     /// The (mutable) collection of contents for `XMLElement.Attributes`.
     @frozen
-    public struct Contents: Collection, MutableCollection {
+    public struct Contents: Collection, MutableCollection, CustomStringConvertible, CustomDebugStringConvertible {
         /// inherited
         public typealias Element = XMLElement.Attributes.Content
         /// inherited
@@ -379,6 +526,12 @@ extension XMLElement.Attributes {
 
         @usableFromInline
         var storage: Storage
+
+        /// inherited
+        public var description: String { Array(storage).description }
+
+        /// inherited
+        public var debugDescription: String { Array(storage).debugDescription }
 
         @usableFromInline
         init(storage: Storage) {

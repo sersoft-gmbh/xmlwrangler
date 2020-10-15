@@ -6,7 +6,7 @@ extension XMLElement {
         typealias Storage = [Element]
 
         /// Describes an part (element) of the `XMLElement`'s content.
-        public enum Element: Equatable, ExpressibleByStringLiteral, ExpressibleByStringInterpolation, ExpressibleByXMLElement {
+        public enum Element: Equatable, ExpressibleByStringLiteral, ExpressibleByStringInterpolation, ExpressibleByXMLElement, CustomStringConvertible, CustomDebugStringConvertible {
             /// The type used to represent a string content
             public typealias StringPart = String
             /// inherited
@@ -18,6 +18,22 @@ extension XMLElement {
             case element(XMLElement)
 
             // TODO: Do we need a CDATA case, too? -> For now we serialize these into Strings
+
+            /// inherited
+            public var description: String {
+                switch self {
+                case .string(let str): return "StringPart(\(str))"
+                case .element(let element): return "Element(\(element.name))"
+                }
+            }
+
+            /// inherited
+            public var debugDescription: String {
+                switch self {
+                case .string(let str): return "StringPart { \(str) }"
+                case .element(let element): return "Element {\n\(element)\n}"
+                }
+            }
 
             /// inherited
             @inlinable
@@ -115,7 +131,9 @@ extension XMLElement.Content: RandomAccessCollection {
 extension XMLElement.Content: RangeReplaceableCollection {
     /// inherited
     @inlinable
-    public mutating func replaceSubrange<C>(_ subrange: Range<Index>, with newElements: C) where C : Collection, Element == C.Element {
+    public mutating func replaceSubrange<C>(_ subrange: Range<Index>, with newElements: C)
+    where C: Collection, Element == C.Element
+    {
         storage.replaceSubrange(subrange, with: newElements)
     }
 }
@@ -228,4 +246,14 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
     public init(stringInterpolation: StringInterpolation) {
         self.init(storage: stringInterpolation.storage)
     }
+}
+
+extension XMLElement.Content: CustomStringConvertible, CustomDebugStringConvertible {
+    /// inherited
+    @inlinable
+    public var description: String { storage.description }
+
+    /// inherited
+    @inlinable
+    public var debugDescription: String { storage.debugDescription }
 }

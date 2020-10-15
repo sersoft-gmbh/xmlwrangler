@@ -21,7 +21,6 @@ extension XMLElement.Content {
     }
 
     /// Searches for elements which match a given predicate. Optionally also recursive.
-    ///
     /// - Parameters:
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
     ///   - predicate: The predicate to apply on elements. If it returns `true` the element will be included in the result.
@@ -37,7 +36,6 @@ extension XMLElement.Content {
     }
 
     /// Finds the first occurence of an element that matches a given predicate.
-    ///
     /// - Parameters:
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
     ///   - predicate: The predicate to apply on elements until it returns `true`.
@@ -55,7 +53,6 @@ extension XMLElement.Content {
     }
 
     /// Finds the last occurence of an element that matches a given predicate.
-    ///
     /// - Parameters:
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
     ///   - predicate: The predicate to apply on elements starting at the end until it returns `true`.
@@ -73,7 +70,6 @@ extension XMLElement.Content {
     }
 
     /// Searches for elements with a given name. Optionally also recursive.
-    ///
     /// - Parameters:
     ///   - name: The name with which to search for elements.
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
@@ -85,7 +81,6 @@ extension XMLElement.Content {
     }
 
     /// Finds the first occurence of an element with a given name.
-    ///
     /// - Parameters:
     ///   - name: The name with which to search for the first element.
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
@@ -99,7 +94,6 @@ extension XMLElement.Content {
     }
 
     /// Finds the last occurence of an element with a given name.
-    ///
     /// - Parameters:
     ///   - name: The name with which to search for the last element.
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
@@ -115,7 +109,6 @@ extension XMLElement.Content {
 
 extension Sequence {
     /// Returns the result of a closure for the first element that the closure returns a non-nil result.
-    ///
     /// - Parameter predicate: The predicate applied to the elements in self.
     /// - Returns: The result of `predicate` for the first element where `predicate` returned a non-nil result. Or nil if that never happens.
     /// - Throws: Any error thrown by `predicate`.

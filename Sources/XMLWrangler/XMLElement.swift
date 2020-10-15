@@ -1,15 +1,30 @@
 /// Represents an element in an XML structure.
-public struct XMLElement: Equatable, Identifiable {
+public struct XMLElement: Equatable, Identifiable, CustomStringConvertible, CustomDebugStringConvertible {
     /// The name of the element.
     public let name: Name
     /// The attributes of the element.
-    public var attributes: Attributes = [:]
+    public var attributes: Attributes
     /// The content of the element.
-    public var content: Content = []
+    public var content: Content
 
     /// inherited
     @inlinable
     public var id: Name { name }
+
+    /// inherited
+    public var description: String {
+        "XMLElement '\(name)' { \(attributes.storage.count) attribute(s), \(content.storage.count) content element(s) }"
+    }
+
+    /// inherited
+    public var debugDescription: String {
+        """
+        XMLElement '\(name.debugDescription)' {
+        attributes: \(attributes.debugDescription)
+        contents: \(content.debugDescription)
+        }
+        """
+    }
 
     /// Creates a new element using the given parameters.
     /// - Parameters:
@@ -68,12 +83,18 @@ public struct XMLElement: Equatable, Identifiable {
 extension XMLElement {
     /// Represents the name of an element.
     @frozen
-    public struct Name: RawRepresentable, Hashable, Codable, ExpressibleByStringLiteral {
+    public struct Name: RawRepresentable, Hashable, Codable, ExpressibleByStringLiteral, XMLAttributeContentRepresentable, CustomStringConvertible, CustomDebugStringConvertible {
         public typealias RawValue = String
         public typealias StringLiteralType = RawValue
 
         /// inherited
         public let rawValue: RawValue
+
+        /// inherited
+        public var description: String { rawValue }
+
+        /// inherited
+        public var debugDescription: String { "\(Self.self)(\(rawValue))" }
 
         /// inherited
         public init(rawValue: RawValue) { self.rawValue = rawValue }

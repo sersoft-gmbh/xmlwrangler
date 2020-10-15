@@ -1,6 +1,5 @@
 extension XMLElement {
     /// Appends a string to the content.
-    ///
     /// - Parameter string: The string to append to the content.
     /// - SeeAlso: `XMLElement.Contents.append(string:)`
     @inlinable
@@ -9,7 +8,6 @@ extension XMLElement {
     }
 
     /// Appends an element to the content.
-    ///
     /// - Parameter element: The element to append to the content.
     /// - SeeAlso: `XMLElement.Content.append(element:)`
     @inlinable
@@ -18,7 +16,6 @@ extension XMLElement {
     }
 
     /// Appends the contents of a sequence of elements to the content.
-    ///
     /// - Parameter elements: The sequence of elements to append to the content.
     /// - SeeAlso: `XMLElement.Content.append(contentsOf:)`
     @inlinable
@@ -27,7 +24,6 @@ extension XMLElement {
     }
 
     /// Appends one or more elements to the content.
-    ///
     /// - Parameter elements: The elements to append to the content.
     /// - SeeAlso: `XMLElement.Content.append(elements:)`
     @inlinable
@@ -38,7 +34,6 @@ extension XMLElement {
 
 extension XMLElement {
     /// Gives mutating access to an element at a given path.
-    ///
     /// - Parameters:
     ///   - path: A collection of element names which represent the path to the element to mutate.
     ///   - work: The closure which is provided with mutating access to the element at the given path.
@@ -51,14 +46,13 @@ extension XMLElement {
         guard let index = content.firstIndex(where: { $0.element?.name == path[path.startIndex] }),
               var element = content[index].element // This one should always succeed.
         else {
-            throw LookupError.missingChild(element: self, childElementName: path[path.startIndex])
+            throw LookupError.missingChild(element: self, childName: path[path.startIndex])
         }
         defer { content[index] = .element(element) }
         return try element.withMutatingAccess(toElementAt: path.dropFirst(), do: work)
     }
 
     /// Gives mutating access to an element at a given path.
-    ///
     /// - Parameters:
     ///   - path: A list of element names which represent the path to the element to mutate.
     ///   - work: The closure which is provided with mutating access to the element at the given path.
@@ -70,31 +64,35 @@ extension XMLElement {
     }
 
     /// Replaces an element at a given path with a new element.
-    ///
     /// - Parameters:
     ///   - path: A collection of element names which represent the path to the element to replace.
     ///   - newElement: The element insert in place of the element at `path`.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
+    /// - Returns: The old element at `path`.
     @inlinable
-    public mutating func replace<Path: Collection>(elementAt path: Path, with newElement: XMLElement) throws
+    @discardableResult
+    public mutating func replace<Path: Collection>(elementAt path: Path, with newElement: XMLElement) throws -> XMLElement
     where Path.Element == Name
     {
-        try withMutatingAccess(toElementAt: path) { $0 = newElement }
+        try withMutatingAccess(toElementAt: path) { element in
+            defer { element = newElement }
+            return element
+        }
     }
 
     /// Replaces an element at a given path with a new element.
-    ///
     /// - Parameters:
     ///   - path: A list of element names which represent the path to the element to replace.
     ///   - newElement: The element insert in place of the element at `path`.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
+    /// - Returns: The old element at `path`.
     @inlinable
-    public mutating func replace(elementAt path: Name..., with newElement: XMLElement) throws {
+    @discardableResult
+    public mutating func replace(elementAt path: Name..., with newElement: XMLElement) throws -> XMLElement {
         try replace(elementAt: path, with: newElement)
     }
 
     /// Removes an element at a given path.
-    ///
     /// - Parameter path: A collection of element names which represent the path to the element to remove.
     /// - Returns: The removed element or nil if no element was present at the given path or the path was empty.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
@@ -109,7 +107,6 @@ extension XMLElement {
     }
 
     /// Removes an element at a given path.
-    ///
     /// - Parameter path: A list of element names which represent the path to the element to remove.
     /// - Returns: The removed element or nil if no element was present at the given path or the path was empty.
     /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.

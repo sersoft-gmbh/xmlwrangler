@@ -1,5 +1,4 @@
 /// Converts a input value into an output value using a given converter. Throws if the converter returns nil (or throws).
-///
 /// - Parameters:
 ///   - input: The input value to convert.
 ///   - converter: The converter to use for the conversion.
@@ -18,7 +17,6 @@ where Error: Swift.Error
 
 extension RawRepresentable where RawValue: LosslessStringConvertible {
     /// Creates an instance of self from the description of the RawValue. Returns nil if nil is returned by RawValue.init(_:)
-    ///
     /// - Parameter rawValueDescription: The description of the RawValue to use to try to create an instance.
     @usableFromInline
     init?(rawValueDescription: String) {

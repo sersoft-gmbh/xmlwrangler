@@ -109,7 +109,7 @@ final class XMLElement_LookupTests: XCTestCase {
     
     func testNonExistingElementLookupAtPath() {
         XCTAssertThrowsError(try sut.element(at: ["simple", "simple_child", "nope"])) {
-            XCTAssert($0, is: .missingChild(element: XWElement(name: "simple_child"), childElementName: "nope"))
+            XCTAssert($0, is: .missingChild(element: XWElement(name: "simple_child"), childName: "nope"))
         }
     }
     
@@ -120,7 +120,7 @@ final class XMLElement_LookupTests: XCTestCase {
     
     func testNonExistingElementLookupAtVariadicPath() {
         XCTAssertThrowsError(try sut.element(at: "simple", "simple_child", "nope")) {
-            XCTAssert($0, is: .missingChild(element: XWElement(name: "simple_child"), childElementName: "nope"))
+            XCTAssert($0, is: .missingChild(element: XWElement(name: "simple_child"), childName: "nope"))
         }
     }
     
@@ -166,13 +166,13 @@ final class XMLElement_LookupTests: XCTestCase {
     
     func testFailedExistingAttributeConversion() {
         XCTAssertThrowsError(try sut.convertedAttribute(for: "version", converter: { NotStringInitializable(str: $0.rawValue) })) {
-            XCTAssert($0, is: .cannotConvertAttribute(element: sut, key: "version", type: NotStringInitializable.self))
+            XCTAssert($0, is: .cannotConvertAttribute(element: sut, key: "version", content: "2.3.4", type: NotStringInitializable.self))
         }
     }
     
     func testFailedRawRepresentableAttributeConversion() {
         XCTAssertThrowsError(try sut.convertedAttribute(for: "version", converter: { StringRepresentableWithNotConvertibleRawValue(rawValueDescription: $0.rawValue) })) {
-            XCTAssert($0, is: .cannotConvertAttribute(element: sut, key: "version", type: StringRepresentableWithNotConvertibleRawValue.self))
+            XCTAssert($0, is: .cannotConvertAttribute(element: sut, key: "version", content: "2.3.4", type: StringRepresentableWithNotConvertibleRawValue.self))
         }
     }
     
@@ -195,7 +195,7 @@ final class XMLElement_LookupTests: XCTestCase {
     // MARK: Retrieval
     func testNonExistingStringContentLookup() {
         XCTAssertThrowsError(try noStringContentSUT.stringContent()) {
-            XCTAssert($0, is: .missingContent(element: noStringContentSUT))
+            XCTAssert($0, is: .missingStringContent(element: noStringContentSUT))
         }
     }
     
@@ -207,7 +207,7 @@ final class XMLElement_LookupTests: XCTestCase {
     // MARK: Conversion
     func testNonExistingStringContentConversion() {
         XCTAssertThrowsError(try noStringContentSUT.convertedStringContent(converter: StringInitializable.init)) {
-            XCTAssert($0, is: .missingContent(element: noStringContentSUT))
+            XCTAssert($0, is: .missingStringContent(element: noStringContentSUT))
         }
     }
     
@@ -218,13 +218,13 @@ final class XMLElement_LookupTests: XCTestCase {
     
     func testFailedExistingStringContentConversion() {
         XCTAssertThrowsError(try stringContentSUT.convertedStringContent(converter: NotStringInitializable.init)) {
-            XCTAssert($0, is: .cannotConvertContent(element: stringContentSUT, content: "we have content", type: NotStringInitializable.self))
+            XCTAssert($0, is: .cannotConvertStringContent(element: stringContentSUT, stringContent: "we have content", type: NotStringInitializable.self))
         }
     }
     
     func testFailedRawRepresentableExistingStringContentConversion() {
         XCTAssertThrowsError(try stringContentSUT.convertedStringContent(converter: StringRepresentableWithNotConvertibleRawValue.init)) {
-            XCTAssert($0, is: .cannotConvertContent(element: stringContentSUT, content: "we have content", type: StringRepresentableWithNotConvertibleRawValue.self))
+            XCTAssert($0, is: .cannotConvertStringContent(element: stringContentSUT, stringContent: "we have content", type: StringRepresentableWithNotConvertibleRawValue.self))
         }
     }
     
