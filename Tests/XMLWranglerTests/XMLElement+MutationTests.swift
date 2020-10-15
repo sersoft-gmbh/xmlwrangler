@@ -26,7 +26,7 @@ final class XMLElement_MutationTests: XCTestCase {
     }
 
     func testAppendingString() {
-        var element = XWElement(name: "test")
+        var element = XWElement(name: "s")
         var element2 = XWElement(name: "test2", stringContent: "hello")
 
         element.append(string: "_this")
@@ -37,11 +37,9 @@ final class XMLElement_MutationTests: XCTestCase {
     }
 
     func testAppendingElement() {
-        var element = XWElement(name: "test")
+        var element = XWElement(name: "x")
         let child = XWElement(name: "_this")
-
         element.append(element: child)
-
         XCTAssertEqual(element.content, [.element(child)])
     }
 
@@ -49,16 +47,14 @@ final class XMLElement_MutationTests: XCTestCase {
         struct Convertible: XMLElementConvertible {
             let xml: XWElement
         }
-        var element = XWElement(name: "test")
-        let child = XWElement(name: "_this")
-
+        var element = XWElement(name: "base")
+        let child = XWElement(name: "child")
         element.append(elementOf: Convertible(xml: child))
-
         XCTAssertEqual(element.content, [.element(child)])
     }
 
     func testAppendingContentOfSequence() {
-        var element = XWElement(name: "test")
+        var element = XWElement(name: "a")
         let child1 = XWElement(name: "_this1")
         let child2 = XWElement(name: "_this2")
         let child3 = XWElement(name: "_this3")
@@ -69,7 +65,7 @@ final class XMLElement_MutationTests: XCTestCase {
     }
 
     func testAppendingElements() {
-        var element = XWElement(name: "test")
+        var element = XWElement(name: "b")
         let child1 = XWElement(name: "_this1")
         let child2 = XWElement(name: "_this2")
         let child3 = XWElement(name: "_this3")

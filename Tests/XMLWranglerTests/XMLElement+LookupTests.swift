@@ -205,19 +205,13 @@ final class XMLElement_LookupTests: XCTestCase {
         }
     }
     
-    func testRawRepresentableAttributeConversion() throws {
-        let attribute: StringRepresentable = try sut.convertedAttribute(for: "version")
-        XCTAssertEqual(attribute, StringRepresentable(rawValue: "2.3.4"))
-    }
-    
-    func testLosslessStringConvertibleAttributeConversion() throws {
-        let attribute: StringConvertible = try sut.convertedAttribute(for: "version")
-        XCTAssertEqual(attribute, StringConvertible("2.3.4"))
-    }
-    
-    func testRawRepresentableLosslessStringConvertibleAttributeConversion() throws {
-        let attribute: StringConvertibleAndRepresentable = try sut.convertedAttribute(for: "version")
-        XCTAssertEqual(attribute, .rawValue("2.3.4"))
+    func testAttributeConversionWithStdlibProtocols() throws {
+        let rawRep: StringRepresentable = try sut.convertedAttribute(for: "version")
+        XCTAssertEqual(rawRep, StringRepresentable(rawValue: "2.3.4"))
+        let lossLess: StringConvertible = try sut.convertedAttribute(for: "version")
+        XCTAssertEqual(lossLess, StringConvertible("2.3.4"))
+        let both: StringConvertibleAndRepresentable = try sut.convertedAttribute(for: "version")
+        XCTAssertEqual(both, .rawValue("2.3.4"))
     }
 
     func testConvertibleAttribute() throws {
@@ -230,7 +224,7 @@ final class XMLElement_LookupTests: XCTestCase {
         let andBoth: AttributeExpressibleAndBoth = try sut.convertedAttribute(for: "version")
         XCTAssertEqual(andBoth.rawValue, "2.3.4")
     }
-    
+
     // MARK: - String Content
     // MARK: Retrieval
     func testNonExistingStringContentLookup() {

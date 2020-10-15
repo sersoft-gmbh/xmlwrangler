@@ -157,6 +157,7 @@ extension XMLElement_LookupTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__XMLElement_LookupTests = [
+        ("testAttributeConversionWithStdlibProtocols", testAttributeConversionWithStdlibProtocols),
         ("testConvertibleAttribute", testConvertibleAttribute),
         ("testConvertingElement", testConvertingElement),
         ("testExistingAttributeConversion", testExistingAttributeConversion),
@@ -170,7 +171,6 @@ extension XMLElement_LookupTests {
         ("testFailedExistingStringContentConversion", testFailedExistingStringContentConversion),
         ("testFailedRawRepresentableAttributeConversion", testFailedRawRepresentableAttributeConversion),
         ("testFailedRawRepresentableExistingStringContentConversion", testFailedRawRepresentableExistingStringContentConversion),
-        ("testLosslessStringConvertibleAttributeConversion", testLosslessStringConvertibleAttributeConversion),
         ("testLosslessStringConvertibleStringContentConversion", testLosslessStringConvertibleStringContentConversion),
         ("testNonExistingAttributeConversion", testNonExistingAttributeConversion),
         ("testNonExistingAttributeLookup", testNonExistingAttributeLookup),
@@ -179,8 +179,6 @@ extension XMLElement_LookupTests {
         ("testNonExistingElementsLookup", testNonExistingElementsLookup),
         ("testNonExistingStringContentConversion", testNonExistingStringContentConversion),
         ("testNonExistingStringContentLookup", testNonExistingStringContentLookup),
-        ("testRawRepresentableAttributeConversion", testRawRepresentableAttributeConversion),
-        ("testRawRepresentableLosslessStringConvertibleAttributeConversion", testRawRepresentableLosslessStringConvertibleAttributeConversion),
         ("testRawRepresentableLosslessStringConvertibleStringContentConversion", testRawRepresentableLosslessStringConvertibleStringContentConversion),
         ("testRawRepresentableStringContentConversion", testRawRepresentableStringContentConversion),
     ]
