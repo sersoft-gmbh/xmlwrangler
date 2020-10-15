@@ -2,6 +2,17 @@ import XCTest
 @testable import XMLWrangler
 
 final class XMLElementContent_LookupTests: XCTestCase {
+    func testAllElementsAndAllStrings() {
+        let content: XWElement.Content = [
+            "abc",
+            .element(.init(name: "test")),
+            "def",
+            .element(.init(name: "test2")),
+        ]
+        XCTAssertEqual(content.allElements, [.init(name: "test"), .init(name: "test2")])
+        XCTAssertEqual(content.allStrings, ["abc", "def"])
+    }
+    
     func testFindingObjectsShallow() {
         let string: XWElement.Content = [.string("testStr")]
         let source: XWElement.Content = [

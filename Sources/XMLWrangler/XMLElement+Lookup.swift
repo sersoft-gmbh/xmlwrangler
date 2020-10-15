@@ -73,18 +73,60 @@ extension XMLElement {
                             failingWith: LookupError.cannotConvertAttribute(element: self, key: key, content: content, type: T.self))
     }
 
-    /// Returns the result of initializing `Convertible` with the attribute for the given key if it exists.
+    /// Returns the result of initializing `Target` with the attribute for the given key if it exists.
     /// - Parameters:
-    ///    - convertible: The convertible type. Defaults to `Convertible.self`.
+    ///    - convertible: The convertible type. Defaults to `Target.self`.
     ///    - key: The key for which to get the attribute content.
-    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `Convertible.init(xmlAttributeContent:)`.
+    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `Target.init(xmlAttributeContent:)`.
     /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
     /// - SeeAlso: `XMLElement.attribute(for:)` and `ExpressibleByXMLAttributeContent`
     @inlinable
-    public func convertedAttribute<Convertible>(to convertible: Convertible.Type = Convertible.self, for key: Attributes.Key) throws -> Convertible
-    where Convertible: ExpressibleByXMLAttributeContent
+    public func convertedAttribute<Target>(for key: Attributes.Key) throws -> Target
+    where Target: ExpressibleByXMLAttributeContent
     {
-        try convertedAttribute(for: key, converter: convertible.init)
+        try convertedAttribute(for: key, converter: Target.init)
+    }
+
+    /// Returns the result of initializing `Target` with the attribute for the given key if it exists.
+    /// - Parameters:
+    ///    - convertible: The convertible type. Defaults to `Target.self`.
+    ///    - key: The key for which to get the attribute content.
+    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `Target.init(xmlAttributeContent:)`.
+    /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
+    /// - SeeAlso: `XMLElement.attribute(for:)` and `ExpressibleByXMLAttributeContent`
+    @inlinable
+    public func convertedAttribute<Target>(for key: Attributes.Key) throws -> Target
+    where Target: ExpressibleByXMLAttributeContent, Target: RawRepresentable, Target.RawValue: LosslessStringConvertible
+    {
+        try convertedAttribute(for: key, converter: Target.init(xmlAttributeContent:))
+    }
+
+    /// Returns the result of initializing `Target` with the attribute for the given key if it exists.
+    /// - Parameters:
+    ///    - convertible: The convertible type. Defaults to `Target.self`.
+    ///    - key: The key for which to get the attribute content.
+    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `Target.init(xmlAttributeContent:)`.
+    /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
+    /// - SeeAlso: `XMLElement.attribute(for:)` and `ExpressibleByXMLAttributeContent`
+    @inlinable
+    public func convertedAttribute<Target>(for key: Attributes.Key) throws -> Target
+    where Target: ExpressibleByXMLAttributeContent, Target: LosslessStringConvertible
+    {
+        try convertedAttribute(for: key, converter: Target.init(xmlAttributeContent:))
+    }
+
+    // Returns the result of initializing `Target` with the attribute for the given key if it exists.
+    /// - Parameters:
+    ///    - convertible: The convertible type. Defaults to `Target.self`.
+    ///    - key: The key for which to get the attribute content.
+    /// - Throws: `LookupError.missingAttribute` in case no attribute exists for the given key or any error thrown by `Target.init(xmlAttributeContent:)`.
+    /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
+    /// - SeeAlso: `XMLElement.attribute(for:)` and `ExpressibleByXMLAttributeContent`
+    @inlinable
+    public func convertedAttribute<Target>(for key: Attributes.Key) throws -> Target
+    where Target: ExpressibleByXMLAttributeContent, Target: RawRepresentable, Target: LosslessStringConvertible, Target.RawValue: LosslessStringConvertible
+    {
+        try convertedAttribute(for: key, converter: Target.init(xmlAttributeContent:))
     }
 
     /// Returns the result of initializing a RawRepresentable type with the value for a given attribute key

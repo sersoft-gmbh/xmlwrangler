@@ -14,16 +14,6 @@ public protocol XMLElementConvertible {
 /// A type that can be converted from and to an `XMLElement`.
 public typealias XMLElementRepresentable = ExpressibleByXMLElement & XMLElementConvertible
 
-extension XMLElement: XMLElementRepresentable {
-    /// inherited
-    @inlinable
-    public var xml: XMLElement { self }
-
-    /// inherited
-    @inlinable
-    public init(xml: XMLElement) { self = xml }
-}
-
 extension ExpressibleByXMLElement {
     @usableFromInline
     static func _fromContent(of element: XMLElement, converter: (XMLElement.Content.Element.StringPart) -> Self?) throws -> Self {

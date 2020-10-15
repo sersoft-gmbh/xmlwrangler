@@ -80,6 +80,16 @@ public struct XMLElement: Equatable, Identifiable, CustomStringConvertible, Cust
     }
 }
 
+extension XMLElement: XMLElementRepresentable {
+    /// inherited
+    @inlinable
+    public var xml: XMLElement { self }
+
+    /// inherited
+    @inlinable
+    public init(xml: XMLElement) { self = xml }
+}
+
 extension XMLElement {
     /// Represents the name of an element.
     @frozen

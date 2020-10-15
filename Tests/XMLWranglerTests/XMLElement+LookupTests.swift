@@ -47,8 +47,37 @@ final class XMLElement_LookupTests: XCTestCase {
         let rawValue: RawValue
         init(rawValue: RawValue) { self.rawValue = rawValue }
     }
-    
-    private struct Expressible: ExpressibleByXMLElement {
+
+    private struct AttributeExpressible: ExpressibleByXMLAttributeContent {
+        let xmlAttributeContent: XWElement.Attributes.Content
+    }
+
+    private struct AttributeExpressibleAndRaw: RawRepresentable, ExpressibleByXMLAttributeContent {
+        typealias RawValue = String
+
+        let rawValue: RawValue
+
+        init(rawValue: RawValue) { self.rawValue = rawValue }
+    }
+
+    private struct AttributeExpressibleAndLossLess: LosslessStringConvertible, ExpressibleByXMLAttributeContent {
+        let description: String
+
+        init(_ description: String) { self.description = description }
+    }
+
+    private struct AttributeExpressibleAndBoth: RawRepresentable, LosslessStringConvertible, ExpressibleByXMLAttributeContent {
+        typealias RawValue = String
+
+        let rawValue: RawValue
+
+        var description: String { rawValue }
+
+        init(rawValue: RawValue) { self.rawValue = rawValue }
+        init(_ description: String) { self.init(rawValue: description) }
+    }
+
+    private struct ElementExpressible: ExpressibleByXMLElement {
         let element: XWElement
         
         init(xml: XWElement) throws {
@@ -190,6 +219,17 @@ final class XMLElement_LookupTests: XCTestCase {
         let attribute: StringConvertibleAndRepresentable = try sut.convertedAttribute(for: "version")
         XCTAssertEqual(attribute, .rawValue("2.3.4"))
     }
+
+    func testConvertibleAttribute() throws {
+        let pure: AttributeExpressible = try sut.convertedAttribute(for: "version")
+        XCTAssertEqual(pure.xmlAttributeContent, "2.3.4")
+        let andRaw: AttributeExpressibleAndRaw = try sut.convertedAttribute(for: "version")
+        XCTAssertEqual(andRaw.rawValue, "2.3.4")
+        let andLossLess: AttributeExpressibleAndLossLess = try sut.convertedAttribute(for: "version")
+        XCTAssertEqual(andLossLess.description, "2.3.4")
+        let andBoth: AttributeExpressibleAndBoth = try sut.convertedAttribute(for: "version")
+        XCTAssertEqual(andBoth.rawValue, "2.3.4")
+    }
     
     // MARK: - String Content
     // MARK: Retrieval
@@ -243,9 +283,9 @@ final class XMLElement_LookupTests: XCTestCase {
         XCTAssertEqual(content, .rawValue("we have content"))
     }
     
-    func testConverting() {
-        XCTAssertEqual(try sut.converted(to: Expressible.self).element, sut)
-        XCTAssertEqual(try [sut, stringContentSUT, noStringContentSUT].converted(to: Expressible.self).map(\.element),
+    func testConvertingElement() {
+        XCTAssertEqual(try sut.converted(to: ElementExpressible.self).element, sut)
+        XCTAssertEqual(try [sut, stringContentSUT, noStringContentSUT].converted(to: ElementExpressible.self).map(\.element),
                        [sut, stringContentSUT, noStringContentSUT])
     }
 }

@@ -7,14 +7,14 @@ extension XMLElement {
 
         /// Describes an part (element) of the `XMLElement`'s content.
         public enum Element: Equatable, ExpressibleByStringLiteral, ExpressibleByStringInterpolation, ExpressibleByXMLElement, CustomStringConvertible, CustomDebugStringConvertible {
-            /// The type used to represent a string content
+            /// The type used to represent a string content.
             public typealias StringPart = String
             /// inherited
             public typealias StringLiteralType = StringPart
 
-            /// A raw string
+            /// Represents a raw string part.
             case string(StringPart)
-            /// An xml element
+            /// Represents an xml element part.
             case element(XMLElement)
 
             // TODO: Do we need a CDATA case, too? -> For now we serialize these into Strings
@@ -31,7 +31,7 @@ extension XMLElement {
             public var debugDescription: String {
                 switch self {
                 case .string(let str): return "StringPart { \(str) }"
-                case .element(let element): return "Element {\n\(element)\n}"
+                case .element(let element): return "Element {\n\(element.debugDescription)\n}"
                 }
             }
 
@@ -62,6 +62,16 @@ extension XMLElement {
             self.init(storage: .init())
         }
     }
+}
+
+extension XMLElement.Content: CustomStringConvertible, CustomDebugStringConvertible {
+    /// inherited
+    @inlinable
+    public var description: String { storage.description }
+
+    /// inherited
+    @inlinable
+    public var debugDescription: String { storage.debugDescription }
 }
 
 extension XMLElement.Content: Sequence, Collection, MutableCollection {
@@ -183,23 +193,45 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
             storage.reserveCapacity(interpolationCount + Swift.min(literalCapacity, 2))
         }
 
+        @usableFromInline
+        mutating func _appendString<S: StringProtocol>(_ string: S) {
+            guard !string.isEmpty else { return }
+            if case .string(let str) = storage.last {
+                storage[storage.indexBeforeEndIndex] = .string(str + string)
+            } else {
+                storage.append(.string(String(string)))
+            }
+        }
+
+        @usableFromInline
+        mutating func _appendContent(_ content: XMLElement.Content) {
+            guard !content.storage.isEmpty else { return }
+            let compressed = content.compressed().storage
+            if case .string(let addendum) = compressed.first, case .string(let str) = storage.last {
+                storage[storage.indexBeforeEndIndex] = .string(str + addendum)
+                storage.append(contentsOf: compressed.dropFirst())
+            } else {
+                storage.append(contentsOf: compressed)
+            }
+        }
+
         /// Appends a literal to the contents by simply adding a `.string` element with the literal's contents.
         /// - Parameter literal: The literal to append.
         @inlinable
         public mutating func appendLiteral(_ literal: StringLiteralType) {
-            storage.append(.init(stringLiteral: literal))
+            _appendString(literal)
         }
 
         /// Appends a string element to the contents.
         /// - Parameter string: The string to append.
         @inlinable
         public mutating func appendInterpolation<S: StringProtocol>(_ string: S) {
-            storage.append(.string(String(string)))
+            _appendString(string)
         }
 
 //        @inlinable
 //        public mutating func appendInterpolation<B: BinaryInteger>(_ int: B) {
-//            storage.append(.string(String(int)))
+//            _appendString(String(int))
 //        }
 
         /// Appends the `XMLElement` of a `XMLElementConvertible` type to the contents.
@@ -215,29 +247,29 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
         /// - Parameter contents: The sequence to append.
         @inlinable
         public mutating func appendInterpolation<C: Sequence>(_ contents: C) where C.Element == XMLElement.Content.Element {
-            storage.append(contentsOf: contents)
+            _appendContent(.init(contents))
         }
 
         /// Appends a variadic list of `XMLElement.Content.Element` to the contents.
         /// - Parameter contents: The variadic list of `XMLElement.Content` to append.
         @inlinable
         public mutating func appendInterpolation(_ contents: XMLElement.Content.Element...) {
-            appendInterpolation(contents)
+            _appendContent(.init(storage: contents))
         }
 
         /// Appends another `XMLElement.Content` instance.
         /// - Parameter content: The `XMLElement.Content` whose contents to append.
         @inlinable
         public mutating func appendInterpolation(_ content: XMLElement.Content) {
-            appendInterpolation(content.storage)
+            _appendContent(content)
         }
 
         /// Appends the contents of another `XMLElement`.
         /// - Parameter element: The `XMLElement` whose `content` to append.
-        /// - Note: This only appends the `content` of `element`, not the `element` itself!
+        /// - Note: This only appends the `content` of `element`, **not** the `element` itself!
         @inlinable
         public mutating func appendInterpolation(contentOf element: XMLElement) {
-            appendInterpolation(element.content.storage)
+            _appendContent(element.content)
         }
     }
 
@@ -246,14 +278,4 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
     public init(stringInterpolation: StringInterpolation) {
         self.init(storage: stringInterpolation.storage)
     }
-}
-
-extension XMLElement.Content: CustomStringConvertible, CustomDebugStringConvertible {
-    /// inherited
-    @inlinable
-    public var description: String { storage.description }
-
-    /// inherited
-    @inlinable
-    public var debugDescription: String { storage.debugDescription }
 }

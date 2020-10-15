@@ -45,6 +45,18 @@ final class XMLElement_MutationTests: XCTestCase {
         XCTAssertEqual(element.content, [.element(child)])
     }
 
+    func testAppendingElementConvertible() {
+        struct Convertible: XMLElementConvertible {
+            let xml: XWElement
+        }
+        var element = XWElement(name: "test")
+        let child = XWElement(name: "_this")
+
+        element.append(elementOf: Convertible(xml: child))
+
+        XCTAssertEqual(element.content, [.element(child)])
+    }
+
     func testAppendingContentOfSequence() {
         var element = XWElement(name: "test")
         let child1 = XWElement(name: "_this1")

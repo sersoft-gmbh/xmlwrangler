@@ -26,7 +26,7 @@ final class XMLElement_AttributesTests: XCTestCase {
         }
     }
 
-    func testXMLAttributeContentConvrtibleDefaultImplementation() {
+    func testXMLAttributeContentConvertibleDefaultImplementation() {
         XCTAssertEqual(String("abc").xmlAttributeContent, .init("abc"))
         XCTAssertEqual(String(xmlAttributeContent: "abc"), "abc")
         XCTAssertEqual(RawRepAttrContent.test.xmlAttributeContent, .init(RawRepAttrContent.test.rawValue))

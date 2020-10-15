@@ -77,4 +77,10 @@ final class XMLElementTests: XCTestCase {
                        }
                        """)
     }
+
+    func testXMLElementRepresentableCoformance() {
+        let element = XWElement(name: "conv-test")
+        XCTAssertEqual(XWElement(xml: element), element)
+        XCTAssertEqual(element.xml, element)
+    }
 }

@@ -15,10 +15,10 @@ extension XMLElement.Content {
         storage.lazy.compactMap(\.element)
     }
 
-    @inlinable
-    internal var lazyAllString: LazyStorageAllSequence<Element.StringPart> {
-        storage.lazy.compactMap(\.string)
-    }
+//    @inlinable
+//    internal var lazyAllString: LazyStorageAllSequence<Element.StringPart> {
+//        storage.lazy.compactMap(\.string)
+//    }
 
     /// Searches for elements which match a given predicate. Optionally also recursive.
     /// - Parameters:

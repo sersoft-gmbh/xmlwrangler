@@ -15,6 +15,14 @@ extension XMLElement {
         content.append(element: element)
     }
 
+    /// Appends the xml element of a convertible type.
+    /// - Parameter convertible: The type conforming to `XMLElementConvertible`.
+    /// - SeeAlso: `XMLElement.Content.append(elementOf:)`
+    @inlinable
+    public mutating func append<Convertible: XMLElementConvertible>(elementOf convertible: Convertible) {
+        content.append(elementOf: convertible)
+    }
+
     /// Appends the contents of a sequence of elements to the content.
     /// - Parameter elements: The sequence of elements to append to the content.
     /// - SeeAlso: `XMLElement.Content.append(contentsOf:)`
