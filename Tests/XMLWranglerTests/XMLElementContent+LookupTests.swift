@@ -92,6 +92,7 @@ final class XMLElementContent_LookupTests: XCTestCase {
         let string: XWElement.Content = [.string("testStr")]
         let source: XWElement.Content = [
             .element(XWElement(name: "test_something",
+                               attributes: ["some": "is"],
                                elements: XWElement(name: "test", content: "value"))),
             .element(XWElement(name: "test_it")),
             .element(XWElement(name: "is", elements: [
@@ -130,7 +131,9 @@ final class XMLElementContent_LookupTests: XCTestCase {
         let string: XWElement.Content = [.string("some_string")]
         let source: XWElement.Content = [
             .element(XWElement(name: "test_something",
-                               elements: XWElement(name: "test", content: "value"))),
+                               elements: XWElement(name: "test",
+                                                   attributes: ["is": "not"],
+                                                   content: "value"))),
             .element(XWElement(name: "test_it")),
             .element(XWElement(name: "is", elements: [
                 XWElement(name: "add_that", elements: [
@@ -176,7 +179,7 @@ final class XMLElementContent_LookupTests: XCTestCase {
             .element(XWElement(name: "is", elements: [
                 XWElement(name: "add", elements: [
                     XWElement(name: "some", elements: [
-                        XWElement(name: "deeper"),
+                        XWElement(name: "deeper", attributes: ["again": "here"]),
                         XWElement(name: "levels", elements: [
                             XWElement(name: "deeper"),
                             XWElement(name: "whatever", content: "deep down no one reaches"),
