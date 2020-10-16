@@ -17,12 +17,12 @@ final class XMLElementContent_LookupTests: XCTestCase {
         let string: XWElement.Content = [.string("testStr")]
         let source: XWElement.Content = [
             .element(XWElement(name: "test")),
-            .element(XWElement(name: "test_something")),
+            .element(XWElement(name: "no_test_something")),
             .element(XWElement(name: "whatever")),
             .element(XWElement(name: "test")),
             .element(XWElement(name: "is")),
-            .element(XWElement(name: "here")),
-            .element(XWElement(name: "test_something")),
+            .element(XWElement(name: "hereNot")),
+            .element(XWElement(name: "no_test_something")),
         ]
         
         let stringResult = string.find(elementsNamed: "something")
@@ -126,18 +126,18 @@ final class XMLElementContent_LookupTests: XCTestCase {
     }
     
     func testFindingFirstObjectRecursive() {
-        let string: XWElement.Content = [.string("testStr")]
+        let string: XWElement.Content = [.string("some_string")]
         let source: XWElement.Content = [
             .element(XWElement(name: "test_something",
                                elements: XWElement(name: "test", content: "value"))),
             .element(XWElement(name: "test_it")),
             .element(XWElement(name: "is", elements: [
-                XWElement(name: "add", elements: [
-                    XWElement(name: "some", elements: [
+                XWElement(name: "add_that", elements: [
+                    XWElement(name: "to_some", elements: [
                         XWElement(name: "deeper"),
                         XWElement(name: "levels", elements: [
-                            XWElement(name: "deeper"),
-                            XWElement(name: "whatever", content: "deep down"),
+                            XWElement(name: "deeper_and"),
+                            XWElement(name: "whatever", content: "this is deep down"),
                         ]),
                     ]),
                     XWElement(name: "test"),
@@ -146,7 +146,7 @@ final class XMLElementContent_LookupTests: XCTestCase {
                 ]),
                 XWElement(name: "deeper"),
             ])),
-            .element(XWElement(name: "here")),
+            .element(XWElement(name: "here_is")),
             .element(XWElement(name: "test_something")),
         ]
         

@@ -33,9 +33,9 @@ final class XMLElementContentElementTests: XCTestCase {
 
     func testAppendingContentOfSequence() {
         var content: XWElement.Content = []
-        let child1 = XWElement(name: "_this1")
-        let child2 = XWElement(name: "_this2")
-        let child3 = XWElement(name: "_this3")
+        let child1 = XWElement(name: "one1")
+        let child2 = XWElement(name: "two2")
+        let child3 = XWElement(name: "three3")
 
         content.append(contentsOf: [child1, child2, child3])
 
@@ -44,9 +44,9 @@ final class XMLElementContentElementTests: XCTestCase {
 
     func testAppendingElements() {
         var content: XWElement.Content = []
-        let child1 = XWElement(name: "_this1")
-        let child2 = XWElement(name: "_this2")
-        let child3 = XWElement(name: "_this3")
+        let child1 = XWElement(name: "abc1")
+        let child2 = XWElement(name: "def2")
+        let child3 = XWElement(name: "ghi3")
 
         content.append(elements: child1, child2, child3)
 
@@ -57,48 +57,48 @@ final class XMLElementContentElementTests: XCTestCase {
         var content1: XWElement.Content = [
             .string("ABC"),
             .string("DEF"),
-            .element(XWElement(name: "obj1")),
-            .element(XWElement(name: "obj2")),
+            .element(XWElement(name: "elem1")),
+            .element(XWElement(name: "elem2")),
             .string("GHI"),
-            .element(XWElement(name: "obj3")),
+            .element(XWElement(name: "elem3")),
             .string("JKL"),
             .string("MNO"),
         ]
         let expectedContent1:XWElement.Content = [
             .string("ABCDEF"),
-            .element(XWElement(name: "obj1")),
-            .element(XWElement(name: "obj2")),
+            .element(XWElement(name: "elem1")),
+            .element(XWElement(name: "elem2")),
             .string("GHI"),
-            .element(XWElement(name: "obj3")),
+            .element(XWElement(name: "elem3")),
             .string("JKLMNO"),
         ]
 
         var content2: XWElement.Content = [
-            .string("ABC"),
-            .string("DEF"),
-            .element(XWElement(name: "obj1")),
-            .element(XWElement(name: "obj2")),
-            .element(XWElement(name: "obj3")),
-            .string("GHI"),
-            .element(XWElement(name: "obj4")),
-            .element(XWElement(name: "obj5")),
-            .string("JKL"),
-            .string("MNO"),
-            .string("PQR"),
-            .element(XWElement(name: "obj6")),
-            .element(XWElement(name: "obj7")),
+            .string("AB"),
+            .string("CD"),
+            .element(XWElement(name: "e1")),
+            .element(XWElement(name: "e2")),
+            .element(XWElement(name: "e3")),
+            .string("EF"),
+            .element(XWElement(name: "e4")),
+            .element(XWElement(name: "e5")),
+            .string("GH"),
+            .string("IJ"),
+            .string("KL"),
+            .element(XWElement(name: "e6")),
+            .element(XWElement(name: "e7")),
         ]
         let expectedContent2: XWElement.Content = [
-            .string("ABCDEF"),
-            .element(XWElement(name: "obj1")),
-            .element(XWElement(name: "obj2")),
-            .element(XWElement(name: "obj3")),
-            .string("GHI"),
-            .element(XWElement(name: "obj4")),
-            .element(XWElement(name: "obj5")),
-            .string("JKLMNOPQR"),
-            .element(XWElement(name: "obj6")),
-            .element(XWElement(name: "obj7")),
+            .string("ABCD"),
+            .element(XWElement(name: "e1")),
+            .element(XWElement(name: "e2")),
+            .element(XWElement(name: "e3")),
+            .string("EF"),
+            .element(XWElement(name: "e4")),
+            .element(XWElement(name: "e5")),
+            .string("GHIJKL"),
+            .element(XWElement(name: "e6")),
+            .element(XWElement(name: "e7")),
         ]
 
         let compressed1 = content1.compressed()

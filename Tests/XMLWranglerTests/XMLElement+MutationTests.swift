@@ -83,15 +83,15 @@ final class XMLElement_MutationTests: XCTestCase {
     
     func testMutatingAccessToElementAtPath() throws {
         var expectedResult: XWElement = sut
-        expectedResult.content[0]._element.content[0]._element.append(element: XWElement(name: "Test"))
-        try sut.withMutatingAccess(toElementAt: ["Child1", "Child1.1"], do: { $0.append(element: XWElement(name: "Test")) })
+        expectedResult.content[0]._element.content[0]._element.append(element: XWElement(name: "TestMutating"))
+        try sut.withMutatingAccess(toElementAt: ["Child1", "Child1.1"], do: { $0.append(element: XWElement(name: "TestMutating")) })
         XCTAssertEqual(sut, expectedResult)
     }
     
     func testMutatingAccessToElementAtVariadicPath() throws {
         var expectedResult: XWElement = sut
-        expectedResult.content[0]._element.content[0]._element.append(element: XWElement(name: "Test"))
-        try sut.withMutatingAccess(toElementAt: "Child1", "Child1.1", do: { $0.append(element: XWElement(name: "Test")) })
+        expectedResult.content[0]._element.content[0]._element.append(element: XWElement(name: "TestVariadicMutating"))
+        try sut.withMutatingAccess(toElementAt: "Child1", "Child1.1", do: { $0.append(element: XWElement(name: "TestVariadicMutating")) })
         XCTAssertEqual(sut, expectedResult)
     }
     
@@ -107,8 +107,8 @@ final class XMLElement_MutationTests: XCTestCase {
     func testReplacingElementAtVariadicPath() throws {
         let oldElement = sut.content[0]._element.content[0]._element
         var expectedResult: XWElement = sut
-        expectedResult.content[0]._element.content[0]._element = XWElement(name: "Test")
-        let replacedElement = try sut.replace(elementAt: "Child1", "Child1.1", with: XWElement(name: "Test"))
+        expectedResult.content[0]._element.content[0]._element = XWElement(name: "TestVariadic")
+        let replacedElement = try sut.replace(elementAt: "Child1", "Child1.1", with: XWElement(name: "TestVariadic"))
         XCTAssertEqual(sut, expectedResult)
         XCTAssertEqual(replacedElement, oldElement)
     }
