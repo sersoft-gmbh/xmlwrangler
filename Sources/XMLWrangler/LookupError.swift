@@ -1,10 +1,17 @@
+/// The error type that is thrown for all lookup operations on `XMLElement`.
 public enum LookupError: Error, CustomStringConvertible {
-    case missingAttribute(element: Element, key: Element.AttributeKey)
-    case cannotConvertAttribute(element: Element, key: Element.AttributeKey, type: Any.Type)
+    /// Thrown when a given `element` is missing a child with the given `childName`.
+    case missingChild(element: XMLElement, childName: XMLElement.Name)
 
-    case missingContent(element: Element)
-    case missingChild(element: Element, childElementName: Element.Name)
-    case cannotConvertContent(element: Element, content: String, type: Any.Type)
+    /// Thrown when an `element` is missing an attribute for a given `key`.
+    case missingAttribute(element: XMLElement, key: XMLElement.Attributes.Key)
+    /// Thrown when an attribute `content` (for `key`) cannot be converted to a given `type`.
+    case cannotConvertAttribute(element: XMLElement, key: XMLElement.Attributes.Key, content: XMLElement.Attributes.Content, type: Any.Type)
+
+    /// Thrown when an element is missing string content.
+    case missingStringContent(element: XMLElement)
+    /// Thrown when the `stringContent` of an `element` cannot be converted to a given `type`.
+    case cannotConvertStringContent(element: XMLElement, stringContent: XMLElement.Content.Element.StringPart, type: Any.Type)
 
     public var description: String {
         switch self {
@@ -13,20 +20,21 @@ public enum LookupError: Error, CustomStringConvertible {
                 Element '\(element.name.rawValue)' has no attribute '\(key.rawValue)'!
                 Attributes: \(element.attributes)
                 """
-        case .cannotConvertAttribute(let element, let key, let targetType):
+        case .cannotConvertAttribute(let element, let key, let content, let targetType):
             return """
                 Could not convert attribute '\(key.rawValue)' of element '\(element.name.rawValue)' to \(targetType)!
-                Attribute value: \(element.attributes[key] ?? "nil")
+                Attribute content: \(content)
                 """
 
-        case .missingContent(let element):
-            return "Element '\(element.name.rawValue)' has no content!"
-        case .missingChild(let element, let childElementName):
-            return "Element '\(element.name.rawValue)' has no child named '\(childElementName.rawValue)'"
-        case .cannotConvertContent(let element, let content, let targetType):
+        case .missingChild(let element, let childName):
+            return "Element '\(element.name.rawValue)' has no child named '\(childName.rawValue)'"
+
+        case .missingStringContent(let element):
+            return "Element '\(element.name.rawValue)' has no string content!"
+        case .cannotConvertStringContent(let element, let stringContent, let targetType):
             return """
                 Could not convert content of element '\(element.name.rawValue)' to \(targetType)!
-                Content: \(content)
+                Element string content: \(stringContent)
                 """
         }
     }

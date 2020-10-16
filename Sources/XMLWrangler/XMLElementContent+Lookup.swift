@@ -1,16 +1,26 @@
-extension Sequence where Element == XMLElement.Content {
-    /// Returns the elements of all `.object(_)`s in the sequence.
+extension XMLElement.Content {
+    /// Returns the elements of all `.element(_)`s in the receiver.
     @inlinable
-    public var allObjects: [XMLElement] { compactMap(\.object) }
+    public var allElements: [XMLElement] { storage.compactMap(\.element) }
 
-    /// Returns the strings of all `.string(_)`s in the sequence.
+    /// Returns the strings of all `.string(_)`s in the receiver.
     @inlinable
-    public var allStrings: [String] { compactMap(\.string) }
-}
+    public var allStrings: [Element.StringPart] { storage.compactMap(\.string) }
 
-extension Sequence where Element == XMLElement.Content {
+    @usableFromInline
+    internal typealias LazyStorageAllSequence<T> = LazyMapSequence<LazyFilterSequence<LazyMapSequence<Storage, Optional<T>>>, T>
+
+    @inlinable
+    internal var lazyAllElements: LazyStorageAllSequence<XMLElement> {
+        storage.lazy.compactMap(\.element)
+    }
+
+//    @inlinable
+//    internal var lazyAllString: LazyStorageAllSequence<Element.StringPart> {
+//        storage.lazy.compactMap(\.string)
+//    }
+
     /// Searches for elements which match a given predicate. Optionally also recursive.
-    ///
     /// - Parameters:
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
     ///   - predicate: The predicate to apply on elements. If it returns `true` the element will be included in the result.
@@ -19,14 +29,13 @@ extension Sequence where Element == XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func find(recursive: Bool = false, elementsMatching predicate: (XMLElement) throws -> Bool) rethrows -> [XMLElement] {
-        let objects = allObjects
-        let matches = try objects.filter(predicate)
+        let elements = lazyAllElements
+        let matches = try elements.filter(predicate)
         guard recursive else { return matches }
-        return try matches + objects.flatMap { try $0.content.find(recursive: recursive, elementsMatching: predicate) }
+        return try matches + elements.flatMap { try $0.content.find(recursive: recursive, elementsMatching: predicate) }
     }
 
     /// Finds the first occurence of an element that matches a given predicate.
-    ///
     /// - Parameters:
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
     ///   - predicate: The predicate to apply on elements until it returns `true`.
@@ -37,14 +46,13 @@ extension Sequence where Element == XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func findFirst(recursive: Bool = false, elementMatching predicate: (XMLElement) throws -> Bool) rethrows -> XMLElement? {
-        let objects = allObjects
-        let match = try objects.first(where: predicate)
+        let elements = lazyAllElements
+        let match = try elements.first(where: predicate)
         guard recursive else { return match }
-        return try match ?? objects.mapFirst { try $0.content.findFirst(recursive: recursive, elementMatching: predicate) }
+        return try match ?? elements.mapFirst { try $0.content.findFirst(recursive: recursive, elementMatching: predicate) }
     }
 
     /// Finds the last occurence of an element that matches a given predicate.
-    ///
     /// - Parameters:
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
     ///   - predicate: The predicate to apply on elements starting at the end until it returns `true`.
@@ -55,14 +63,13 @@ extension Sequence where Element == XMLElement.Content {
     /// - Note: `.string(_)` content elements are skipped.
     @usableFromInline
     internal func findLast(recursive: Bool = false, elementMatching predicate: (XMLElement) throws -> Bool) rethrows -> XMLElement? {
-        let objects = allObjects.reversed()
-        let match = try objects.first(where: predicate)
+        let elements = lazyAllElements.reversed()
+        let match = try elements.first(where: predicate)
         guard recursive else { return match }
-        return try match ?? objects.mapFirst { try $0.content.findLast(recursive: recursive, elementMatching: predicate) }
+        return try match ?? elements.mapFirst { try $0.content.findLast(recursive: recursive, elementMatching: predicate) }
     }
 
     /// Searches for elements with a given name. Optionally also recursive.
-    ///
     /// - Parameters:
     ///   - name: The name with which to search for elements.
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
@@ -74,7 +81,6 @@ extension Sequence where Element == XMLElement.Content {
     }
 
     /// Finds the first occurence of an element with a given name.
-    ///
     /// - Parameters:
     ///   - name: The name with which to search for the first element.
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
@@ -88,7 +94,6 @@ extension Sequence where Element == XMLElement.Content {
     }
 
     /// Finds the last occurence of an element with a given name.
-    ///
     /// - Parameters:
     ///   - name: The name with which to search for the last element.
     ///   - recursive: If `true` the search will recurse down the tree. `false` by default.
@@ -104,7 +109,6 @@ extension Sequence where Element == XMLElement.Content {
 
 extension Sequence {
     /// Returns the result of a closure for the first element that the closure returns a non-nil result.
-    ///
     /// - Parameter predicate: The predicate applied to the elements in self.
     /// - Returns: The result of `predicate` for the first element where `predicate` returned a non-nil result. Or nil if that never happens.
     /// - Throws: Any error thrown by `predicate`.

@@ -5,25 +5,24 @@ import FoundationXML
 @testable import XMLWrangler
 
 final class ParserTests: XCTestCase {
-
     private struct Expressible: ExpressibleByXMLElement {
-        let element: Element
+        let element: XWElement
 
-        init(xml: Element) throws {
+        init(xml: XWElement) throws {
             element = xml
         }
     }
     
-    private let testRoot: Element = {
-        var root = Element(name: "root", attributes: ["some": "key"])
-        root.append(object: "first")
-        root.append(object: XMLElement(name: "second", content: "something"))
-        root.append(object: XMLElement(name: "third", objects: [
-            "third_one",
-            XMLElement(name: "third_two", attributes: ["third_some": "value"]),
-            XMLElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right")
+    private let testRoot: XWElement = {
+        var root = XWElement(name: "root", attributes: ["some": "key"])
+        root.append(element: XWElement(name: "first"))
+        root.append(element: XWElement(name: "second", content: "something"))
+        root.append(element: XWElement(name: "third", elements: [
+            XWElement(name: "third_one"),
+            XWElement(name: "third_two", attributes: ["third_some": "value"]),
+            XWElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right")
         ]))
-        root.append(object: XMLElement(name: "fourth", content: "Some <CDATA> value"))
+        root.append(element: XMLElement(name: "fourth", content: "Some <CDATA> value"))
         return root
     }()
     
@@ -40,8 +39,8 @@ final class ParserTests: XCTestCase {
             switch $0 {
             case is Parser.UnknownError:
                 XCTAssertTrue($0 is Parser.UnknownError)
-            case is Parser.MissingObjectError:
-                XCTAssertTrue($0 is Parser.MissingObjectError)
+            case is Parser.MissingRootElementError:
+                XCTAssertTrue($0 is Parser.MissingRootElementError)
             case let nsError as NSError:
                 XCTAssertEqual(nsError.domain, XMLParser.errorDomain)
             }
@@ -77,22 +76,22 @@ final class ParserTests: XCTestCase {
     func testMixedContentParsing() {
         let mixedContentXML = """
                             <?xml version="1.0" encoding="UTF-8"?>
-                            <root>
-                            Some text is here to check.
-                            Which even contains newlines.
-                            <child>I'm not of much relevance</child>
-                            <child/>
-                            Again we have some more text here.
-                            Let's see how this will end.
-                            <other/>
-                            </root>
+                            <rootElement>
+                            This is a text, here to check,
+                            if newlines work correctly.
+                            <childElement>I'm just sitting here</childElement>
+                            <childElement/>
+                            Again to check the works,
+                            we add some newlines.
+                            <otherElement/>
+                            </rootElement>
                             """
-        let expectedElement = Element(name: "root", content: [
-            .string("Some text is here to check.\nWhich even contains newlines."),
-            .object(Element(name: "child", content: "I'm not of much relevance")),
-            .object(Element(name: "child")),
-            .string("Again we have some more text here.\nLet's see how this will end."),
-            .object(Element(name: "other"))
+        let expectedElement = XWElement(name: "rootElement", content: [
+            .string("This is a text, here to check,\nif newlines work correctly."),
+            .element(XWElement(name: "childElement", content: "I'm just sitting here")),
+            .element(XWElement(name: "childElement")),
+            .string("Again to check the works,\nwe add some newlines."),
+            .element(XWElement(name: "otherElement"))
         ])
         let parser = Parser(string: mixedContentXML)
         XCTAssertEqual(try parser.parse(), expectedElement)

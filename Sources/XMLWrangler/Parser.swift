@@ -13,8 +13,8 @@ public final class Parser: ParserDelegate {
     private let xmlParser: XMLParser
     private lazy var delegate = Delegate(delegate: self)
 
-    private var parsedRoot: Element?
-    private var elementStack: [Element] = []
+    private var parsedRoot: XMLElement?
+    private var elementStack: [XMLElement] = []
 
     /// Creates a new instance using the given `Data`.
     ///
@@ -34,15 +34,15 @@ public final class Parser: ParserDelegate {
     /// Tries to parse the associated XML data. The parsing is only performed once.
     ///
     /// - Returns: The parsed element.
-    /// - Throws: Any error reported by `XMLParser`. `Parser.UnknownError` if parsing failed but no error reported. `MissingObjectError` if parsing succeeded but no root object was parsed.
-    public func parse() throws -> Element {
+    /// - Throws: Any error reported by `XMLParser`. `Parser.UnknownError` if parsing failed but no error reported. `MissingRootElementError` if parsing succeeded but no root element was parsed.
+    public func parse() throws -> XMLElement {
         // We only parse things once...
-        if let object = parsedRoot { return object }
+        if let element = parsedRoot { return element }
         xmlParser.delegate = delegate
         defer { xmlParser.delegate = nil }
         guard xmlParser.parse() else { throw xmlParser.parserError ?? UnknownError() }
-        guard let obj = parsedRoot else { throw MissingObjectError() }
-        return obj
+        guard let element = parsedRoot else { throw MissingRootElementError() }
+        return element
     }
 
     /// Tries to parse the associated XML data and convert it to the given target by using it's conformance to `ExpressibleByXMLElement`.
@@ -56,7 +56,7 @@ public final class Parser: ParserDelegate {
     }
 
     // MARK: - Helpers
-    private func stripTrailingNewlinesAndWhitespaces(of element: inout Element) {
+    private func stripTrailingNewlinesAndWhitespaces(of element: inout XMLElement) {
         guard !element.content.isEmpty,
               case let idx = element.content.indexBeforeEndIndex,
               case .string(let str) = element.content[idx]
@@ -71,7 +71,7 @@ public final class Parser: ParserDelegate {
                             namespaceURI: String?,
                             qualifiedName qName: String?,
                             attributes attributeDict: [String: String]) {
-        elementStack.append(Element(name: .init(rawValue: elementName), attributes: attributeDict.asAttributes))
+        elementStack.append(.init(name: .init(rawValue: elementName), attributes: attributeDict.asAttributes))
     }
 
     fileprivate func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
@@ -79,7 +79,7 @@ public final class Parser: ParserDelegate {
         stripTrailingNewlinesAndWhitespaces(of: &lastElem)
         if var parent = elementStack.popLast() {
             stripTrailingNewlinesAndWhitespaces(of: &parent)
-            parent.append(object: lastElem)
+            parent.append(element: lastElem)
             elementStack.append(parent)
         } else {
             parsedRoot = lastElem
@@ -91,8 +91,8 @@ public final class Parser: ParserDelegate {
         guard !string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
               var currentElem = elementStack.popLast()
         else { return }
-        if currentElem.content.isEmpty || currentElem.content.last?.isObject == true {
-            // For first strings (either after objects or generally first content), we strip leading newlines.
+        if currentElem.content.isEmpty || currentElem.content.last?.isElement == true {
+            // For first strings (either after elements or generally first content), we strip leading newlines.
             let leftTrimmed = string.drop(while: { $0.isNewline || $0.isWhitespace })
             currentElem.content.append(.string(String(leftTrimmed)))
         } else {
@@ -117,10 +117,10 @@ extension Parser {
         public var description: String { "An unknown parsing error occurred!" }
     }
 
-    /// Describes a failure that caused no object to be parsed.
-    /// Used if parsing succeeds, but no object was parsed.
-    public struct MissingObjectError: Error, CustomStringConvertible {
-        public var description: String { "Parsing did not yield an object! Please check that the XML is valid!" }
+    /// Describes a failure that caused no element to be parsed.
+    /// Used if parsing succeeds, but no element was parsed.
+    public struct MissingRootElementError: Error, CustomStringConvertible {
+        public var description: String { "Parsing did not yield an element! Please check that the XML is valid!" }
     }
 }
 
@@ -188,16 +188,4 @@ extension Parser {
         }
         #endif
     }
-}
-
-extension Dictionary where Key == XMLWrangler.Element.AttributeKey.RawValue, Value == XMLWrangler.Element.AttributeValue.RawValue {
-    @inlinable
-    var asAttributes: XMLWrangler.Element.Attributes {
-        .init(uniqueKeysWithValues: lazy.map { (.init(rawValue: $0.key), .init(rawValue: $0.value)) })
-    }
-}
-
-extension RandomAccessCollection {
-    @inlinable
-    var indexBeforeEndIndex: Index { index(before: endIndex) }
 }
