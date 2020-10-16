@@ -17,8 +17,8 @@ Add the following dependency to your `Package.swift`:
 
 ## Compatibility
 
--  For Swift up to version 5.2, use XMLWrangler version 3.x.y.
--  For Swift as of version 5.3, use XMLWrangler version 5.x.y.
+-   For Swift up to version 5.2, use XMLWrangler version 3.x.y.
+-   For Swift as of version 5.3, use XMLWrangler version 5.x.y.
 
 ## Usage
 
