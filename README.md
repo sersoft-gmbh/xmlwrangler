@@ -1,10 +1,10 @@
 # XMLWrangler
 
-[![GitHub release](https://img.shields.io/github/release/sersoft-gmbh/XMLWrangler.svg?style=flat)](https://github.com/sersoft-gmbh/XMLWrangler/releases/latest)
-![Tests](https://github.com/sersoft-gmbh/XMLWrangler/workflows/Tests/badge.svg)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c997088f35484726bb1bc6167f074cc4)](https://www.codacy.com/app/ffried/XMLWrangler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/XMLWrangler&amp;utm_campaign=Badge_Grade)
-[![codecov](https://codecov.io/gh/sersoft-gmbh/XMLWrangler/branch/master/graph/badge.svg)](https://codecov.io/gh/sersoft-gmbh/XMLWrangler)
-[![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/XMLWrangler/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/XMLWrangler)
+[![GitHub release](https://img.shields.io/github/release/sersoft-gmbh/xmlwrangler.svg?style=flat)](https://github.com/sersoft-gmbh/xmlwrangler/releases/latest)
+![Tests](https://github.com/sersoft-gmbh/xmlwrangler/workflows/Tests/badge.svg)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8932a462fa6d4cd6b2850069c68195c0)](https://www.codacy.com/gh/sersoft-gmbh/xmlwrangler/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/xmlwrangler&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/sersoft-gmbh/xmlwrangler/branch/master/graph/badge.svg?token=zTgWMfSyCb)](https://codecov.io/gh/sersoft-gmbh/xmlwrangler)
+[![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/xmlwrangler/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/xmlwrangler)
 
 Easily deal with XMLs in Swift.
 
@@ -117,7 +117,7 @@ While not yet integrated, the following features might provide added value and c
 
 ## Documentation
 
-The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an [online version](https://sersoft-gmbh.github.io/XMLWrangler) available for you.
+The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an [online version](https://sersoft-gmbh.github.io/xmlwrangler) available for you.
 
 ## Contributing
 

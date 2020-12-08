@@ -10,7 +10,7 @@ jobs:
   validate-linux-tests:
     runs-on: macos-latest
     steps:
-      - run: sudo xcode-select -s /Applications/Xcode_12.1.app/Contents/Developer
+      - run: sudo xcode-select -s /Applications/Xcode_12.2.app/Contents/Developer
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
         with:
@@ -30,13 +30,13 @@ jobs:
 
     runs-on: ${{matrix.os}}
     steps:
-      - run: sudo xcode-select -s /Applications/Xcode_12.1.app/Contents/Developer
+      - run: sudo xcode-select -s /Applications/Xcode_12.2.app/Contents/Developer
         if: runner.os == 'macOS'
       - name: Install Swift
         if: runner.os == 'Linux'
         uses: sersoft-gmbh/SwiftyActions@v1
         with:
-          release-version: 5.3
+          release-version: 5.3.1
           platform: ${{matrix.os}}
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
@@ -69,15 +69,16 @@ jobs:
           - platform=iOS Simulator,OS=latest,name=iPhone 11 Pro
           - platform=iOS Simulator,OS=latest,name=iPad Pro (11-inch) (2nd generation)
           - platform=tvOS Simulator,OS=latest,name=Apple TV 4K
+        # parallel-testing-enabled: [true]
+        # enable-code-coverage: [true]
         # Watch currently doesn't work because there's no XCTest on watchOS
-        # additional-flags:
-        #   - -parallel-testing-enabled YES -enableCodeCoverage YES
         # include:
         #   - action: build
         #     destination: platform=watchOS Simulator,OS=latest,name=Apple Watch Series 6 - 44mm
-        #     additional-flags: ''
+        #     parallel-testing-enabled: false
+        #     enable-code-coverage: false
     steps:
-      - run: sudo xcode-select -s /Applications/Xcode_12.1.app/Contents/Developer
+      - run: sudo xcode-select -s /Applications/Xcode_12.2.app/Contents/Developer
       - uses: actions/checkout@v2
       - uses: sersoft-gmbh/xcodebuild-action@v1
         with:
@@ -85,8 +86,10 @@ jobs:
           scheme: xmlwrangler
           destination: ${{matrix.destination}}
           action: ${{matrix.action}}
-          build-settings: -parallel-testing-enabled YES -enableCodeCoverage YES
-          # build-settings: ${{matrix.additional-flags}}
+          parallel-testing-enabled: true
+          enable-code-coverage: true
+          # parallel-testing-enabled: ${{matrix.parallel-testing-enabled}}
+          # enable-code-coverage: ${{matrix.enable-code-coverage}}
       - uses: codecov/codecov-action@v1
         with:
           token: ${{secrets.CODECOV_TOKEN}}
