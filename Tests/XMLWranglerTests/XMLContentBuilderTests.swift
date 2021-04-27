@@ -1,3 +1,4 @@
+#if swift(>=5.4)
 import XCTest
 import XMLWrangler
 
@@ -40,7 +41,7 @@ final class XMLContentBuilderTests: XCTestCase {
 
         let bool = true
         let kind = Kind.a
-//        let int = 5
+        let int = 5
 
         let root = XWElement(name: "root") {
             XWElement(name: "inner1") {
@@ -72,13 +73,13 @@ final class XMLContentBuilderTests: XCTestCase {
                 }
             }
             "Element Loop"
-//            for i in 0..<int {
-//                XWElement(name: "loop-\(i)")
-//            }
-//            "String Loop"
-//            for i in 0..<int {
-//                "Loop line \(i + 1)"
-//            }
+            for i in 0..<int {
+                XWElement(name: .init(rawValue: "loop-\(i)"))
+            }
+            "String Loop"
+            for i in 0..<int {
+                "Loop line \(i + 1)"
+            }
         }
 
         let expectedElement = XWElement(name: "root", content: [
@@ -90,14 +91,15 @@ final class XMLContentBuilderTests: XCTestCase {
             .element(XWElement(name: "if-true2")),
             .element(XWElement(name: "kind-a")),
             .string("String line in kind a\nElement Loop"),
-//                .element(XWElement(name: "loop-0")),
-//                .element(XWElement(name: "loop-1")),
-//                .element(XWElement(name: "loop-2")),
-//                .element(XWElement(name: "loop-3")),
-//                .element(XWElement(name: "loop-4")),
-//                .string("String Loop\nLoop line 1\nLoop line 2\nLoop line 3\nLoop line 4\nLoop line 5"),
+                .element(XWElement(name: "loop-0")),
+                .element(XWElement(name: "loop-1")),
+                .element(XWElement(name: "loop-2")),
+                .element(XWElement(name: "loop-3")),
+                .element(XWElement(name: "loop-4")),
+                .string("String Loop\nLoop line 1\nLoop line 2\nLoop line 3\nLoop line 4\nLoop line 5"),
         ])
 
         XCTAssertEqual(root, expectedElement)
     }
 }
+#endif
