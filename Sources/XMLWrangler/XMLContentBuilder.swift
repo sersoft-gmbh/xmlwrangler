@@ -1,6 +1,6 @@
+#if swift(>=5.4)
 @frozen
-//@resultBuilder
-@_functionBuilder
+@resultBuilder
 public enum XMLContentBuilder {
     @inlinable
     public static func buildExpression(_ element: XMLElement.Content.Element) -> XMLElement.Content {
@@ -67,3 +67,4 @@ extension XMLElement {
         self.init(name: name, attributes: attributes, content: content())
     }
 }
+#endif
