@@ -125,7 +125,7 @@ extension Parser {
 }
 
 // MARK: - Delegate forwarding
-fileprivate protocol ParserDelegate: class {
+fileprivate protocol ParserDelegate: AnyObject {
     func parser(_ parser: XMLParser,
                 didStartElement elementName: String,
                 namespaceURI: String?,
