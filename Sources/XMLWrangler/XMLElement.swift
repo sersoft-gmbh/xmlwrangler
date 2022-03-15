@@ -122,3 +122,8 @@ extension XMLElement {
 /// A typealias for `XMLWrangler.XWElement`.
 /// Use this if you run into conflicts with `Foundation.XMLElement`.
 public typealias XWElement = XMLElement
+
+#if compiler(>=5.5) && canImport(_Concurrency)
+extension XMLElement: Sendable {}
+extension XMLElement.Name: Sendable {}
+#endif

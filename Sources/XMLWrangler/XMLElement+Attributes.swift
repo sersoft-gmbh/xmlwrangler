@@ -211,7 +211,7 @@ extension XMLElement {
         /// - Returns: The filtered attributes. Only elements for which `isIncluded` returned `true` are contained.
         @inlinable
         public func filter(_ isIncluded: (Element) throws -> Bool) rethrows -> Self {
-            try .init(storage: storage.filter(isIncluded))
+            try .init(storage: storage.filter { try isIncluded((key: $0.key, content: $0.value)) })
         }
 
         /// Updates the content element for a given key.
@@ -570,3 +570,15 @@ extension XMLElement.Attributes {
         }
     }
 }
+
+#if compiler(>=5.5) && canImport(_Concurrency)
+extension XMLElement.Attributes: Sendable {}
+extension XMLElement.Attributes.Iterator: Sendable {}
+extension XMLElement.Attributes.Index: Sendable {}
+extension XMLElement.Attributes.Key: Sendable {}
+extension XMLElement.Attributes.Content: Sendable {}
+extension XMLElement.Attributes.Contents: Sendable {}
+extension XMLElement.Attributes.Contents.Iterator: Sendable {}
+extension XMLElement.Attributes.Keys: Sendable {}
+extension XMLElement.Attributes.Keys.Iterator: Sendable {}
+#endif

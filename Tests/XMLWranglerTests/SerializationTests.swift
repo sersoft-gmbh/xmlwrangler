@@ -62,7 +62,6 @@ final class SerializationTests: XCTestCase {
         XCTAssertEqual(processingInstructions, expectedProcessingInstruction)
     }
 
-    #if swift(>=5.4)
     private let testRoot: XWElement = {
         XWElement(name: "root", attributes: ["some": "key"]) {
             XWElement(name: "first")
@@ -84,27 +83,6 @@ final class SerializationTests: XCTestCase {
         "Let's see how this will end."
         XWElement(name: "other")
     }
-    #else
-    private let testRoot: XWElement = {
-        XWElement(name: "root", attributes: ["some": "key"], elements: [
-            XWElement(name: "first"),
-            XWElement(name: "second", content: "something"),
-            XWElement(name: "third", elements: [
-                XWElement(name: "third_one"),
-                XWElement(name: "third_two", attributes: ["third_some": "value"]),
-                XWElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right"),
-            ]),
-        ])
-    }()
-
-    private let mixedContentRoot = XWElement(name: "root", content: [
-        .string("Some text is here to check.\nWhich even contains newlines."),
-        .element(XWElement(name: "child", content: "I'm not of much relevance")),
-        .element(XWElement(name: "child")),
-        .string("Again we have some more text here.\nLet's see how this will end."),
-        .element(XWElement(name: "other")),
-    ])
-    #endif
 
     func testXMLSerialization() {
         let str1 = String(xml: testRoot)

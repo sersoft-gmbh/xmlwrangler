@@ -1,4 +1,3 @@
-#if swift(>=5.4)
 import XCTest
 import XMLWrangler
 
@@ -102,4 +101,3 @@ final class XMLContentBuilderTests: XCTestCase {
         XCTAssertEqual(root, expectedElement)
     }
 }
-#endif

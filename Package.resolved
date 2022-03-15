@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "semver",
-        "repositoryURL": "https://github.com/sersoft-gmbh/semver.git",
-        "state": {
-          "branch": null,
-          "revision": "767611922002e126fe42c969dc908fad4f4865dd",
-          "version": "3.2.0"
-        }
+  "pins" : [
+    {
+      "identity" : "semver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sersoft-gmbh/semver.git",
+      "state" : {
+        "revision" : "c883b794c9085cf6ac4cc0ae54fe3595671305cc",
+        "version" : "3.3.1"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

@@ -222,3 +222,10 @@ extension String {
         self = didContainElementsOrMultilineStrings ? options.lineSeparator + contentStr : contentStr
     }
 }
+
+#if compiler(>=5.5) && canImport(_Concurrency)
+extension SerializationOptions: Sendable {}
+extension DocumentEncoding: Sendable {}
+extension EscapableContent: Sendable {}
+extension EscapableContent.Quotes: Sendable {}
+#endif

@@ -279,3 +279,10 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
         self.init(storage: stringInterpolation.storage)
     }
 }
+
+#if compiler(>=5.5) && canImport(_Concurrency)
+extension XMLElement.Content: Sendable {}
+extension XMLElement.Content.Element: Sendable {}
+extension XMLElement.Content.Iterator: Sendable {}
+extension XMLElement.Content.StringInterpolation: Sendable {}
+#endif

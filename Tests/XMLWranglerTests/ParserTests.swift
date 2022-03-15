@@ -20,7 +20,7 @@ final class ParserTests: XCTestCase {
         root.appendElement(XWElement(name: "third", elements: [
             XWElement(name: "third_one"),
             XWElement(name: "third_two", attributes: ["third_some": "value"]),
-            XWElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right")
+            XWElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right"),
         ]))
         root.appendElement(XMLElement(name: "fourth", content: "Some <CDATA> value"))
         return root

@@ -1,4 +1,3 @@
-#if swift(>=5.4)
 @frozen
 @resultBuilder
 public enum XMLContentBuilder {
@@ -67,4 +66,3 @@ extension XMLElement {
         self.init(name: name, attributes: attributes, content: content())
     }
 }
-#endif
