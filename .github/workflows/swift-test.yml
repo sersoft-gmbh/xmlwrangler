@@ -79,7 +79,6 @@ jobs:
         with:
           xcode-version: ^13.0
       - uses: actions/checkout@v3.0.0
-      # remove these two steps once Xcode 13.3 (Swift 5.6) is available on GHA
       - name: Read Swift Version
         uses: sersoft-gmbh/swift-version-action@v1.0.1
         id: swift-version
