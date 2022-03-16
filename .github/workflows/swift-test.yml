@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         os: [ macos-11, ubuntu-18.04, ubuntu-20.04 ]
-        swift-version: [ 5.5 ]
+        swift-version: [ 5.5, 5.6 ]
 
     runs-on: ${{matrix.os}}
 
@@ -40,6 +40,9 @@ jobs:
           key: ${{runner.os}}-${{steps.os-version.outputs.version}}-${{github.repository}}-spm-${{steps.swift-version.outputs.version}}-${{hashFiles('**/Package.resolved')}}
           restore-keys: |
             ${{runner.os}}-${{steps.os-version.outputs.version}}-${{github.repository}}-spm-${{steps.swift-version.outputs.version}}-
+      - name: Workaround Package.resolved format issues
+        if: ${{ startsWith(steps.swift-version.outputs.version, '5.5') }}
+        run: rm -rf Package.resolved
       - name: Build & Test
         run: swift test -v --parallel --enable-code-coverage
       - name: Generate Coverage Files
@@ -76,6 +79,13 @@ jobs:
         with:
           xcode-version: ^13.0
       - uses: actions/checkout@v3.0.0
+      # remove these two steps once Xcode 13.3 (Swift 5.6) is available on GHA
+      - name: Read Swift Version
+        uses: sersoft-gmbh/swift-version-action@v1.0.1
+        id: swift-version
+      - name: Workaround Package.resolved format issues
+        if: ${{ startsWith(steps.swift-version.outputs.version, '5.5') }}
+        run: rm -rf Package.resolved
       - uses: sersoft-gmbh/xcodebuild-action@v1.8.0
         with:
           spm-package: './'
