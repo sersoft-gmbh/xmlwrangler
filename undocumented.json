@@ -1,0 +1,173 @@
+{
+  "warnings": [
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 34,
+      "symbol": "DocumentEncoding.ascii",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 34,
+      "symbol": "DocumentEncoding.utf16",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 34,
+      "symbol": "DocumentEncoding.utf8",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 60,
+      "symbol": "EscapableContent.Quotes.double",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 60,
+      "symbol": "EscapableContent.Quotes.single",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 83,
+      "symbol": "EscapableContent.attribute(quotes:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 84,
+      "symbol": "EscapableContent.text",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 85,
+      "symbol": "EscapableContent.cdata",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 86,
+      "symbol": "EscapableContent.comment",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/Serialization.swift",
+      "line": 87,
+      "symbol": "EscapableContent.processingInstruction",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 3,
+      "symbol": "XMLContentBuilder",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 5,
+      "symbol": "XMLContentBuilder.buildExpression(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 10,
+      "symbol": "XMLContentBuilder.buildExpression(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 15,
+      "symbol": "XMLContentBuilder.buildExpression(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 20,
+      "symbol": "XMLContentBuilder.buildExpression(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 25,
+      "symbol": "XMLContentBuilder.buildBlock()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 28,
+      "symbol": "XMLContentBuilder.buildBlock(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 33,
+      "symbol": "XMLContentBuilder.buildBlock(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 38,
+      "symbol": "XMLContentBuilder.buildOptional(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 43,
+      "symbol": "XMLContentBuilder.buildEither(first:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 48,
+      "symbol": "XMLContentBuilder.buildEither(second:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 53,
+      "symbol": "XMLContentBuilder.buildArray(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 58,
+      "symbol": "XMLContentBuilder.buildFinalResult(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/home/runner/work/xmlwrangler/xmlwrangler/Sources/XMLWrangler/XMLContentBuilder.swift",
+      "line": 65,
+      "symbol": "XMLElement.init(name:attributes:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/home/runner/work/xmlwrangler/xmlwrangler/Sources"
+}
