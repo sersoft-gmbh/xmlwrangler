@@ -4,7 +4,7 @@
 ![Tests](https://github.com/sersoft-gmbh/xmlwrangler/workflows/Tests/badge.svg)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8932a462fa6d4cd6b2850069c68195c0)](https://www.codacy.com/gh/sersoft-gmbh/xmlwrangler/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/xmlwrangler&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/sersoft-gmbh/xmlwrangler/branch/master/graph/badge.svg?token=zTgWMfSyCb)](https://codecov.io/gh/sersoft-gmbh/xmlwrangler)
-[![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/xmlwrangler/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/xmlwrangler)
+[![Docs](https://img.shields.io/badge/-documentation-informational)](https://sersoft-gmbh.github.io/xmlwrangler)
 
 Easily deal with XMLs in Swift.
 
