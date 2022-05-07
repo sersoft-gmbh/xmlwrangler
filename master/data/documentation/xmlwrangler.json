@@ -1,0 +1,656 @@
+{
+  "abstract" : [
+    {
+      "text" : "",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "XMLWrangler",
+    "modules" : [
+      {
+        "name" : "XMLWrangler"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "XMLWrangler"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser"
+      ],
+      "title" : "Classes"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible"
+      ],
+      "title" : "Protocols"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/SerializationOptions",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentRepresentable",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementRepresentable",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XWElement"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/DocumentEncoding",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/EscapableContent",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLContentBuilder"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/xmlwrangler"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://XMLWrangler/documentation/XMLWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "XMLWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/DocumentEncoding": {
+  "abstract" : [
+    {
+      "text" : "The encoding of an XML document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentEncoding"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/DocumentEncoding",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocumentEncoding"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DocumentEncoding",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/documentencoding"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/EscapableContent": {
+  "abstract" : [
+    {
+      "text" : "Represents a type of content that can be escaped.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EscapableContent"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/EscapableContent",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EscapableContent"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EscapableContent",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/escapablecontent"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLAttributeContent": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can be created from an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement.Attributes.Content",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " instance.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLAttributeContent"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLAttributeContent"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ExpressibleByXMLAttributeContent",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can be initialized with an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ExpressibleByXMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/LookupError": {
+  "abstract" : [
+    {
+      "text" : "The error type that is thrown for all lookup operations on ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LookupError"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LookupError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LookupError",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/lookuperror"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/Parser": {
+  "abstract" : [
+    {
+      "text" : "Responsible for parsing XMLs.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parser"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Parser",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/parser"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/SerializationOptions": {
+  "abstract" : [
+    {
+      "text" : "Represents options to use for serializing XML elements.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SerializationOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/SerializationOptions",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SerializationOptions"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SerializationOptions",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/serializationoptions"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLAttributeContentConvertible": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can turn itself into an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement.Attributes.Content",
+      "type" : "codeVoice"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLAttributeContentConvertible"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLAttributeContentConvertible"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLAttributeContentConvertible",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLAttributeContentRepresentable": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can be converted from and to an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement.Attributes.Content",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " instance.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLAttributeContentRepresentable"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentRepresentable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLAttributeContentRepresentable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLAttributeContentRepresentable",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlattributecontentrepresentable"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLContentBuilder": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLContentBuilder"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLContentBuilder",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLContentBuilder"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLContentBuilder",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlcontentbuilder"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElementConvertible": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can be converted to an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElementConvertible"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElementConvertible"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElementConvertible",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelementconvertible"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElementRepresentable": {
+  "abstract" : [
+    {
+      "text" : "A type that can be converted from and to an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElementRepresentable"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementRepresentable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElementRepresentable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElementRepresentable",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelementrepresentable"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XWElement": {
+  "abstract" : [
+    {
+      "text" : "A typealias for ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLWrangler.XWElement",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Use this if you run into conflicts with ",
+      "type" : "text"
+    },
+    {
+      "code" : "Foundation.XMLElement",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XWElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XWElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XWElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XWElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xwelement"
+}
+}
+}

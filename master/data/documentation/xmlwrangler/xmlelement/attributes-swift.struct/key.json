@@ -1,0 +1,873 @@
+{
+  "abstract" : [
+    {
+      "text" : "Represents the key of an attribute.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Key"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "XMLWrangler"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Key"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "XMLElement.Attributes.Key"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@frozen"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Key"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent",
+        "doc:\/\/XMLWrangler\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
+        "doc:\/\/XMLWrangler\/Se",
+        "doc:\/\/XMLWrangler\/SE",
+        "doc:\/\/XMLWrangler\/SQ",
+        "doc:\/\/XMLWrangler\/s43ExpressibleByExtendedGraphemeClusterLiteralP",
+        "doc:\/\/XMLWrangler\/s26ExpressibleByStringLiteralP",
+        "doc:\/\/XMLWrangler\/s33ExpressibleByUnicodeScalarLiteralP",
+        "doc:\/\/XMLWrangler\/SH",
+        "doc:\/\/XMLWrangler\/SY",
+        "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/init(_:)",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/init(rawValue:)",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/init(stringLiteral:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/debugDescription",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/description",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/rawValue-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/RawValue-swift.typealias",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/StringLiteralType"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/Equatable-Implementations",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/ExpressibleByExtendedGraphemeClusterLiteral-Implementations",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/ExpressibleByUnicodeScalarLiteral-Implementations",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://XMLWrangler/SE": {
+  "identifier" : "doc:\/\/XMLWrangler\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/SH": {
+  "identifier" : "doc:\/\/XMLWrangler\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/SQ": {
+  "identifier" : "doc:\/\/XMLWrangler\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/SY": {
+  "identifier" : "doc:\/\/XMLWrangler\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/Se": {
+  "identifier" : "doc:\/\/XMLWrangler\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/documentation/XMLWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "XMLWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLAttributeContent": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can be created from an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement.Attributes.Content",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " instance.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLAttributeContent"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLAttributeContent"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ExpressibleByXMLAttributeContent",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLAttributeContentConvertible": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can turn itself into an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement.Attributes.Content",
+      "type" : "codeVoice"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLAttributeContentConvertible"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLAttributeContentConvertible"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLAttributeContentConvertible",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct": {
+  "abstract" : [
+    {
+      "text" : "Contains the attributes of an ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Attributes"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Attributes"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Attributes",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key": {
+  "abstract" : [
+    {
+      "text" : "Represents the key of an attribute.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Key"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Key"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Attributes.Key",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/equatable-implementations"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/ExpressibleByExtendedGraphemeClusterLiteral-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/ExpressibleByExtendedGraphemeClusterLiteral-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "ExpressibleByExtendedGraphemeClusterLiteral Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/expressiblebyextendedgraphemeclusterliteral-implementations"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/ExpressibleByUnicodeScalarLiteral-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/ExpressibleByUnicodeScalarLiteral-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/expressiblebyunicodescalarliteral-implementations"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/rawrepresentable-implementations"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/RawValue-swift.typealias": {
+  "abstract" : [
+    {
+      "text" : "inherited",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RawValue"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/RawValue-swift.typealias",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RawValue"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Attributes.Key.RawValue",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/rawvalue-swift.typealias"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/StringLiteralType": {
+  "abstract" : [
+    {
+      "text" : "inherited",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "StringLiteralType"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/StringLiteralType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StringLiteralType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Attributes.Key.StringLiteralType",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/stringliteraltype"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/debugDescription": {
+  "abstract" : [
+    {
+      "text" : "inherited",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "debugDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/debugDescription",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "debugDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/debugdescription"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/description": {
+  "abstract" : [
+    {
+      "text" : "inherited",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/description"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/init(_:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new key using the given raw value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
+      "text" : "Key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV8RawValuea",
+      "text" : "RawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/init(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/init(_:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/init(rawValue:)": {
+  "abstract" : [
+    {
+      "text" : "inherited",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
+      "text" : "Key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV8RawValuea",
+      "text" : "RawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/init(rawvalue:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/init(stringLiteral:)": {
+  "abstract" : [
+    {
+      "text" : "inherited",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringLiteral"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
+      "text" : "Key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV17StringLiteralTypea",
+      "text" : "StringLiteralType"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/init(stringLiteral:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringLiteral:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/init(stringliteral:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/rawValue-swift.property": {
+  "abstract" : [
+    {
+      "text" : "inherited",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
+      "text" : "Key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV8RawValuea",
+      "text" : "RawValue"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key\/rawValue-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rawValue",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/rawvalue-swift.property"
+},
+"doc://XMLWrangler/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s26ExpressibleByStringLiteralP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s26ExpressibleByStringLiteralP",
+  "title" : "Swift.ExpressibleByStringLiteral",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s33ExpressibleByUnicodeScalarLiteralP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s33ExpressibleByUnicodeScalarLiteralP",
+  "title" : "Swift.ExpressibleByUnicodeScalarLiteral",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s43ExpressibleByExtendedGraphemeClusterLiteralP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s43ExpressibleByExtendedGraphemeClusterLiteralP",
+  "title" : "Swift.ExpressibleByExtendedGraphemeClusterLiteral",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s8SendableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}
