@@ -94,7 +94,7 @@ jobs:
           spm-package: './'
           scheme: xmlwrangler
           destination: ${{matrix.destination}}
-          action: $test
+          action: test
           parallel-testing-enabled: true
           enable-code-coverage: true
       - uses: sersoft-gmbh/swift-coverage-action@v3.0.0
