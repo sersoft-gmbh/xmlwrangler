@@ -3,10 +3,16 @@ extension XMLElement {
     @frozen
     public struct Content: Equatable {
         @usableFromInline
-        typealias Storage = [Element]
+        typealias Storage = Array<Element>
 
         /// Describes an part (element) of the `XMLElement`'s content.
-        public enum Element: Equatable, ExpressibleByStringLiteral, ExpressibleByStringInterpolation, ExpressibleByXMLElement, CustomStringConvertible, CustomDebugStringConvertible {
+        public enum Element: Equatable,
+                             ExpressibleByStringLiteral,
+                             ExpressibleByStringInterpolation,
+                             ExpressibleByXMLElement,
+                             CustomStringConvertible,
+                             CustomDebugStringConvertible
+        {
             /// The type used to represent a string content.
             public typealias StringPart = String
             /// inherited
@@ -246,7 +252,9 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
         /// Appends the contents of another sequence of `XMLElement.Content.Element` to the contents.
         /// - Parameter contents: The sequence to append.
         @inlinable
-        public mutating func appendInterpolation<C: Sequence>(_ contents: C) where C.Element == XMLElement.Content.Element {
+        public mutating func appendInterpolation<C: Sequence>(_ contents: C)
+        where C.Element == XMLElement.Content.Element
+        {
             _appendContent(.init(contents))
         }
 

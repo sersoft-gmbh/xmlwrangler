@@ -93,7 +93,14 @@ extension XMLElement: XMLElementRepresentable {
 extension XMLElement {
     /// Represents the name of an element.
     @frozen
-    public struct Name: RawRepresentable, Hashable, Codable, ExpressibleByStringLiteral, XMLAttributeContentRepresentable, CustomStringConvertible, CustomDebugStringConvertible {
+    public struct Name: RawRepresentable,
+                        Hashable,
+                        Codable,
+                        ExpressibleByStringLiteral,
+                        XMLAttributeContentRepresentable,
+                        CustomStringConvertible,
+                        CustomDebugStringConvertible
+    {
         public typealias RawValue = String
         public typealias StringLiteralType = RawValue
 

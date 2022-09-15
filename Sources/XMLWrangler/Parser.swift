@@ -14,7 +14,7 @@ public final class Parser: ParserDelegate {
     private lazy var delegate = Delegate(delegate: self)
 
     private var parsedRoot: XMLElement?
-    private var elementStack: [XMLElement] = []
+    private var elementStack = Array<XMLElement>()
 
     /// Creates a new instance using the given `Data`.
     ///

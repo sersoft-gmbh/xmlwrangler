@@ -22,7 +22,7 @@ public enum XMLContentBuilder {
     }
 
     @inlinable
-    public static func buildBlock() -> XMLElement.Content { .init(storage: []) }
+    public static func buildBlock() -> XMLElement.Content { .init(storage: .init()) }
 
     @inlinable
     public static func buildBlock(_ content: XMLElement.Content) -> XMLElement.Content {
@@ -36,7 +36,7 @@ public enum XMLContentBuilder {
 
     @inlinable
     public static func buildOptional(_ content: XMLElement.Content?) -> XMLElement.Content {
-        content ?? .init(storage: [])
+        content ?? .init(storage: .init())
     }
 
     @inlinable
@@ -50,7 +50,7 @@ public enum XMLContentBuilder {
     }
 
     @inlinable
-    public static func buildArray(_ content: [XMLElement.Content]) -> XMLElement.Content {
+    public static func buildArray(_ content: Array<XMLElement.Content>) -> XMLElement.Content {
         .init(storage: content.flatMap(\.storage))
     }
 
