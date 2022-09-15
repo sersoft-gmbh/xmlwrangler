@@ -8,9 +8,9 @@
   "defaultImplementationsSections" : [
     {
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-57hl",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-3j6bp",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-94r05",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-57hl"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-94r05"
       ],
       "title" : "ExpressibleByXMLAttributeContent Implementations"
     }
@@ -170,7 +170,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

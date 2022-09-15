@@ -59,7 +59,7 @@
           "type" : "text"
         },
         {
-          "code" : "XMLElement.Attributes.Content.RawValue",
+          "code" : "String",
           "type" : "codeVoice"
         },
         {
@@ -194,7 +194,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -309,7 +309,7 @@
         "type" : "text"
       },
       {
-        "code" : "XMLElement.Attributes.Content.RawValue",
+        "code" : "String",
         "type" : "codeVoice"
       },
       {
