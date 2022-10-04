@@ -133,12 +133,12 @@
                   {
                     "children" : [
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
