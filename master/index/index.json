@@ -133,17 +133,17 @@
                   {
                     "children" : [
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
-                        "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
-                        "type" : "init"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3j6bp",
+                        "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
+                        "type" : "init"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       }
@@ -172,7 +172,7 @@
                   {
                     "children" : [
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-76pd1",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9t88v",
                         "title" : "init(xml: XMLElement) throws",
                         "type" : "init"
                       },
@@ -182,7 +182,7 @@
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9t88v",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-76pd1",
                         "title" : "init(xml: XMLElement) throws",
                         "type" : "init"
                       }
