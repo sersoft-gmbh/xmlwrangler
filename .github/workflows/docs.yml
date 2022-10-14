@@ -48,11 +48,11 @@ jobs:
       - name: Dump package
         id: dump-package
         # We need to escape newlines: https://github.community/t/set-output-truncates-multiline-strings/16852/5
+        # package_dump="${package_dump//'%'/'%25'}"
+        # package_dump="${package_dump//$'\n'/'%0A'}"
+        # package_dump="${package_dump//$'\r'/'%0D'}"
         run: |
           package_dump="$(swift package dump-package)"
-          package_dump="${package_dump//'%'/'%25'}"
-          package_dump="${package_dump//$'\n'/'%0A'}"
-          package_dump="${package_dump//$'\r'/'%0D'}"
           echo "package-dump=${package_dump}" >> "${GITHUB_OUTPUT}"
 
   generate-docs:
