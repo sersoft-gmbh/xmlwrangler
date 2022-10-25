@@ -1,12 +1,13 @@
 extension XMLElement {
     /// A collection implementation that represents the contents of an XML element.
     @frozen
-    public struct Content: Equatable {
+    public struct Content: Equatable, Sendable {
         @usableFromInline
         typealias Storage = Array<Element>
 
-        /// Describes an part (element) of the `XMLElement`'s content.
+        /// Describes an part (element) of the ``XMLElement``'s content.
         public enum Element: Equatable,
+                             Sendable,
                              ExpressibleByStringLiteral,
                              ExpressibleByStringInterpolation,
                              ExpressibleByXMLElement,
@@ -15,7 +16,6 @@ extension XMLElement {
         {
             /// The type used to represent a string content.
             public typealias StringPart = String
-            /// inherited
             public typealias StringLiteralType = StringPart
 
             /// Represents a raw string part.
@@ -25,7 +25,6 @@ extension XMLElement {
 
             // TODO: Do we need a CDATA case, too? -> For now we serialize these into Strings
 
-            /// inherited
             public var description: String {
                 switch self {
                 case .string(let str): return "StringPart(\(str))"
@@ -33,7 +32,6 @@ extension XMLElement {
                 }
             }
 
-            /// inherited
             public var debugDescription: String {
                 switch self {
                 case .string(let str): return "StringPart { \(str) }"
@@ -41,13 +39,11 @@ extension XMLElement {
                 }
             }
 
-            /// inherited
             @inlinable
             public init(stringLiteral value: StringLiteralType) {
                 self = .string(value)
             }
 
-            /// inherited
             @inlinable
             public init(xml: XMLElement) {
                 self = .element(xml)
@@ -62,7 +58,6 @@ extension XMLElement {
             self.storage = storage
         }
 
-        /// inherited
         @inlinable
         public init() {
             self.init(storage: .init())
@@ -71,51 +66,38 @@ extension XMLElement {
 }
 
 extension XMLElement.Content: CustomStringConvertible, CustomDebugStringConvertible {
-    /// inherited
     @inlinable
     public var description: String { storage.description }
 
-    /// inherited
     @inlinable
     public var debugDescription: String { storage.debugDescription }
 }
 
 extension XMLElement.Content: Sequence, Collection, MutableCollection {
-    /// inherited
     public typealias Index = Int
-    /// inherited
     public typealias Indices = DefaultIndices<Self>
-    /// inherited
     public typealias SubSequence = Slice<Self>
 
-    /// inherited
     @inlinable
     public var startIndex: Index { storage.startIndex }
-
-    /// inherited
     @inlinable
     public var endIndex: Index { storage.endIndex }
 
-    /// inherited
     @inlinable
     public var isEmpty: Bool { storage.isEmpty }
 
-    /// inherited
     @inlinable
     public var underestimatedCount: Int { storage.underestimatedCount }
 
-    /// inherited
     @inlinable
     public var count: Int { storage.count }
 
-    /// inherited
     @inlinable
     public subscript(position: Index) -> Element {
         get { storage[position] }
         set { storage[position] = newValue }
     }
 
-    /// inherited
     @inlinable
     public func index(after i: Index) -> Index {
         storage.index(after: i)
@@ -123,7 +105,6 @@ extension XMLElement.Content: Sequence, Collection, MutableCollection {
 }
 
 extension XMLElement.Content: BidirectionalCollection {
-    /// inherited
     @inlinable
     public func index(before i: Index) -> Index {
         storage.index(before: i)
@@ -131,13 +112,11 @@ extension XMLElement.Content: BidirectionalCollection {
 }
 
 extension XMLElement.Content: RandomAccessCollection {
-    /// inherited
     @inlinable
     public func index(_ i: Index, offsetBy distance: Int) -> Index {
         storage.index(i, offsetBy: distance)
     }
 
-    /// inherited
     @inlinable
     public func distance(from start: Index, to end: Index) -> Int {
         storage.distance(from: start, to: end)
@@ -145,7 +124,6 @@ extension XMLElement.Content: RandomAccessCollection {
 }
 
 extension XMLElement.Content: RangeReplaceableCollection {
-    /// inherited
     @inlinable
     public mutating func replaceSubrange<C>(_ subrange: Range<Index>, with newElements: C)
     where C: Collection, Element == C.Element
@@ -155,10 +133,8 @@ extension XMLElement.Content: RangeReplaceableCollection {
 }
 
 extension XMLElement.Content: ExpressibleByArrayLiteral {
-    /// inherited
     public typealias ArrayLiteralElement = Element
 
-    /// inherited
     @inlinable
     public init(arrayLiteral elements: ArrayLiteralElement...) {
         self.init(storage: elements)
@@ -166,7 +142,6 @@ extension XMLElement.Content: ExpressibleByArrayLiteral {
 }
 
 extension XMLElement.Content: ExpressibleByXMLElement {
-    /// inherited
     @inlinable
     public init(xml: XMLElement) {
         self.init(storage: [.element(xml)])
@@ -174,10 +149,8 @@ extension XMLElement.Content: ExpressibleByXMLElement {
 }
 
 extension XMLElement.Content: ExpressibleByStringLiteral {
-    /// inherited
     public typealias StringLiteralType = Element.StringLiteralType
 
-    /// inherited
     @inlinable
     public init(stringLiteral value: StringLiteralType) {
         self.init(storage: [.init(stringLiteral: value)])
@@ -185,16 +158,14 @@ extension XMLElement.Content: ExpressibleByStringLiteral {
 }
 
 extension XMLElement.Content: ExpressibleByStringInterpolation {
-    /// The string interpolation type for `Element.Content`.
+    /// The string interpolation type for ``XMLElement/Content``.
     @frozen
-    public struct StringInterpolation: StringInterpolationProtocol {
-        /// inherited
+    public struct StringInterpolation: StringInterpolationProtocol, Sendable {
         public typealias StringLiteralType = XMLElement.Content.StringLiteralType
 
         @usableFromInline
-        var storage: Storage = []
+        var storage = Storage()
 
-        /// inherited
         public init(literalCapacity: Int, interpolationCount: Int) {
             storage.reserveCapacity(interpolationCount + Swift.min(literalCapacity, 2))
         }
@@ -221,7 +192,7 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
             }
         }
 
-        /// Appends a literal to the contents by simply adding a `.string` element with the literal's contents.
+        /// Appends a literal to the contents by simply adding a ``XMLElement/Content/Element/string(_:)`` element with the literal's contents.
         /// - Parameter literal: The literal to append.
         @inlinable
         public mutating func appendLiteral(_ literal: StringLiteralType) {
@@ -240,7 +211,7 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
 //            _appendString(String(int))
 //        }
 
-        /// Appends the `XMLElement` of a `XMLElementConvertible` type to the contents.
+        /// Appends the ``XMLElement`` of an ``XMLElementConvertible`` type to the contents.
         /// - Parameter convertible: The convertible whose `xml` to append to the contents.
         @inlinable
         public mutating func appendInterpolation<Convertible>(_ convertible: Convertible)
@@ -249,7 +220,7 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
             storage.append(.element(convertible.xml))
         }
 
-        /// Appends the contents of another sequence of `XMLElement.Content.Element` to the contents.
+        /// Appends the contents of another sequence of ``XMLElement/Content/Element`` to the contents.
         /// - Parameter contents: The sequence to append.
         @inlinable
         public mutating func appendInterpolation<C: Sequence>(_ contents: C)
@@ -258,39 +229,31 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
             _appendContent(.init(contents))
         }
 
-        /// Appends a variadic list of `XMLElement.Content.Element` to the contents.
-        /// - Parameter contents: The variadic list of `XMLElement.Content` to append.
+        /// Appends a variadic list of ``XMLElement/Content/Element`` to the contents.
+        /// - Parameter contents: The variadic list of ``XMLElement/Content`` to append.
         @inlinable
         public mutating func appendInterpolation(_ contents: XMLElement.Content.Element...) {
             _appendContent(.init(storage: contents))
         }
 
-        /// Appends another `XMLElement.Content` instance.
-        /// - Parameter content: The `XMLElement.Content` whose contents to append.
+        /// Appends another ``XMLElement/Content`` instance.
+        /// - Parameter content: The ``XMLElement/Content`` whose contents to append.
         @inlinable
         public mutating func appendInterpolation(_ content: XMLElement.Content) {
             _appendContent(content)
         }
 
-        /// Appends the contents of another `XMLElement`.
-        /// - Parameter element: The `XMLElement` whose `content` to append.
-        /// - Note: This only appends the `content` of `element`, **not** the `element` itself!
+        /// Appends the contents of another ``XMLElement``.
+        /// - Parameter element: The ``XMLElement`` whose ``XMLElement/content`` to append.
+        /// - Note: This only appends the ``XMLElement/content`` of `element`, **not** the `element` itself!
         @inlinable
         public mutating func appendInterpolation(contentOf element: XMLElement) {
             _appendContent(element.content)
         }
     }
 
-    /// inherited
     @inlinable
     public init(stringInterpolation: StringInterpolation) {
         self.init(storage: stringInterpolation.storage)
     }
 }
-
-#if compiler(>=5.5) && canImport(_Concurrency)
-extension XMLElement.Content: Sendable {}
-extension XMLElement.Content.Element: Sendable {}
-extension XMLElement.Content.Iterator: Sendable {}
-extension XMLElement.Content.StringInterpolation: Sendable {}
-#endif

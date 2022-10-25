@@ -1,17 +1,17 @@
-/// Describes a type that can be initialized with an `XMLElement`.
+/// Describes a type that can be initialized with an ``XMLElement``.
 public protocol ExpressibleByXMLElement {
-    /// Creates a new instance using the given `XMLElement`.
+    /// Creates a new instance using the given ``XMLElement``.
     /// - Parameter xml: The xml to initialize from.
     init(xml: XMLElement) throws
 }
 
-/// Describes a type that can be converted to an `XMLElement`.
+/// Describes a type that can be converted to an ``XMLElement``.
 public protocol XMLElementConvertible {
-    /// The `XMLElement` representing this instance.
+    /// The ``XMLElement`` representing this instance.
     var xml: XMLElement { get }
 }
 
-/// A type that can be converted from and to an `XMLElement`.
+/// A type that can be converted from and to an ``XMLElement``.
 public typealias XMLElementRepresentable = ExpressibleByXMLElement & XMLElementConvertible
 
 extension ExpressibleByXMLElement {
@@ -27,7 +27,6 @@ extension ExpressibleByXMLElement {
 }
 
 extension ExpressibleByXMLElement where Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
-    /// inherited
     @inlinable
     public init(xml: XMLElement) throws {
         self = try Self._fromContent(of: xml, converter: Self.init)
@@ -35,7 +34,6 @@ extension ExpressibleByXMLElement where Self: RawRepresentable, Self.RawValue: L
 }
 
 extension ExpressibleByXMLElement where Self: LosslessStringConvertible {
-    /// inherited
     @inlinable
     public init(xml: XMLElement) throws {
         self = try Self._fromContent(of: xml, converter: Self.init)
@@ -43,7 +41,6 @@ extension ExpressibleByXMLElement where Self: LosslessStringConvertible {
 }
 
 extension ExpressibleByXMLElement where Self: LosslessStringConvertible, Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
-    /// inherited
     @inlinable
     public init(xml: XMLElement) throws {
         self = try Self._fromContent(of: xml, converter: Self.init(rawValue:))

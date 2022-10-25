@@ -16,15 +16,13 @@ public final class Parser: ParserDelegate {
     private var parsedRoot: XMLElement?
     private var elementStack = Array<XMLElement>()
 
-    /// Creates a new instance using the given `Data`.
-    ///
+    /// Creates a new instance using the given ``Foundation/Data``.
     /// - Parameter data: The XML data to parse.
     public init(data: Data) {
         xmlParser = XMLParser(data: data)
     }
 
     /// Creates a new instance using the given string.
-    ///
     /// - Parameter string: An XML string.
     @inlinable
     public convenience init(string: String) {
@@ -32,9 +30,10 @@ public final class Parser: ParserDelegate {
     }
 
     /// Tries to parse the associated XML data. The parsing is only performed once.
-    ///
     /// - Returns: The parsed element.
-    /// - Throws: Any error reported by `XMLParser`. `Parser.UnknownError` if parsing failed but no error reported. `MissingRootElementError` if parsing succeeded but no root element was parsed.
+    /// - Throws: Any error reported by ``Foundation/XMLParser``.
+    ///           ``Parser/UnknownError`` if parsing failed but no error reported.
+    ///           ``Parser/MissingRootElementError`` if parsing succeeded but no root element was parsed.
     public func parse() throws -> XMLElement {
         // We only parse things once...
         if let element = parsedRoot { return element }
@@ -45,11 +44,11 @@ public final class Parser: ParserDelegate {
         return element
     }
 
-    /// Tries to parse the associated XML data and convert it to the given target by using it's conformance to `ExpressibleByXMLElement`.
+    /// Tries to parse the associated XML data and convert it to the given target by using it's conformance to ``ExpressibleByXMLElement``.
     /// - Parameter target: The target type to convert to.
-    /// - Throws: Any error thrown by `parse` or `ExpressibleByXMLElement.init(xml:)` of `Target.`
+    /// - Throws: Any error thrown by `parse` or ``ExpressibleByXMLElement/init(xml:)`` of `Target.`
     /// - Returns: The parsed element converted to the given target.
-    /// - SeeAlso: `Parser.parse()` and `ExpressibleByXMLElement`.
+    /// - SeeAlso: ``Parser/parse()`` and ``ExpressibleByXMLElement``.
     @inlinable
     public func parseAndConvert<Target: ExpressibleByXMLElement>(to target: Target.Type = Target.self) throws -> Target {
         try parse().converted(to: target)
@@ -112,7 +111,7 @@ public final class Parser: ParserDelegate {
 // MARK: - Unknown Parsing Error
 extension Parser {
     /// Describes an unknown error.
-    /// Used if parsing fails, but the XMLParser of Foundation does not report an error.
+    /// Used if parsing fails, but the `XMLParser` of Foundation does not report an error.
     public struct UnknownError: Error, CustomStringConvertible {
         public var description: String { "An unknown parsing error occurred!" }
     }

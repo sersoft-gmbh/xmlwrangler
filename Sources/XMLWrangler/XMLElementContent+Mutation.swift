@@ -10,28 +10,30 @@ extension XMLElement.Content {
         }
     }
 
-    /// Appends either a new `.string` element, or if the last one is already `.string`, appends `string` to the last one.
+    /// Appends either a new ``XMLElement/Content/Element/string(_:)`` element,
+    /// or if the last one is already ``XMLElement/Content/Element/string(_:)``, appends `string` to the last one.
     /// - Parameter string: The string to append.
     @inlinable
     public mutating func appendString(_ string: Element.StringPart) {
         _appendString(string, separator: nil)
     }
 
-    /// Appends either a new `.string` element, or if the last one is already `.string`, appends `string` to the last one.
+    /// Appends either a new ``XMLElement/Content/Element/string(_:)`` element,
+    /// or if the last one is already ``XMLElement/Content/Element/string(_:)``, appends `string` to the last one.
     /// - Parameter string: The string to append.
     @inlinable
     @available(*, deprecated, message: "Use appendString(_:)", renamed: "appendString(_:)")
     public mutating func append(string: Element.StringPart) { appendString(string) }
 
-    /// Appends an element wrapped as `.element`.
-    /// - Parameter element: The element to append wrapped in `.element`.
+    /// Appends an element wrapped as ``XMLElement/Content/Element/element(_:)``.
+    /// - Parameter element: The element to append wrapped in ``XMLElement/Content/Element/element(_:)``.
     @inlinable
     public mutating func appendElement(_ element: XMLElement) {
         storage.append(.element(element))
     }
 
-    /// Appends an element wrapped as `.element`.
-    /// - Parameter element: The element to append wrapped in `.element`.
+    /// Appends an element wrapped as ``XMLElement/Content/Element/element(_:)``.
+    /// - Parameter element: The element to append wrapped in ``XMLElement/Content/Element/element(_:)``.
     @inlinable
     @available(*, deprecated, message: "Use appendElement(_:)", renamed: "appendElement(_:)")
     public mutating func append(element: XMLElement) {
@@ -39,28 +41,28 @@ extension XMLElement.Content {
     }
 
     /// Appends the xml element of a convertible type.
-    /// - Parameter convertible: The type conforming to `XMLElementConvertible`.
+    /// - Parameter convertible: The type conforming to ``XMLElementConvertible``.
     @inlinable
     public mutating func append<Convertible: XMLElementConvertible>(elementOf convertible: Convertible) {
         appendElement(convertible.xml)
     }
 
-    /// Appends the contents of a sequcence of elements wrapped as `.element`.
-    /// - Parameter elements: The sequence of elements to append wrapped in `.element`.
+    /// Appends the contents of a sequcence of elements wrapped as ``XMLElement/Content/Element/element(_:)``.
+    /// - Parameter elements: The sequence of elements to append wrapped in ``XMLElement/Content/Element/element(_:)``.
     @inlinable
     public mutating func append<S: Sequence>(contentsOf elements: S) where S.Element == XMLElement {
         storage.append(contentsOf: elements.lazy.map { .element($0) })
     }
 
-    /// Appends the one or more elements wrapped as `.element`.
-    /// - Parameter elements: The elements to append wrapped in `.element`.
+    /// Appends the one or more elements wrapped as ``XMLElement/Content/Element/element(_:)``.
+    /// - Parameter elements: The elements to append wrapped in ``XMLElement/Content/Element/element(_:)``.
     @inlinable
     public mutating func appendElements(_ elements: XMLElement...) {
         append(contentsOf: elements)
     }
 
-    /// Appends the one or more elements wrapped as `.element`.
-    /// - Parameter elements: The elements to append wrapped in `.element`.
+    /// Appends the one or more elements wrapped as ``XMLElement/Content/Element/element(_:)``.
+    /// - Parameter elements: The elements to append wrapped in ``XMLElement/Content/Element/element(_:)``.
     @inlinable
     @available(*, deprecated, message: "Use appendElements(_:)", renamed: "appendElements(_:)")
     public mutating func append(elements: XMLElement...) {
@@ -91,15 +93,16 @@ extension XMLElement.Content {
         return compressed
     }
 
-    /// Merges consecutive `.string` elements into one.
+    /// Merges consecutive ``XMLElement/Content/Element/string(_:)`` elements into one.
+    /// /// - SeeAlso: ``XMLElement/Content/compressed()``
     @inlinable
     public mutating func compress() {
         _compress(stringSeparator: nil)
     }
 
-    /// Returns a compressed version of `self`, where all consecutive `.string` elements were merged into one.
+    /// Returns a compressed version of `self`, where all consecutive ``XMLElement/Content/Element/string(_:)`` elements were merged into one.
     /// - Returns: A compressed version of `self`.
-    /// - SeeAlso: `compress()`
+    /// - SeeAlso: ``XMLElement/Content/compress()``
     @inlinable
     public func compressed() -> Self {
         _compressed(stringSeparator: nil)

@@ -1,6 +1,6 @@
 @frozen
 @resultBuilder
-public enum XMLContentBuilder {
+public enum XMLContentBuilder: Sendable {
     @inlinable
     public static func buildExpression(_ element: XMLElement.Content.Element) -> XMLElement.Content {
         .init(storage: [element])

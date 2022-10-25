@@ -1,25 +1,23 @@
-/// Describes a type that can turn itself into an `XMLElement.Attributes.Content`
+/// Describes a type that can turn itself into an ``XMLElement/Attributes/Content``
 public protocol XMLAttributeContentConvertible {
     /// The attribute content of this type.
     var xmlAttributeContent: XMLElement.Attributes.Content { get }
 }
 
-/// Describes a type that can be created from an `XMLElement.Attributes.Content` instance.
+/// Describes a type that can be created from an ``XMLElement/Attributes/Content`` instance.
 public protocol ExpressibleByXMLAttributeContent {
     /// Creates a new instance of the conforming type using the given attribute content.
     /// - Parameter xmlAttributeContent: The attribute content from which to create a new instance.
     init?(xmlAttributeContent: XMLElement.Attributes.Content)
 }
 
-/// Describes a type that can be converted from and to an `XMLElement.Attributes.Content` instance.
+/// Describes a type that can be converted from and to an ``XMLElement/Attributes/Content`` instance.
 public typealias XMLAttributeContentRepresentable = ExpressibleByXMLAttributeContent & XMLAttributeContentConvertible
 
 extension String: XMLAttributeContentRepresentable {
-    /// inherited
     @inlinable
     public var xmlAttributeContent: XMLElement.Attributes.Content { .init(self) }
 
-    /// inherited
     @inlinable
     public init(xmlAttributeContent: XMLElement.Attributes.Content) {
         self = xmlAttributeContent.rawValue
@@ -27,13 +25,11 @@ extension String: XMLAttributeContentRepresentable {
 }
 
 extension XMLAttributeContentConvertible where Self: RawRepresentable, RawValue == XMLElement.Attributes.Content.RawValue {
-    /// inherited
     @inlinable
     public var xmlAttributeContent: XMLElement.Attributes.Content { .init(rawValue) }
 }
 
 extension ExpressibleByXMLAttributeContent where Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
-    /// inherited
     @inlinable
     public init?(xmlAttributeContent: XMLElement.Attributes.Content) {
         self.init(rawValueDescription: xmlAttributeContent.rawValue)
@@ -41,7 +37,6 @@ extension ExpressibleByXMLAttributeContent where Self: RawRepresentable, Self.Ra
 }
 
 extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible {
-    /// inherited
     @inlinable
     public init?(xmlAttributeContent: XMLElement.Attributes.Content) {
         self.init(xmlAttributeContent.rawValue)
@@ -49,7 +44,6 @@ extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible
 }
 
 extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible, Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
-    /// inherited
     @inlinable
     public init?(xmlAttributeContent: XMLElement.Attributes.Content) {
         self.init(rawValueDescription: xmlAttributeContent.rawValue)
@@ -57,76 +51,72 @@ extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible
 }
 
 extension XMLElement {
-    /// Contains the attributes of an `XMLElement`.
+    /// Contains the attributes of an ``XMLElement``.
     @frozen
-    public struct Attributes: Equatable {
+    public struct Attributes: Sendable, Equatable {
         /// Represents the key of an attribute.
         @frozen
-        public struct Key: RawRepresentable, Hashable, Codable, ExpressibleByStringLiteral, XMLAttributeContentRepresentable, CustomStringConvertible, CustomDebugStringConvertible {
-            /// inherited
+        public struct Key: RawRepresentable,
+                           Sendable,
+                           Hashable,
+                           Codable,
+                           ExpressibleByStringLiteral,
+                           XMLAttributeContentRepresentable,
+                           CustomStringConvertible,
+                           CustomDebugStringConvertible
+        {
             public typealias RawValue = String
-            /// inherited
             public typealias StringLiteralType = RawValue
 
-            /// inherited
             public let rawValue: RawValue
 
-            /// inherited
             public var description: String { rawValue }
-
-            /// inherited
             public var debugDescription: String { "\(Self.self)(\(rawValue))" }
 
-            /// inherited
             public init(rawValue: RawValue) { self.rawValue = rawValue }
 
             /// Creates a new key using the given raw value.
             @inlinable
             public init(_ rawValue: RawValue) { self.init(rawValue: rawValue) }
 
-            /// inherited
             @inlinable
             public init(stringLiteral value: StringLiteralType) { self.init(rawValue: value) }
         }
 
         /// Represents the content of an attribute.
         @frozen
-        public struct Content: RawRepresentable, Hashable, ExpressibleByStringLiteral, ExpressibleByStringInterpolation, XMLAttributeContentRepresentable, CustomStringConvertible, CustomDebugStringConvertible {
-            /// inherited
+        public struct Content: RawRepresentable,
+                               Sendable,
+                               Hashable,
+                               ExpressibleByStringLiteral,
+                               ExpressibleByStringInterpolation,
+                               XMLAttributeContentRepresentable,
+                               CustomStringConvertible,
+                               CustomDebugStringConvertible
+        {
             public typealias RawValue = String
-            /// inhertied
             public typealias StringLiteralType = RawValue
 
-            /// inherited
             public let rawValue: RawValue
 
-            /// inherited
             @inlinable
             public var description: String { rawValue }
-
-            /// inherited
             public var debugDescription: String { "\(Self.self)(\(rawValue))" }
 
-            /// inherited
             @inlinable
             public var xmlAttributeContent: Content { self }
 
-            /// inherited
             public init(rawValue: RawValue) { self.rawValue = rawValue }
 
             /// Creates a new key using the given raw value.
             @inlinable
             public init(_ rawValue: RawValue) { self.init(rawValue: rawValue) }
 
-            /// inherited
             @inlinable
             public init(stringLiteral value: StringLiteralType) { self.init(rawValue: value) }
 
-            /// inherited
             @inlinable
-            public init(xmlAttributeContent: Content) {
-                self = xmlAttributeContent
-            }
+            public init(xmlAttributeContent: Content) { self = xmlAttributeContent }
         }
 
         @usableFromInline
@@ -135,11 +125,11 @@ extension XMLElement {
         @usableFromInline
         var storage: Storage
 
-        /// Returns the keys of in this `Attributes`.
+        /// Returns the keys of in this ``XMLElement/Attributes``.
         @inlinable
         public var keys: Keys { .init(storage: storage.keys) }
 
-        /// Returns the contents of in this `Attributes`. The `contents` can be mutated.
+        /// Returns the contents of in this ``XMLElement/Attributes``. The  ``XMLElement/Attributes/contents`` can be mutated.
         @inlinable
         public var contents: Contents {
             get { .init(storage: storage.values) }
@@ -296,7 +286,7 @@ extension XMLElement {
 
 extension Dictionary where Key == XMLElement.Attributes.Key, Value == XMLElement.Attributes.Content {
     /// Initializes the dictionary using the storage of the given attributes.
-    /// - Parameter attributes: The `XMLElement.Attributes` whose contents should be contained in the dictionary.
+    /// - Parameter attributes: The ``XMLElement/Attributes`` whose contents should be contained in the dictionary.
     @inlinable
     public init(elementsOf attributes: XMLElement.Attributes) {
         self = attributes.storage
@@ -304,7 +294,6 @@ extension Dictionary where Key == XMLElement.Attributes.Key, Value == XMLElement
 }
 
 extension XMLElement.Attributes: ExpressibleByDictionaryLiteral {
-    /// inherited
     @inlinable
     public init(dictionaryLiteral elements: (Key, XMLAttributeContentConvertible)...) {
         self.init(storage: .init(uniqueKeysWithValues: elements.lazy.map { ($0, $1.xmlAttributeContent) }))
@@ -312,10 +301,10 @@ extension XMLElement.Attributes: ExpressibleByDictionaryLiteral {
 }
 
 extension XMLElement.Attributes: Sequence {
-    /// inherited
     public typealias Element = (key: Key, content: Content)
 
-    /// Casts the `Element` tuple to `Storage.Element`. Uses `unsafeBitCast` since the tuples only differ in labels.
+    /// Casts the ``XMLElement/Attributes/Element`` tuple to ``XMLElement/Attributes/Storage/Element``.
+    /// - Note: Uses `unsafeBitCast` since the tuples only differ in labels.
     @usableFromInline
     static func _castElement(_ storageElement: Storage.Element) -> Element {
         unsafeBitCast(storageElement, to: Element.self)
@@ -323,7 +312,7 @@ extension XMLElement.Attributes: Sequence {
 
     /// The iterator for iterating over attributes.
     @frozen
-    public struct Iterator: IteratorProtocol {
+    public struct Iterator: IteratorProtocol, Sendable {
         @usableFromInline
         var storageIterator: Storage.Iterator
 
@@ -332,18 +321,15 @@ extension XMLElement.Attributes: Sequence {
             storageIterator = base
         }
 
-        /// inherited
         @inlinable
         public mutating func next() -> Element? {
             storageIterator.next().map(_castElement)
         }
     }
 
-    /// inherited
     @inlinable
     public var underestimatedCount: Int { storage.underestimatedCount }
 
-    /// inherited
     @inlinable
     public func makeIterator() -> Iterator {
         .init(base: storage.makeIterator())
@@ -353,7 +339,7 @@ extension XMLElement.Attributes: Sequence {
 extension XMLElement.Attributes: Collection {
     /// The index for attributes.
     @frozen
-    public struct Index: Comparable {
+    public struct Index: Comparable, Sendable {
         @usableFromInline
         let storageIndex: Storage.Index
 
@@ -362,40 +348,33 @@ extension XMLElement.Attributes: Collection {
             storageIndex = base
         }
 
-        /// inherited
         @inlinable
         public static func <(lhs: Self, rhs: Self) -> Bool {
             lhs.storageIndex < rhs.storageIndex
         }
     }
 
-    /// inherited
     @inlinable
     public var isEmpty: Bool { storage.isEmpty }
 
-    /// inherited
     @inlinable
     public var count: Int { storage.count }
 
-    /// inherited
     @inlinable
     public var startIndex: Index {
         .init(base: storage.startIndex)
     }
 
-    /// inherited
     @inlinable
     public var endIndex: Index {
         .init(base: storage.endIndex)
     }
 
-    /// inherited
     @inlinable
     public func index(after i: Index) -> Index {
         .init(base: storage.index(after: i.storageIndex))
     }
 
-    /// inherited
     @inlinable
     public subscript(position: Index) -> Element {
         Self._castElement(storage[position.storageIndex])
@@ -421,20 +400,18 @@ extension XMLElement.Attributes: CustomStringConvertible, CustomDebugStringConve
 }
 
 extension XMLElement.Attributes {
-    /// A collection of keys inside `XMLElement.Attributes`
+    /// A collection of keys inside ``XMLElement/Attributes``
     @frozen
-    public struct Keys: Collection, Equatable, CustomStringConvertible, CustomDebugStringConvertible {
-        /// inherited
+    public struct Keys: Collection, Sendable, Equatable, CustomStringConvertible, CustomDebugStringConvertible {
         public typealias Element = XMLElement.Attributes.Key
-        /// inherited
         public typealias Index = XMLElement.Attributes.Index
 
         @usableFromInline
         typealias Storage = XMLElement.Attributes.Storage.Keys
 
-        /// The iterator for iterating over `XMLElement.Attributes.Keys`.
+        /// The iterator for iterating over ``XMLElement/Attributes/Keys``.
         @frozen
-        public struct Iterator: IteratorProtocol {
+        public struct Iterator: IteratorProtocol, Sendable {
             @usableFromInline
             var storageIterator: Storage.Iterator
 
@@ -443,7 +420,6 @@ extension XMLElement.Attributes {
                 storageIterator = base
             }
 
-            /// inherited
             @inlinable
             public mutating func next() -> Element? {
                 storageIterator.next()
@@ -453,10 +429,7 @@ extension XMLElement.Attributes {
         @usableFromInline
         let storage: Storage
 
-        /// inherited
         public var description: String { Array(storage).description }
-
-        /// inherited
         public var debugDescription: String { Array(storage).debugDescription }
 
         @usableFromInline
@@ -464,51 +437,44 @@ extension XMLElement.Attributes {
             self.storage = storage
         }
 
-        /// inherited
         @inlinable
         public var startIndex: Index {
             .init(base: storage.startIndex)
         }
 
-        /// inherited
         @inlinable
         public var endIndex: Index {
             .init(base: storage.endIndex)
         }
 
-        /// inherited
         @inlinable
         public subscript(position: Index) -> Element {
             storage[position.storageIndex]
         }
 
-        /// inherited
         @inlinable
         public func makeIterator() -> Iterator {
             .init(base: storage.makeIterator())
         }
 
-        /// inherited
         @inlinable
         public func index(after i: Index) -> Index {
             .init(base: storage.index(after: i.storageIndex))
         }
     }
 
-    /// The (mutable) collection of contents for `XMLElement.Attributes`.
+    /// The (mutable) collection of contents for ``XMLElement/Attributes``.
     @frozen
-    public struct Contents: Collection, MutableCollection, CustomStringConvertible, CustomDebugStringConvertible {
-        /// inherited
+    public struct Contents: Collection, MutableCollection, Sendable, CustomStringConvertible, CustomDebugStringConvertible {
         public typealias Element = XMLElement.Attributes.Content
-        /// inherited
         public typealias Index = XMLElement.Attributes.Index
 
         @usableFromInline
         typealias Storage = XMLElement.Attributes.Storage.Values
 
-        /// The iterator for iterating over `XMLElement.Attributes.Contents`.
+        /// The iterator for iterating over ``XMLElement/Attributes/Contents``.
         @frozen
-        public struct Iterator: IteratorProtocol {
+        public struct Iterator: IteratorProtocol, Sendable {
             @usableFromInline
             var storageIterator: Storage.Iterator
 
@@ -517,7 +483,6 @@ extension XMLElement.Attributes {
                 storageIterator = base
             }
 
-            /// inherited
             @inlinable
             public mutating func next() -> Element? {
                 storageIterator.next()
@@ -527,10 +492,7 @@ extension XMLElement.Attributes {
         @usableFromInline
         var storage: Storage
 
-        /// inherited
         public var description: String { Array(storage).description }
-
-        /// inherited
         public var debugDescription: String { Array(storage).debugDescription }
 
         @usableFromInline
@@ -538,47 +500,30 @@ extension XMLElement.Attributes {
             self.storage = storage
         }
 
-        /// inherited
         @inlinable
         public var startIndex: Index {
             .init(base: storage.startIndex)
         }
 
-        /// inherited
         @inlinable
         public var endIndex: Index {
             .init(base: storage.endIndex)
         }
 
-        /// inherited
         @inlinable
         public subscript(position: Index) -> Element {
             get { storage[position.storageIndex] }
             set { storage[position.storageIndex] = newValue }
         }
 
-        /// inherited
         @inlinable
         public func makeIterator() -> Iterator {
             .init(base: storage.makeIterator())
         }
 
-        /// inherited
         @inlinable
         public func index(after i: Index) -> Index {
             .init(base: storage.index(after: i.storageIndex))
         }
     }
 }
-
-#if compiler(>=5.5) && canImport(_Concurrency)
-extension XMLElement.Attributes: Sendable {}
-extension XMLElement.Attributes.Iterator: Sendable {}
-extension XMLElement.Attributes.Index: Sendable {}
-extension XMLElement.Attributes.Key: Sendable {}
-extension XMLElement.Attributes.Content: Sendable {}
-extension XMLElement.Attributes.Contents: Sendable {}
-extension XMLElement.Attributes.Contents.Iterator: Sendable {}
-extension XMLElement.Attributes.Keys: Sendable {}
-extension XMLElement.Attributes.Keys.Iterator: Sendable {}
-#endif

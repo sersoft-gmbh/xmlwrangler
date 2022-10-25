@@ -16,8 +16,8 @@ where Error: Swift.Error
 }
 
 extension RawRepresentable where RawValue: LosslessStringConvertible {
-    /// Creates an instance of self from the description of the RawValue. Returns nil if nil is returned by RawValue.init(_:)
-    /// - Parameter rawValueDescription: The description of the RawValue to use to try to create an instance.
+    /// Creates an instance of self from the description of the `RawValue`. Returns nil if nil is returned by `RawValue.init(_:)`
+    /// - Parameter rawValueDescription: The description of the `RawValue` to use to try to create an instance.
     @usableFromInline
     init?(rawValueDescription: String) {
         guard let rawValue = RawValue(rawValueDescription) else { return nil }
@@ -26,7 +26,7 @@ extension RawRepresentable where RawValue: LosslessStringConvertible {
 }
 
 extension Dictionary where Key == XMLElement.Attributes.Key.RawValue, Value == XMLElement.Attributes.Content.RawValue {
-    /// Converts the receiver to the `XMLElement.Attributes` type.
+    /// Converts the receiver to the ``XMLElement/Attributes`` type.
     @inlinable
     var asAttributes: XMLElement.Attributes {
         .init(storage: .init(uniqueKeysWithValues: lazy.map { (.init(rawValue: $0.key), .init(rawValue: $0.value)) }))

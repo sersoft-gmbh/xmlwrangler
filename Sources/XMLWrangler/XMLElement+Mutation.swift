@@ -1,7 +1,7 @@
 extension XMLElement {
     /// Appends a string to the content.
     /// - Parameter string: The string to append to the content.
-    /// - SeeAlso: `XMLElement.Contents.appendString(_:)`
+    /// - SeeAlso: ``XMLElement/Content/appendString(_:)``
     @inlinable
     public mutating func appendString(_ string: Content.Element.StringPart) {
         content.appendString(string)
@@ -9,7 +9,7 @@ extension XMLElement {
 
     /// Appends a string to the content.
     /// - Parameter string: The string to append to the content.
-    /// - SeeAlso: `XMLElement.Contents.append(string:)`
+    /// - SeeAlso: ``XMLElement/Content/append(string:)``
     @inlinable
     @available(*, deprecated, message: "Use appendString(_:)", renamed: "appendString(_:)")
     public mutating func append(string: Content.Element.StringPart) {
@@ -18,7 +18,7 @@ extension XMLElement {
 
     /// Appends an element to the content.
     /// - Parameter element: The element to append to the content.
-    /// - SeeAlso: `XMLElement.Content.appendElement(_:)`
+    /// - SeeAlso: ``XMLElement/Content/appendElement(_:)``
     @inlinable
     public mutating func appendElement(_ element: XMLElement) {
         content.appendElement(element)
@@ -26,7 +26,7 @@ extension XMLElement {
 
     /// Appends an element to the content.
     /// - Parameter element: The element to append to the content.
-    /// - SeeAlso: `XMLElement.Content.append(element:)`
+    /// - SeeAlso: ``XMLElement/Content/append(element:)``
     @inlinable
     @available(*, deprecated, message: "Use appendElement(_:)", renamed: "appendElement(_:)")
     public mutating func append(element: XMLElement) {
@@ -34,8 +34,8 @@ extension XMLElement {
     }
 
     /// Appends the xml element of a convertible type.
-    /// - Parameter convertible: The type conforming to `XMLElementConvertible`.
-    /// - SeeAlso: `XMLElement.Content.append(elementOf:)`
+    /// - Parameter convertible: The type conforming to ``XMLElementConvertible``.
+    /// - SeeAlso: ``XMLElement/Content/append(elementOf:)``
     @inlinable
     public mutating func append<Convertible: XMLElementConvertible>(elementOf convertible: Convertible) {
         content.append(elementOf: convertible)
@@ -43,7 +43,7 @@ extension XMLElement {
 
     /// Appends the contents of a sequence of elements to the content.
     /// - Parameter elements: The sequence of elements to append to the content.
-    /// - SeeAlso: `XMLElement.Content.append(contentsOf:)`
+    /// - SeeAlso: ``XMLElement/Content/append(contentsOf:)``
     @inlinable
     public mutating func append<S: Sequence>(contentsOf elements: S) where S.Element == XMLElement {
         content.append(contentsOf: elements)
@@ -51,7 +51,7 @@ extension XMLElement {
 
     /// Appends one or more elements to the content.
     /// - Parameter elements: The elements to append to the content.
-    /// - SeeAlso: `XMLElement.Content.appendElements(_:)`
+    /// - SeeAlso: ``XMLElement/Content/appendElements(_:)``
     @inlinable
     public mutating func appendElements(_ elements: XMLElement...) {
         append(contentsOf: elements)
@@ -59,7 +59,7 @@ extension XMLElement {
 
     /// Appends one or more elements to the content.
     /// - Parameter elements: The elements to append to the content.
-    /// - SeeAlso: `XMLElement.Content.append(elements:)`
+    /// - SeeAlso: ``XMLElement/Content/append(elements:)``
     @inlinable
     @available(*, deprecated, message: "Use appendElements(_:)", renamed: "appendElements(_:)")
     public mutating func append(elements: XMLElement...) {
@@ -73,16 +73,14 @@ extension XMLElement {
     ///   - path: A collection of element names which represent the path to the element to mutate.
     ///   - work: The closure which is provided with mutating access to the element at the given path.
     /// - Returns: The value returned by `work`.
-    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point. Or any error thrown by `work`
+    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point. Or any error thrown by `work`
     public mutating func withMutatingAccess<Path: Collection, T>(toElementAt path: Path, do work: (inout XMLElement) throws -> T) throws -> T
     where Path.Element == Name
     {
         guard !path.isEmpty else { return try work(&self) }
         guard let index = content.firstIndex(where: { $0.element?.name == path[path.startIndex] }),
               var element = content[index].element // This one should always succeed.
-        else {
-            throw LookupError.missingChild(element: self, childName: path[path.startIndex])
-        }
+        else { throw LookupError.missingChild(element: self, childName: path[path.startIndex]) }
         defer { content[index] = .element(element) }
         return try element.withMutatingAccess(toElementAt: path.dropFirst(), do: work)
     }
@@ -92,7 +90,7 @@ extension XMLElement {
     ///   - path: A list of element names which represent the path to the element to mutate.
     ///   - work: The closure which is provided with mutating access to the element at the given path.
     /// - Returns: The value returned by `work`.
-    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point. Or any error thrown by `work`
+    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point. Or any error thrown by `work`
     @inlinable
     public mutating func withMutatingAccess<T>(toElementAt path: Name..., do work: (inout XMLElement) throws -> T) throws -> T {
         try withMutatingAccess(toElementAt: path, do: work)
@@ -102,7 +100,7 @@ extension XMLElement {
     /// - Parameters:
     ///   - path: A collection of element names which represent the path to the element to replace.
     ///   - newElement: The element insert in place of the element at `path`.
-    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
+    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
     /// - Returns: The old element at `path`.
     @inlinable
     @discardableResult
@@ -119,7 +117,7 @@ extension XMLElement {
     /// - Parameters:
     ///   - path: A list of element names which represent the path to the element to replace.
     ///   - newElement: The element insert in place of the element at `path`.
-    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
+    /// - Throws: ``LookupError/missingChild(element:childName:)``in case the path contains an inexistent element at some point.
     /// - Returns: The old element at `path`.
     @inlinable
     @discardableResult
@@ -130,7 +128,7 @@ extension XMLElement {
     /// Removes an element at a given path.
     /// - Parameter path: A collection of element names which represent the path to the element to remove.
     /// - Returns: The removed element or nil if no element was present at the given path or the path was empty.
-    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
+    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
     ///           The only exception here is the last path element. If it not present, nil is returned instead.
     @discardableResult
     public mutating func remove<Path: Collection>(elementAt path: Path) throws -> XMLElement? where Path.Element == Name {
@@ -144,7 +142,7 @@ extension XMLElement {
     /// Removes an element at a given path.
     /// - Parameter path: A list of element names which represent the path to the element to remove.
     /// - Returns: The removed element or nil if no element was present at the given path or the path was empty.
-    /// - Throws: `LookupError.missingChild` in case the path contains an inexistent element at some point.
+    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
     ///           The only exception here is the last path element. If it not present, nil is returned instead.
     @inlinable
     @discardableResult
