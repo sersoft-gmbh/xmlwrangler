@@ -5,8 +5,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -163,8 +164,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -216,7 +218,7 @@
       "type" : "text"
     },
     {
-      "code" : "content",
+      "code" : "XMLElement\/Attributes\/Contents",
       "type" : "codeVoice"
     },
     {
@@ -375,8 +377,9 @@
       "type" : "text"
     },
     {
-      "code" : "stringContent",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/stringContent()",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " of an ",
@@ -774,6 +777,85 @@
   "title" : "LookupError.missingStringContent(element:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/lookuperror\/missingstringcontent(element:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/stringContent()": {
+  "abstract" : [
+    {
+      "text" : "Returns the combined string content of the element.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "stringContent"
+    },
+    {
+      "kind" : "text",
+      "text" : "() "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/stringContent()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "stringContent()",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/stringcontent()"
 },
 "doc://XMLWrangler/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",

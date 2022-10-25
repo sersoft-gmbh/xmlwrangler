@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -322,8 +316,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -404,10 +399,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/_(_:_:)-5fbmx": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

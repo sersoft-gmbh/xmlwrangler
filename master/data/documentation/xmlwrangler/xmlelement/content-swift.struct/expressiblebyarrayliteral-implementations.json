@@ -141,10 +141,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/ArrayLiteralElement": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -175,10 +172,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init(arrayLiteral:)": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

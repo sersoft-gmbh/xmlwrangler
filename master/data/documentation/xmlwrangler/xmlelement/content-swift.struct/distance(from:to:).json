@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -370,10 +364,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Index": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -404,10 +395,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/distance(from:to:)": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

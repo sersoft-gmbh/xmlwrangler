@@ -5,15 +5,23 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
-      "text" : " element, or if the last one is already ",
+      "text" : " element,",
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "or if the last one is already ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -334,8 +342,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : "’s content.",
@@ -410,15 +419,23 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
-      "text" : " element, or if the last one is already ",
+      "text" : " element,",
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "or if the last one is already ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {

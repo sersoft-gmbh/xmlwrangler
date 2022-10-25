@@ -144,24 +144,34 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "XMLParser",
+                  "code" : "Foundation\/XMLParser",
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : ". ",
+                  "text" : ".",
                   "type" : "text"
                 },
                 {
-                  "code" : "Parser.UnknownError",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " if parsing failed but no error reported. ",
+                  "text" : " ",
                   "type" : "text"
                 },
                 {
-                  "code" : "MissingRootElementError",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser\/UnknownError",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " if parsing failed but no error reported.",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser\/MissingRootElementError",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
                   "text" : " if parsing succeeded but no root element was parsed.",
@@ -245,6 +255,98 @@
   "title" : "Parser",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/parser"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/Parser/MissingRootElementError": {
+  "abstract" : [
+    {
+      "text" : "Describes a failure that caused no element to be parsed.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Used if parsing succeeds, but no element was parsed.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MissingRootElementError"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser\/MissingRootElementError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MissingRootElementError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Parser.MissingRootElementError",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/Parser/UnknownError": {
+  "abstract" : [
+    {
+      "text" : "Describes an unknown error.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Used if parsing fails, but the ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLParser",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " of Foundation does not report an error.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UnknownError"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser\/UnknownError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UnknownError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Parser.UnknownError",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/parser\/unknownerror"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Parser/parse()": {
   "abstract" : [

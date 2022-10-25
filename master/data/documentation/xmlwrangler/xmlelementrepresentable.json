@@ -5,8 +5,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -146,8 +147,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -181,6 +183,40 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElementConvertible": {
   "abstract" : [
     {
@@ -188,8 +224,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -230,8 +267,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

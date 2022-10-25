@@ -172,7 +172,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Content",
+      "code" : "XMLElement\/Attributes\/Content",
       "type" : "codeVoice"
     },
     {
@@ -214,8 +214,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -256,8 +257,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -366,7 +368,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Content",
+      "code" : "XMLElement\/Attributes\/Content",
       "type" : "codeVoice"
     }
   ],
@@ -404,7 +406,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Content",
+      "code" : "XMLElement\/Attributes\/Content",
       "type" : "codeVoice"
     },
     {
@@ -511,8 +513,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -553,8 +556,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -595,8 +599,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLWrangler.XWElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XWElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -611,7 +616,7 @@
       "type" : "text"
     },
     {
-      "code" : "Foundation.XMLElement",
+      "code" : "Foundation\/XMLElement",
       "type" : "codeVoice"
     },
     {

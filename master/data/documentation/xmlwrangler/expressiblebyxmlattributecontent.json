@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Content",
+      "code" : "XMLElement\/Attributes\/Content",
       "type" : "codeVoice"
     },
     {
@@ -146,7 +146,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Content",
+      "code" : "XMLElement\/Attributes\/Content",
       "type" : "codeVoice"
     },
     {

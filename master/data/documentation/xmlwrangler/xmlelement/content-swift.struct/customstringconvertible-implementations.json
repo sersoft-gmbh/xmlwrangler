@@ -134,10 +134,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/description": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

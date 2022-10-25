@@ -142,6 +142,49 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can be initialized with an ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ExpressibleByXMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/Parser": {
   "abstract" : [
     {
@@ -229,7 +272,15 @@
       "type" : "text"
     },
     {
-      "text" : "Used if parsing fails, but the XMLParser of Foundation does not report an error.",
+      "text" : "Used if parsing fails, but the ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLParser",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " of Foundation does not report an error.",
       "type" : "text"
     }
   ],
@@ -267,7 +318,7 @@
       "type" : "text"
     },
     {
-      "code" : "Data",
+      "code" : "Foundation\/Data",
       "type" : "codeVoice"
     },
     {
@@ -410,8 +461,9 @@
       "type" : "text"
     },
     {
-      "code" : "ExpressibleByXMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

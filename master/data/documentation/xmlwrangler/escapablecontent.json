@@ -345,10 +345,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/EscapableContent/description": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

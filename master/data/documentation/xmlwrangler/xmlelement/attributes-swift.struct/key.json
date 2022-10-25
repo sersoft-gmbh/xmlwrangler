@@ -210,7 +210,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Content",
+      "code" : "XMLElement\/Attributes\/Content",
       "type" : "codeVoice"
     },
     {
@@ -252,7 +252,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Content",
+      "code" : "XMLElement\/Attributes\/Content",
       "type" : "codeVoice"
     }
   ],
@@ -324,8 +324,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -439,10 +440,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/RawValue-swift.typealias": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -473,10 +471,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/StringLiteralType": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -507,10 +502,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/debugDescription": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -544,10 +536,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/description": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -641,10 +630,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/init(rawValue:)": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -709,10 +695,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/init(stringLiteral:)": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -777,10 +760,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/rawValue-swift.property": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

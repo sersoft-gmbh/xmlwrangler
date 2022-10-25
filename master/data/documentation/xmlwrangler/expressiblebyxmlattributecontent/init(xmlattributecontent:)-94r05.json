@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -212,7 +206,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Content",
+      "code" : "XMLElement\/Attributes\/Content",
       "type" : "codeVoice"
     },
     {
@@ -310,10 +304,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)-94r05": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [
@@ -440,8 +431,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

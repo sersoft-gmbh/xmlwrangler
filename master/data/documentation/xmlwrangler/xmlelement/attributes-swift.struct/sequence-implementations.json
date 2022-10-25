@@ -149,8 +149,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -186,10 +187,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Element": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -1392,10 +1390,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/makeIterator()": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -2464,10 +2459,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/underestimatedCount-25r5f": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

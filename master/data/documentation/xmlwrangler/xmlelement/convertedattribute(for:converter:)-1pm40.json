@@ -377,16 +377,22 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "LookupError.missingAttribute",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingAttribute(element:key:)",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
-                  "text" : " in case no attribute exists for the given key, ",
+                  "text" : " in case no attribute exists for the given key,",
                   "type" : "text"
                 },
                 {
-                  "code" : "LookupError.cannotConvertAttribute",
-                  "type" : "codeVoice"
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/cannotConvertAttribute(element:key:content:type:)",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
                   "text" : " when ",
@@ -397,7 +403,15 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " returns nil or any error thrown by ",
+                  "text" : " returns ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "nil",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " or any error thrown by ",
                   "type" : "text"
                 },
                 {
@@ -453,6 +467,265 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/LookupError/cannotConvertAttribute(element:key:content:type:)": {
+  "abstract" : [
+    {
+      "text" : "Thrown when an attribute ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement\/Attributes\/Contents",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " (for ",
+      "type" : "text"
+    },
+    {
+      "code" : "key",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") cannot be converted to a given ",
+      "type" : "text"
+    },
+    {
+      "code" : "type",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "cannotConvertAttribute"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "element"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "key"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
+      "text" : "Key"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "content"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7ContentV",
+      "text" : "Content"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "Any"
+    },
+    {
+      "kind" : "text",
+      "text" : ".Type)"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/cannotConvertAttribute(element:key:content:type:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "LookupError.cannotConvertAttribute(element:key:content:type:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/lookuperror\/cannotconvertattribute(element:key:content:type:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/LookupError/missingAttribute(element:key:)": {
+  "abstract" : [
+    {
+      "text" : "Thrown when an ",
+      "type" : "text"
+    },
+    {
+      "code" : "element",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is missing an attribute for a given ",
+      "type" : "text"
+    },
+    {
+      "code" : "key",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "missingAttribute"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "element"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "key"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
+      "text" : "Key"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingAttribute(element:key:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "LookupError.missingAttribute(element:key:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/lookuperror\/missingattribute(element:key:)"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
   "abstract" : [
     {
@@ -494,8 +767,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

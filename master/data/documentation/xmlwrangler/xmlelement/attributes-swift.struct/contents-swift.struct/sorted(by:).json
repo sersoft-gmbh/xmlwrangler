@@ -970,8 +970,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -1012,7 +1013,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes",
+      "code" : "XMLElement\/Attributes",
       "type" : "codeVoice"
     },
     {

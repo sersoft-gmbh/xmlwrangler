@@ -1,7 +1,31 @@
 {
   "abstract" : [
     {
-      "text" : "Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the combined string content passed into the RawValue’s LosslessStringConvertible-initializer.",
+      "text" : "Returns the result of initializing a ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawRepresentable & LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type with the combined string content passed into the ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "-initializer.",
       "type" : "text"
     }
   ],
@@ -199,7 +223,31 @@
         {
           "inlineContent" : [
             {
-              "text" : "An instance of the RawRepresentable & LosslessStringConvertible type initialized with the combined string content passed into the RawValue’s LosslessStringConvertible-initializer.",
+              "text" : "An instance of the ",
+              "type" : "text"
+            },
+            {
+              "code" : "RawRepresentable & LosslessStringConvertible",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " type initialized with the combined string content passed into the ",
+              "type" : "text"
+            },
+            {
+              "code" : "RawValue",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "’s ",
+              "type" : "text"
+            },
+            {
+              "code" : "LosslessStringConvertible",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "-initializer.",
               "type" : "text"
             }
           ],
@@ -225,15 +273,16 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "LookupError.missingStringContent",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingStringContent(element:)",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
                   "text" : " if ",
                   "type" : "text"
                 },
                 {
-                  "code" : "content",
+                  "code" : "XMLElement\/content",
                   "type" : "codeVoice"
                 },
                 {
@@ -241,19 +290,40 @@
                   "type" : "text"
                 },
                 {
-                  "code" : ".string",
+                  "code" : "XMLElement\/Content\/Element\/string(_:)",
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " elements, ",
+                  "text" : " elements,",
                   "type" : "text"
                 },
                 {
-                  "code" : "LookupError.cannotConvertStringContent",
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/cannotConvertStringContent(element:stringContent:type:)",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " when the initializer of the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "RawRepresentable",
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " when the initializer of the RawRepresentable type or its RawValue returns nil.",
+                  "text" : " type or its ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "RawValue",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " returns nil.",
                   "type" : "text"
                 }
               ],
@@ -269,7 +339,15 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "This overload will prefer the RawRepresentable initializer.",
+                  "text" : "This overload will prefer the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "RawRepresentable",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " initializer.",
                   "type" : "text"
                 }
               ],
@@ -317,6 +395,189 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/LookupError/cannotConvertStringContent(element:stringContent:type:)": {
+  "abstract" : [
+    {
+      "text" : "Thrown when the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/stringContent()",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " of an ",
+      "type" : "text"
+    },
+    {
+      "code" : "element",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " cannot be converted to a given ",
+      "type" : "text"
+    },
+    {
+      "code" : "type",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "cannotConvertStringContent"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "element"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringContent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
+      "text" : "Content"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO10StringParta",
+      "text" : "StringPart"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "Any"
+    },
+    {
+      "kind" : "text",
+      "text" : ".Type)"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/cannotConvertStringContent(element:stringContent:type:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "LookupError.cannotConvertStringContent(element:stringContent:type:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/lookuperror\/cannotconvertstringcontent(element:stringcontent:type:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/LookupError/missingStringContent(element:)": {
+  "abstract" : [
+    {
+      "text" : "Thrown when an element is missing string content.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "missingStringContent"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "element"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingStringContent(element:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "LookupError.missingStringContent(element:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/lookuperror\/missingstringcontent(element:)"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
   "abstract" : [
     {
@@ -354,7 +615,31 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent()-44s62": {
   "abstract" : [
     {
-      "text" : "Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the combined string content passed into the RawValue’s LosslessStringConvertible-initializer.",
+      "text" : "Returns the result of initializing a ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawRepresentable & LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type with the combined string content passed into the ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "-initializer.",
       "type" : "text"
     }
   ],
@@ -402,6 +687,51 @@
   "title" : "convertedStringContent()",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedstringcontent()-44s62"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/stringContent()": {
+  "abstract" : [
+    {
+      "text" : "Returns the combined string content of the element.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "stringContent"
+    },
+    {
+      "kind" : "text",
+      "text" : "() "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/stringContent()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "stringContent()",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/stringcontent()"
 }
 }
 }

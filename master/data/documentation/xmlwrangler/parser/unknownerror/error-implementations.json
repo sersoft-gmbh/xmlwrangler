@@ -109,7 +109,15 @@
       "type" : "text"
     },
     {
-      "text" : "Used if parsing fails, but the XMLParser of Foundation does not report an error.",
+      "text" : "Used if parsing fails, but the ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLParser",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " of Foundation does not report an error.",
       "type" : "text"
     }
   ],

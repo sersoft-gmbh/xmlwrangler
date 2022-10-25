@@ -146,7 +146,7 @@
       "type" : "text"
     },
     {
-      "code" : "Element.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -183,10 +183,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init(stringInterpolation:)": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -248,8 +248,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -402,8 +403,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : "’s content.",
@@ -565,7 +567,7 @@
       "type" : "text"
     },
     {
-      "code" : ".element(_)",
+      "code" : "XMLElement\/Content\/Element\/element(_:)",
       "type" : "codeVoice"
     },
     {
@@ -588,7 +590,16 @@
     },
     {
       "kind" : "text",
-      "text" : ": ["
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -597,7 +608,7 @@
     },
     {
       "kind" : "text",
-      "text" : "]"
+      "text" : ">"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/allElements",
@@ -614,7 +625,7 @@
       "type" : "text"
     },
     {
-      "code" : ".string(_)",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -637,7 +648,16 @@
     },
     {
       "kind" : "text",
-      "text" : ": ["
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -673,7 +693,7 @@
     },
     {
       "kind" : "text",
-      "text" : "]"
+      "text" : ">"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/allStrings",
@@ -690,7 +710,7 @@
       "type" : "text"
     },
     {
-      "code" : ".element",
+      "code" : "XMLElement\/Content\/Element\/element(_:)",
       "type" : "codeVoice"
     },
     {
@@ -754,7 +774,7 @@
       "type" : "text"
     },
     {
-      "code" : ".element",
+      "code" : "XMLElement\/Content\/Element\/element(_:)",
       "type" : "codeVoice"
     },
     {
@@ -868,7 +888,7 @@
       "type" : "text"
     },
     {
-      "code" : ".element",
+      "code" : "XMLElement\/Content\/Element\/element(_:)",
       "type" : "codeVoice"
     },
     {
@@ -926,15 +946,23 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
-      "text" : " element, or if the last one is already ",
+      "text" : " element,",
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "or if the last one is already ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -1027,7 +1055,7 @@
       "type" : "text"
     },
     {
-      "code" : ".element",
+      "code" : "XMLElement\/Content\/Element\/element(_:)",
       "type" : "codeVoice"
     },
     {
@@ -1076,7 +1104,7 @@
       "type" : "text"
     },
     {
-      "code" : ".element",
+      "code" : "XMLElement\/Content\/Element\/element(_:)",
       "type" : "codeVoice"
     },
     {
@@ -1125,15 +1153,23 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
-      "text" : " element, or if the last one is already ",
+      "text" : " element,",
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "or if the last one is already ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -1217,12 +1253,24 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
       "text" : " elements into one.",
       "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "\/\/\/ - SeeAlso: ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement\/Content\/compressed()",
+      "type" : "codeVoice"
     }
   ],
   "fragments" : [
@@ -1265,7 +1313,7 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -1566,10 +1614,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init()": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

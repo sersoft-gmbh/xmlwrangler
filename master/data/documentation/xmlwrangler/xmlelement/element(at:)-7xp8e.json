@@ -226,8 +226,9 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "LookupError.missingChild",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingChild(element:childName:)",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
                   "text" : " in case the path contains an inexistent element at some point.",
@@ -277,6 +278,97 @@
   "title" : "XMLWrangler",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/LookupError/missingChild(element:childName:)": {
+  "abstract" : [
+    {
+      "text" : "Thrown when a given ",
+      "type" : "text"
+    },
+    {
+      "code" : "element",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is missing a child with the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "childName",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "missingChild"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "element"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "childName"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
+      "text" : "Name"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingChild(element:childName:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "LookupError.missingChild(element:childName:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/lookuperror\/missingchild(element:childname:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
   "abstract" : [

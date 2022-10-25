@@ -5,12 +5,24 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
       "text" : " elements into one.",
       "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "\/\/\/ - SeeAlso: ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement\/Content\/compressed()",
+      "type" : "codeVoice"
     }
   ],
   "hierarchy" : {
@@ -207,12 +219,24 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
       "text" : " elements into one.",
       "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "\/\/\/ - SeeAlso: ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLElement\/Content\/compressed()",
+      "type" : "codeVoice"
     }
   ],
   "fragments" : [

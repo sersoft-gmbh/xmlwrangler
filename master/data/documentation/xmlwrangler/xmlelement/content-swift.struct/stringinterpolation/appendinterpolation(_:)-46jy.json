@@ -5,16 +5,18 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
-      "text" : " of a ",
+      "text" : " of an ",
       "type" : "text"
     },
     {
-      "code" : "XMLElementConvertible",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " type to the contents.",
@@ -324,7 +326,7 @@
       "type" : "text"
     },
     {
-      "code" : "Element.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -366,16 +368,18 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
-      "text" : " of a ",
+      "text" : " of an ",
       "type" : "text"
     },
     {
-      "code" : "XMLElementConvertible",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " type to the contents.",
@@ -430,8 +434,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

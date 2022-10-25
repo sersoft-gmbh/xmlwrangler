@@ -13,7 +13,7 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -273,7 +273,7 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {

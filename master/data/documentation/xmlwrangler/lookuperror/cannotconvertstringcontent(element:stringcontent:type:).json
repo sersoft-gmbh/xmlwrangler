@@ -5,8 +5,9 @@
       "type" : "text"
     },
     {
-      "code" : "stringContent",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/stringContent()",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " of an ",
@@ -304,8 +305,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -346,8 +348,9 @@
       "type" : "text"
     },
     {
-      "code" : "stringContent",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/stringContent()",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " of an ",
@@ -547,8 +550,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : "’s content.",
@@ -615,6 +619,51 @@
   "title" : "XMLElement.Content.Element.StringPart",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/stringpart"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/stringContent()": {
+  "abstract" : [
+    {
+      "text" : "Returns the combined string content of the element.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "stringContent"
+    },
+    {
+      "kind" : "text",
+      "text" : "() "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/stringContent()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "stringContent()",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/stringcontent()"
 }
 }
 }

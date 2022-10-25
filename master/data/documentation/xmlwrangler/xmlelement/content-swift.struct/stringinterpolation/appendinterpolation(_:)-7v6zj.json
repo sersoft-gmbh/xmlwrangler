@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -165,7 +165,7 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "XMLElement.Content",
+                  "code" : "XMLElement\/Content",
                   "type" : "codeVoice"
                 },
                 {
@@ -300,7 +300,7 @@
       "type" : "text"
     },
     {
-      "code" : "Element.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -342,7 +342,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {

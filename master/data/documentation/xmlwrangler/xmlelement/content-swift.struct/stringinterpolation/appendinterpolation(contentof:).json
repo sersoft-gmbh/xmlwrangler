@@ -5,8 +5,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -154,15 +155,16 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "XMLElement",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
                   "text" : " whose ",
                   "type" : "text"
                 },
                 {
-                  "code" : "content",
+                  "code" : "XMLElement\/content",
                   "type" : "codeVoice"
                 },
                 {
@@ -194,7 +196,7 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "content",
+                  "code" : "XMLElement\/content",
                   "type" : "codeVoice"
                 },
                 {
@@ -361,7 +363,7 @@
       "type" : "text"
     },
     {
-      "code" : "Element.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -403,8 +405,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

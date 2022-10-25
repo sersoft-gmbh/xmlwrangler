@@ -229,10 +229,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/DocumentEncoding/description": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

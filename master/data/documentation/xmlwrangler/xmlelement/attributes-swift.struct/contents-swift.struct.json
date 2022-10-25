@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes",
+      "code" : "XMLElement\/Attributes",
       "type" : "codeVoice"
     },
     {
@@ -247,8 +247,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -289,7 +290,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes",
+      "code" : "XMLElement\/Attributes",
       "type" : "codeVoice"
     },
     {
@@ -337,10 +338,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/Element": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -371,10 +369,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/Index": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -410,7 +405,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Contents",
+      "code" : "XMLElement\/Attributes\/Contents",
       "type" : "codeVoice"
     },
     {
@@ -469,10 +464,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/debugDescription": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -506,10 +498,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/description": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -543,10 +532,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/endIndex": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -607,10 +593,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/index(after:)": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -715,10 +698,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/makeIterator()": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -779,10 +759,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/startIndex": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -843,10 +820,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/subscript(_:)-1w5qy": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -5,8 +5,9 @@
       "type" : "text"
     },
     {
-      "code" : "ExpressibleByXMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " target.",
@@ -206,15 +207,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The result of calling ",
-              "type" : "text"
-            },
-            {
-              "code" : "Target(xml:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
+              "text" : "The target type converted from the receiving XML element.",
               "type" : "text"
             }
           ],
@@ -267,7 +260,7 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "ExpressibleByXMLElement.init(xml:)",
+                  "code" : "ExpressibleByXMLElement\/init(xml:)",
                   "type" : "codeVoice"
                 },
                 {
@@ -334,8 +327,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -410,8 +404,9 @@
       "type" : "text"
     },
     {
-      "code" : "ExpressibleByXMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " target.",

@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Content.Element",
+      "code" : "XMLElement\/Content\/Element",
       "type" : "codeVoice"
     },
     {
@@ -342,8 +342,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : "’s content.",
@@ -395,7 +396,7 @@
       "type" : "text"
     },
     {
-      "code" : "Element.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -437,7 +438,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Content.Element",
+      "code" : "XMLElement\/Content\/Element",
       "type" : "codeVoice"
     },
     {

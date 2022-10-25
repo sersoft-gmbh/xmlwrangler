@@ -197,7 +197,7 @@
             },
             {
               "kind" : "text",
-              "text" : " = [:], "
+              "text" : " = .init(), "
             },
             {
               "kind" : "externalParam",
@@ -307,8 +307,9 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "XMLElement",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
                   "text" : "s to use as content for the new element.",
@@ -397,8 +398,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : ".element(_)",
+      "code" : "XMLElement\/Content\/Element\/element(_:)",
       "type" : "codeVoice"
     },
     {
@@ -45,7 +45,16 @@
       },
       {
         "kind" : "text",
-        "text" : ": ["
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sa",
+        "text" : "Array"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
       },
       {
         "kind" : "typeIdentifier",
@@ -54,7 +63,7 @@
       },
       {
         "kind" : "text",
-        "text" : "]"
+        "text" : ">"
       }
     ],
     "modules" : [
@@ -92,7 +101,16 @@
             },
             {
               "kind" : "text",
-              "text" : ": ["
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sa",
+              "text" : "Array"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
             },
             {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
@@ -102,7 +120,7 @@
             },
             {
               "kind" : "text",
-              "text" : "] { "
+              "text" : "> { "
             },
             {
               "kind" : "keyword",
@@ -226,7 +244,7 @@
       "type" : "text"
     },
     {
-      "code" : ".element(_)",
+      "code" : "XMLElement\/Content\/Element\/element(_:)",
       "type" : "codeVoice"
     },
     {
@@ -249,7 +267,16 @@
     },
     {
       "kind" : "text",
-      "text" : ": ["
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -258,7 +285,7 @@
     },
     {
       "kind" : "text",
-      "text" : "]"
+      "text" : ">"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/allElements",

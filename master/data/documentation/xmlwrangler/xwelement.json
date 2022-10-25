@@ -5,8 +5,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLWrangler.XWElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XWElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -21,7 +22,7 @@
       "type" : "text"
     },
     {
-      "code" : "Foundation.XMLElement",
+      "code" : "Foundation\/XMLElement",
       "type" : "codeVoice"
     },
     {
@@ -186,8 +187,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLWrangler.XWElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XWElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -202,7 +204,7 @@
       "type" : "text"
     },
     {
-      "code" : "Foundation.XMLElement",
+      "code" : "Foundation\/XMLElement",
       "type" : "codeVoice"
     },
     {

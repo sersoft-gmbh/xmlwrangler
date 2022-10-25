@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Keys",
+      "code" : "XMLElement\/Attributes\/Keys",
       "type" : "codeVoice"
     },
     {
@@ -195,8 +195,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -237,7 +238,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes",
+      "code" : "XMLElement\/Attributes",
       "type" : "codeVoice"
     }
   ],
@@ -275,7 +276,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Attributes.Keys",
+      "code" : "XMLElement\/Attributes\/Keys",
       "type" : "codeVoice"
     },
     {
@@ -312,10 +313,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Keys-swift.struct/Iterator/next()": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : ".string(_)",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -45,7 +45,16 @@
       },
       {
         "kind" : "text",
-        "text" : ": ["
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sa",
+        "text" : "Array"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
       },
       {
         "kind" : "typeIdentifier",
@@ -81,7 +90,7 @@
       },
       {
         "kind" : "text",
-        "text" : "]"
+        "text" : ">"
       }
     ],
     "modules" : [
@@ -119,7 +128,16 @@
             },
             {
               "kind" : "text",
-              "text" : ": ["
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sa",
+              "text" : "Array"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
             },
             {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
@@ -159,7 +177,7 @@
             },
             {
               "kind" : "text",
-              "text" : "] { "
+              "text" : "> { "
             },
             {
               "kind" : "keyword",
@@ -283,8 +301,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : "’s content.",
@@ -359,7 +378,7 @@
       "type" : "text"
     },
     {
-      "code" : ".string(_)",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -382,7 +401,16 @@
     },
     {
       "kind" : "text",
-      "text" : ": ["
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -418,7 +446,7 @@
     },
     {
       "kind" : "text",
-      "text" : "]"
+      "text" : ">"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/allStrings",

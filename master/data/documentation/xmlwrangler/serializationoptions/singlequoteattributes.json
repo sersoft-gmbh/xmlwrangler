@@ -1,7 +1,23 @@
 {
   "abstract" : [
     {
-      "text" : "Use single quotes (’) instead of double quotes (”) for attribute values.",
+      "text" : "Use single quotes (",
+      "type" : "text"
+    },
+    {
+      "code" : "'",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") instead of double quotes (",
+      "type" : "text"
+    },
+    {
+      "code" : "\"",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") for attribute values.",
       "type" : "text"
     }
   ],
@@ -179,7 +195,23 @@
 "doc://XMLWrangler/documentation/XMLWrangler/SerializationOptions/singleQuoteAttributes": {
   "abstract" : [
     {
-      "text" : "Use single quotes (’) instead of double quotes (”) for attribute values.",
+      "text" : "Use single quotes (",
+      "type" : "text"
+    },
+    {
+      "code" : "'",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") instead of double quotes (",
+      "type" : "text"
+    },
+    {
+      "code" : "\"",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") for attribute values.",
       "type" : "text"
     }
   ],

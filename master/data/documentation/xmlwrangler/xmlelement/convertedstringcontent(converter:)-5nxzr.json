@@ -243,15 +243,16 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "LookupError.missingStringContent",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingStringContent(element:)",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
                   "text" : " if ",
                   "type" : "text"
                 },
                 {
-                  "code" : "content",
+                  "code" : "XMLElement\/content",
                   "type" : "codeVoice"
                 },
                 {
@@ -259,11 +260,19 @@
                   "type" : "text"
                 },
                 {
-                  "code" : ".string",
+                  "code" : "XMLElement\/Content\/Element\/string(_:)",
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " elements or any error thrown by ",
+                  "text" : " elements",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "or any error thrown by ",
                   "type" : "text"
                 },
                 {
@@ -318,6 +327,55 @@
   "title" : "XMLWrangler",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/LookupError/missingStringContent(element:)": {
+  "abstract" : [
+    {
+      "text" : "Thrown when an element is missing string content.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "missingStringContent"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "element"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingStringContent(element:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "LookupError.missingStringContent(element:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/lookuperror\/missingstringcontent(element:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
   "abstract" : [

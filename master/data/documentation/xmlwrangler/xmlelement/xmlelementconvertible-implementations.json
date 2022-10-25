@@ -99,10 +99,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/xml": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

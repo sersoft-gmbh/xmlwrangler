@@ -220,8 +220,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -296,8 +297,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -1079,8 +1081,9 @@
       "type" : "text"
     },
     {
-      "code" : "ExpressibleByXMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " target.",
@@ -1246,7 +1249,15 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:)-29eim": {
   "abstract" : [
     {
-      "text" : "Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the value for a given attribute key",
+      "text" : "Returns the result of initializing a ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawRepresentable & LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type with the value for a given attribute key",
       "type" : "text"
     },
     {
@@ -1254,7 +1265,23 @@
       "type" : "text"
     },
     {
-      "text" : "passed into the RawValue’s LosslessStringConvertible-initializer.",
+      "text" : "passed into the ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "-initializer.",
       "type" : "text"
     }
   ],
@@ -1436,7 +1463,15 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:)-3wjco": {
   "abstract" : [
     {
-      "text" : "Returns the result of initializing a RawRepresentable type with the value for a given attribute key",
+      "text" : "Returns the result of initializing a ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawRepresentable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type with the value for a given attribute key",
       "type" : "text"
     },
     {
@@ -1444,7 +1479,23 @@
       "type" : "text"
     },
     {
-      "text" : "passed into the RawValue’s LosslessStringConvertible-initializer.",
+      "text" : "passed into the ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "-initializer.",
       "type" : "text"
     }
   ],
@@ -1626,7 +1677,15 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:)-7pgeq": {
   "abstract" : [
     {
-      "text" : "Returns the result of initializing a LosslessStringConvertible type with the value for a given attribute key.",
+      "text" : "Returns the result of initializing a ",
+      "type" : "text"
+    },
+    {
+      "code" : "LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type with the value for a given attribute key.",
       "type" : "text"
     }
   ],
@@ -1712,7 +1771,18 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:)-j6st": {
   "abstract" : [
-
+    {
+      "text" : "Returns the result of initializing ",
+      "type" : "text"
+    },
+    {
+      "code" : "Target",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " with the attribute for the given key if it exists.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -2073,7 +2143,31 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent()-44s62": {
   "abstract" : [
     {
-      "text" : "Returns the result of initializing a RawRepresentable & LosslessStringConvertible type with the combined string content passed into the RawValue’s LosslessStringConvertible-initializer.",
+      "text" : "Returns the result of initializing a ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawRepresentable & LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type with the combined string content passed into the ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "-initializer.",
       "type" : "text"
     }
   ],
@@ -2125,7 +2219,31 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent()-4i8zf": {
   "abstract" : [
     {
-      "text" : "Returns the result of initializing a RawRepresentable type with the combined string content passed into the RawValue’s LosslessStringConvertible-initializer.",
+      "text" : "Returns the result of initializing a ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawRepresentable",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type with the combined string content passed into the ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "-initializer.",
       "type" : "text"
     }
   ],
@@ -2177,7 +2295,15 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent()-6gudh": {
   "abstract" : [
     {
-      "text" : "Returns the result of initializing a LosslessStringConvertible type with the combined string content.",
+      "text" : "Returns the result of initializing a ",
+      "type" : "text"
+    },
+    {
+      "code" : "LosslessStringConvertible",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type with the combined string content.",
       "type" : "text"
     }
   ],
@@ -2398,10 +2524,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/debugDescription": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -2435,10 +2558,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/description": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -2666,7 +2786,16 @@
     },
     {
       "kind" : "text",
-      "text" : " -> ["
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -2675,7 +2804,7 @@
     },
     {
       "kind" : "text",
-      "text" : "]"
+      "text" : ">"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/elements(named:)",
@@ -2687,10 +2816,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/id-4rc6g": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -4012,8 +4138,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

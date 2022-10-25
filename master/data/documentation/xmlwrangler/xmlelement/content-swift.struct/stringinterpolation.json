@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : "Element.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -254,7 +254,7 @@
       "type" : "text"
     },
     {
-      "code" : "Element.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -291,10 +291,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/StringInterpolation/StringLiteralType": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -330,16 +327,18 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
-      "text" : " of a ",
+      "text" : " of an ",
       "type" : "text"
     },
     {
-      "code" : "XMLElementConvertible",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " type to the contents.",
@@ -394,7 +393,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Content.Element",
+      "code" : "XMLElement\/Content\/Element",
       "type" : "codeVoice"
     },
     {
@@ -461,7 +460,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Content",
+      "code" : "XMLElement\/Content",
       "type" : "codeVoice"
     },
     {
@@ -567,7 +566,7 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement.Content.Element",
+      "code" : "XMLElement\/Content\/Element",
       "type" : "codeVoice"
     },
     {
@@ -623,8 +622,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -680,7 +680,7 @@
       "type" : "text"
     },
     {
-      "code" : ".string",
+      "code" : "XMLElement\/Content\/Element\/string(_:)",
       "type" : "codeVoice"
     },
     {
@@ -751,10 +751,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/StringInterpolation/init(literalCapacity:interpolationCount:)": {
   "abstract" : [
-    {
-      "text" : "inherited",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -806,6 +803,49 @@
   "title" : "init(literalCapacity:interpolationCount:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/stringinterpolation\/init(literalcapacity:interpolationcount:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElementConvertible": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can be converted to an ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElementConvertible"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElementConvertible"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElementConvertible",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelementconvertible"
 },
 "doc://XMLWrangler/s27StringInterpolationProtocolP": {
   "identifier" : "doc:\/\/XMLWrangler\/s27StringInterpolationProtocolP",

@@ -70,7 +70,16 @@
       },
       {
         "kind" : "text",
-        "text" : " -> ["
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sa",
+        "text" : "Array"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
       },
       {
         "kind" : "typeIdentifier",
@@ -79,7 +88,7 @@
       },
       {
         "kind" : "text",
-        "text" : "]"
+        "text" : ">"
       }
     ],
     "modules" : [
@@ -161,7 +170,16 @@
             },
             {
               "kind" : "text",
-              "text" : " -> ["
+              "text" : " -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sa",
+              "text" : "Array"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
             },
             {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
@@ -171,7 +189,7 @@
             },
             {
               "kind" : "text",
-              "text" : "]"
+              "text" : ">"
             }
           ]
         }
@@ -410,7 +428,16 @@
     },
     {
       "kind" : "text",
-      "text" : " -> ["
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -419,7 +446,7 @@
     },
     {
       "kind" : "text",
-      "text" : "]"
+      "text" : ">"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/elements(named:)",
