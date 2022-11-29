@@ -117,6 +117,7 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/DocumentEncoding\/CustomStringConvertible-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/DocumentEncoding\/Equatable-Implementations"
       ],
       "title" : "Default Implementations"
@@ -190,6 +191,17 @@
   "title" : "DocumentEncoding",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/documentencoding"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/DocumentEncoding/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/DocumentEncoding\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/documentencoding\/customstringconvertible-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/DocumentEncoding/Equatable-Implementations": {
   "abstract" : [

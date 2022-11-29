@@ -117,6 +117,7 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/EscapableContent\/Quotes\/CustomStringConvertible-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/EscapableContent\/Quotes\/Equatable-Implementations"
       ],
       "title" : "Default Implementations"
@@ -224,6 +225,17 @@
   "title" : "EscapableContent.Quotes",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/EscapableContent/Quotes/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/EscapableContent\/Quotes\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/customstringconvertible-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/EscapableContent/Quotes/Equatable-Implementations": {
   "abstract" : [

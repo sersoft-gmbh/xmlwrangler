@@ -175,6 +175,7 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/CustomStringConvertible-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Equatable-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/ExpressibleByXMLElement-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Identifiable-Implementations",
@@ -366,6 +367,17 @@
   "title" : "XMLElement.Content",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/customstringconvertible-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Equatable-Implementations": {
   "abstract" : [

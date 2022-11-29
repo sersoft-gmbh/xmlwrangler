@@ -35,6 +35,22 @@
                         "type" : "groupMarker"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror\/halfwidthcornerquoted",
+                        "title" : "var halfWidthCornerQuoted: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror\/customstringconvertible-implementations",
+                    "title" : "CustomStringConvertible Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror\/localizeddescription",
                         "title" : "var localizedDescription: String",
                         "type" : "property"
@@ -63,6 +79,22 @@
                   {
                     "title" : "Default Implementations",
                     "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/parser\/unknownerror\/halfwidthcornerquoted",
+                        "title" : "var halfWidthCornerQuoted: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/parser\/unknownerror\/customstringconvertible-implementations",
+                    "title" : "CustomStringConvertible Implementations",
+                    "type" : "symbol"
                   },
                   {
                     "children" : [
@@ -133,17 +165,17 @@
                   {
                     "children" : [
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
-                        "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
-                        "type" : "init"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3j6bp",
+                        "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
+                        "type" : "init"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       }
@@ -177,12 +209,12 @@
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-76pd1",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-3wu3r",
                         "title" : "init(xml: XMLElement) throws",
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-3wu3r",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-76pd1",
                         "title" : "init(xml: XMLElement) throws",
                         "type" : "init"
                       }
@@ -539,6 +571,22 @@
                       {
                         "children" : [
                           {
+                            "title" : "Instance Properties",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/halfwidthcornerquoted",
+                            "title" : "var halfWidthCornerQuoted: String",
+                            "type" : "property"
+                          }
+                        ],
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/customstringconvertible-implementations",
+                        "title" : "CustomStringConvertible Implementations",
+                        "type" : "symbol"
+                      },
+                      {
+                        "children" : [
+                          {
                             "title" : "Operators",
                             "type" : "groupMarker"
                           },
@@ -753,6 +801,16 @@
                             "type" : "groupMarker"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/convertbyoffset(_:in:)-2vce2",
+                            "title" : "func convertByOffset<C>(Self.Index, in: C) -> C.Index",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/convertbyoffset(_:in:)-70m7r",
+                            "title" : "func convertByOffset<C>(Range<Self.Index>, in: C) -> Range<C.Index>",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/distance(from:to:)",
                             "title" : "func distance(from: Self.Index, to: Self.Index) -> Int",
                             "type" : "method"
@@ -783,6 +841,11 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/firstrange(of:)",
+                            "title" : "func firstRange<C>(of: C) -> Range<Self.Index>?",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/formindex(_:offsetby:)",
                             "title" : "func formIndex(inout Self.Index, offsetBy: Int)",
                             "type" : "method"
@@ -808,6 +871,11 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/index(atoffset:)",
+                            "title" : "func index(atOffset: Int) -> Self.Index",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/index(of:)",
                             "title" : "func index(of: Self.Element) -> Self.Index?",
                             "type" : "method"
@@ -815,6 +883,21 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/map(_:)-7145q",
                             "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/offset(of:)",
+                            "title" : "func offset(of: Self.Index) -> Int",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/offset(ofindex:)",
+                            "title" : "func offset(ofIndex: Self.Index) -> Int",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/offsets(of:)",
+                            "title" : "func offsets(of: Range<Self.Index>) -> Range<Int>",
                             "type" : "method"
                           },
                           {
@@ -848,6 +931,16 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/ranges(of:)",
+                            "title" : "func ranges<C>(of: C) -> [Range<Self.Index>]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/split(around:)",
+                            "title" : "func split(around: Range<Self.Index>) -> (prefix: Self.SubSequence, Self.SubSequence, suffix: Self.SubSequence)",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
                             "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
                             "type" : "method"
@@ -865,6 +958,26 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/suffix(from:)",
                             "title" : "func suffix(from: Self.Index) -> Self.SubSequence",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/trimmingprefix(_:)",
+                            "title" : "func trimmingPrefix<Prefix>(Prefix) -> Self.SubSequence",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/trimmingprefix(while:)",
+                            "title" : "func trimmingPrefix(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/trydropprefix(_:)",
+                            "title" : "func tryDropPrefix<C>(C) -> Self.SubSequence?",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/trydropsuffix(_:)",
+                            "title" : "func tryDropSuffix<C>(C) -> Self.SubSequence?",
                             "type" : "method"
                           },
                           {
@@ -889,6 +1002,22 @@
                         ],
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/collection-implementations",
                         "title" : "Collection Implementations",
+                        "type" : "symbol"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Instance Properties",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/halfwidthcornerquoted",
+                            "title" : "var halfWidthCornerQuoted: String",
+                            "type" : "property"
+                          }
+                        ],
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/customstringconvertible-implementations",
+                        "title" : "CustomStringConvertible Implementations",
                         "type" : "symbol"
                       },
                       {
@@ -967,8 +1096,18 @@
                             "type" : "groupMarker"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/all(_:)",
+                            "title" : "func all((Self.Element) -> Bool) -> Bool",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/allsatisfy(_:)",
                             "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/any(_:)",
+                            "title" : "func any((Self.Element) -> Bool) -> Bool",
                             "type" : "method"
                           },
                           {
@@ -1044,6 +1183,11 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/min(by:)",
                             "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/none(_:)",
+                            "title" : "func none((Self.Element) -> Bool) -> Bool",
                             "type" : "method"
                           },
                           {
@@ -1158,6 +1302,22 @@
                       {
                         "title" : "Default Implementations",
                         "type" : "groupMarker"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Instance Properties",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/halfwidthcornerquoted",
+                            "title" : "var halfWidthCornerQuoted: String",
+                            "type" : "property"
+                          }
+                        ],
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/customstringconvertible-implementations",
+                        "title" : "CustomStringConvertible Implementations",
+                        "type" : "symbol"
                       },
                       {
                         "children" : [
@@ -1374,6 +1534,16 @@
                             "type" : "groupMarker"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/convertbyoffset(_:in:)-14d74",
+                            "title" : "func convertByOffset<C>(Self.Index, in: C) -> C.Index",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/convertbyoffset(_:in:)-7svhz",
+                            "title" : "func convertByOffset<C>(Range<Self.Index>, in: C) -> Range<C.Index>",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/distance(from:to:)",
                             "title" : "func distance(from: Self.Index, to: Self.Index) -> Int",
                             "type" : "method"
@@ -1404,6 +1574,11 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/firstrange(of:)",
+                            "title" : "func firstRange<C>(of: C) -> Range<Self.Index>?",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/formindex(_:offsetby:)",
                             "title" : "func formIndex(inout Self.Index, offsetBy: Int)",
                             "type" : "method"
@@ -1429,6 +1604,11 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/index(atoffset:)",
+                            "title" : "func index(atOffset: Int) -> Self.Index",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/index(of:)",
                             "title" : "func index(of: Self.Element) -> Self.Index?",
                             "type" : "method"
@@ -1436,6 +1616,21 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/map(_:)-53j2n",
                             "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/offset(of:)",
+                            "title" : "func offset(of: Self.Index) -> Int",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/offset(ofindex:)",
+                            "title" : "func offset(ofIndex: Self.Index) -> Int",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/offsets(of:)",
+                            "title" : "func offsets(of: Range<Self.Index>) -> Range<Int>",
                             "type" : "method"
                           },
                           {
@@ -1469,6 +1664,16 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/ranges(of:)",
+                            "title" : "func ranges<C>(of: C) -> [Range<Self.Index>]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/split(around:)",
+                            "title" : "func split(around: Range<Self.Index>) -> (prefix: Self.SubSequence, Self.SubSequence, suffix: Self.SubSequence)",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
                             "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
                             "type" : "method"
@@ -1486,6 +1691,26 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/suffix(from:)",
                             "title" : "func suffix(from: Self.Index) -> Self.SubSequence",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/trimmingprefix(_:)",
+                            "title" : "func trimmingPrefix<Prefix>(Prefix) -> Self.SubSequence",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/trimmingprefix(while:)",
+                            "title" : "func trimmingPrefix(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/trydropprefix(_:)",
+                            "title" : "func tryDropPrefix<C>(C) -> Self.SubSequence?",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/trydropsuffix(_:)",
+                            "title" : "func tryDropSuffix<C>(C) -> Self.SubSequence?",
                             "type" : "method"
                           },
                           {
@@ -1510,6 +1735,22 @@
                         ],
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/collection-implementations",
                         "title" : "Collection Implementations",
+                        "type" : "symbol"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Instance Properties",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/halfwidthcornerquoted",
+                            "title" : "var halfWidthCornerQuoted: String",
+                            "type" : "property"
+                          }
+                        ],
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/customstringconvertible-implementations",
+                        "title" : "CustomStringConvertible Implementations",
                         "type" : "symbol"
                       },
                       {
@@ -1549,8 +1790,18 @@
                             "type" : "groupMarker"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/all(_:)",
+                            "title" : "func all((Self.Element) -> Bool) -> Bool",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/allsatisfy(_:)",
                             "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/any(_:)",
+                            "title" : "func any((Self.Element) -> Bool) -> Bool",
                             "type" : "method"
                           },
                           {
@@ -1626,6 +1877,11 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/min(by:)",
                             "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/none(_:)",
+                            "title" : "func none((Self.Element) -> Bool) -> Bool",
                             "type" : "method"
                           },
                           {
@@ -1930,6 +2186,16 @@
                         "type" : "groupMarker"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/convertbyoffset(_:in:)-4hpjj",
+                        "title" : "func convertByOffset<C>(Self.Index, in: C) -> C.Index",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/convertbyoffset(_:in:)-5mnqx",
+                        "title" : "func convertByOffset<C>(Range<Self.Index>, in: C) -> Range<C.Index>",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/distance(from:to:)",
                         "title" : "func distance(from: Self.Index, to: Self.Index) -> Int",
                         "type" : "method"
@@ -1985,8 +2251,28 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index(atoffset:)",
+                        "title" : "func index(atOffset: Int) -> Self.Index",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/map(_:)-5apbc",
                         "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/offset(of:)",
+                        "title" : "func offset(of: Self.Index) -> Int",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/offset(ofindex:)",
+                        "title" : "func offset(ofIndex: Self.Index) -> Int",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/offsets(of:)",
+                        "title" : "func offsets(of: Range<Self.Index>) -> Range<Int>",
                         "type" : "method"
                       },
                       {
@@ -2020,6 +2306,11 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/split(around:)",
+                        "title" : "func split(around: Range<Self.Index>) -> (prefix: Self.SubSequence, Self.SubSequence, suffix: Self.SubSequence)",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
                         "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
                         "type" : "method"
@@ -2032,6 +2323,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/suffix(from:)",
                         "title" : "func suffix(from: Self.Index) -> Self.SubSequence",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/trimmingprefix(while:)",
+                        "title" : "func trimmingPrefix(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
                         "type" : "method"
                       },
                       {
@@ -2088,6 +2384,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/description",
                         "title" : "var description: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/halfwidthcornerquoted",
+                        "title" : "var halfWidthCornerQuoted: String",
                         "type" : "property"
                       }
                     ],
@@ -2173,8 +2474,18 @@
                         "type" : "groupMarker"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/all(_:)",
+                        "title" : "func all((Self.Element) -> Bool) -> Bool",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/allsatisfy(_:)",
                         "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/any(_:)",
+                        "title" : "func any((Self.Element) -> Bool) -> Bool",
                         "type" : "method"
                       },
                       {
@@ -2240,6 +2551,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/min(by:)",
                         "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/none(_:)",
+                        "title" : "func none((Self.Element) -> Bool) -> Bool",
                         "type" : "method"
                       },
                       {
@@ -2464,6 +2780,22 @@
                       {
                         "children" : [
                           {
+                            "title" : "Instance Properties",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/halfwidthcornerquoted",
+                            "title" : "var halfWidthCornerQuoted: String",
+                            "type" : "property"
+                          }
+                        ],
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/customstringconvertible-implementations",
+                        "title" : "CustomStringConvertible Implementations",
+                        "type" : "symbol"
+                      },
+                      {
+                        "children" : [
+                          {
                             "title" : "Operators",
                             "type" : "groupMarker"
                           },
@@ -2565,6 +2897,11 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/flatmapoffsets(_:)",
+                        "title" : "func flatmapOffsets(Offsets?) -> Range<Self.Index>",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/formindex(before:)",
                         "title" : "func formIndex(before: inout Self.Index)",
                         "type" : "method"
@@ -2587,6 +2924,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/lastindex(where:)",
                         "title" : "func lastIndex(where: (Self.Element) throws -> Bool) rethrows -> Self.Index?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/mapoffsets(_:)",
+                        "title" : "func mapOffsets(Offsets) -> Range<Self.Index>",
                         "type" : "method"
                       },
                       {
@@ -2660,6 +3002,16 @@
                         "type" : "groupMarker"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/convertbyoffset(_:in:)-1ruxw",
+                        "title" : "func convertByOffset<C>(Range<Self.Index>, in: C) -> Range<C.Index>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/convertbyoffset(_:in:)-6pnus",
+                        "title" : "func convertByOffset<C>(Self.Index, in: C) -> C.Index",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/distance(from:to:)",
                         "title" : "func distance(from: XMLElement.Content.Index, to: XMLElement.Content.Index) -> Int",
                         "type" : "method"
@@ -2682,6 +3034,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/firstindex(where:)",
                         "title" : "func firstIndex(where: (Self.Element) throws -> Bool) rethrows -> Self.Index?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/firstrange(of:)",
+                        "title" : "func firstRange<C>(of: C) -> Range<Self.Index>?",
                         "type" : "method"
                       },
                       {
@@ -2710,6 +3067,11 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/index(atoffset:)",
+                        "title" : "func index(atOffset: Int) -> Self.Index",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/index(of:)",
                         "title" : "func index(of: Self.Element) -> Self.Index?",
                         "type" : "method"
@@ -2722,6 +3084,21 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/map(_:)-34vrq",
                         "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/offset(of:)",
+                        "title" : "func offset(of: Self.Index) -> Int",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/offset(ofindex:)",
+                        "title" : "func offset(ofIndex: Self.Index) -> Int",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/offsets(of:)",
+                        "title" : "func offsets(of: Range<Self.Index>) -> Range<Int>",
                         "type" : "method"
                       },
                       {
@@ -2755,6 +3132,16 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/ranges(of:)",
+                        "title" : "func ranges<C>(of: C) -> [Range<Self.Index>]",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/split(around:)",
+                        "title" : "func split(around: Range<Self.Index>) -> (prefix: Self.SubSequence, Self.SubSequence, suffix: Self.SubSequence)",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
                         "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
                         "type" : "method"
@@ -2767,6 +3154,26 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/suffix(from:)",
                         "title" : "func suffix(from: Self.Index) -> Self.SubSequence",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/trimmingprefix(_:)",
+                        "title" : "func trimmingPrefix<Prefix>(Prefix) -> Self.SubSequence",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/trimmingprefix(while:)",
+                        "title" : "func trimmingPrefix(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/trydropprefix(_:)",
+                        "title" : "func tryDropPrefix<C>(C) -> Self.SubSequence?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/trydropsuffix(_:)",
+                        "title" : "func tryDropSuffix<C>(C) -> Self.SubSequence?",
                         "type" : "method"
                       },
                       {
@@ -2842,6 +3249,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/description",
                         "title" : "var description: String",
+                        "type" : "property"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/halfwidthcornerquoted",
+                        "title" : "var halfWidthCornerQuoted: String",
                         "type" : "property"
                       }
                     ],
@@ -3273,6 +3685,11 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/replace(_:with:maxreplacements:)",
+                        "title" : "func replace<C, Replacement>(C, with: Replacement, maxReplacements: Int)",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/replacesubrange(_:with:)-1o7d7",
                         "title" : "func replaceSubrange<C>(Range<XMLElement.Content.Index>, with: C)",
                         "type" : "method"
@@ -3288,8 +3705,28 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/replacing(_:with:maxreplacements:)",
+                        "title" : "func replacing<C, Replacement>(C, with: Replacement, maxReplacements: Int) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/replacing(_:with:subrange:maxreplacements:)",
+                        "title" : "func replacing<C, Replacement>(C, with: Replacement, subrange: Range<Self.Index>, maxReplacements: Int) -> Self",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/reservecapacity(_:)",
                         "title" : "func reserveCapacity(Int)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/trimprefix(_:)",
+                        "title" : "func trimPrefix<Prefix>(Prefix)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/trimprefix(while:)",
+                        "title" : "func trimPrefix(while: (Self.Element) throws -> Bool) rethrows",
                         "type" : "method"
                       }
                     ],
@@ -3323,8 +3760,18 @@
                         "type" : "groupMarker"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/all(_:)",
+                        "title" : "func all((Self.Element) -> Bool) -> Bool",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/allsatisfy(_:)",
                         "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/any(_:)",
+                        "title" : "func any((Self.Element) -> Bool) -> Bool",
                         "type" : "method"
                       },
                       {
@@ -3395,6 +3842,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/min(by:)",
                         "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/none(_:)",
+                        "title" : "func none((Self.Element) -> Bool) -> Bool",
                         "type" : "method"
                       },
                       {
@@ -3504,6 +3956,22 @@
                   {
                     "title" : "Default Implementations",
                     "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/halfwidthcornerquoted",
+                        "title" : "var halfWidthCornerQuoted: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/customstringconvertible-implementations",
+                    "title" : "CustomStringConvertible Implementations",
+                    "type" : "symbol"
                   },
                   {
                     "children" : [
@@ -3846,6 +4314,22 @@
               {
                 "children" : [
                   {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/halfwidthcornerquoted",
+                    "title" : "var halfWidthCornerQuoted: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
                     "title" : "Operators",
                     "type" : "groupMarker"
                   },
@@ -3972,6 +4456,22 @@
               {
                 "children" : [
                   {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/documentencoding\/halfwidthcornerquoted",
+                    "title" : "var halfWidthCornerQuoted: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/documentencoding\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
                     "title" : "Operators",
                     "type" : "groupMarker"
                   },
@@ -4066,6 +4566,22 @@
                   {
                     "children" : [
                       {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/halfwidthcornerquoted",
+                        "title" : "var halfWidthCornerQuoted: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/customstringconvertible-implementations",
+                    "title" : "CustomStringConvertible Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
                         "title" : "Operators",
                         "type" : "groupMarker"
                       },
@@ -4087,6 +4603,22 @@
               {
                 "title" : "Default Implementations",
                 "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/halfwidthcornerquoted",
+                    "title" : "var halfWidthCornerQuoted: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
               },
               {
                 "children" : [
@@ -4152,6 +4684,22 @@
               {
                 "title" : "Default Implementations",
                 "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/lookuperror\/halfwidthcornerquoted",
+                    "title" : "var halfWidthCornerQuoted: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/lookuperror\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
               },
               {
                 "children" : [

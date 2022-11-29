@@ -127,6 +127,7 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/CustomStringConvertible-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/Error-Implementations"
       ],
       "title" : "Default Implementations"
@@ -199,6 +200,17 @@
   "title" : "LookupError",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/lookuperror"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/LookupError/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/lookuperror\/customstringconvertible-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/LookupError/Error-Implementations": {
   "abstract" : [

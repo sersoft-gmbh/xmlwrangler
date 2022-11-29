@@ -126,6 +126,7 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser\/UnknownError\/CustomStringConvertible-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser\/UnknownError\/Error-Implementations"
       ],
       "title" : "Default Implementations"
@@ -239,6 +240,17 @@
   "title" : "Parser.UnknownError",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/parser\/unknownerror"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/Parser/UnknownError/CustomStringConvertible-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Parser\/UnknownError\/CustomStringConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CustomStringConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/parser\/unknownerror\/customstringconvertible-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Parser/UnknownError/Error-Implementations": {
   "abstract" : [
