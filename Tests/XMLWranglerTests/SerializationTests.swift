@@ -62,17 +62,15 @@ final class SerializationTests: XCTestCase {
         XCTAssertEqual(processingInstructions, expectedProcessingInstruction)
     }
 
-    private let testRoot: XWElement = {
-        XWElement(name: "root", attributes: ["some": "key"]) {
-            XWElement(name: "first")
-            XWElement(name: "second", content: "something")
-            XWElement(name: "third", elements: [
-                XWElement(name: "third_one"),
-                XWElement(name: "third_two", attributes: ["third_some": "value"]),
-                XWElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right"),
-            ])
-        }
-    }()
+    private let testRoot = XWElement(name: "root", attributes: ["some": "key"]) {
+        XWElement(name: "first")
+        XWElement(name: "second", content: "something")
+        XWElement(name: "third", elements: [
+            XWElement(name: "third_one"),
+            XWElement(name: "third_two", attributes: ["third_some": "value"]),
+            XWElement(name: "third_three", attributes: ["third_some": "value"], content: "test this right"),
+        ])
+    }
 
     private let mixedContentRoot = XWElement(name: "root") {
         "Some text is here to check."
@@ -104,22 +102,22 @@ final class SerializationTests: XCTestCase {
     }
 
     func testXMLDocumentSerialization() {
-        let str1 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf8)
+        let str1 = String(xmlDocumentRoot: testRoot, version: .init(major: 1), encoding: .utf8)
         let expected1 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root some=\"key\"><first/><second>something</second><third><third_one/><third_two third_some=\"value\"/><third_three third_some=\"value\">test this right</third_three></third></root>"
         
-        let str2 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf8, options: [.pretty])
+        let str2 = String(xmlDocumentRoot: testRoot, version: .init(major: 1), encoding: .utf8, options: [.pretty])
         let expected2 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root some=\"key\">\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some=\"value\"/>\n<third_three third_some=\"value\">test this right</third_three>\n</third>\n</root>"
         
-        let str3 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf8, options: [.singleQuoteAttributes])
+        let str3 = String(xmlDocumentRoot: testRoot, version: .init(major: 1), encoding: .utf8, options: [.singleQuoteAttributes])
         let expected3 = "<?xml version='1.0' encoding='UTF-8'?><root some='key'><first/><second>something</second><third><third_one/><third_two third_some='value'/><third_three third_some='value'>test this right</third_three></third></root>"
         
-        let str4 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf8, options: [.pretty, .singleQuoteAttributes])
+        let str4 = String(xmlDocumentRoot: testRoot, version: .init(major: 1), encoding: .utf8, options: [.pretty, .singleQuoteAttributes])
         let expected4 = "<?xml version='1.0' encoding='UTF-8'?>\n<root some='key'>\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some='value'/>\n<third_three third_some='value'>test this right</third_three>\n</third>\n</root>"
         
-        let str5 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .utf16)
+        let str5 = String(xmlDocumentRoot: testRoot, version: .init(major: 1), encoding: .utf16)
         let expected5 = "<?xml version=\"1.0\" encoding=\"UTF-16\"?><root some=\"key\"><first/><second>something</second><third><third_one/><third_two third_some=\"value\"/><third_three third_some=\"value\">test this right</third_three></third></root>"
         
-        let str6 = String(xmlDocumentRoot: testRoot, version: Version(major: 1), encoding: .ascii)
+        let str6 = String(xmlDocumentRoot: testRoot, version: .init(major: 1), encoding: .ascii)
         let expected6 = "<?xml version=\"1.0\" encoding=\"ASCII\"?><root some=\"key\"><first/><second>something</second><third><third_one/><third_two third_some=\"value\"/><third_three third_some=\"value\">test this right</third_three></third></root>"
         
         XCTAssertEqual(str1, expected1)

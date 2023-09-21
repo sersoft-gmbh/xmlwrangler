@@ -17,7 +17,7 @@ public enum XMLContentBuilder: Sendable {
     }
 
     @inlinable
-    public static func buildExpression<T: XMLElementConvertible>(_ element: T) -> XMLElement.Content {
+    public static func buildExpression(_ element: some XMLElementConvertible) -> XMLElement.Content {
         .init(storage: [.element(element.xml)])
     }
 
@@ -62,7 +62,7 @@ public enum XMLContentBuilder: Sendable {
 
 extension XMLElement {
     @inlinable
-    public init(name: Name, attributes: Attributes = [:], @XMLContentBuilder content: () -> Content) {
-        self.init(name: name, attributes: attributes, content: content())
+    public init(name: Name, attributes: Attributes = [:], @XMLContentBuilder content: () throws -> Content) rethrows {
+        try self.init(name: name, attributes: attributes, content: content())
     }
 }

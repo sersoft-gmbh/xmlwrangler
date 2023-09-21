@@ -7,16 +7,13 @@ extension XMLElement.Content {
     @inlinable
     public var allStrings: Array<Element.StringPart> { storage.compactMap(\.string) }
 
-    @usableFromInline
-    internal typealias LazyStorageAllSequence<T> = LazyMapSequence<LazyFilterSequence<LazyMapSequence<Storage, Optional<T>>>, T>
-
     @inlinable
-    internal var lazyAllElements: LazyStorageAllSequence<XMLElement> {
+    internal var lazyAllElements: some Sequence<XMLElement> {
         storage.lazy.compactMap(\.element)
     }
 
 //    @inlinable
-//    internal var lazyAllString: LazyStorageAllSequence<Element.StringPart> {
+//    internal var lazyAllString: some Sequence<Element.StringPart> {
 //        storage.lazy.compactMap(\.string)
 //    }
 
@@ -80,7 +77,7 @@ extension XMLElement.Content {
     /// - Returns: The found elements in the order they were found in the tree. May be empty if nothing was found.
     /// - Note: ``XMLElement/Content/Element/string(_:)`` elements are skipped.
     @inlinable
-    public func find(elementsNamed name: XMLElement.Name, recursive: Bool = false) -> [XMLElement] {
+    public func find(elementsNamed name: XMLElement.Name, recursive: Bool = false) -> Array<XMLElement> {
         find(recursive: recursive) { $0.name == name }
     }
 

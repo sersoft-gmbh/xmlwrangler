@@ -5,7 +5,7 @@ extension XMLElement {
     /// - Parameter path: A collection of element names which represent the path to extract the element from.
     /// - Returns: The element at the given path.
     /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
-    public func element<Path: Collection>(at path: Path) throws -> XMLElement where Path.Element == Name {
+    public func element(at path: some Collection<Name>) throws -> XMLElement {
         guard !path.isEmpty else { return self }
         guard let nextElement = content.findFirst(elementNamed: path[path.startIndex], recursive: false) else {
             throw LookupError.missingChild(element: self, childName: path[path.startIndex])

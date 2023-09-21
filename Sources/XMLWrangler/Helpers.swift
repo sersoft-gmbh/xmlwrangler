@@ -6,11 +6,9 @@
 /// - Returns: The output of the converter.
 /// - Throws: `error` in case the `converter` returns nil or any error thrown by `converter`.
 @inlinable
-func _convert<Input, Output, Error>(_ input: Input,
-                                    using converter: (Input) throws -> Output?,
-                                    failingWith error: @autoclosure () -> Error) throws -> Output
-where Error: Swift.Error
-{
+func _convert<Input, Output>(_ input: Input,
+                             using converter: (Input) throws -> Output?,
+                             failingWith error: @autoclosure () -> some Error) throws -> Output {
     guard let converted = try converter(input) else { throw error() }
     return converted
 }
@@ -18,7 +16,7 @@ where Error: Swift.Error
 extension RawRepresentable where RawValue: LosslessStringConvertible {
     /// Creates an instance of self from the description of the `RawValue`. Returns nil if nil is returned by `RawValue.init(_:)`
     /// - Parameter rawValueDescription: The description of the `RawValue` to use to try to create an instance.
-    @usableFromInline
+    @inlinable
     init?(rawValueDescription: String) {
         guard let rawValue = RawValue(rawValueDescription) else { return nil }
         self.init(rawValue: rawValue)

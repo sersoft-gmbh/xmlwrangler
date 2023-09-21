@@ -12,13 +12,14 @@ Easily deal with XMLs in Swift.
 
 Add the following dependency to your `Package.swift`:
 ```swift
-.package(url: "https://github.com/sersoft-gmbh/xmlwrangler.git", from: "5.0.0"),
+.package(url: "https://github.com/sersoft-gmbh/xmlwrangler", from: "6.0.0"),
 ```
 
 ## Compatibility
 
 -   For Swift up to version 5.2, use XMLWrangler version 3.x.y.
 -   For Swift as of version 5.3, use XMLWrangler version 5.x.y.
+-   For Swift as of version 5.9, use XMLWrangler version 6.x.y.
 
 ## Usage
 
@@ -131,4 +132,4 @@ If you find a bug / like to see a new feature in XMLWrangler there are a few way
 
 See [LICENSE](./LICENSE) file.
 
-Copyright &copy; 2016-2021 ser.soft GmbH.
+Copyright &copy; 2016-2023 ser.soft GmbH.

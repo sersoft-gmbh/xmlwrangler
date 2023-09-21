@@ -29,7 +29,7 @@ extension XMLAttributeContentConvertible where Self: RawRepresentable, RawValue 
     public var xmlAttributeContent: XMLElement.Attributes.Content { .init(rawValue) }
 }
 
-extension ExpressibleByXMLAttributeContent where Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
+extension ExpressibleByXMLAttributeContent where Self: RawRepresentable, RawValue: LosslessStringConvertible {
     @inlinable
     public init?(xmlAttributeContent: XMLElement.Attributes.Content) {
         self.init(rawValueDescription: xmlAttributeContent.rawValue)
@@ -43,7 +43,7 @@ extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible
     }
 }
 
-extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible, Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
+extension ExpressibleByXMLAttributeContent where Self: LosslessStringConvertible, Self: RawRepresentable, RawValue: LosslessStringConvertible {
     @inlinable
     public init?(xmlAttributeContent: XMLElement.Attributes.Content) {
         self.init(rawValueDescription: xmlAttributeContent.rawValue)
@@ -157,7 +157,7 @@ extension XMLElement {
         /// - Parameter keysAndContents: The sequence of unique key and content tuples to initialize from.
         /// - Precondition: The keys must be unique. Failure to fulfill this precondition will result in crahes.
         @inlinable
-        public init<S>(uniqueKeysWithContents keysAndContents: S) where S: Sequence, S.Element == (Key, Content) {
+        public init(uniqueKeysWithContents keysAndContents: some Sequence<(Key, Content)>) {
             self.init(storage: .init(uniqueKeysWithValues: keysAndContents))
         }
 
@@ -167,9 +167,8 @@ extension XMLElement {
         ///   - combine: The closure to use for uniquing keys. The closure is passed the two contents for non-unique keys and should return the content to choose.
         /// - Throws: Rethrows errors thrown by `combine`.
         @inlinable
-        public init<S>(_ keysAndContents: S, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows
-        where S: Sequence, S.Element == (Key, Content)
-        {
+        public init(_ keysAndContents: some Sequence<(Key, Content)>,
+                    uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows {
             try self.init(storage: .init(keysAndContents, uniquingKeysWith: combine))
         }
 
@@ -189,7 +188,7 @@ extension XMLElement {
         ///   - default: The default value to use if no value exists for the given `key`.
         /// - Returns: The content for the given key. `default` if none is found.
         @inlinable
-        public subscript<Default: XMLAttributeContentConvertible>(key: Key, default defaultValue: @autoclosure () -> Default) -> Content {
+        public subscript(key: Key, default defaultValue: @autoclosure () -> some XMLAttributeContentConvertible) -> Content {
             get { storage[key, default: defaultValue().xmlAttributeContent] }
             set { storage[key, default: defaultValue().xmlAttributeContent] = newValue }
         }
@@ -231,9 +230,8 @@ extension XMLElement {
         ///              The returned element is used, the other one discarded.
         /// - Throws: Any error thrown by `combine`.
         @inlinable
-        public mutating func merge<S>(_ other: S, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows
-        where S: Sequence, S.Element == (Key, Content)
-        {
+        public mutating func merge(_ other: some Sequence<(Key, Content)>,
+                                   uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows {
             try storage.merge(other, uniquingKeysWith: combine)
         }
 
@@ -256,9 +254,8 @@ extension XMLElement {
         /// - Throws: Any error thrown by `combine`.
         /// - Returns: The merged attributes list.
         @inlinable
-        public func merging<S>(_ other: S, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows -> Self
-        where S: Sequence, S.Element == (Key, Content)
-        {
+        public func merging(_ other: some Sequence<(Key, Content)>, 
+                            uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows -> Self {
             try .init(storage: storage.merging(other, uniquingKeysWith: combine))
         }
 
@@ -295,7 +292,7 @@ extension Dictionary where Key == XMLElement.Attributes.Key, Value == XMLElement
 
 extension XMLElement.Attributes: ExpressibleByDictionaryLiteral {
     @inlinable
-    public init(dictionaryLiteral elements: (Key, XMLAttributeContentConvertible)...) {
+    public init(dictionaryLiteral elements: (Key, any XMLAttributeContentConvertible)...) {
         self.init(storage: .init(uniqueKeysWithValues: elements.lazy.map { ($0, $1.xmlAttributeContent) }))
     }
 }

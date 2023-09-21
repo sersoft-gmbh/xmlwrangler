@@ -171,7 +171,7 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
         }
 
         @usableFromInline
-        mutating func _appendString<S: StringProtocol>(_ string: S) {
+        mutating func _appendString(_ string: some StringProtocol) {
             guard !string.isEmpty else { return }
             if case .string(let str) = storage.last {
                 storage[storage.indexBeforeEndIndex] = .string(str + string)
@@ -202,30 +202,26 @@ extension XMLElement.Content: ExpressibleByStringInterpolation {
         /// Appends a string element to the contents.
         /// - Parameter string: The string to append.
         @inlinable
-        public mutating func appendInterpolation<S: StringProtocol>(_ string: S) {
+        public mutating func appendInterpolation(_ string: some StringProtocol) {
             _appendString(string)
         }
 
 //        @inlinable
-//        public mutating func appendInterpolation<B: BinaryInteger>(_ int: B) {
+//        public mutating func appendInterpolation(_ int: some BinaryInteger) {
 //            _appendString(String(int))
 //        }
 
         /// Appends the ``XMLElement`` of an ``XMLElementConvertible`` type to the contents.
         /// - Parameter convertible: The convertible whose `xml` to append to the contents.
         @inlinable
-        public mutating func appendInterpolation<Convertible>(_ convertible: Convertible)
-        where Convertible: XMLElementConvertible
-        {
+        public mutating func appendInterpolation(_ convertible: some XMLElementConvertible) {
             storage.append(.element(convertible.xml))
         }
 
         /// Appends the contents of another sequence of ``XMLElement/Content/Element`` to the contents.
         /// - Parameter contents: The sequence to append.
         @inlinable
-        public mutating func appendInterpolation<C: Sequence>(_ contents: C)
-        where C.Element == XMLElement.Content.Element
-        {
+        public mutating func appendInterpolation(_ contents: some Sequence<XMLElement.Content.Element>) {
             _appendContent(.init(contents))
         }
 

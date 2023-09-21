@@ -69,7 +69,7 @@ public final class Parser: ParserDelegate {
                             didStartElement elementName: String,
                             namespaceURI: String?,
                             qualifiedName qName: String?,
-                            attributes attributeDict: [String: String]) {
+                            attributes attributeDict: Dictionary<String, String>) {
         elementStack.append(.init(name: .init(rawValue: elementName), attributes: attributeDict.asAttributes))
     }
 
@@ -129,7 +129,7 @@ fileprivate protocol ParserDelegate: AnyObject {
                 didStartElement elementName: String,
                 namespaceURI: String?,
                 qualifiedName qName: String?,
-                attributes attributeDict: [String: String])
+                attributes attributeDict: Dictionary<String, String>)
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
     func parser(_ parser: XMLParser, foundCharacters string: String)
     func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data)
@@ -145,12 +145,12 @@ extension Parser {
             self.delegate = delegate
         }
 
-        #if canImport(ObjectiveC)
+#if canImport(ObjectiveC)
         @objc dynamic func parser(_ parser: XMLParser,
                                   didStartElement elementName: String,
                                   namespaceURI: String?,
                                   qualifiedName qName: String?,
-                                  attributes attributeDict: [String: String] = [:]) {
+                                  attributes attributeDict: Dictionary<String, String> = [:]) {
             delegate.parser(parser, didStartElement: elementName, namespaceURI: namespaceURI, qualifiedName: qName, attributes: attributeDict)
         }
 
@@ -165,12 +165,12 @@ extension Parser {
         @objc dynamic func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
             delegate.parser(parser, foundCDATA: CDATABlock)
         }
-        #else
+#else
         func parser(_ parser: XMLParser,
                     didStartElement elementName: String,
                     namespaceURI: String?,
                     qualifiedName qName: String?,
-                    attributes attributeDict: [String: String] = [:]) {
+                    attributes attributeDict: Dictionary<String, String> = [:]) {
             delegate.parser(parser, didStartElement: elementName, namespaceURI: namespaceURI, qualifiedName: qName, attributes: attributeDict)
         }
 
@@ -185,6 +185,6 @@ extension Parser {
         func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
             delegate.parser(parser, foundCDATA: CDATABlock)
         }
-        #endif
+#endif
     }
 }

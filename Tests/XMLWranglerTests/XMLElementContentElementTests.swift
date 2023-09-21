@@ -22,33 +22,11 @@ final class XMLElementContentElementTests: XCTestCase {
         XCTAssertEqual(content2, [.string("hello world")])
     }
 
-    @available(*, deprecated)
-    func testAppendingString_Deprecated() {
-        var content: XWElement.Content = []
-        var content2: XWElement.Content = ["hello"]
-
-        content.append(string: "_this")
-        content2.append(string: " world")
-
-        XCTAssertEqual(content, [.string("_this")])
-        XCTAssertEqual(content2, [.string("hello world")])
-    }
-
     func testAppendingObject() {
         var content: XWElement.Content = []
         let child = XWElement(name: "_this")
 
         content.appendElement(child)
-
-        XCTAssertEqual(content, [.element(child)])
-    }
-
-    @available(*, deprecated)
-    func testAppendingObject_Deprecated() {
-        var content: XWElement.Content = []
-        let child = XWElement(name: "_this")
-
-        content.append(element: child)
 
         XCTAssertEqual(content, [.element(child)])
     }
@@ -71,18 +49,6 @@ final class XMLElementContentElementTests: XCTestCase {
         let child3 = XWElement(name: "ghi3")
 
         content.appendElements(child1, child2, child3)
-
-        XCTAssertEqual(content, [.element(child1), .element(child2), .element(child3)])
-    }
-
-    @available(*, deprecated)
-    func testAppendingElements_Deprecated() {
-        var content: XWElement.Content = []
-        let child1 = XWElement(name: "abc1")
-        let child2 = XWElement(name: "def2")
-        let child3 = XWElement(name: "ghi3")
-
-        content.append(elements: child1, child2, child3)
 
         XCTAssertEqual(content, [.element(child1), .element(child2), .element(child3)])
     }

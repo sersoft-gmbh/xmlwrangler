@@ -26,7 +26,7 @@ extension ExpressibleByXMLElement {
     }
 }
 
-extension ExpressibleByXMLElement where Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
+extension ExpressibleByXMLElement where Self: RawRepresentable, RawValue: LosslessStringConvertible {
     @inlinable
     public init(xml: XMLElement) throws {
         self = try Self._fromContent(of: xml, converter: Self.init)
@@ -40,7 +40,7 @@ extension ExpressibleByXMLElement where Self: LosslessStringConvertible {
     }
 }
 
-extension ExpressibleByXMLElement where Self: LosslessStringConvertible, Self: RawRepresentable, Self.RawValue: LosslessStringConvertible {
+extension ExpressibleByXMLElement where Self: LosslessStringConvertible, Self: RawRepresentable, RawValue: LosslessStringConvertible {
     @inlinable
     public init(xml: XMLElement) throws {
         self = try Self._fromContent(of: xml, converter: Self.init(rawValue:))

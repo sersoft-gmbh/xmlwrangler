@@ -1,15 +1,40 @@
-import struct Foundation.CharacterSet
-@_exported import struct SemVer.Version
+/// Represents the version of an XML document.
+public struct XMLVersion: Sendable, Hashable, Comparable, CustomStringConvertible {
+    /// The major version of the document.
+    public var major: Int
+    /// The minor version of the document.
+    public var minor: Int
+
+    @usableFromInline
+    var versionString: String {
+        "\(major).\(minor)"
+    }
+
+    public var description: String {
+        versionString
+    }
+    
+    /// Creates a new XML version using the given parts.
+    /// - Parameters:
+    ///   - major: The major part.
+    ///   - minor: The minor part.
+    public init(major: Int, minor: Int = 0) {
+        self.major = major
+        self.minor = minor
+    }
+
+    public static func <(lhs: Self, rhs: Self) -> Bool {
+        (lhs.major, lhs.minor) < (rhs.major, rhs.minor)
+    }
+}
 
 /// Represents options to use for serializing XML elements.
 @frozen
 public struct SerializationOptions: OptionSet, Sendable {
     public typealias RawValue = UInt
 
-    /// inherited
     public let rawValue: RawValue
 
-    /// inherited
     public init(rawValue: RawValue) {
         self.rawValue = rawValue
     }
@@ -95,7 +120,7 @@ public enum EscapableContent: Equatable, Sendable, CustomStringConvertible {
     }
 
     // See: https://en.wikipedia.org/wiki/XML#Escaping
-    fileprivate var replacements: [Replacement] {
+    fileprivate var replacements: Array<Replacement> {
         let ampersandReplacement = ("&", "&amp;")
         let doubleQuoteReplacement = ("\"", "&quot;")
         let singleQuoteReplacement = ("'", "&apos;")
@@ -110,10 +135,6 @@ public enum EscapableContent: Equatable, Sendable, CustomStringConvertible {
         case .cdata, .comment, .processingInstruction: return []
         }
     }
-}
-
-fileprivate extension Version {
-    var xmlVersionString: String { "\(major).\(minor)" }
 }
 
 extension String {
@@ -137,15 +158,15 @@ extension String {
     /// Creates a String by serializing an XML element as root and adding the <?xml ...?> document header.
     /// - Parameters:
     ///   - root: The root element for the XML document.
-    ///   - version: The version of the XML document. Only major and minor are used since XML only supports these. Defaults to `"1.0"`.
+    ///   - version: The version of the XML document. Defaults to `"1.0"`.
     ///   - encoding: The encoding for the document. Defaults to ``DocumentEncoding/utf8``.
     ///   - options: The options to use for serializing. Defaults to empty options.
     /// - SeeAlso: ``String/init(xml:options:)``
     public init(xmlDocumentRoot root: XMLElement,
-                version: Version = Version(major: 1),
+                version: XMLVersion = XMLVersion(major: 1),
                 encoding: DocumentEncoding = .utf8,
                 options: SerializationOptions = []) {
-        let versionAttribute = "version=" + options.quotes.quoted(attributeString: version.xmlVersionString)
+        let versionAttribute = "version=" + options.quotes.quoted(attributeString: version.versionString)
         let encodingAttribute = "encoding=" + options.quotes.quoted(attributeString: encoding.attributeValue)
         self = "<?xml \(versionAttribute) \(encodingAttribute)?>"
             + options.lineSeparator
@@ -155,17 +176,15 @@ extension String {
     /// Creates a String by serializing the ``XMLElement`` representation of the given `convertible` as root and adding the <?xml ...?> document header.
     /// - Parameters:
     ///   - convertible: The type whose ``XMLElement`` representation to use as root element for the serialization.
-    ///   - version: The version of the XML document. Only major and minor are used since XML only supports these. Defaults to `"1.0"`.
+    ///   - version: The version of the XML document. Defaults to `"1.0"`.
     ///   - encoding: The encoding for the document. Defaults to ``DocumentEncoding/utf8``.
     ///   - options: The options to use for serializing. Defaults to empty options.
     /// - SeeAlso: ``String/init(xmlDocumentRoot:version:encoding:options:)`` and ``XMLElementConvertible``.
     @inlinable
-    public init<Convertible>(xmlDocumentRootWith convertible: Convertible,
-                             version: Version = Version(major: 1),
-                             encoding: DocumentEncoding = .utf8,
-                             options: SerializationOptions = [])
-    where Convertible: XMLElementConvertible
-    {
+    public init(xmlDocumentRootWith convertible: some XMLElementConvertible,
+                version: XMLVersion = XMLVersion(major: 1),
+                encoding: DocumentEncoding = .utf8,
+                options: SerializationOptions = []) {
         self.init(xmlDocumentRoot: convertible.xml, version: version, encoding: encoding, options: options)
     }
 
@@ -194,9 +213,7 @@ extension String {
     ///   - options: The options to use for serializing. Defaults to empty options.
     /// - SeeAlso: ``String/init(xml:options:)`` and ``XMLElementConvertible``
     @inlinable
-    public init<Convertible>(xmlOf convertible: Convertible, options: SerializationOptions = [])
-    where Convertible: XMLElementConvertible
-    {
+    public init(xmlOf convertible: some XMLElementConvertible, options: SerializationOptions = []) {
         self.init(xml: convertible.xml, options: options)
     }
 
@@ -208,7 +225,7 @@ extension String {
         let (contentStr, didContainElementsOrMultilineStrings) = content.compressed().reduce(into: ("", false)) {
             switch $1 {
             case .string(let str):
-                let hasNewlines = !CharacterSet(charactersIn: str).isDisjoint(with: .newlines)
+                let hasNewlines = str.contains { $0.isNewline }
                 $0.1 = $0.1 || hasNewlines
                 $0.0 += str.escaped(content: .text) + (hasNewlines ? options.lineSeparator : "")
             case .element(let obj):

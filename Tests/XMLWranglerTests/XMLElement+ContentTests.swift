@@ -40,7 +40,8 @@ final class XMLElement_ContentTests: XCTestCase {
         XCTAssertEqual(content.count, content.storage.count)
         XCTAssertEqual(content.isEmpty, content.storage.isEmpty)
         XCTAssertEqual(content.isEmpty, content.storage.isEmpty)
-        XCTAssertEqual(content.index(after: content.startIndex), content.storage.index(after: content.storage.startIndex))
+        XCTAssertEqual(content.index(after: content.startIndex), 
+                       content.storage.index(after: content.storage.startIndex))
         XCTAssertEqual(content[content.startIndex], content.storage[content.storage.startIndex])
         content[content.startIndex] = .element(.init(name: "otherElem"))
         XCTAssertEqual(content.storage[content.storage.startIndex], .element(.init(name: "otherElem")))
@@ -48,7 +49,8 @@ final class XMLElement_ContentTests: XCTestCase {
 
     func testBidirectionalCollectionConformance() {
         let content: Content = ["bidi"]
-        XCTAssertEqual(content.index(before: content.endIndex), content.storage.index(before: content.storage.endIndex))
+        XCTAssertEqual(content.index(before: content.endIndex), 
+                       content.storage.index(before: content.storage.endIndex))
     }
 
     func testRandomAccessCollectionConformance() {

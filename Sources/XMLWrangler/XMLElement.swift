@@ -28,7 +28,7 @@ public struct XMLElement: Sendable, Equatable, Identifiable, CustomStringConvert
     ///   - name: The name of the new element.
     ///   - attributes: The attributes of the new element (defaults to empty attributes).
     ///   - content: The content of the new element (defaults to empty contents).
-    public init(name: Name, attributes: Attributes = .init(), content: Content = []) {
+    public init(name: Name, attributes: Attributes = .init(), content: Content = .init()) {
         self.name = name
         self.attributes = attributes
         self.content = content
@@ -50,9 +50,7 @@ public struct XMLElement: Sendable, Equatable, Identifiable, CustomStringConvert
     ///   - attributes: The attributes of the new element (defaults to empty attributes).
     ///   - elements: A sequence of ``XMLElement``s to use as content for the new element.
     @inlinable
-    public init<Elements>(name: Name, attributes: Attributes = .init(), elements: Elements)
-    where Elements: Sequence, Elements.Element == XMLElement
-    {
+    public init(name: Name, attributes: Attributes = .init(), elements: some Sequence<XMLElement>) {
         self.init(name: name, attributes: attributes, content: .init(storage: elements.map { .element($0) }))
     }
 

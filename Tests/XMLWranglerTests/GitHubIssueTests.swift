@@ -1,5 +1,5 @@
 import XCTest
-@testable import XMLWrangler
+import XMLWrangler
 
 final class GitHubIssueTests: XCTestCase {
     func testIssue11() throws {

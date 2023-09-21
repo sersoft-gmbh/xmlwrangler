@@ -27,8 +27,8 @@ final class XMLElement_LookupTests: XCTestCase {
 
         var stringValue: String {
             switch self {
-            case .rawValue(let rawValue): return rawValue
-            case .description(let description): return description
+            case .rawValue(let rawValue): rawValue
+            case .description(let description): description
             }
         }
 
@@ -197,8 +197,14 @@ final class XMLElement_LookupTests: XCTestCase {
     }
 
     func testFailedRawRepresentableAttributeConversion() {
-        XCTAssertThrowsError(try sut.convertedAttribute(for: "version", converter: { StringRepresentableWithNotConvertibleRawValue(rawValueDescription: $0.rawValue) })) {
-            XCTAssert($0, is: .cannotConvertAttribute(element: sut, key: "version", content: "2.3.4", type: StringRepresentableWithNotConvertibleRawValue.self))
+        XCTAssertThrowsError(try sut.convertedAttribute(
+            for: "version",
+            converter: { StringRepresentableWithNotConvertibleRawValue(rawValueDescription: $0.rawValue) }
+        )) {
+            XCTAssert($0, is: .cannotConvertAttribute(element: sut,
+                                                      key: "version",
+                                                      content: "2.3.4",
+                                                      type: StringRepresentableWithNotConvertibleRawValue.self))
         }
     }
 
@@ -249,7 +255,9 @@ final class XMLElement_LookupTests: XCTestCase {
 
     func testFailedExistingStringContentConversion() {
         XCTAssertThrowsError(try stringContentSUT.convertedStringContent(converter: NotStringInitializable.init)) {
-            XCTAssert($0, is: .cannotConvertStringContent(element: stringContentSUT, stringContent: "we have content", type: NotStringInitializable.self))
+            XCTAssert($0, is: .cannotConvertStringContent(element: stringContentSUT, 
+                                                          stringContent: "we have content",
+                                                          type: NotStringInitializable.self))
         }
     }
 

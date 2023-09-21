@@ -1,6 +1,6 @@
 extension XMLElement.Content {
     @usableFromInline
-    mutating func _appendString<S: StringProtocol>(_ string: S, separator _: @autoclosure () -> Character?) {
+    mutating func _appendString(_ string: some StringProtocol, separator _: @autoclosure () -> Character?) {
         if !storage.isEmpty,
            case let lastIndex = storage.index(endIndex, offsetBy: -1),
            case .string(let str) = storage[lastIndex] {
@@ -18,26 +18,11 @@ extension XMLElement.Content {
         _appendString(string, separator: nil)
     }
 
-    /// Appends either a new ``XMLElement/Content/Element/string(_:)`` element,
-    /// or if the last one is already ``XMLElement/Content/Element/string(_:)``, appends `string` to the last one.
-    /// - Parameter string: The string to append.
-    @inlinable
-    @available(*, deprecated, message: "Use appendString(_:)", renamed: "appendString(_:)")
-    public mutating func append(string: Element.StringPart) { appendString(string) }
-
     /// Appends an element wrapped as ``XMLElement/Content/Element/element(_:)``.
     /// - Parameter element: The element to append wrapped in ``XMLElement/Content/Element/element(_:)``.
     @inlinable
     public mutating func appendElement(_ element: XMLElement) {
         storage.append(.element(element))
-    }
-
-    /// Appends an element wrapped as ``XMLElement/Content/Element/element(_:)``.
-    /// - Parameter element: The element to append wrapped in ``XMLElement/Content/Element/element(_:)``.
-    @inlinable
-    @available(*, deprecated, message: "Use appendElement(_:)", renamed: "appendElement(_:)")
-    public mutating func append(element: XMLElement) {
-        appendElement(element)
     }
 
     /// Appends the xml element of a convertible type.
@@ -50,7 +35,7 @@ extension XMLElement.Content {
     /// Appends the contents of a sequcence of elements wrapped as ``XMLElement/Content/Element/element(_:)``.
     /// - Parameter elements: The sequence of elements to append wrapped in ``XMLElement/Content/Element/element(_:)``.
     @inlinable
-    public mutating func append<S: Sequence>(contentsOf elements: S) where S.Element == XMLElement {
+    public mutating func append(contentsOf elements: some Sequence<XMLElement>) {
         storage.append(contentsOf: elements.lazy.map { .element($0) })
     }
 
@@ -58,14 +43,6 @@ extension XMLElement.Content {
     /// - Parameter elements: The elements to append wrapped in ``XMLElement/Content/Element/element(_:)``.
     @inlinable
     public mutating func appendElements(_ elements: XMLElement...) {
-        append(contentsOf: elements)
-    }
-
-    /// Appends the one or more elements wrapped as ``XMLElement/Content/Element/element(_:)``.
-    /// - Parameter elements: The elements to append wrapped in ``XMLElement/Content/Element/element(_:)``.
-    @inlinable
-    @available(*, deprecated, message: "Use appendElements(_:)", renamed: "appendElements(_:)")
-    public mutating func append(elements: XMLElement...) {
         append(contentsOf: elements)
     }
 

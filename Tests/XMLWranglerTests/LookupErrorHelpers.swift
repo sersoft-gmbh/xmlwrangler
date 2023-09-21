@@ -23,7 +23,7 @@ extension LookupError: Equatable {
     }
 }
 
-func XCTAssert(_ error: Error, is expectedError: LookupError, file: StaticString = #filePath, line: UInt = #line) {
+func XCTAssert(_ error: some Error, is expectedError: LookupError, file: StaticString = #filePath, line: UInt = #line) {
     XCTAssertTrue(error is LookupError, "\(error) is no \(LookupError.self)", file: file, line: line)
     XCTAssertEqual(error as? LookupError, expectedError, file: file, line: line)
 }
