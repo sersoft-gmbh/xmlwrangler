@@ -2,8 +2,8 @@ import XCTest
 import XMLWrangler
 
 // Only equatable for testing
-extension LookupError: Equatable {
-    public static func ==(lhs: LookupError, rhs: LookupError) -> Bool {
+extension XWElement.LookupError: Equatable {
+    public static func ==(lhs: Self, rhs: Self) -> Bool {
         switch (lhs, rhs) {
         case (.missingChild(let lhsElement, let lhsChildElementName), .missingChild(let rhsElement, let rhsChildElementName)):
             return lhsElement == rhsElement && lhsChildElementName == rhsChildElementName
@@ -23,7 +23,7 @@ extension LookupError: Equatable {
     }
 }
 
-func XCTAssert(_ error: some Error, is expectedError: LookupError, file: StaticString = #filePath, line: UInt = #line) {
-    XCTAssertTrue(error is LookupError, "\(error) is no \(LookupError.self)", file: file, line: line)
-    XCTAssertEqual(error as? LookupError, expectedError, file: file, line: line)
+func XCTAssert(_ error: some Error, is expectedError: XWElement.LookupError, file: StaticString = #filePath, line: UInt = #line) {
+    XCTAssertTrue(error is XWElement.LookupError, "\(error) is no \(XWElement.LookupError.self)", file: file, line: line)
+    XCTAssertEqual(error as? XWElement.LookupError, expectedError, file: file, line: line)
 }

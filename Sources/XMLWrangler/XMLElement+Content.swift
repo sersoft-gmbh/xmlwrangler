@@ -27,15 +27,15 @@ extension XMLElement {
 
             public var description: String {
                 switch self {
-                case .string(let str): return "StringPart(\(str))"
-                case .element(let element): return "Element(\(element.name))"
+                case .string(let str): "StringPart(\(str))"
+                case .element(let element): "Element(\(element.name))"
                 }
             }
 
             public var debugDescription: String {
                 switch self {
-                case .string(let str): return "StringPart { \(str) }"
-                case .element(let element): return "Element {\n\(element.debugDescription)\n}"
+                case .string(let str): "StringPart { \(str) }"
+                case .element(let element): "Element {\n\(element.debugDescription)\n}"
                 }
             }
 
@@ -125,9 +125,7 @@ extension XMLElement.Content: RandomAccessCollection {
 
 extension XMLElement.Content: RangeReplaceableCollection {
     @inlinable
-    public mutating func replaceSubrange<C>(_ subrange: Range<Index>, with newElements: C)
-    where C: Collection, Element == C.Element
-    {
+    public mutating func replaceSubrange(_ subrange: Range<Index>, with newElements: some Collection<Element>) {
         storage.replaceSubrange(subrange, with: newElements)
     }
 }

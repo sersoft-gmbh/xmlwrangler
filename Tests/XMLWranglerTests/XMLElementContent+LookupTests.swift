@@ -9,8 +9,8 @@ final class XMLElementContent_LookupTests: XCTestCase {
             "def",
             .element(.init(name: "test2")),
         ]
-        XCTAssertEqual(content.allElements, [.init(name: "test"), .init(name: "test2")])
-        XCTAssertEqual(content.allStrings, ["abc", "def"])
+        XCTAssertEqual(Array(content.allElements), [.init(name: "test"), .init(name: "test2")])
+        XCTAssertEqual(Array(content.allStrings), ["abc", "def"])
     }
 
     func testFindingObjectsShallow() {

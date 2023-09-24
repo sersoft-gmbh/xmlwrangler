@@ -4,19 +4,18 @@ extension XMLElement {
     /// Looks up a single child element at a given path of element names.
     /// - Parameter path: A collection of element names which represent the path to extract the element from.
     /// - Returns: The element at the given path.
-    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
+    /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
     public func element(at path: some Collection<Name>) throws -> XMLElement {
         guard !path.isEmpty else { return self }
-        guard let nextElement = content.findFirst(elementNamed: path[path.startIndex], recursive: false) else {
-            throw LookupError.missingChild(element: self, childName: path[path.startIndex])
-        }
+        guard let nextElement = content.findFirst(elementNamed: path[path.startIndex], recursive: false)
+        else { throw LookupError.missingChild(element: self, childName: path[path.startIndex]) }
         return try nextElement.element(at: path.dropFirst())
     }
 
     /// Looks up a single child element at a given path of element names.
     /// - Parameter path: A list of element names which represent the path to extract the element from.
     /// - Returns: The element at the given path.
-    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
+    /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
     @inlinable
     public func element(at path: Name...) throws -> XMLElement {
         try element(at: path)
@@ -39,11 +38,10 @@ extension XMLElement {
     /// Returns the value for a given attribute key if present.
     /// - Parameter key: The key for which to get the attribute value.
     /// - Returns: The attribute value for the given key.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key.
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key.
     public func attribute(for key: Attributes.Key) throws -> Attributes.Content {
-        guard let attribute = attributes[key] else {
-            throw LookupError.missingAttribute(element: self, key: key)
-        }
+        guard let attribute = attributes[key] 
+        else { throw LookupError.missingAttribute(element: self, key: key) }
         return attribute
     }
 
@@ -53,7 +51,7 @@ extension XMLElement {
     ///   - key: The key for which to get the attribute value.
     ///   - converter: The converter to use for the conversion.
     /// - Returns: The converted value.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key or any error thrown by `converter`.
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key or any error thrown by `converter`.
     /// - SeeAlso: ``XMLElement/attribute(for:)``
     @inlinable
     public func convertedAttribute<T>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T) throws -> T {
@@ -65,8 +63,8 @@ extension XMLElement {
     ///   - key: The key for which to get the attribute value.
     ///   - converter: The converter to use for the conversion.
     /// - Returns: The converted value.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key,
-    ///           ``LookupError/cannotConvertAttribute(element:key:content:type:)`` when `converter` returns `nil` or any error thrown by `converter`.
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key,
+    ///           ``XMLElement/LookupError/cannotConvertAttribute(element:key:content:type:)`` when `converter` returns `nil` or any error thrown by `converter`.
     /// - SeeAlso: ``XMLElement/attribute(for:)``
     public func convertedAttribute<T>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T?) throws -> T {
         let content = try attribute(for: key)
@@ -78,7 +76,7 @@ extension XMLElement {
     /// - Parameters:
     ///    - convertible: The convertible type. Defaults to `Target.self`.
     ///    - key: The key for which to get the attribute content.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
     ///           or any error thrown by ``ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)``.
     /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
     /// - SeeAlso: ``XMLElement/attribute(for:)`` and ``ExpressibleByXMLAttributeContent``
@@ -93,7 +91,7 @@ extension XMLElement {
     /// - Parameters:
     ///    - convertible: The convertible type. Defaults to `Target.self`.
     ///    - key: The key for which to get the attribute content.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
     ///           or any error thrown by ``ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)``.
     /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
     /// - SeeAlso: ``XMLElement/attribute(for:)`` and ``ExpressibleByXMLAttributeContent``
@@ -108,7 +106,7 @@ extension XMLElement {
     /// - Parameters:
     ///    - convertible: The convertible type. Defaults to `Target.self`.
     ///    - key: The key for which to get the attribute content.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
     ///           or any error thrown by ``ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)``.
     /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
     /// - SeeAlso: ``XMLElement/attribute(for:)`` and ``ExpressibleByXMLAttributeContent``
@@ -123,7 +121,7 @@ extension XMLElement {
     /// - Parameters:
     ///    - convertible: The convertible type. Defaults to `Target.self`.
     ///    - key: The key for which to get the attribute content.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
     ///           or any error thrown by ``ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)``.
     /// - Returns: An instance of the `Convertible` type initialized with the attribute content.
     /// - SeeAlso: ``XMLElement/attribute(for:)`` and ``ExpressibleByXMLAttributeContent``
@@ -141,9 +139,9 @@ extension XMLElement {
     /// passed into the `RawValue`'s `LosslessStringConvertible`-initializer.
     /// - Parameter key: The key for which to get the attribute value.
     /// - Returns: An instance of the `RawRepresentable` type initialized with the attribute value passed into the `RawValue`'s `LosslessStringConvertible`-initializer.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
-    ///           or ``LookupError/cannotConvertAttribute(element:key:content:type:)`` when the initializer of the `RawRepresentable` type or its `RawValue` returns nil.
-    /// - SeeAlso: ``XMLElement/convertedAttribute(for:converter:)``, ``RawRepresentable/init?(rawValue:)`` and ``LosslessStringConvertible.init?(_:)``
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
+    ///           or ``XMLElement/LookupError/cannotConvertAttribute(element:key:content:type:)`` when the initializer of the `RawRepresentable` type or its `RawValue` returns nil.
+    /// - SeeAlso: ``XMLElement/convertedAttribute(for:converter:)-1pm40``, ``Swift/RawRepresentable/init?(rawValue:)`` and ``Swift/LosslessStringConvertible/init?(_:)``
     @inlinable
     public func convertedAttribute<T: RawRepresentable>(for key: Attributes.Key) throws -> T
     where T.RawValue: LosslessStringConvertible
@@ -154,9 +152,9 @@ extension XMLElement {
     /// Returns the result of initializing a `LosslessStringConvertible` type with the value for a given attribute key.
     /// - Parameter key: The key for which to get the attribute value.
     /// - Returns: An instance of the `LosslessStringConvertible` type initialized with the attribute value.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
-    ///           or ``LookupError/cannotConvertAttribute(element:key:content:type:)`` when the initializer of the `LosslessStringConvertible` type returns nil.
-    /// - SeeAlso: ``XMLElement/convertedAttribute(for:converter:)`` and ``LosslessStringConvertible.init?(_:)``
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
+    ///           or ``XMLElement/LookupError/cannotConvertAttribute(element:key:content:type:)`` when the initializer of the `LosslessStringConvertible` type returns nil.
+    /// - SeeAlso: ``XMLElement/convertedAttribute(for:converter:)-1pm40`` and ``Swift/LosslessStringConvertible/init?(_:)``
     @inlinable
     public func convertedAttribute<T: LosslessStringConvertible>(for key: Attributes.Key) throws -> T {
         try convertedAttribute(for: key, converter: { T($0.rawValue) })
@@ -166,9 +164,9 @@ extension XMLElement {
     /// passed into the `RawValue`'s `LosslessStringConvertible`-initializer.
     /// - Parameter key: The key for which to get the attribute value.
     /// - Returns: An instance of the `RawRepresentable & LosslessStringConvertible` type initialized with the attribute value passed into the `RawValue`'s `LosslessStringConvertible`-initializer.
-    /// - Throws: ``LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
-    ///           or ``LookupError/cannotConvertAttribute(element:key:content:type:)`` when the initializer of the `RawRepresentable` type or its `RawValue` returns nil.
-    /// - SeeAlso: ``XMLElement/convertedAttribute(for:converter:)``, ``RawRepresentable/init?(rawValue:)`` and ``LosslessStringConvertible.init?(_:)``
+    /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key
+    ///           or ``XMLElement/LookupError/cannotConvertAttribute(element:key:content:type:)`` when the initializer of the `RawRepresentable` type or its `RawValue` returns nil.
+    /// - SeeAlso: ``XMLElement/convertedAttribute(for:converter:)-1pm40``, ``Swift/RawRepresentable/init?(rawValue:)`` and ``Swift/LosslessStringConvertible/init?(_:)``
     /// - Note: This overload will prefer the `RawRepresentable` initializer.
     @inlinable
     public func convertedAttribute<T: RawRepresentable & LosslessStringConvertible>(for key: Attributes.Key) throws -> T
@@ -183,7 +181,7 @@ extension XMLElement {
     // MARK: Retrieval
     /// Returns the combined string content of the element.
     /// - Returns: All ``XMLElement/Content/Element/string(_:)`` contents joined together into one string.
-    /// - Throws: ``LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements.
+    /// - Throws: ``XMLElement/LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements.
     public func stringContent() throws -> String {
         let stringContent = content.allStrings
         guard !stringContent.isEmpty else { throw LookupError.missingStringContent(element: self) }
@@ -194,7 +192,7 @@ extension XMLElement {
     /// Returns the result of converting the combined string content.
     /// - Parameter converter: The converter to use for the conversion.
     /// - Returns: The converted content.
-    /// - Throws: ``LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements
+    /// - Throws: ``XMLElement/LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements
     ///           or any error thrown by `converter`.
     /// - SeeAlso: ``XMLElement/stringContent()``
     @inlinable
@@ -205,8 +203,8 @@ extension XMLElement {
     /// Returns the result of converting the combined string content.
     /// - Parameter converter: The converter to use for the conversion.
     /// - Returns: The converted content.
-    /// - Throws: ``LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
-    ///           ``LookupError/cannotConvertStringContent(element:stringContent:type:)`` if the `converter` returns nil, or any error thrown by `converter`.
+    /// - Throws: ``XMLElement/LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
+    ///           ``XMLElement/LookupError/cannotConvertStringContent(element:stringContent:type:)`` if the `converter` returns nil, or any error thrown by `converter`.
     /// - SeeAlso: ``XMLElement/stringContent()``
     public func convertedStringContent<T>(converter: (String) throws -> T?) throws -> T {
         let content = try stringContent()
@@ -216,9 +214,9 @@ extension XMLElement {
 
     /// Returns the result of initializing a `RawRepresentable` type with the combined string content passed into the `RawValue`'s `LosslessStringConvertible`-initializer.
     /// - Returns: An instance of the `RawRepresentable` type initialized with the combined string content passed into the `RawValue`'s `LosslessStringConvertible`-initializer.
-    /// - Throws: ``LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
-    ///           ``LookupError/cannotConvertStringContent(element:stringContent:type:)`` when the initializer of the `RawRepresentable` type or its `RawValue` returns nil.
-    /// - SeeAlso: ``XMLElement/convertedStringContent(converter:)``, ``RawRepresentable.init?(rawValue:)`` and ``LosslessStringConvertible.init?(_:)``
+    /// - Throws: ``XMLElement/LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
+    ///           ``XMLElement/LookupError/cannotConvertStringContent(element:stringContent:type:)`` when the initializer of the `RawRepresentable` type or its `RawValue` returns nil.
+    /// - SeeAlso: ``XMLElement/convertedStringContent(converter:)-1fj6u``, ``Swift/RawRepresentable/init?(rawValue:)`` and ``Swift/LosslessStringConvertible/init?(_:)``
     @inlinable
     public func convertedStringContent<T: RawRepresentable>() throws -> T where T.RawValue: LosslessStringConvertible {
         try convertedStringContent(converter: T.init)
@@ -226,9 +224,9 @@ extension XMLElement {
 
     /// Returns the result of initializing a `LosslessStringConvertible` type with the combined string content.
     /// - Returns: An instance of the `LosslessStringConvertible` type initialized with the combined string content.
-    /// - Throws: ``LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
-    ///           ``LookupError/cannotConvertStringContent(element:stringContent:type:)``  when the initializer of the `LosslessStringConvertible` type returns nil.
-    /// - SeeAlso: ``XMLElement/convertedStringContent(converter:)`` and ``LosslessStringConvertible/init?(_:)``
+    /// - Throws: ``XMLElement/LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
+    ///           ``XMLElement/LookupError/cannotConvertStringContent(element:stringContent:type:)``  when the initializer of the `LosslessStringConvertible` type returns nil.
+    /// - SeeAlso: ``XMLElement/convertedStringContent(converter:)-1fj6u`` and ``Swift/LosslessStringConvertible/init?(_:)``
     @inlinable
     public func convertedStringContent<T: LosslessStringConvertible>() throws -> T {
         try convertedStringContent(converter: T.init)
@@ -236,9 +234,9 @@ extension XMLElement {
 
     /// Returns the result of initializing a `RawRepresentable & LosslessStringConvertible` type with the combined string content passed into the `RawValue`'s `LosslessStringConvertible`-initializer.
     /// - Returns: An instance of the `RawRepresentable & LosslessStringConvertible` type initialized with the combined string content passed into the `RawValue`'s `LosslessStringConvertible`-initializer.
-    /// - Throws: ``LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
-    ///           ``LookupError/cannotConvertStringContent(element:stringContent:type:)`` when the initializer of the `RawRepresentable` type or its `RawValue` returns nil.
-    /// - SeeAlso: ``XMLElement/convertedStringContent(converter:)``, ``RawRepresentable/init?(rawValue:)`` and ``LosslessStringConvertible/init?(_:)``
+    /// - Throws: ``XMLElement/LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
+    ///           ``XMLElement/LookupError/cannotConvertStringContent(element:stringContent:type:)`` when the initializer of the `RawRepresentable` type or its `RawValue` returns nil.
+    /// - SeeAlso: ``XMLElement/convertedStringContent(converter:)-1fj6u``, ``Swift/RawRepresentable/init?(rawValue:)`` and ``Swift/LosslessStringConvertible/init?(_:)``
     /// - Note: This overload will prefer the `RawRepresentable` initializer.
     @inlinable
     public func convertedStringContent<T: RawRepresentable & LosslessStringConvertible>() throws -> T

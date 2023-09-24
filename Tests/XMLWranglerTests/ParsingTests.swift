@@ -4,7 +4,7 @@ import FoundationXML
 #endif
 @testable import XMLWrangler
 
-final class ParserTests: XCTestCase {
+final class ParsingTests: XCTestCase {
     private struct Expressible: ExpressibleByXMLElement {
         let element: XWElement
 
@@ -31,16 +31,13 @@ final class ParserTests: XCTestCase {
     private let xml3 = "<?xml version='1.0' encoding='UTF-8'?><root some='key'><first/><second>something</second><third><third_one/><third_two third_some='value'/><third_three third_some='value'>test this right</third_three></third><fourth><![CDATA[Some <CDATA> value]]></fourth></root>"
     private let xml4 = "<?xml version='1.0' encoding='UTF-8'?>\n<root some='key'>\n<first/>\n<second>something</second>\n<third>\n<third_one/>\n<third_two third_some='value'/>\n<third_three third_some='value'>test this right</third_three>\n</third>\n<fourth>\n<![CDATA[Some <CDATA> value]]>\n</fourth>\n</root>\n"
 
-    func testParsingError() {
-        let invalidXML = "<>Totally not valid XML<!>"
-        let parser = Parser(string: invalidXML)
-
-        XCTAssertThrowsError(try parser.parse()) {
+    func testParsingErrors() {
+        XCTAssertThrowsError(try XWElement.parse("<>Totally not valid XML<!>")) {
             switch $0 {
-            case is Parser.UnknownError:
-                XCTAssertTrue($0 is Parser.UnknownError)
-            case is Parser.MissingRootElementError:
-                XCTAssertTrue($0 is Parser.MissingRootElementError)
+            case is XWElement.UnknownParsingError:
+                XCTAssertTrue($0 is XWElement.UnknownParsingError)
+            case is XWElement.MissingRootElementError:
+                XCTAssertTrue($0 is XWElement.MissingRootElementError)
             case let nsError as NSError:
                 XCTAssertEqual(nsError.domain, XMLParser.errorDomain)
             }
@@ -48,29 +45,10 @@ final class ParserTests: XCTestCase {
     }
 
     func testSuccessfulParsing() {
-        let parser1 = Parser(string: xml1)
-        let parser2 = Parser(string: xml2)
-        let parser3 = Parser(string: xml3)
-        let parser4 = Parser(string: xml4)
-
-        XCTAssertEqual(try parser1.parse(), testRoot)
-        XCTAssertEqual(try parser2.parse(), testRoot)
-        XCTAssertEqual(try parser3.parse(), testRoot)
-        XCTAssertEqual(try parser4.parse(), testRoot)
-    }
-
-    func testRepetitiveParsing() throws {
-        let parser = Parser(string: xml1)
-        let start1 = DispatchTime.now().uptimeNanoseconds
-        let run1 = try parser.parse()
-        let duration1 = DispatchTime.now().uptimeNanoseconds - start1
-        let start2 = DispatchTime.now().uptimeNanoseconds
-        let run2 = try parser.parse()
-        let duration2 = DispatchTime.now().uptimeNanoseconds - start2
-
-        XCTAssertEqual(run1, run2)
-        // The second run's gotta be much faster since we return the previously parsed object directly.
-        XCTAssertLessThan(duration2, duration1)
+        XCTAssertEqual(try XWElement.parse(xml1), testRoot)
+        XCTAssertEqual(try XWElement.parse(xml2), testRoot)
+        XCTAssertEqual(try XWElement.parse(xml3), testRoot)
+        XCTAssertEqual(try XWElement.parse(xml4), testRoot)
     }
 
     func testMixedContentParsing() {
@@ -91,14 +69,13 @@ final class ParserTests: XCTestCase {
             .element(XWElement(name: "childElement", content: "I'm just sitting here")),
             .element(XWElement(name: "childElement")),
             .string("Again to check the works,\nwe add some newlines."),
-            .element(XWElement(name: "otherElement"))
+            .element(XWElement(name: "otherElement")),
         ])
-        let parser = Parser(string: mixedContentXML)
-        XCTAssertEqual(try parser.parse(), expectedElement)
+        XCTAssertEqual(try .parse(mixedContentXML), expectedElement)
     }
 
     func testParsingAndConverting() {
-        let parser = Parser(string: xml1)
-        XCTAssertEqual(try parser.parseAndConvert(to: Expressible.self).element, testRoot)
+        XCTAssertEqual(try Expressible.parsedFromXML(Data(xml1.utf8)).element, testRoot)
+        XCTAssertEqual(try Expressible.parsedFromXML(xml1).element, testRoot)
     }
 }

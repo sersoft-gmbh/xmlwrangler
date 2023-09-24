@@ -1,6 +1,6 @@
 extension XMLElement.Content {
-    @usableFromInline
-    mutating func _appendString(_ string: some StringProtocol, separator _: @autoclosure () -> Character?) {
+    // @usableFromInline -> added with indention support.
+    mutating func _appendString(_ string: some StringProtocol) {
         if !storage.isEmpty,
            case let lastIndex = storage.index(endIndex, offsetBy: -1),
            case .string(let str) = storage[lastIndex] {
@@ -13,9 +13,9 @@ extension XMLElement.Content {
     /// Appends either a new ``XMLElement/Content/Element/string(_:)`` element,
     /// or if the last one is already ``XMLElement/Content/Element/string(_:)``, appends `string` to the last one.
     /// - Parameter string: The string to append.
-    @inlinable
+    // @inlinable -> added with indention support.
     public mutating func appendString(_ string: Element.StringPart) {
-        _appendString(string, separator: nil)
+        _appendString(string)
     }
 
     /// Appends an element wrapped as ``XMLElement/Content/Element/element(_:)``.
@@ -28,7 +28,7 @@ extension XMLElement.Content {
     /// Appends the xml element of a convertible type.
     /// - Parameter convertible: The type conforming to ``XMLElementConvertible``.
     @inlinable
-    public mutating func append<Convertible: XMLElementConvertible>(elementOf convertible: Convertible) {
+    public mutating func append(elementOf convertible: some XMLElementConvertible) {
         appendElement(convertible.xml)
     }
 
@@ -53,8 +53,8 @@ extension XMLElement.Content {
             defer { currentIndex = nextIndex }
             guard case .string(var newStr) = storage[currentIndex] else { continue }
             while nextIndex < storage.endIndex, case .string(let nextStr) = storage[nextIndex] {
-                if let char = stringSeparator {
-                    newStr.append(char)
+                if let stringSeparator {
+                    newStr.append(stringSeparator)
                 }
                 newStr += nextStr
                 storage.remove(at: nextIndex) // TODO: this might be a performance problem

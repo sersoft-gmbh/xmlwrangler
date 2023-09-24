@@ -10,16 +10,16 @@ final class ErrorsTests: XCTestCase {
         let testStringContent = "Test Content"
         let testType = Int32.self
 
-        let missingAttribute = LookupError.missingAttribute(element: testElement, key: testKey)
-        let cannotConvertAttribute = LookupError.cannotConvertAttribute(element: testElement, 
-                                                                        key: testKey,
-                                                                        content: testAttributeContent,
-                                                                        type: testType)
-        let missingContent = LookupError.missingStringContent(element: testElement)
-        let missingChild = LookupError.missingChild(element: testElement, childName: testName)
-        let cannotConvertContent = LookupError.cannotConvertStringContent(element: testElement, 
-                                                                          stringContent: testStringContent,
-                                                                          type: testType)
+        let missingAttribute = XWElement.LookupError.missingAttribute(element: testElement, key: testKey)
+        let cannotConvertAttribute = XWElement.LookupError.cannotConvertAttribute(element: testElement,
+                                                                                  key: testKey,
+                                                                                  content: testAttributeContent,
+                                                                                  type: testType)
+        let missingContent = XWElement.LookupError.missingStringContent(element: testElement)
+        let missingChild = XWElement.LookupError.missingChild(element: testElement, childName: testName)
+        let cannotConvertContent = XWElement.LookupError.cannotConvertStringContent(element: testElement,
+                                                                                    stringContent: testStringContent,
+                                                                                    type: testType)
 
         XCTAssertEqual(String(describing: missingAttribute),
                        "Element '\(testElement.name.rawValue)' has no attribute '\(testKey.rawValue)'!\nAttributes: \(testElement.attributes)")
@@ -33,12 +33,12 @@ final class ErrorsTests: XCTestCase {
                        "Could not convert content of element '\(testElement.name.rawValue)' to \(testType)!\nElement string content: \(testStringContent)")
     }
     
-    func testParserUnknownError() {
-        XCTAssertEqual(String(describing: Parser.UnknownError()), "An unknown parsing error occurred!")
+    func testParserUnknownParsingError() {
+        XCTAssertEqual(String(describing: XWElement.UnknownParsingError()), "An unknown parsing error occurred!")
     }
     
     func testParserMissingRootElementError() {
-        XCTAssertEqual(String(describing: Parser.MissingRootElementError()), 
+        XCTAssertEqual(String(describing: XWElement.MissingRootElementError()),
                        "Parsing did not yield an element! Please check that the XML is valid!")
     }
 }

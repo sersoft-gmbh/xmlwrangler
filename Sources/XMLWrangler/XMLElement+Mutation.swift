@@ -46,7 +46,7 @@ extension XMLElement {
     ///   - path: A collection of element names which represent the path to the element to mutate.
     ///   - work: The closure which is provided with mutating access to the element at the given path.
     /// - Returns: The value returned by `work`.
-    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point. Or any error thrown by `work`
+    /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point. Or any error thrown by `work`
     public mutating func withMutatingAccess<T>(toElementAt path: some Collection<Name>,
                                                do work: (inout XMLElement) throws -> T) throws -> T {
         guard !path.isEmpty else { return try work(&self) }
@@ -62,7 +62,7 @@ extension XMLElement {
     ///   - path: A list of element names which represent the path to the element to mutate.
     ///   - work: The closure which is provided with mutating access to the element at the given path.
     /// - Returns: The value returned by `work`.
-    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point. Or any error thrown by `work`
+    /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point. Or any error thrown by `work`
     @inlinable
     public mutating func withMutatingAccess<T>(toElementAt path: Name..., do work: (inout XMLElement) throws -> T) throws -> T {
         try withMutatingAccess(toElementAt: path, do: work)
@@ -72,7 +72,7 @@ extension XMLElement {
     /// - Parameters:
     ///   - path: A collection of element names which represent the path to the element to replace.
     ///   - newElement: The element insert in place of the element at `path`.
-    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
+    /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
     /// - Returns: The old element at `path`.
     @inlinable
     @discardableResult
@@ -87,7 +87,7 @@ extension XMLElement {
     /// - Parameters:
     ///   - path: A list of element names which represent the path to the element to replace.
     ///   - newElement: The element insert in place of the element at `path`.
-    /// - Throws: ``LookupError/missingChild(element:childName:)``in case the path contains an inexistent element at some point.
+    /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)``in case the path contains an inexistent element at some point.
     /// - Returns: The old element at `path`.
     @inlinable
     @discardableResult
@@ -98,7 +98,7 @@ extension XMLElement {
     /// Removes an element at a given path.
     /// - Parameter path: A collection of element names which represent the path to the element to remove.
     /// - Returns: The removed element or nil if no element was present at the given path or the path was empty.
-    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
+    /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
     ///           The only exception here is the last path element. If it not present, nil is returned instead.
     @discardableResult
     public mutating func remove(elementAt path: some Collection<Name>) throws -> XMLElement? {
@@ -112,7 +112,7 @@ extension XMLElement {
     /// Removes an element at a given path.
     /// - Parameter path: A list of element names which represent the path to the element to remove.
     /// - Returns: The removed element or nil if no element was present at the given path or the path was empty.
-    /// - Throws: ``LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
+    /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point.
     ///           The only exception here is the last path element. If it not present, nil is returned instead.
     @inlinable
     @discardableResult

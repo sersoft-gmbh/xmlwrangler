@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "289F2CF4-74C3-43B1-88BC-F86C9015A85F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "XMLWranglerTests",
+        "name" : "XMLWranglerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

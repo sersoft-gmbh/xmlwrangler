@@ -1,21 +1,11 @@
 extension XMLElement.Content {
     /// Returns the elements of all ``XMLElement/Content/Element/element(_:)``s in the receiver.
     @inlinable
-    public var allElements: Array<XMLElement> { storage.compactMap(\.element) }
+    public var allElements: some Collection<XMLElement> { storage.lazy.compactMap(\.element) }
 
     /// Returns the strings of all ``XMLElement/Content/Element/string(_:)``s in the receiver.
     @inlinable
-    public var allStrings: Array<Element.StringPart> { storage.compactMap(\.string) }
-
-    @inlinable
-    internal var lazyAllElements: some Sequence<XMLElement> {
-        storage.lazy.compactMap(\.element)
-    }
-
-//    @inlinable
-//    internal var lazyAllString: some Sequence<Element.StringPart> {
-//        storage.lazy.compactMap(\.string)
-//    }
+    public var allStrings: some Collection<Element.StringPart> { storage.lazy.compactMap(\.string) }
 
     /// Searches for elements which match a given predicate. Optionally also recursive.
     /// - Parameters:
@@ -26,7 +16,7 @@ extension XMLElement.Content {
     /// - Note: ``XMLElement/Content/Element/string(_:)``  elements are skipped.
     @usableFromInline
     internal func find(recursive: Bool = false, elementsMatching predicate: (XMLElement) throws -> Bool) rethrows -> [XMLElement] {
-        let elements = lazyAllElements
+        let elements = allElements
         let matches = try elements.filter(predicate)
         guard recursive else { return matches }
         return try matches + elements.flatMap { try $0.content.find(recursive: recursive, elementsMatching: predicate) }
@@ -43,7 +33,7 @@ extension XMLElement.Content {
     /// - Note: ``XMLElement/Content/Element/string(_:)`` elements are skipped.
     @usableFromInline
     internal func findFirst(recursive: Bool = false, elementMatching predicate: (XMLElement) throws -> Bool) rethrows -> XMLElement? {
-        let elements = lazyAllElements
+        let elements = allElements
         let match = try elements.first(where: predicate)
         guard recursive else { return match }
         return try match ?? elements.lazy.compactMap {
@@ -62,7 +52,7 @@ extension XMLElement.Content {
     /// - Note: ``XMLElement/Content/Element/string(_:)`` elements are skipped.
     @usableFromInline
     internal func findLast(recursive: Bool = false, elementMatching predicate: (XMLElement) throws -> Bool) rethrows -> XMLElement? {
-        let elements = lazyAllElements.reversed()
+        let elements = allElements.reversed()
         let match = try elements.first(where: predicate)
         guard recursive else { return match }
         return try match ?? elements.lazy.compactMap {

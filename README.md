@@ -17,9 +17,11 @@ Add the following dependency to your `Package.swift`:
 
 ## Compatibility
 
--   For Swift up to version 5.2, use XMLWrangler version 3.x.y.
--   For Swift as of version 5.3, use XMLWrangler version 5.x.y.
--   For Swift as of version 5.9, use XMLWrangler version 6.x.y.
+| **Swift**          | **XMLWrangler Package**  |
+|--------------------|--------------------------|
+| <  5.2.0           | 1.x.y - 3.x.y            |
+| >= 5.3.0, < 5.9.0  | 5.x.y                    |
+| >= 5.9.0           | 6.x.y                    |
 
 ## Usage
 
@@ -36,9 +38,8 @@ Both, serializing and parsing XMLs with XMLWrangler relies on `XMLElement`.
 
 ### Parsing XMLs
 
-Parsing existing XMLs can be done using the `Parser` class. You can instantiate a parser with either a given `Data` object or a `String` containing the XML.
-
-Once you have a parser ready, you can call `parse()` on it, and it'll try to parse the XML. If that succeeds, it'll return the parsed root object. Otherwise it throws whatever error happend along the way. Errors thrown are the ones created by `Foundation.XMLParser`.
+Parsing existing XMLs can be done using the static functions on `XMLElement`. You can parse either a given `Data` object or a `String` containing the XML.
+If parsing succeeds, the parsed root object is returned. Otherwise whatever error happend along the way is thrown. Errors thrown are the ones created by `Foundation.XMLParser`.
 
 ```swift
 do {
@@ -49,54 +50,49 @@ do {
                   <child2>some text</child2>
               </root>
               """
-    let parser = Parser(string: xml)
-    let rootElement = try parser.parse()
+    let root = try XMLElement.parse(xml)
 } catch {
     print("Something went wrong while parsing: \(error)")
 }
 ```
 
-In this example, `root.name.rawValue` would of course be `"root"`. `rootElement.content` would contain two `.element`s. The first would have a associated `XMLElement` with a `name` of `"child1"` and an empty `content`. The `name` of `XMLElement` of the second `.element` would be `"child2"` and its content would contain one `.string` having `"some text"` associated. `root.attributes` would contain the value `"myvalue"` for the key `"myattr"`.
+In this example, `root.name.rawValue` would of course be `"root"`. `root.content` would contain two `.element`s. The first would have a associated `XMLElement` with a `name` of `"child1"` and an empty `content`. The `name` of `XMLElement` of the second `.element` would be `"child2"` and its content would contain one `.string` having `"some text"` associated. `root.attributes` would contain the value `"myvalue"` for the key `"myattr"`.
 
 ### Serializing XMLElements
 
-Since you can parse XMLs, you can also convert an `XMLElement` to a String. For this, there are two initializers on `String` added in XMLWrangler.
-The first one just converts an `XMLElement` into a `String`. This happens by creating an opening and ending tag (where the beginning tag contains the `attributes` if available) and putting the `content` of the element in between. If `content` is empty, then no ending tag is created and the opening tag is directly closed with `/>`. Also, `content` is compressed (using the aforementioned `compress` function) before being serialized.
+Since you can parse XMLs, you can also convert an `XMLElement` to a String. For this, there are two functions on `XMLElement`.
+The first one just converts an `XMLElement` into a `String`. This happens by creating an opening and ending tag (where the beginning tag contains the `attributes` if available) and putting the `content` of the element in between. Also, `content` is compressed (using the aforementioned `compress` function) before being serialized.
 
 ```swift
 var root = XMLElement(name: "root", attributes: ["myattr": "myvalue"])
 root.content.append(element: "child1")
 root.content.append(element: XMLElement(name: "child2", content: "some text"))
 
-let xml = String(xml: root) // -> "<root myattr=\"myvalue\"><child1/><child2>some text</child2></root>"
+let xmlString = xml.serialize() // -> "<root myattr=\"myvalue\"><child1/><child2>some text</child2></root>"
 ```
 
-If the traditional XML header should also be added, there's a second initializer which takes a version and a document encoding as additional parameters, but otherwise follows the same rules:
+If the traditional XML header should also be added, there's a second function which takes a version and a document encoding as additional parameters, but otherwise follows the same rules:
 
 ```swift
 var root = XMLElement(name: "root", attributes: ["myattr": "myvalue"])
 root.content.append(element: "child1")
 root.content.append(element: XMLElement(name: "child2", content: "some text"))
 
-let xml = String(xmlDocumentRoot: root, version: Version(major: 1), encoding: .utf8)
+let xmlDocumentString = root.serializeAsDocument(at: DocumentVersion(major: 1), using: .utf8)
 // -> "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root myattr=\"myvalue\"><child1/><child2>some text</child2></root>"
 ```
 
-For more information on `Version` see [SemVer](https://github.com/sersoft-gmbh/semver) but note that only `major` and `minor` are used for XMLs.
-Please note that currently XMLWrangler only supports serializing documents for the following encodings:
-
--   UTF-8
--   UTF-16
--   ASCII
+Please note that XMLWrangler does not escape the string based on the given encoding. It simply uses it the generate the document header.
 
 Both initializers can take an additional parameter `options` which contains a set of options to control the serialization behaviour. Currently the following options are possible:
 
 -   `.pretty`: Use pretty formatting. This adds newlines around the tags to make the resulting XML more readable. This is usually not needed for processing XML.
 -   `.singleQuoteAttributes`: When this option is present, then attributes of elements will be enclosed in single quotes (') instead of double quotes (").
+-   `.explicitClosingTag`: This option forces empty elements to be serialized with an explicit closing tag instead of using the shorthand `/>` syntax.
 
 ### Type safety
 
-XMLWrangler will always extract all content and attributes as `String`. This is because XML itself does not differentiate between types like e.g. JSON does.
+XMLWrangler will always extract all content and attributes as `String` internally. This is because XML itself does not differentiate between types like e.g. JSON does.
 However, there are many helper functions to safely look up and convert content and attributes of an `XMLElement`:
 
 -   First, there are helpers to extract all child elements with a given name: `XMLElement.elements(named:)`
@@ -106,7 +102,7 @@ However, there are many helper functions to safely look up and convert content a
 -   Last but not least you can extract the string content of an Element: `XMLElement.stringContent()`
 -   And of course as you can with attributes, you can also convert string content: `XMLElement.convertedStringContent(converter:)`
 
-All these methods throw an error (`LookupError`) when something went wrong instead of returning optionals. If you prefern an optional, you can always use `try?`.
+All these methods throw an error (`XMLElement.LookupError`) when something went wrong instead of returning optionals. If you prefern an optional, you can always use `try?`.
 For more information also check the header docs which describe these methods a little closer.
 
 ## Possible Features
