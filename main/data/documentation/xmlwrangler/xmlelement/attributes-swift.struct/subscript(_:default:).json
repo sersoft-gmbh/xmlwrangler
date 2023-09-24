@@ -28,15 +28,7 @@
       },
       {
         "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "genericParameter",
-        "text" : "Default"
-      },
-      {
-        "kind" : "text",
-        "text" : ">("
+        "text" : "("
       },
       {
         "kind" : "typeIdentifier",
@@ -71,11 +63,12 @@
       },
       {
         "kind" : "text",
-        "text" : " _: () -> "
+        "text" : " _: () -> some "
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "Default"
+        "preciseIdentifier" : "s:11XMLWrangler30XMLAttributeContentConvertibleP",
+        "text" : "XMLAttributeContentConvertible"
       },
       {
         "kind" : "text",
@@ -132,15 +125,7 @@
             },
             {
               "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "genericParameter",
-              "text" : "Default"
-            },
-            {
-              "kind" : "text",
-              "text" : ">("
+              "text" : "("
             },
             {
               "kind" : "internalParam",
@@ -202,11 +187,13 @@
             },
             {
               "kind" : "text",
-              "text" : "() -> "
+              "text" : "() -> some "
             },
             {
+              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible",
               "kind" : "typeIdentifier",
-              "text" : "Default"
+              "preciseIdentifier" : "s:11XMLWrangler30XMLAttributeContentConvertibleP",
+              "text" : "XMLAttributeContentConvertible"
             },
             {
               "kind" : "text",
@@ -240,32 +227,6 @@
             },
             {
               "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "where"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Default"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler30XMLAttributeContentConvertibleP",
-              "text" : "XMLAttributeContentConvertible"
-            },
-            {
-              "kind" : "text",
               "text" : " { "
             },
             {
@@ -288,34 +249,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The content for the given key. ",
-              "type" : "text"
-            },
-            {
-              "code" : "default",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " if none is found.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     },
     {
       "kind" : "parameters",
@@ -357,6 +290,34 @@
           "name" : "default"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The content for the given key. ",
+              "type" : "text"
+            },
+            {
+              "code" : "default",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " if none is found.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -399,8 +360,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement\/Attributes\/Content",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Content",
+      "isActive" : true,
+      "type" : "reference"
     }
   ],
   "fragments" : [
@@ -589,15 +551,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Default"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
@@ -632,11 +586,12 @@
     },
     {
       "kind" : "text",
-      "text" : " _: () -> "
+      "text" : " _: () -> some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Default"
+      "preciseIdentifier" : "s:11XMLWrangler30XMLAttributeContentConvertibleP",
+      "text" : "XMLAttributeContentConvertible"
     },
     {
       "kind" : "text",

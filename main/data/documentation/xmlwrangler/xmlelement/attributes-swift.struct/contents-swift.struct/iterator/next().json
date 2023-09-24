@@ -279,8 +279,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement\/Attributes",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -352,8 +353,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement\/Attributes\/Contents",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Contents-swift.struct",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

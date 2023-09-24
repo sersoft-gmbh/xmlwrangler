@@ -283,34 +283,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The value returned by ",
-              "type" : "text"
-            },
-            {
-              "code" : "work",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -346,6 +318,34 @@
     {
       "content" : [
         {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The value returned by ",
+              "type" : "text"
+            },
+            {
+              "code" : "work",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "content" : [
+        {
           "anchor" : "discussion",
           "level" : 2,
           "text" : "Discussion",
@@ -360,7 +360,7 @@
                   "type" : "text"
                 },
                 {
-                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingChild(element:childName:)",
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/missingChild(element:childName:)",
                   "isActive" : true,
                   "type" : "reference"
                 },
@@ -417,7 +417,41 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/LookupError/missingChild(element:childName:)": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/LookupError/missingChild(element:childName:)": {
   "abstract" : [
     {
       "text" : "Thrown when a given ",
@@ -501,46 +535,12 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/LookupError\/missingChild(element:childName:)",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/missingChild(element:childName:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "LookupError.missingChild(element:childName:)",
+  "title" : "XMLElement.LookupError.missingChild(element:childName:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/lookuperror\/missingchild(element:childname:)"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
-  "abstract" : [
-    {
-      "text" : "Represents an element in an XML structure.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "XMLElement"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "XMLElement"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "XMLElement",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/missingchild(element:childname:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct": {
   "abstract" : [

@@ -146,8 +146,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement\/Content",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",

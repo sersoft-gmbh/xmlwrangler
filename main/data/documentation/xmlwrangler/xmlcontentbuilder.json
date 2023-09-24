@@ -741,19 +741,12 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "(some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "T"
+      "preciseIdentifier" : "s:11XMLWrangler21XMLElementConvertibleP",
+      "text" : "XMLElementConvertible"
     },
     {
       "kind" : "text",

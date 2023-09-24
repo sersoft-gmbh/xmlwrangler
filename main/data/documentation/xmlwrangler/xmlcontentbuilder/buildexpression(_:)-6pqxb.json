@@ -37,19 +37,12 @@
       },
       {
         "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "genericParameter",
-        "text" : "T"
-      },
-      {
-        "kind" : "text",
-        "text" : ">("
+        "text" : "(some "
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "T"
+        "preciseIdentifier" : "s:11XMLWrangler21XMLElementConvertibleP",
+        "text" : "XMLElementConvertible"
       },
       {
         "kind" : "text",
@@ -113,15 +106,7 @@
             },
             {
               "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "genericParameter",
-              "text" : "T"
-            },
-            {
-              "kind" : "text",
-              "text" : ">("
+              "text" : "("
             },
             {
               "kind" : "externalParam",
@@ -137,11 +122,13 @@
             },
             {
               "kind" : "text",
-              "text" : ": "
+              "text" : ": some "
             },
             {
+              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible",
               "kind" : "typeIdentifier",
-              "text" : "T"
+              "preciseIdentifier" : "s:11XMLWrangler21XMLElementConvertibleP",
+              "text" : "XMLElementConvertible"
             },
             {
               "kind" : "text",
@@ -162,32 +149,6 @@
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
               "text" : "Content"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "where"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "T"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler21XMLElementConvertibleP",
-              "text" : "XMLElementConvertible"
             }
           ]
         }
@@ -286,19 +247,12 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "(some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "T"
+      "preciseIdentifier" : "s:11XMLWrangler21XMLElementConvertibleP",
+      "text" : "XMLElementConvertible"
     },
     {
       "kind" : "text",

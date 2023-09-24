@@ -107,14 +107,19 @@
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/MissingRootElementError",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/UnknownParsingError"
       ],
       "title" : "Structures"
     },
     {
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:content:)-123k0",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:content:)-5rtdv",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:content:)-80f5p",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:content:)-kgzp",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:elements:)-4kmbt",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:elements:)-7lxxa",
@@ -128,7 +133,7 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/content-swift.property",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/debugDescription",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/description",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/id-4rc6g",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/id",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/name-swift.property"
       ],
       "title" : "Instance Properties"
@@ -136,10 +141,7 @@
     {
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(contentsOf:)",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(element:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(elementOf:)",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(elements:)",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(string:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/appendElement(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/appendElements(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/appendString(_:)",
@@ -166,19 +168,33 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/remove(elementAt:)-9ydn7",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/replace(elementAt:with:)-1onn0",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/replace(elementAt:with:)-4vaaw",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/serialize(with:)",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/serializeAsDocument(at:in:with:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/stringContent()",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/withMutatingAccess(toElementAt:do:)-47tub",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/withMutatingAccess(toElementAt:do:)-7my5i"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/withMutatingAccess(toElementAt:do:)-98ke7"
       ],
       "title" : "Instance Methods"
     },
     {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parse(_:)-3057l",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parse(_:)-3lced"
+      ],
+      "title" : "Type Methods"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/EscapableContent",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError"
+      ],
+      "title" : "Enumerations"
+    },
+    {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/CustomStringConvertible-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Equatable-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/ExpressibleByXMLElement-Implementations",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Identifiable-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/XMLElementConvertible-Implementations"
       ],
       "title" : "Default Implementations"
@@ -256,6 +272,37 @@
   "title" : "ExpressibleByXMLElement",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLContentBuilder": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLContentBuilder"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLContentBuilder",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLContentBuilder"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLContentBuilder",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlcontentbuilder"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
   "abstract" : [
@@ -368,16 +415,73 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/CustomStringConvertible-Implementations": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentEncoding": {
   "abstract" : [
-
+    {
+      "text" : "The encoding of an XML document.",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/CustomStringConvertible-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "CustomStringConvertible Implementations",
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentEncoding"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocumentEncoding"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.DocumentEncoding",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/customstringconvertible-implementations"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion": {
+  "abstract" : [
+    {
+      "text" : "Represents the version of an XML document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DocumentVersion"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DocumentVersion"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.DocumentVersion",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Equatable-Implementations": {
   "abstract" : [
@@ -390,6 +494,40 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/equatable-implementations"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/EscapableContent": {
+  "abstract" : [
+    {
+      "text" : "Represents a type of content that can be escaped.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EscapableContent"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/EscapableContent",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EscapableContent"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.EscapableContent",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/ExpressibleByXMLElement-Implementations": {
   "abstract" : [
 
@@ -401,16 +539,90 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/expressiblebyxmlelement-implementations"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Identifiable-Implementations": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/LookupError": {
   "abstract" : [
-
+    {
+      "text" : "The error type that is thrown for all lookup operations on ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Identifiable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Identifiable Implementations",
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LookupError"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LookupError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.LookupError",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/identifiable-implementations"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/MissingRootElementError": {
+  "abstract" : [
+    {
+      "text" : "Describes a failure that caused no element to be parsed.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Used if parsing succeeds, but no element was parsed.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MissingRootElementError"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/MissingRootElementError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MissingRootElementError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.MissingRootElementError",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/missingrootelementerror"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct": {
   "abstract" : [
@@ -446,6 +658,90 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions": {
+  "abstract" : [
+    {
+      "text" : "Represents options to use for serializing XML elements.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SerializationOptions"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SerializationOptions"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.SerializationOptions",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/UnknownParsingError": {
+  "abstract" : [
+    {
+      "text" : "Describes an unknown error.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Used if parsing fails, but the ",
+      "type" : "text"
+    },
+    {
+      "code" : "XMLParser",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " of Foundation does not report an error.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UnknownParsingError"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/UnknownParsingError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UnknownParsingError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.UnknownParsingError",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/XMLElementConvertible-Implementations": {
   "abstract" : [
 
@@ -479,15 +775,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "S"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -495,56 +783,16 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "S"
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
     },
     {
       "kind" : "text",
-      "text" : ")"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(contentsOf:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "append(contentsOf:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/append(contentsof:)"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/append(element:)": {
-  "abstract" : [
-    {
-      "text" : "Appends an element to the content.",
-      "type" : "text"
-    }
-  ],
-  "deprecated" : true,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "append"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "element"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
+      "text" : "<"
     },
     {
       "kind" : "typeIdentifier",
@@ -553,15 +801,15 @@
     },
     {
       "kind" : "text",
-      "text" : ")"
+      "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(element:)",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(contentsOf:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "append(element:)",
+  "title" : "append(contentsOf:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/append(element:)"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/append(contentsof:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/append(elementOf:)": {
   "abstract" : [
@@ -585,15 +833,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Convertible"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -601,11 +841,12 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Convertible"
+      "preciseIdentifier" : "s:11XMLWrangler21XMLElementConvertibleP",
+      "text" : "XMLElementConvertible"
     },
     {
       "kind" : "text",
@@ -618,133 +859,6 @@
   "title" : "append(elementOf:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/append(elementof:)"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/append(elements:)": {
-  "abstract" : [
-    {
-      "text" : "Appends one or more elements to the content.",
-      "type" : "text"
-    }
-  ],
-  "deprecated" : true,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "append"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "elements"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "...)"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(elements:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "append(elements:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/append(elements:)"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/append(string:)": {
-  "abstract" : [
-    {
-      "text" : "Appends a string to the content.",
-      "type" : "text"
-    }
-  ],
-  "deprecated" : true,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "append"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "string"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO10StringParta",
-      "text" : "StringPart"
-    },
-    {
-      "kind" : "text",
-      "text" : ")"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(string:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "append(string:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/append(string:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/appendElement(_:)": {
   "abstract" : [
@@ -2624,15 +2738,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Path"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -2640,15 +2746,34 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Path"
+      "preciseIdentifier" : "s:Sl",
+      "text" : "Collection"
     },
     {
       "kind" : "text",
-      "text" : ") "
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
+      "text" : "Name"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) "
     },
     {
       "kind" : "keyword",
@@ -2826,7 +2951,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/elements(named:)"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/id-4rc6g": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/id": {
   "abstract" : [
 
   ],
@@ -2862,12 +2987,135 @@
       "text" : "Name"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/id-4rc6g",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/id",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "id",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/id-4rc6g"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/id"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/init(name:attributes:content:)-123k0": {
+  "abstract" : [
+    {
+      "text" : "Creates a new element using the given name and attributes. The content is built using the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLContentBuilder",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
+      "text" : "Name"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "content"
+    },
+    {
+      "kind" : "text",
+      "text" : ": () "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
+      "text" : "Content"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "rethrows"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:content:)-123k0",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(name:attributes:content:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-123k0"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/init(name:attributes:content:)-5rtdv": {
   "abstract" : [
@@ -2979,105 +3227,6 @@
   "title" : "init(name:attributes:content:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-5rtdv"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/init(name:attributes:content:)-80f5p": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "name"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
-      "text" : "Name"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "content"
-    },
-    {
-      "kind" : "text",
-      "text" : ": () -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : ")"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:content:)-80f5p",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "init(name:attributes:content:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-80f5p"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/init(name:attributes:content:)-kgzp": {
   "abstract" : [
@@ -3288,15 +3437,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Elements"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -3356,15 +3497,25 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Elements"
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
     },
     {
       "kind" : "text",
-      "text" : ")"
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/init(name:attributes:elements:)-7lxxa",
@@ -3540,6 +3691,130 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.property"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/parse(_:)-3057l": {
+  "abstract" : [
+    {
+      "text" : "Tries to parse the given data as XML.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parse"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DataV",
+      "text" : "Data"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parse(_:)-3057l",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "parse(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-3057l"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/parse(_:)-3lced": {
+  "abstract" : [
+    {
+      "text" : "Tries to parse the given string as XML.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parse"
+    },
+    {
+      "kind" : "text",
+      "text" : "(some "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sy",
+      "text" : "StringProtocol"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parse(_:)-3lced",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "parse(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-3lced"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/remove(elementAt:)-9v7qi": {
   "abstract" : [
     {
@@ -3637,15 +3912,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Path"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -3653,15 +3920,34 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Path"
+      "preciseIdentifier" : "s:Sl",
+      "text" : "Collection"
     },
     {
       "kind" : "text",
-      "text" : ") "
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
+      "text" : "Name"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) "
     },
     {
       "kind" : "keyword",
@@ -3798,15 +4084,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Path"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "externalParam",
@@ -3814,15 +4092,34 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Path"
+      "preciseIdentifier" : "s:Sl",
+      "text" : "Collection"
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
+      "text" : "Name"
+    },
+    {
+      "kind" : "text",
+      "text" : ">, "
     },
     {
       "kind" : "externalParam",
@@ -3861,6 +4158,192 @@
   "title" : "replace(elementAt:with:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/replace(elementat:with:)-4vaaw"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/serialize(with:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a String by serializing the XML element.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "serialize"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
+      "text" : "SerializationOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/serialize(with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "serialize(with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/serialize(with:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/serializeAsDocument(at:in:with:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a String by serializing the XML element as root and adding the ",
+      "type" : "text"
+    },
+    {
+      "code" : "<?xml ...?>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " document header.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "serializeAsDocument"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV15DocumentVersionV",
+      "text" : "DocumentVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "in"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV16DocumentEncodingV",
+      "text" : "DocumentEncoding"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
+      "text" : "SerializationOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/serializeAsDocument(at:in:with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "serializeAsDocument(at:in:with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializeasdocument(at:in:with:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/stringContent()": {
   "abstract" : [
@@ -4026,7 +4509,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/withmutatingaccess(toelementat:do:)-47tub"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/withMutatingAccess(toElementAt:do:)-7my5i": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/withMutatingAccess(toElementAt:do:)-98ke7": {
   "abstract" : [
     {
       "text" : "Gives mutating access to an element at a given path.",
@@ -4052,14 +4535,6 @@
     },
     {
       "kind" : "genericParameter",
-      "text" : "Path"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "genericParameter",
       "text" : "T"
     },
     {
@@ -4072,15 +4547,34 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Path"
+      "preciseIdentifier" : "s:Sl",
+      "text" : "Collection"
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
+      "text" : "Name"
+    },
+    {
+      "kind" : "text",
+      "text" : ">, "
     },
     {
       "kind" : "externalParam",
@@ -4136,12 +4630,12 @@
       "text" : "T"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/withMutatingAccess(toElementAt:do:)-7my5i",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/withMutatingAccess(toElementAt:do:)-98ke7",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "withMutatingAccess(toElementAt:do:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/withmutatingaccess(toelementat:do:)-7my5i"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/withmutatingaccess(toelementat:do:)-98ke7"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElementConvertible": {
   "abstract" : [

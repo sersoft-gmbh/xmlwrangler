@@ -144,7 +144,10 @@
     ],
     "modules" : [
       {
-        "name" : "XMLWrangler"
+        "name" : "XMLWrangler",
+        "relatedModules" : [
+          "Swift"
+        ]
       }
     ],
     "role" : "symbol",
@@ -763,7 +766,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The sorting algorithm is not guaranteed to be stable. A stable sort",
+              "text" : "The sorting algorithm is guaranteed to be stable. A stable sort",
               "type" : "text"
             },
             {

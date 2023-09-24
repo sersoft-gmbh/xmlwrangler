@@ -75,7 +75,10 @@
     ],
     "modules" : [
       {
-        "name" : "XMLWrangler"
+        "name" : "XMLWrangler",
+        "relatedModules" : [
+          "Swift"
+        ]
       }
     ],
     "role" : "symbol",
@@ -145,7 +148,7 @@
             "var characters: [Character] = [\"C\", \"a\", \"f\", \"é\"]",
             "characters.reverse()",
             "print(characters)",
-            "\/\/ Prints \"[\"é\", \"f\", \"a\", \"C\"]"
+            "\/\/ Prints \"[\"é\", \"f\", \"a\", \"C\"]\""
           ],
           "syntax" : null,
           "type" : "codeListing"

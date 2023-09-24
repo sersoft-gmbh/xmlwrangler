@@ -1,42 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Appends either a new ",
-      "type" : "text"
-    },
-    {
-      "code" : "XMLElement\/Content\/Element\/string(_:)",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " element,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "or if the last one is already ",
-      "type" : "text"
-    },
-    {
-      "code" : "XMLElement\/Content\/Element\/string(_:)",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ", appends ",
-      "type" : "text"
-    },
-    {
-      "code" : "string",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " to the last one.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -213,25 +175,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The string to append.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "string"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -414,42 +357,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/appendString(_:)": {
   "abstract" : [
-    {
-      "text" : "Appends either a new ",
-      "type" : "text"
-    },
-    {
-      "code" : "XMLElement\/Content\/Element\/string(_:)",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " element,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "or if the last one is already ",
-      "type" : "text"
-    },
-    {
-      "code" : "XMLElement\/Content\/Element\/string(_:)",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ", appends ",
-      "type" : "text"
-    },
-    {
-      "code" : "string",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " to the last one.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

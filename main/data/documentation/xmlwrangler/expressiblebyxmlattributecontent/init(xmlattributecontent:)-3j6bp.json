@@ -238,8 +238,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement\/Attributes\/Content",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Content",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " instance.",

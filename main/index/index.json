@@ -4,153 +4,6 @@
       {
         "children" : [
           {
-            "title" : "Classes",
-            "type" : "groupMarker"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Structures",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror\/description",
-                    "title" : "var description: String",
-                    "type" : "property"
-                  },
-                  {
-                    "title" : "Default Implementations",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror\/customstringconvertible-implementations",
-                    "title" : "CustomStringConvertible Implementations",
-                    "type" : "symbol"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror\/localizeddescription",
-                        "title" : "var localizedDescription: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror\/error-implementations",
-                    "title" : "Error Implementations",
-                    "type" : "symbol"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/parser\/missingrootelementerror",
-                "title" : "Parser.MissingRootElementError",
-                "type" : "struct"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/parser\/unknownerror\/description",
-                    "title" : "var description: String",
-                    "type" : "property"
-                  },
-                  {
-                    "title" : "Default Implementations",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/parser\/unknownerror\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/xmlwrangler\/parser\/unknownerror\/customstringconvertible-implementations",
-                    "title" : "CustomStringConvertible Implementations",
-                    "type" : "symbol"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/parser\/unknownerror\/localizeddescription",
-                        "title" : "var localizedDescription: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/xmlwrangler\/parser\/unknownerror\/error-implementations",
-                    "title" : "Error Implementations",
-                    "type" : "symbol"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/parser\/unknownerror",
-                "title" : "Parser.UnknownError",
-                "type" : "struct"
-              },
-              {
-                "title" : "Initializers",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/parser\/init(data:)",
-                "title" : "init(data: Data)",
-                "type" : "init"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/parser\/init(string:)",
-                "title" : "convenience init(string: String)",
-                "type" : "init"
-              },
-              {
-                "title" : "Instance Methods",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/parser\/parse()",
-                "title" : "func parse() throws -> XMLElement",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/parser\/parseandconvert(to:)",
-                "title" : "func parseAndConvert<Target>(to: Target.Type) throws -> Target",
-                "type" : "method"
-              }
-            ],
-            "path" : "\/documentation\/xmlwrangler\/parser",
-            "title" : "Parser",
-            "type" : "class"
-          },
-          {
             "title" : "Protocols",
             "type" : "groupMarker"
           },
@@ -165,7 +18,7 @@
                   {
                     "children" : [
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
@@ -175,7 +28,7 @@
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       }
@@ -226,6 +79,20 @@
                 "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9lxb6",
                 "title" : "init(xml: XMLElement) throws",
                 "type" : "init"
+              },
+              {
+                "title" : "Type Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/parsedfromxml(_:)-3qdph",
+                "title" : "static func parsedFromXML(some StringProtocol) throws -> Self",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/parsedfromxml(_:)-twgh",
+                "title" : "static func parsedFromXML(Data) throws -> Self",
+                "type" : "method"
               }
             ],
             "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement",
@@ -271,6 +138,20 @@
                 "path" : "\/documentation\/xmlwrangler\/xmlelementconvertible\/xml",
                 "title" : "var xml: XMLElement",
                 "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/xmlelementconvertible\/serializeasxml(with:)",
+                "title" : "func serializeAsXML(with: XMLElement.SerializationOptions) -> String",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/xmlelementconvertible\/serializeasxmldocument(at:in:with:)",
+                "title" : "func serializeAsXMLDocument(at: XMLElement.DocumentVersion, in: XMLElement.DocumentEncoding, with: XMLElement.SerializationOptions) -> String",
+                "type" : "method"
               }
             ],
             "path" : "\/documentation\/xmlwrangler\/xmlelementconvertible",
@@ -280,213 +161,6 @@
           {
             "title" : "Structures",
             "type" : "groupMarker"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Initializers",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/serializationoptions\/init(rawvalue:)",
-                "title" : "init(rawValue: SerializationOptions.RawValue)",
-                "type" : "init"
-              },
-              {
-                "title" : "Instance Properties",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/serializationoptions\/rawvalue-swift.property",
-                "title" : "let rawValue: SerializationOptions.RawValue",
-                "type" : "property"
-              },
-              {
-                "title" : "Type Aliases",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/serializationoptions\/rawvalue-swift.typealias",
-                "title" : "SerializationOptions.RawValue",
-                "type" : "typealias"
-              },
-              {
-                "title" : "Type Properties",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/serializationoptions\/pretty",
-                "title" : "static let pretty: SerializationOptions",
-                "type" : "property"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/serializationoptions\/singlequoteattributes",
-                "title" : "static let singleQuoteAttributes: SerializationOptions",
-                "type" : "property"
-              },
-              {
-                "title" : "Default Implementations",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Operators",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/!=(_:_:)",
-                    "title" : "static func != (Self, Self) -> Bool",
-                    "type" : "op"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/serializationoptions\/equatable-implementations",
-                "title" : "Equatable Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Initializers",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/init()",
-                    "title" : "init()",
-                    "type" : "init"
-                  },
-                  {
-                    "title" : "Instance Methods",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/contains(_:)",
-                    "title" : "func contains(Self) -> Bool",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/formintersection(_:)",
-                    "title" : "func formIntersection(Self)",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/formsymmetricdifference(_:)",
-                    "title" : "func formSymmetricDifference(Self)",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/formunion(_:)",
-                    "title" : "func formUnion(Self)",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/insert(_:)",
-                    "title" : "func insert(Self.Element) -> (inserted: Bool, memberAfterInsert: Self.Element)",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/intersection(_:)",
-                    "title" : "func intersection(Self) -> Self",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/remove(_:)",
-                    "title" : "func remove(Self.Element) -> Self.Element?",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/symmetricdifference(_:)",
-                    "title" : "func symmetricDifference(Self) -> Self",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/union(_:)",
-                    "title" : "func union(Self) -> Self",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/update(with:)",
-                    "title" : "func update(with: Self.Element) -> Self.Element?",
-                    "type" : "method"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/serializationoptions\/optionset-implementations",
-                "title" : "OptionSet Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Initializers",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/init(_:)",
-                    "title" : "init<S>(S)",
-                    "type" : "init"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/init(arrayliteral:)",
-                    "title" : "init(arrayLiteral: Self.Element...)",
-                    "type" : "init"
-                  },
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/isempty",
-                    "title" : "var isEmpty: Bool",
-                    "type" : "property"
-                  },
-                  {
-                    "title" : "Instance Methods",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/isdisjoint(with:)",
-                    "title" : "func isDisjoint(with: Self) -> Bool",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/isstrictsubset(of:)",
-                    "title" : "func isStrictSubset(of: Self) -> Bool",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/isstrictsuperset(of:)",
-                    "title" : "func isStrictSuperset(of: Self) -> Bool",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/issubset(of:)",
-                    "title" : "func isSubset(of: Self) -> Bool",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/issuperset(of:)",
-                    "title" : "func isSuperset(of: Self) -> Bool",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/subtract(_:)",
-                    "title" : "func subtract(Self)",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/serializationoptions\/subtracting(_:)",
-                    "title" : "func subtracting(Self) -> Self",
-                    "type" : "method"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/serializationoptions\/setalgebra-implementations",
-                "title" : "SetAlgebra Implementations",
-                "type" : "symbol"
-              }
-            ],
-            "path" : "\/documentation\/xmlwrangler\/serializationoptions",
-            "title" : "SerializationOptions",
-            "type" : "struct"
           },
           {
             "children" : [
@@ -567,22 +241,6 @@
                       {
                         "title" : "Default Implementations",
                         "type" : "groupMarker"
-                      },
-                      {
-                        "children" : [
-                          {
-                            "title" : "Instance Properties",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/halfwidthcornerquoted",
-                            "title" : "var halfWidthCornerQuoted: String",
-                            "type" : "property"
-                          }
-                        ],
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/customstringconvertible-implementations",
-                        "title" : "CustomStringConvertible Implementations",
-                        "type" : "symbol"
                       },
                       {
                         "children" : [
@@ -743,7 +401,7 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-1w5qy",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)",
                         "title" : "subscript(XMLElement.Attributes.Contents.Index) -> XMLElement.Attributes.Contents.Element",
                         "type" : "subscript"
                       },
@@ -792,23 +450,13 @@
                             "type" : "property"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/underestimatedcount-9wo6n",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/underestimatedcount",
                             "title" : "var underestimatedCount: Int",
                             "type" : "property"
                           },
                           {
                             "title" : "Instance Methods",
                             "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/convertbyoffset(_:in:)-2vce2",
-                            "title" : "func convertByOffset<C>(Self.Index, in: C) -> C.Index",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/convertbyoffset(_:in:)-70m7r",
-                            "title" : "func convertByOffset<C>(Range<Self.Index>, in: C) -> Range<C.Index>",
-                            "type" : "method"
                           },
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/distance(from:to:)",
@@ -871,11 +519,6 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/index(atoffset:)",
-                            "title" : "func index(atOffset: Int) -> Self.Index",
-                            "type" : "method"
-                          },
-                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/index(of:)",
                             "title" : "func index(of: Self.Element) -> Self.Index?",
                             "type" : "method"
@@ -883,21 +526,6 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/map(_:)-7145q",
                             "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/offset(of:)",
-                            "title" : "func offset(of: Self.Index) -> Int",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/offset(ofindex:)",
-                            "title" : "func offset(ofIndex: Self.Index) -> Int",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/offsets(of:)",
-                            "title" : "func offsets(of: Range<Self.Index>) -> Range<Int>",
                             "type" : "method"
                           },
                           {
@@ -936,11 +564,6 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/split(around:)",
-                            "title" : "func split(around: Range<Self.Index>) -> (prefix: Self.SubSequence, Self.SubSequence, suffix: Self.SubSequence)",
-                            "type" : "method"
-                          },
-                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
                             "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
                             "type" : "method"
@@ -969,55 +592,10 @@
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/trimmingprefix(while:)",
                             "title" : "func trimmingPrefix(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
                             "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/trydropprefix(_:)",
-                            "title" : "func tryDropPrefix<C>(C) -> Self.SubSequence?",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/trydropsuffix(_:)",
-                            "title" : "func tryDropSuffix<C>(C) -> Self.SubSequence?",
-                            "type" : "method"
-                          },
-                          {
-                            "title" : "Subscripts",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-56klo",
-                            "title" : "subscript(Range<Self.Index>) -> Slice<Self>",
-                            "type" : "subscript"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-58fyu",
-                            "title" : "subscript((UnboundedRange_) -> ()) -> Self.SubSequence",
-                            "type" : "subscript"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-5ckk9",
-                            "title" : "subscript<R>(R) -> Self.SubSequence",
-                            "type" : "subscript"
                           }
                         ],
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/collection-implementations",
                         "title" : "Collection Implementations",
-                        "type" : "symbol"
-                      },
-                      {
-                        "children" : [
-                          {
-                            "title" : "Instance Properties",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/halfwidthcornerquoted",
-                            "title" : "var halfWidthCornerQuoted: String",
-                            "type" : "property"
-                          }
-                        ],
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/customstringconvertible-implementations",
-                        "title" : "CustomStringConvertible Implementations",
                         "type" : "symbol"
                       },
                       {
@@ -1040,35 +618,6 @@
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/withcontiguousmutablestorageifavailable(_:)",
                             "title" : "func withContiguousMutableStorageIfAvailable<R>((inout UnsafeMutableBufferPointer<Self.Element>) throws -> R) rethrows -> R?",
                             "type" : "method"
-                          },
-                          {
-                            "title" : "Subscripts",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-2es0p",
-                            "title" : "subscript(Range<Self.Index>) -> Slice<Self>",
-                            "type" : "subscript"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-6z9kz",
-                            "title" : "subscript((UnboundedRange_) -> ()) -> Self.SubSequence",
-                            "type" : "subscript"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-8i8m8",
-                            "title" : "subscript<R>(R) -> Self.SubSequence",
-                            "type" : "subscript"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-91lu6",
-                            "title" : "subscript(Range<Self.Index>) -> Slice<Self>",
-                            "type" : "subscript"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)-wd2l",
-                            "title" : "subscript(Range<Self.Index>) -> Self.SubSequence",
-                            "type" : "subscript"
                           }
                         ],
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/mutablecollection-implementations",
@@ -1087,27 +636,12 @@
                             "type" : "property"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/underestimatedcount-8ku3c",
-                            "title" : "var underestimatedCount: Int",
-                            "type" : "property"
-                          },
-                          {
                             "title" : "Instance Methods",
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/all(_:)",
-                            "title" : "func all((Self.Element) -> Bool) -> Bool",
-                            "type" : "method"
-                          },
-                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/allsatisfy(_:)",
                             "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/any(_:)",
-                            "title" : "func any((Self.Element) -> Bool) -> Bool",
                             "type" : "method"
                           },
                           {
@@ -1183,11 +717,6 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/min(by:)",
                             "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/none(_:)",
-                            "title" : "func none((Self.Element) -> Bool) -> Bool",
                             "type" : "method"
                           },
                           {
@@ -1302,22 +831,6 @@
                       {
                         "title" : "Default Implementations",
                         "type" : "groupMarker"
-                      },
-                      {
-                        "children" : [
-                          {
-                            "title" : "Instance Properties",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/halfwidthcornerquoted",
-                            "title" : "var halfWidthCornerQuoted: String",
-                            "type" : "property"
-                          }
-                        ],
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/customstringconvertible-implementations",
-                        "title" : "CustomStringConvertible Implementations",
-                        "type" : "symbol"
                       },
                       {
                         "children" : [
@@ -1476,7 +989,7 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/subscript(_:)-4xoco",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/subscript(_:)",
                         "title" : "subscript(XMLElement.Attributes.Keys.Index) -> XMLElement.Attributes.Keys.Element",
                         "type" : "subscript"
                       },
@@ -1525,23 +1038,13 @@
                             "type" : "property"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/underestimatedcount-6z6if",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/underestimatedcount",
                             "title" : "var underestimatedCount: Int",
                             "type" : "property"
                           },
                           {
                             "title" : "Instance Methods",
                             "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/convertbyoffset(_:in:)-14d74",
-                            "title" : "func convertByOffset<C>(Self.Index, in: C) -> C.Index",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/convertbyoffset(_:in:)-7svhz",
-                            "title" : "func convertByOffset<C>(Range<Self.Index>, in: C) -> Range<C.Index>",
-                            "type" : "method"
                           },
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/distance(from:to:)",
@@ -1604,11 +1107,6 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/index(atoffset:)",
-                            "title" : "func index(atOffset: Int) -> Self.Index",
-                            "type" : "method"
-                          },
-                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/index(of:)",
                             "title" : "func index(of: Self.Element) -> Self.Index?",
                             "type" : "method"
@@ -1616,21 +1114,6 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/map(_:)-53j2n",
                             "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/offset(of:)",
-                            "title" : "func offset(of: Self.Index) -> Int",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/offset(ofindex:)",
-                            "title" : "func offset(ofIndex: Self.Index) -> Int",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/offsets(of:)",
-                            "title" : "func offsets(of: Range<Self.Index>) -> Range<Int>",
                             "type" : "method"
                           },
                           {
@@ -1669,11 +1152,6 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/split(around:)",
-                            "title" : "func split(around: Range<Self.Index>) -> (prefix: Self.SubSequence, Self.SubSequence, suffix: Self.SubSequence)",
-                            "type" : "method"
-                          },
-                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
                             "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
                             "type" : "method"
@@ -1702,55 +1180,10 @@
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/trimmingprefix(while:)",
                             "title" : "func trimmingPrefix(while: (Self.Element) throws -> Bool) rethrows -> Self.SubSequence",
                             "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/trydropprefix(_:)",
-                            "title" : "func tryDropPrefix<C>(C) -> Self.SubSequence?",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/trydropsuffix(_:)",
-                            "title" : "func tryDropSuffix<C>(C) -> Self.SubSequence?",
-                            "type" : "method"
-                          },
-                          {
-                            "title" : "Subscripts",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/subscript(_:)-6aivr",
-                            "title" : "subscript(Range<Self.Index>) -> Slice<Self>",
-                            "type" : "subscript"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/subscript(_:)-7txyu",
-                            "title" : "subscript((UnboundedRange_) -> ()) -> Self.SubSequence",
-                            "type" : "subscript"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/subscript(_:)-8f0if",
-                            "title" : "subscript<R>(R) -> Self.SubSequence",
-                            "type" : "subscript"
                           }
                         ],
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/collection-implementations",
                         "title" : "Collection Implementations",
-                        "type" : "symbol"
-                      },
-                      {
-                        "children" : [
-                          {
-                            "title" : "Instance Properties",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/halfwidthcornerquoted",
-                            "title" : "var halfWidthCornerQuoted: String",
-                            "type" : "property"
-                          }
-                        ],
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/customstringconvertible-implementations",
-                        "title" : "CustomStringConvertible Implementations",
                         "type" : "symbol"
                       },
                       {
@@ -1781,27 +1214,12 @@
                             "type" : "property"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/underestimatedcount-9gv2w",
-                            "title" : "var underestimatedCount: Int",
-                            "type" : "property"
-                          },
-                          {
                             "title" : "Instance Methods",
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/all(_:)",
-                            "title" : "func all((Self.Element) -> Bool) -> Bool",
-                            "type" : "method"
-                          },
-                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/allsatisfy(_:)",
                             "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
-                            "type" : "method"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/any(_:)",
-                            "title" : "func any((Self.Element) -> Bool) -> Bool",
                             "type" : "method"
                           },
                           {
@@ -1880,11 +1298,6 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/none(_:)",
-                            "title" : "func none((Self.Element) -> Bool) -> Bool",
-                            "type" : "method"
-                          },
-                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/reduce(_:_:)",
                             "title" : "func reduce<Result>(Result, (Result, Self.Element) throws -> Result) rethrows -> Result",
                             "type" : "method"
@@ -1950,7 +1363,7 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/init(_:uniquingkeyswith:)",
-                    "title" : "init<S>(S, uniquingKeysWith: (XMLElement.Attributes.Content, XMLElement.Attributes.Content) throws -> XMLElement.Attributes.Content) rethrows",
+                    "title" : "init(some Sequence<(XMLElement.Attributes.Key, XMLElement.Attributes.Content)>, uniquingKeysWith: (XMLElement.Attributes.Content, XMLElement.Attributes.Content) throws -> XMLElement.Attributes.Content) rethrows",
                     "type" : "init"
                   },
                   {
@@ -1960,7 +1373,7 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/init(uniquekeyswithcontents:)",
-                    "title" : "init<S>(uniqueKeysWithContents: S)",
+                    "title" : "init(uniqueKeysWithContents: some Sequence<(XMLElement.Attributes.Key, XMLElement.Attributes.Content)>)",
                     "type" : "init"
                   },
                   {
@@ -1993,7 +1406,7 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merge(_:uniquingkeyswith:)-2dkp4",
-                    "title" : "func merge<S>(S, uniquingKeysWith: (XMLElement.Attributes.Content, XMLElement.Attributes.Content) throws -> XMLElement.Attributes.Content) rethrows",
+                    "title" : "func merge(some Sequence<(XMLElement.Attributes.Key, XMLElement.Attributes.Content)>, uniquingKeysWith: (XMLElement.Attributes.Content, XMLElement.Attributes.Content) throws -> XMLElement.Attributes.Content) rethrows",
                     "type" : "method"
                   },
                   {
@@ -2003,7 +1416,7 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merging(_:uniquingkeyswith:)-7rko5",
-                    "title" : "func merging<S>(S, uniquingKeysWith: (XMLElement.Attributes.Content, XMLElement.Attributes.Content) throws -> XMLElement.Attributes.Content) rethrows -> XMLElement.Attributes",
+                    "title" : "func merging(some Sequence<(XMLElement.Attributes.Key, XMLElement.Attributes.Content)>, uniquingKeysWith: (XMLElement.Attributes.Content, XMLElement.Attributes.Content) throws -> XMLElement.Attributes.Content) rethrows -> XMLElement.Attributes",
                     "type" : "method"
                   },
                   {
@@ -2032,7 +1445,7 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/subscript(_:default:)",
-                    "title" : "subscript<Default>(XMLElement.Attributes.Key, default _: () -> Default) -> XMLElement.Attributes.Content",
+                    "title" : "subscript(XMLElement.Attributes.Key, default _: () -> some XMLAttributeContentConvertible) -> XMLElement.Attributes.Content",
                     "type" : "subscript"
                   },
                   {
@@ -2137,12 +1550,7 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/count-2xy68",
-                        "title" : "var count: Int",
-                        "type" : "property"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/count-4nfxa",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/count",
                         "title" : "var count: Int",
                         "type" : "property"
                       },
@@ -2162,12 +1570,7 @@
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/isempty-1dzuk",
-                        "title" : "var isEmpty: Bool",
-                        "type" : "property"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/isempty-5h7m7",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/isempty",
                         "title" : "var isEmpty: Bool",
                         "type" : "property"
                       },
@@ -2177,23 +1580,8 @@
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/underestimatedcount-49qwn",
-                        "title" : "var underestimatedCount: Int",
-                        "type" : "property"
-                      },
-                      {
                         "title" : "Instance Methods",
                         "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/convertbyoffset(_:in:)-4hpjj",
-                        "title" : "func convertByOffset<C>(Self.Index, in: C) -> C.Index",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/convertbyoffset(_:in:)-5mnqx",
-                        "title" : "func convertByOffset<C>(Range<Self.Index>, in: C) -> Range<C.Index>",
-                        "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/distance(from:to:)",
@@ -2251,28 +1639,8 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index(atoffset:)",
-                        "title" : "func index(atOffset: Int) -> Self.Index",
-                        "type" : "method"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/map(_:)-5apbc",
                         "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/offset(of:)",
-                        "title" : "func offset(of: Self.Index) -> Int",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/offset(ofindex:)",
-                        "title" : "func offset(ofIndex: Self.Index) -> Int",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/offsets(of:)",
-                        "title" : "func offsets(of: Range<Self.Index>) -> Range<Int>",
                         "type" : "method"
                       },
                       {
@@ -2303,11 +1671,6 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/randomelement(using:)",
                         "title" : "func randomElement<T>(using: inout T) -> Self.Element?",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/split(around:)",
-                        "title" : "func split(around: Range<Self.Index>) -> (prefix: Self.SubSequence, Self.SubSequence, suffix: Self.SubSequence)",
                         "type" : "method"
                       },
                       {
@@ -2385,11 +1748,6 @@
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/description",
                         "title" : "var description: String",
                         "type" : "property"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
-                        "type" : "property"
                       }
                     ],
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/customstringconvertible-implementations",
@@ -2460,12 +1818,7 @@
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/underestimatedcount-25r5f",
-                        "title" : "var underestimatedCount: Int",
-                        "type" : "property"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/underestimatedcount-qh5z",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/underestimatedcount",
                         "title" : "var underestimatedCount: Int",
                         "type" : "property"
                       },
@@ -2474,18 +1827,8 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/all(_:)",
-                        "title" : "func all((Self.Element) -> Bool) -> Bool",
-                        "type" : "method"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/allsatisfy(_:)",
                         "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/any(_:)",
-                        "title" : "func any((Self.Element) -> Bool) -> Bool",
                         "type" : "method"
                       },
                       {
@@ -2551,11 +1894,6 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/min(by:)",
                         "title" : "func min(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Self.Element?",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/none(_:)",
-                        "title" : "func none((Self.Element) -> Bool) -> Bool",
                         "type" : "method"
                       },
                       {
@@ -2634,12 +1972,12 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/allelements",
-                    "title" : "var allElements: Array<XMLElement>",
+                    "title" : "var allElements: some Collection<XMLElement>",
                     "type" : "property"
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/allstrings",
-                    "title" : "var allStrings: Array<XMLElement.Content.Element.StringPart>",
+                    "title" : "var allStrings: some Collection<String>",
                     "type" : "property"
                   },
                   {
@@ -2648,27 +1986,12 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(contentsof:)-7tyzf",
-                    "title" : "func append<S>(contentsOf: S)",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(element:)",
-                    "title" : "func append(element: XMLElement)",
+                    "title" : "func append(contentsOf: some Sequence<XMLElement>)",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(elementof:)",
-                    "title" : "func append<Convertible>(elementOf: Convertible)",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(elements:)",
-                    "title" : "func append(elements: XMLElement...)",
-                    "type" : "method"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(string:)",
-                    "title" : "func append(string: XMLElement.Content.Element.StringPart)",
+                    "title" : "func append(elementOf: some XMLElementConvertible)",
                     "type" : "method"
                   },
                   {
@@ -2698,7 +2021,7 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/find(elementsnamed:recursive:)",
-                    "title" : "func find(elementsNamed: XMLElement.Name, recursive: Bool) -> [XMLElement]",
+                    "title" : "func find(elementsNamed: XMLElement.Name, recursive: Bool) -> Array<XMLElement>",
                     "type" : "method"
                   },
                   {
@@ -2709,6 +2032,11 @@
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/findlast(elementnamed:recursive:)",
                     "title" : "func findLast(elementNamed: XMLElement.Name, recursive: Bool) -> XMLElement?",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/serialize(with:)",
+                    "title" : "func serialize(with: XMLElement.SerializationOptions) -> String",
                     "type" : "method"
                   },
                   {
@@ -2780,22 +2108,6 @@
                       {
                         "children" : [
                           {
-                            "title" : "Instance Properties",
-                            "type" : "groupMarker"
-                          },
-                          {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/halfwidthcornerquoted",
-                            "title" : "var halfWidthCornerQuoted: String",
-                            "type" : "property"
-                          }
-                        ],
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/customstringconvertible-implementations",
-                        "title" : "CustomStringConvertible Implementations",
-                        "type" : "symbol"
-                      },
-                      {
-                        "children" : [
-                          {
                             "title" : "Operators",
                             "type" : "groupMarker"
                           },
@@ -2856,6 +2168,27 @@
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/expressiblebyunicodescalarliteral-implementations",
                         "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
                         "type" : "symbol"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Type Methods",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/parsedfromxml(_:)-55x14",
+                            "title" : "static func parsedFromXML(some StringProtocol) throws -> Self",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/parsedfromxml(_:)-quoz",
+                            "title" : "static func parsedFromXML(Data) throws -> Self",
+                            "type" : "method"
+                          }
+                        ],
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/expressiblebyxmlelement-implementations",
+                        "title" : "ExpressibleByXMLElement Implementations",
+                        "type" : "symbol"
                       }
                     ],
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element",
@@ -2897,11 +2230,6 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/flatmapoffsets(_:)",
-                        "title" : "func flatmapOffsets(Offsets?) -> Range<Self.Index>",
-                        "type" : "method"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/formindex(before:)",
                         "title" : "func formIndex(before: inout Self.Index)",
                         "type" : "method"
@@ -2927,11 +2255,6 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/mapoffsets(_:)",
-                        "title" : "func mapOffsets(Offsets) -> Range<Self.Index>",
-                        "type" : "method"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/reversed()",
                         "title" : "func reversed() -> ReversedCollection<Self>",
                         "type" : "method"
@@ -2953,12 +2276,7 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/count-1znd4",
-                        "title" : "var count: Int",
-                        "type" : "property"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/count-3utvc",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/count",
                         "title" : "var count: Int",
                         "type" : "property"
                       },
@@ -2978,12 +2296,7 @@
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/isempty-2mz9z",
-                        "title" : "var isEmpty: Bool",
-                        "type" : "property"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/isempty-7b44g",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/isempty",
                         "title" : "var isEmpty: Bool",
                         "type" : "property"
                       },
@@ -2993,23 +2306,8 @@
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/underestimatedcount-7zy09",
-                        "title" : "var underestimatedCount: Int",
-                        "type" : "property"
-                      },
-                      {
                         "title" : "Instance Methods",
                         "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/convertbyoffset(_:in:)-1ruxw",
-                        "title" : "func convertByOffset<C>(Range<Self.Index>, in: C) -> Range<C.Index>",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/convertbyoffset(_:in:)-6pnus",
-                        "title" : "func convertByOffset<C>(Self.Index, in: C) -> C.Index",
-                        "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/distance(from:to:)",
@@ -3067,11 +2365,6 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/index(atoffset:)",
-                        "title" : "func index(atOffset: Int) -> Self.Index",
-                        "type" : "method"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/index(of:)",
                         "title" : "func index(of: Self.Element) -> Self.Index?",
                         "type" : "method"
@@ -3084,21 +2377,6 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/map(_:)-34vrq",
                         "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/offset(of:)",
-                        "title" : "func offset(of: Self.Index) -> Int",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/offset(ofindex:)",
-                        "title" : "func offset(ofIndex: Self.Index) -> Int",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/offsets(of:)",
-                        "title" : "func offsets(of: Range<Self.Index>) -> Range<Int>",
                         "type" : "method"
                       },
                       {
@@ -3137,11 +2415,6 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/split(around:)",
-                        "title" : "func split(around: Range<Self.Index>) -> (prefix: Self.SubSequence, Self.SubSequence, suffix: Self.SubSequence)",
-                        "type" : "method"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
                         "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
                         "type" : "method"
@@ -3167,37 +2440,12 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/trydropprefix(_:)",
-                        "title" : "func tryDropPrefix<C>(C) -> Self.SubSequence?",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/trydropsuffix(_:)",
-                        "title" : "func tryDropSuffix<C>(C) -> Self.SubSequence?",
-                        "type" : "method"
-                      },
-                      {
                         "title" : "Subscripts",
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-1di0",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)",
                         "title" : "subscript(XMLElement.Content.Index) -> XMLElement.Content.Element",
-                        "type" : "subscript"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-2tuua",
-                        "title" : "subscript<R>(R) -> Self.SubSequence",
-                        "type" : "subscript"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-5rfhb",
-                        "title" : "subscript(Range<Self.Index>) -> Slice<Self>",
-                        "type" : "subscript"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-nd36",
-                        "title" : "subscript((UnboundedRange_) -> ()) -> Self.SubSequence",
                         "type" : "subscript"
                       },
                       {
@@ -3249,11 +2497,6 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/description",
                         "title" : "var description: String",
-                        "type" : "property"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
                         "type" : "property"
                       }
                     ],
@@ -3341,7 +2584,7 @@
                           },
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/stringinterpolation\/appendinterpolation(_:)-46jy",
-                            "title" : "func appendInterpolation<Convertible>(Convertible)",
+                            "title" : "func appendInterpolation(some XMLElementConvertible)",
                             "type" : "method"
                           },
                           {
@@ -3356,12 +2599,12 @@
                           },
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/stringinterpolation\/appendinterpolation(_:)-7xhft",
-                            "title" : "func appendInterpolation<S>(S)",
+                            "title" : "func appendInterpolation(some StringProtocol)",
                             "type" : "method"
                           },
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/stringinterpolation\/appendinterpolation(_:)-q0o5",
-                            "title" : "func appendInterpolation<C>(C)",
+                            "title" : "func appendInterpolation(some Sequence<XMLElement.Content.Element>)",
                             "type" : "method"
                           },
                           {
@@ -3453,6 +2696,20 @@
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(xml:)",
                         "title" : "init(xml: XMLElement)",
                         "type" : "init"
+                      },
+                      {
+                        "title" : "Type Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/parsedfromxml(_:)-7ufsn",
+                        "title" : "static func parsedFromXML(Data) throws -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/parsedfromxml(_:)-8ka0o",
+                        "title" : "static func parsedFromXML(some StringProtocol) throws -> Self",
+                        "type" : "method"
                       }
                     ],
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/expressiblebyxmlelement-implementations",
@@ -3504,35 +2761,6 @@
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/withcontiguousmutablestorageifavailable(_:)",
                         "title" : "func withContiguousMutableStorageIfAvailable<R>((inout UnsafeMutableBufferPointer<Self.Element>) throws -> R) rethrows -> R?",
                         "type" : "method"
-                      },
-                      {
-                        "title" : "Subscripts",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-233lj",
-                        "title" : "subscript(Range<Self.Index>) -> Slice<Self>",
-                        "type" : "subscript"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-56yom",
-                        "title" : "subscript(Range<Self.Index>) -> Slice<Self>",
-                        "type" : "subscript"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-6d6tl",
-                        "title" : "subscript<R>(R) -> Self.SubSequence",
-                        "type" : "subscript"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-6kkaj",
-                        "title" : "subscript(Range<Self.Index>) -> Self.SubSequence",
-                        "type" : "subscript"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/subscript(_:)-8ficn",
-                        "title" : "subscript((UnboundedRange_) -> ()) -> Self.SubSequence",
-                        "type" : "subscript"
                       }
                     ],
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/mutablecollection-implementations",
@@ -3691,7 +2919,7 @@
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/replacesubrange(_:with:)-1o7d7",
-                        "title" : "func replaceSubrange<C>(Range<XMLElement.Content.Index>, with: C)",
+                        "title" : "func replaceSubrange(Range<XMLElement.Content.Index>, with: some Collection<XMLElement.Content.Element>)",
                         "type" : "method"
                       },
                       {
@@ -3746,12 +2974,7 @@
                         "type" : "property"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/underestimatedcount-2rusn",
-                        "title" : "var underestimatedCount: Int",
-                        "type" : "property"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/underestimatedcount-96dnk",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/underestimatedcount",
                         "title" : "var underestimatedCount: Int",
                         "type" : "property"
                       },
@@ -3760,18 +2983,8 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/all(_:)",
-                        "title" : "func all((Self.Element) -> Bool) -> Bool",
-                        "type" : "method"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/allsatisfy(_:)",
                         "title" : "func allSatisfy((Self.Element) throws -> Bool) rethrows -> Bool",
-                        "type" : "method"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/any(_:)",
-                        "title" : "func any((Self.Element) -> Bool) -> Bool",
                         "type" : "method"
                       },
                       {
@@ -3845,11 +3058,6 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/none(_:)",
-                        "title" : "func none((Self.Element) -> Bool) -> Bool",
-                        "type" : "method"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/reduce(_:_:)",
                         "title" : "func reduce<Result>(Result, (Result, Self.Element) throws -> Result) rethrows -> Result",
                         "type" : "method"
@@ -3897,6 +3105,260 @@
                 ],
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct",
                 "title" : "XMLElement.Content",
+                "type" : "struct"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/init(rawvalue:)",
+                    "title" : "init(rawValue: XMLElement.DocumentEncoding.RawValue)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/rawvalue-swift.property",
+                    "title" : "let rawValue: XMLElement.DocumentEncoding.RawValue",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Type Aliases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/rawvalue-swift.typealias",
+                    "title" : "XMLElement.DocumentEncoding.RawValue",
+                    "type" : "typealias"
+                  },
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/ascii",
+                    "title" : "static let ascii: XMLElement.DocumentEncoding",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/utf16",
+                    "title" : "static let utf16: XMLElement.DocumentEncoding",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/utf8",
+                    "title" : "static let utf8: XMLElement.DocumentEncoding",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/hashvalue",
+                        "title" : "var hashValue: Int",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/hash(into:)",
+                        "title" : "func hash(into: inout Hasher)",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/rawrepresentable-implementations",
+                    "title" : "RawRepresentable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding",
+                "title" : "XMLElement.DocumentEncoding",
+                "type" : "struct"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_(_:_:)-6ylwk",
+                    "title" : "static func < (XMLElement.DocumentVersion, XMLElement.DocumentVersion) -> Bool",
+                    "type" : "op"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/init(major:minor:)",
+                    "title" : "init(major: Int, minor: Int)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/major",
+                    "title" : "var major: Int",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/minor",
+                    "title" : "var minor: Int",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/'...(_:)-5f3hz",
+                        "title" : "static func ... (Self) -> PartialRangeFrom<Self>",
+                        "type" : "op"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/'...(_:)-9nili",
+                        "title" : "static func ... (Self) -> PartialRangeThrough<Self>",
+                        "type" : "op"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/'...(_:_:)",
+                        "title" : "static func ... (Self, Self) -> ClosedRange<Self>",
+                        "type" : "op"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/'.._(_:)",
+                        "title" : "static func ..< (Self) -> PartialRangeUpTo<Self>",
+                        "type" : "op"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/'.._(_:_:)",
+                        "title" : "static func ..< (Self, Self) -> Range<Self>",
+                        "type" : "op"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_(_:_:)-8n415",
+                        "title" : "static func > (Self, Self) -> Bool",
+                        "type" : "op"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_=(_:_:)-9mt1x",
+                        "title" : "static func >= (Self, Self) -> Bool",
+                        "type" : "op"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_=(_:_:)-ctbn",
+                        "title" : "static func <= (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/comparable-implementations",
+                    "title" : "Comparable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion",
+                "title" : "XMLElement.DocumentVersion",
+                "type" : "struct"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/missingrootelementerror\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/missingrootelementerror\/localizeddescription",
+                        "title" : "var localizedDescription: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/missingrootelementerror\/error-implementations",
+                    "title" : "Error Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/missingrootelementerror",
+                "title" : "XMLElement.MissingRootElementError",
                 "type" : "struct"
               },
               {
@@ -3956,22 +3418,6 @@
                   {
                     "title" : "Default Implementations",
                     "type" : "groupMarker"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/customstringconvertible-implementations",
-                    "title" : "CustomStringConvertible Implementations",
-                    "type" : "symbol"
                   },
                   {
                     "children" : [
@@ -4066,17 +3512,265 @@
                 "type" : "struct"
               },
               {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/init(rawvalue:)",
+                    "title" : "init(rawValue: XMLElement.SerializationOptions.RawValue)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/rawvalue-swift.property",
+                    "title" : "let rawValue: XMLElement.SerializationOptions.RawValue",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Type Aliases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/rawvalue-swift.typealias",
+                    "title" : "XMLElement.SerializationOptions.RawValue",
+                    "type" : "typealias"
+                  },
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/explicitclosingtag",
+                    "title" : "static let explicitClosingTag: XMLElement.SerializationOptions",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/pretty",
+                    "title" : "static let pretty: XMLElement.SerializationOptions",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/singlequoteattributes",
+                    "title" : "static let singleQuoteAttributes: XMLElement.SerializationOptions",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/init()",
+                        "title" : "init()",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/contains(_:)",
+                        "title" : "func contains(Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/formintersection(_:)",
+                        "title" : "func formIntersection(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/formsymmetricdifference(_:)",
+                        "title" : "func formSymmetricDifference(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/formunion(_:)",
+                        "title" : "func formUnion(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/insert(_:)",
+                        "title" : "func insert(Self.Element) -> (inserted: Bool, memberAfterInsert: Self.Element)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/intersection(_:)",
+                        "title" : "func intersection(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/remove(_:)",
+                        "title" : "func remove(Self.Element) -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/symmetricdifference(_:)",
+                        "title" : "func symmetricDifference(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/union(_:)",
+                        "title" : "func union(Self) -> Self",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/update(with:)",
+                        "title" : "func update(with: Self.Element) -> Self.Element?",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/optionset-implementations",
+                    "title" : "OptionSet Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/init(_:)",
+                        "title" : "init<S>(S)",
+                        "type" : "init"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/init(arrayliteral:)",
+                        "title" : "init(arrayLiteral: Self.Element...)",
+                        "type" : "init"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/isempty",
+                        "title" : "var isEmpty: Bool",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/isdisjoint(with:)",
+                        "title" : "func isDisjoint(with: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/isstrictsubset(of:)",
+                        "title" : "func isStrictSubset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/isstrictsuperset(of:)",
+                        "title" : "func isStrictSuperset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/issubset(of:)",
+                        "title" : "func isSubset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/issuperset(of:)",
+                        "title" : "func isSuperset(of: Self) -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/subtract(_:)",
+                        "title" : "func subtract(Self)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/subtracting(_:)",
+                        "title" : "func subtracting(Self) -> Self",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/setalgebra-implementations",
+                    "title" : "SetAlgebra Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions",
+                "title" : "XMLElement.SerializationOptions",
+                "type" : "struct"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror\/localizeddescription",
+                        "title" : "var localizedDescription: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror\/error-implementations",
+                    "title" : "Error Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror",
+                "title" : "XMLElement.UnknownParsingError",
+                "type" : "struct"
+              },
+              {
                 "title" : "Initializers",
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-5rtdv",
-                "title" : "init(name: XMLElement.Name, attributes: XMLElement.Attributes, content: XMLElement.Content.Element...)",
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-123k0",
+                "title" : "init(name: XMLElement.Name, attributes: XMLElement.Attributes, content: () throws -> XMLElement.Content) rethrows",
                 "type" : "init"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-80f5p",
-                "title" : "init(name: XMLElement.Name, attributes: XMLElement.Attributes, content: () -> XMLElement.Content)",
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-5rtdv",
+                "title" : "init(name: XMLElement.Name, attributes: XMLElement.Attributes, content: XMLElement.Content.Element...)",
                 "type" : "init"
               },
               {
@@ -4091,7 +3785,7 @@
               },
               {
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:elements:)-7lxxa",
-                "title" : "init<Elements>(name: XMLElement.Name, attributes: XMLElement.Attributes, elements: Elements)",
+                "title" : "init(name: XMLElement.Name, attributes: XMLElement.Attributes, elements: some Sequence<XMLElement>)",
                 "type" : "init"
               },
               {
@@ -4124,7 +3818,7 @@
                 "type" : "property"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/id-4rc6g",
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/id",
                 "title" : "var id: XMLElement.Name",
                 "type" : "property"
               },
@@ -4139,27 +3833,12 @@
               },
               {
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/append(contentsof:)",
-                "title" : "func append<S>(contentsOf: S)",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/append(element:)",
-                "title" : "func append(element: XMLElement)",
+                "title" : "func append(contentsOf: some Sequence<XMLElement>)",
                 "type" : "method"
               },
               {
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/append(elementof:)",
-                "title" : "func append<Convertible>(elementOf: Convertible)",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/append(elements:)",
-                "title" : "func append(elements: XMLElement...)",
-                "type" : "method"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/append(string:)",
-                "title" : "func append(string: XMLElement.Content.Element.StringPart)",
+                "title" : "func append(elementOf: some XMLElementConvertible)",
                 "type" : "method"
               },
               {
@@ -4259,7 +3938,7 @@
               },
               {
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/element(at:)-45kz",
-                "title" : "func element<Path>(at: Path) throws -> XMLElement",
+                "title" : "func element(at: some Collection<XMLElement.Name>) throws -> XMLElement",
                 "type" : "method"
               },
               {
@@ -4279,7 +3958,7 @@
               },
               {
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/remove(elementat:)-9ydn7",
-                "title" : "func remove<Path>(elementAt: Path) throws -> XMLElement?",
+                "title" : "func remove(elementAt: some Collection<XMLElement.Name>) throws -> XMLElement?",
                 "type" : "method"
               },
               {
@@ -4289,7 +3968,17 @@
               },
               {
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/replace(elementat:with:)-4vaaw",
-                "title" : "func replace<Path>(elementAt: Path, with: XMLElement) throws -> XMLElement",
+                "title" : "func replace(elementAt: some Collection<XMLElement.Name>, with: XMLElement) throws -> XMLElement",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/serialize(with:)",
+                "title" : "func serialize(with: XMLElement.SerializationOptions) -> String",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializeasdocument(at:in:with:)",
+                "title" : "func serializeAsDocument(at: XMLElement.DocumentVersion, in: XMLElement.DocumentEncoding, with: XMLElement.SerializationOptions) -> String",
                 "type" : "method"
               },
               {
@@ -4303,29 +3992,224 @@
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/withmutatingaccess(toelementat:do:)-7my5i",
-                "title" : "func withMutatingAccess<Path, T>(toElementAt: Path, do: (inout XMLElement) throws -> T) throws -> T",
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/withmutatingaccess(toelementat:do:)-98ke7",
+                "title" : "func withMutatingAccess<T>(toElementAt: some Collection<XMLElement.Name>, do: (inout XMLElement) throws -> T) throws -> T",
                 "type" : "method"
               },
               {
-                "title" : "Default Implementations",
+                "title" : "Type Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-3057l",
+                "title" : "static func parse(Data) throws -> XMLElement",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-3lced",
+                "title" : "static func parse(some StringProtocol) throws -> XMLElement",
+                "type" : "method"
+              },
+              {
+                "title" : "Enumerations",
                 "type" : "groupMarker"
               },
               {
                 "children" : [
                   {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/attribute(quotes:)",
+                    "title" : "case attribute(quotes: XMLElement.EscapableContent.Quotes)",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/cdata",
+                    "title" : "case cdata",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/comment",
+                    "title" : "case comment",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/processinginstruction",
+                    "title" : "case processingInstruction",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/text",
+                    "title" : "case text",
+                    "type" : "case"
+                  },
+                  {
                     "title" : "Instance Properties",
                     "type" : "groupMarker"
                   },
                   {
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/description",
+                    "title" : "var description: String",
                     "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/escape(_:)",
+                    "title" : "func escape(some StringProtocol) -> String",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Enumerations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Enumeration Cases",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/quotes\/double",
+                        "title" : "case double",
+                        "type" : "case"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/quotes\/single",
+                        "title" : "case single",
+                        "type" : "case"
+                      },
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/quotes\/description",
+                        "title" : "var description: String",
+                        "type" : "property"
+                      },
+                      {
+                        "title" : "Default Implementations",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "children" : [
+                          {
+                            "title" : "Operators",
+                            "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/quotes\/!=(_:_:)",
+                            "title" : "static func != (Self, Self) -> Bool",
+                            "type" : "op"
+                          }
+                        ],
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/quotes\/equatable-implementations",
+                        "title" : "Equatable Implementations",
+                        "type" : "symbol"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/quotes",
+                    "title" : "XMLElement.EscapableContent.Quotes",
+                    "type" : "enum"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Operators",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/!=(_:_:)",
+                        "title" : "static func != (Self, Self) -> Bool",
+                        "type" : "op"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent\/equatable-implementations",
+                    "title" : "Equatable Implementations",
+                    "type" : "symbol"
                   }
                 ],
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/escapablecontent",
+                "title" : "XMLElement.EscapableContent",
+                "type" : "enum"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Enumeration Cases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/cannotconvertattribute(element:key:content:type:)",
+                    "title" : "case cannotConvertAttribute(element: XMLElement, key: XMLElement.Attributes.Key, content: XMLElement.Attributes.Content, type: Any.Type)",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/cannotconvertstringcontent(element:stringcontent:type:)",
+                    "title" : "case cannotConvertStringContent(element: XMLElement, stringContent: XMLElement.Content.Element.StringPart, type: Any.Type)",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/missingattribute(element:key:)",
+                    "title" : "case missingAttribute(element: XMLElement, key: XMLElement.Attributes.Key)",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/missingchild(element:childname:)",
+                    "title" : "case missingChild(element: XMLElement, childName: XMLElement.Name)",
+                    "type" : "case"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/missingstringcontent(element:)",
+                    "title" : "case missingStringContent(element: XMLElement)",
+                    "type" : "case"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/localizeddescription",
+                        "title" : "var localizedDescription: String",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/error-implementations",
+                    "title" : "Error Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror",
+                "title" : "XMLElement.LookupError",
+                "type" : "enum"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
               },
               {
                 "children" : [
@@ -4353,6 +4237,20 @@
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(xml:)",
                     "title" : "init(xml: XMLElement)",
                     "type" : "init"
+                  },
+                  {
+                    "title" : "Type Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/parsedfromxml(_:)-4a13r",
+                    "title" : "static func parsedFromXML(Data) throws -> Self",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/parsedfromxml(_:)-6bn3s",
+                    "title" : "static func parsedFromXML(some StringProtocol) throws -> Self",
+                    "type" : "method"
                   }
                 ],
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/expressiblebyxmlelement-implementations",
@@ -4366,25 +4264,23 @@
                     "type" : "groupMarker"
                   },
                   {
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/id-8gfaw",
-                    "title" : "var id: ObjectIdentifier",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/identifiable-implementations",
-                "title" : "Identifiable Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/xml",
                     "title" : "var xml: XMLElement",
                     "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializeasxml(with:)",
+                    "title" : "func serializeAsXML(with: XMLElement.SerializationOptions) -> String",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/serializeasxmldocument(at:in:with:)",
+                    "title" : "func serializeAsXMLDocument(at: XMLElement.DocumentVersion, in: XMLElement.DocumentEncoding, with: XMLElement.SerializationOptions) -> String",
+                    "type" : "method"
                   }
                 ],
                 "path" : "\/documentation\/xmlwrangler\/xmlelement\/xmlelementconvertible-implementations",
@@ -4418,309 +4314,6 @@
           {
             "title" : "Enumerations",
             "type" : "groupMarker"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Enumeration Cases",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/documentencoding\/ascii",
-                "title" : "case ascii",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/documentencoding\/utf16",
-                "title" : "case utf16",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/documentencoding\/utf8",
-                "title" : "case utf8",
-                "type" : "case"
-              },
-              {
-                "title" : "Instance Properties",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/documentencoding\/description",
-                "title" : "var description: String",
-                "type" : "property"
-              },
-              {
-                "title" : "Default Implementations",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/documentencoding\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/documentencoding\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Operators",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/documentencoding\/!=(_:_:)",
-                    "title" : "static func != (Self, Self) -> Bool",
-                    "type" : "op"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/documentencoding\/equatable-implementations",
-                "title" : "Equatable Implementations",
-                "type" : "symbol"
-              }
-            ],
-            "path" : "\/documentation\/xmlwrangler\/documentencoding",
-            "title" : "DocumentEncoding",
-            "type" : "enum"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Enumeration Cases",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/attribute(quotes:)",
-                "title" : "case attribute(quotes: EscapableContent.Quotes)",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/cdata",
-                "title" : "case cdata",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/comment",
-                "title" : "case comment",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/processinginstruction",
-                "title" : "case processingInstruction",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/text",
-                "title" : "case text",
-                "type" : "case"
-              },
-              {
-                "title" : "Instance Properties",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/description",
-                "title" : "var description: String",
-                "type" : "property"
-              },
-              {
-                "title" : "Enumerations",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Enumeration Cases",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/double",
-                    "title" : "case double",
-                    "type" : "case"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/single",
-                    "title" : "case single",
-                    "type" : "case"
-                  },
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/description",
-                    "title" : "var description: String",
-                    "type" : "property"
-                  },
-                  {
-                    "title" : "Default Implementations",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Instance Properties",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/halfwidthcornerquoted",
-                        "title" : "var halfWidthCornerQuoted: String",
-                        "type" : "property"
-                      }
-                    ],
-                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/customstringconvertible-implementations",
-                    "title" : "CustomStringConvertible Implementations",
-                    "type" : "symbol"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Operators",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/!=(_:_:)",
-                        "title" : "static func != (Self, Self) -> Bool",
-                        "type" : "op"
-                      }
-                    ],
-                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes\/equatable-implementations",
-                    "title" : "Equatable Implementations",
-                    "type" : "symbol"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/quotes",
-                "title" : "EscapableContent.Quotes",
-                "type" : "enum"
-              },
-              {
-                "title" : "Default Implementations",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Operators",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/escapablecontent\/!=(_:_:)",
-                    "title" : "static func != (Self, Self) -> Bool",
-                    "type" : "op"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/escapablecontent\/equatable-implementations",
-                "title" : "Equatable Implementations",
-                "type" : "symbol"
-              }
-            ],
-            "path" : "\/documentation\/xmlwrangler\/escapablecontent",
-            "title" : "EscapableContent",
-            "type" : "enum"
-          },
-          {
-            "children" : [
-              {
-                "title" : "Enumeration Cases",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/lookuperror\/cannotconvertattribute(element:key:content:type:)",
-                "title" : "case cannotConvertAttribute(element: XMLElement, key: XMLElement.Attributes.Key, content: XMLElement.Attributes.Content, type: Any.Type)",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/lookuperror\/cannotconvertstringcontent(element:stringcontent:type:)",
-                "title" : "case cannotConvertStringContent(element: XMLElement, stringContent: XMLElement.Content.Element.StringPart, type: Any.Type)",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/lookuperror\/missingattribute(element:key:)",
-                "title" : "case missingAttribute(element: XMLElement, key: XMLElement.Attributes.Key)",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/lookuperror\/missingchild(element:childname:)",
-                "title" : "case missingChild(element: XMLElement, childName: XMLElement.Name)",
-                "type" : "case"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/lookuperror\/missingstringcontent(element:)",
-                "title" : "case missingStringContent(element: XMLElement)",
-                "type" : "case"
-              },
-              {
-                "title" : "Instance Properties",
-                "type" : "groupMarker"
-              },
-              {
-                "path" : "\/documentation\/xmlwrangler\/lookuperror\/description",
-                "title" : "var description: String",
-                "type" : "property"
-              },
-              {
-                "title" : "Default Implementations",
-                "type" : "groupMarker"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/lookuperror\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/lookuperror\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/xmlwrangler\/lookuperror\/localizeddescription",
-                    "title" : "var localizedDescription: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/xmlwrangler\/lookuperror\/error-implementations",
-                "title" : "Error Implementations",
-                "type" : "symbol"
-              }
-            ],
-            "path" : "\/documentation\/xmlwrangler\/lookuperror",
-            "title" : "LookupError",
-            "type" : "enum"
           },
           {
             "children" : [
@@ -4770,7 +4363,7 @@
               },
               {
                 "path" : "\/documentation\/xmlwrangler\/xmlcontentbuilder\/buildexpression(_:)-6pqxb",
-                "title" : "static func buildExpression<T>(T) -> XMLElement.Content",
+                "title" : "static func buildExpression(some XMLElementConvertible) -> XMLElement.Content",
                 "type" : "method"
               },
               {
@@ -4792,6 +4385,105 @@
             "path" : "\/documentation\/xmlwrangler\/xmlcontentbuilder",
             "title" : "XMLContentBuilder",
             "type" : "enum"
+          },
+          {
+            "title" : "Extended Modules",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Protocols",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/swift\/sequence\/converted(to:)",
+                    "title" : "func converted<Target>(to: Target.Type) throws -> Array<Target>",
+                    "type" : "method"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/swift\/sequence",
+                "title" : "Sequence",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/xmlwrangler\/swift\/dictionary\/init(elementsof:)",
+                    "title" : "init(elementsOf: XMLElement.Attributes)",
+                    "type" : "init"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/swift\/dictionary",
+                "title" : "Dictionary",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Initializers",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/swift\/string\/init(xmlattributecontent:)-2yjjq",
+                        "title" : "init(xmlAttributeContent: XMLElement.Attributes.Content)",
+                        "type" : "init"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/swift\/string\/init(xmlattributecontent:)-85b9j",
+                        "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
+                        "type" : "init"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/swift\/string\/expressiblebyxmlattributecontent-implementations",
+                    "title" : "ExpressibleByXMLAttributeContent Implementations",
+                    "type" : "symbol"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/swift\/string\/xmlattributecontent",
+                        "title" : "var xmlAttributeContent: XMLElement.Attributes.Content",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/xmlwrangler\/swift\/string\/xmlattributecontentconvertible-implementations",
+                    "title" : "XMLAttributeContentConvertible Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/xmlwrangler\/swift\/string",
+                "title" : "String",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/xmlwrangler\/swift",
+            "title" : "Swift",
+            "type" : "extension"
           }
         ],
         "path" : "\/documentation\/xmlwrangler",
@@ -4803,6 +4495,6 @@
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,
-    "patch" : 0
+    "patch" : 1
   }
 }

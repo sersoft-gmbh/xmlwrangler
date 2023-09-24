@@ -5,8 +5,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement\/Content\/Element",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " to the contents.",
@@ -184,8 +185,9 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "XMLElement\/Content",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
+                  "isActive" : true,
+                  "type" : "reference"
                 },
                 {
                   "text" : " to append.",
@@ -362,8 +364,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement\/Content",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -404,8 +407,9 @@
       "type" : "text"
     },
     {
-      "code" : "XMLElement\/Content\/Element",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " to the contents.",
