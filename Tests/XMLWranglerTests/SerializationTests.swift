@@ -3,9 +3,9 @@ import XCTest
 
 final class SerializationTests: XCTestCase {
     func testDocumentEncodingDescription() {
-        XCTAssertEqual(String(describing: XWElement.DocumentEncoding.ascii), "ascii")
-        XCTAssertEqual(String(describing: XWElement.DocumentEncoding.utf8), "utf-8")
-        XCTAssertEqual(String(describing: XWElement.DocumentEncoding.utf16), "utf-16")
+        XCTAssertEqual(String(describing: XWElement.DocumentEncoding.ascii), "ASCII")
+        XCTAssertEqual(String(describing: XWElement.DocumentEncoding.utf8), "UTF-8")
+        XCTAssertEqual(String(describing: XWElement.DocumentEncoding.utf16), "UTF-16")
     }
 
     func testEscapableContentQuotesDescription() {
