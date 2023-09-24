@@ -84,7 +84,7 @@ let xmlDocumentString = root.serializeAsDocument(at: DocumentVersion(major: 1), 
 
 Please note that XMLWrangler does not escape the string based on the given encoding. It simply uses it the generate the document header.
 
-Both initializers can take an additional parameter `options` which contains a set of options to control the serialization behaviour. Currently the following options are possible:
+Both functions can take an additional parameter `options` which contains a set of options to control the serialization behaviour. Currently the following options are possible:
 
 -   `.pretty`: Use pretty formatting. This adds newlines around the tags to make the resulting XML more readable. This is usually not needed for processing XML.
 -   `.singleQuoteAttributes`: When this option is present, then attributes of elements will be enclosed in single quotes (') instead of double quotes (").
