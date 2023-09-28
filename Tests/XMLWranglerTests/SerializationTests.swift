@@ -2,6 +2,15 @@ import XCTest
 @testable import XMLWrangler
 
 final class SerializationTests: XCTestCase {
+    func testDocumentVersionDescription() {
+        XCTAssertEqual(String(describing: XWElement.DocumentVersion(major: 1)), "1.0")
+        XCTAssertEqual(String(describing: XWElement.DocumentVersion(major: 2, minor: 3)), "2.3")
+    }
+
+    func testDocumentVersionComparison() {
+        XCTAssertTrue(XWElement.DocumentVersion(major: 1) < XWElement.DocumentVersion(major: 1, minor: 2))
+    }
+
     func testDocumentEncodingDescription() {
         XCTAssertEqual(String(describing: XWElement.DocumentEncoding.ascii), "ASCII")
         XCTAssertEqual(String(describing: XWElement.DocumentEncoding.utf8), "UTF-8")
