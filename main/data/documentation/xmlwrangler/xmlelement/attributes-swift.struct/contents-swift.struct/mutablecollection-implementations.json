@@ -21,6 +21,7 @@
       }
     ],
     "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
     "title" : "MutableCollection Implementations"
   },
   "schemaVersion" : {
@@ -245,6 +246,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -286,6 +288,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sl5IndexQa",
       "text" : "Index"
     }
   ],
@@ -330,6 +333,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sl5IndexQa",
       "text" : "Index"
     },
     {
@@ -346,6 +350,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sl5IndexQa",
       "text" : "Index"
     },
     {
@@ -416,6 +421,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {

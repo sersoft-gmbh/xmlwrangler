@@ -1019,7 +1019,44 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/appendString(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Appends either a new ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/string(_:)",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " element,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "or if the last one is already ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/string(_:)",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ", appends ",
+      "type" : "text"
+    },
+    {
+      "code" : "string",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to the last one.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

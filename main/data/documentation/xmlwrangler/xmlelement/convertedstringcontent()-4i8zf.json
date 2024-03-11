@@ -179,6 +179,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SY8RawValueQa",
               "text" : "RawValue"
             },
             {
@@ -611,7 +612,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": any "
     },
     {
       "kind" : "keyword",

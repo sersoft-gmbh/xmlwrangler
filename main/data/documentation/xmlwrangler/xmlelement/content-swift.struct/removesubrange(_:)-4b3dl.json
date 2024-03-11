@@ -59,6 +59,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sl5IndexQa",
         "text" : "Index"
       },
       {
@@ -149,6 +150,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sl5IndexQa",
               "text" : "Index"
             },
             {
@@ -448,6 +450,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sl5IndexQa",
       "text" : "Index"
     },
     {

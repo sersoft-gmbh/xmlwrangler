@@ -91,6 +91,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ST7ElementQa",
         "text" : "Element"
       },
       {
@@ -107,6 +108,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ST7ElementQa",
         "text" : "Element"
       },
       {
@@ -242,6 +244,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ST7ElementQa",
               "text" : "Element"
             },
             {
@@ -258,6 +261,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ST7ElementQa",
               "text" : "Element"
             },
             {
@@ -924,6 +928,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -940,6 +945,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {

@@ -18,17 +18,17 @@
                   {
                     "children" : [
                       {
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
+                        "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
+                        "type" : "init"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3j6bp",
-                        "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
-                        "type" : "init"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       }
@@ -57,7 +57,7 @@
                   {
                     "children" : [
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-76pd1",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-3wu3r",
                         "title" : "init(xml: XMLElement) throws",
                         "type" : "init"
                       },
@@ -67,7 +67,7 @@
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-3wu3r",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-76pd1",
                         "title" : "init(xml: XMLElement) throws",
                         "type" : "init"
                       }
@@ -888,7 +888,7 @@
                           },
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/init(from:)",
-                            "title" : "init(from: Decoder) throws",
+                            "title" : "init(from: any Decoder) throws",
                             "type" : "init"
                           },
                           {
@@ -906,7 +906,7 @@
                           },
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/encode(to:)",
-                            "title" : "func encode(to: Encoder) throws",
+                            "title" : "func encode(to: any Encoder) throws",
                             "type" : "method"
                           },
                           {
@@ -1778,7 +1778,7 @@
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/init(dictionaryliteral:)",
-                        "title" : "init(dictionaryLiteral: (XMLElement.Attributes.Key, XMLAttributeContentConvertible)...)",
+                        "title" : "init(dictionaryLiteral: (XMLElement.Attributes.Key, any XMLAttributeContentConvertible)...)",
                         "type" : "init"
                       }
                     ],
@@ -3475,7 +3475,7 @@
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/init(from:)",
-                        "title" : "init(from: Decoder) throws",
+                        "title" : "init(from: any Decoder) throws",
                         "type" : "init"
                       },
                       {
@@ -3493,7 +3493,7 @@
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/encode(to:)",
-                        "title" : "func encode(to: Encoder) throws",
+                        "title" : "func encode(to: any Encoder) throws",
                         "type" : "method"
                       },
                       {
@@ -4150,12 +4150,12 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/cannotconvertattribute(element:key:content:type:)",
-                    "title" : "case cannotConvertAttribute(element: XMLElement, key: XMLElement.Attributes.Key, content: XMLElement.Attributes.Content, type: Any.Type)",
+                    "title" : "case cannotConvertAttribute(element: XMLElement, key: XMLElement.Attributes.Key, content: XMLElement.Attributes.Content, type: any Any.Type)",
                     "type" : "case"
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/cannotconvertstringcontent(element:stringcontent:type:)",
-                    "title" : "case cannotConvertStringContent(element: XMLElement, stringContent: XMLElement.Content.Element.StringPart, type: Any.Type)",
+                    "title" : "case cannotConvertStringContent(element: XMLElement, stringContent: XMLElement.Content.Element.StringPart, type: any Any.Type)",
                     "type" : "case"
                   },
                   {
