@@ -1,0 +1,463 @@
+{
+  "abstract" : [
+    {
+      "text" : "Initializes the dictionary using the storage of the given attributes.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Dictionary"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Dictionary\/init(elementsOf:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Key",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " is ",
+          "type" : "text"
+        },
+        {
+          "code" : "XMLElement.Attributes.Key",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " and ",
+          "type" : "text"
+        },
+        {
+          "code" : "Value",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " is ",
+          "type" : "text"
+        },
+        {
+          "code" : "XMLElement.Attributes.Content",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "Swift",
+    "externalID" : "s:SD11XMLWranglerAA10XMLElementV10AttributesV3KeyVRszAE7ContentVRs_rlE10elementsOfSDyAgIGAE_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "elementsOf"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+        "text" : "XMLElement"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+        "text" : "Attributes"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "XMLWrangler",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(elementsOf:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "elementsOf"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "attributes"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+              "text" : "XMLElement"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+              "text" : "Attributes"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " whose contents should be contained in the dictionary.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "attributes"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/xmlwrangler\/swift\/dictionary\/init(elementsof:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://XMLWrangler/documentation/XMLWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "XMLWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/Swift": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Swift",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/swift"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/Swift/Dictionary": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:SD",
+      "text" : "Dictionary"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Dictionary",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Dictionary"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Dictionary",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/swift\/dictionary"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/Swift/Dictionary/init(elementsOf:)": {
+  "abstract" : [
+    {
+      "text" : "Initializes the dictionary using the storage of the given attributes.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Key",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "XMLElement.Attributes.Key",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "XMLElement.Attributes.Content",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "elementsOf"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Dictionary\/init(elementsOf:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(elementsOf:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/swift\/dictionary\/init(elementsof:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct": {
+  "abstract" : [
+    {
+      "text" : "Contains the attributes of an ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Attributes"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Attributes"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Attributes",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct"
+}
+}
+}

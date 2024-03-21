@@ -1,0 +1,536 @@
+{
+  "abstract" : [
+    {
+      "text" : "Returns a Boolean value indicating whether two values are not equal.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Collection-Implementations",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/Equatable-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/!=(_:_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "Swift",
+    "externalID" : "s:SQsE2neoiySbx_xtFZ::SYNTHESIZED::s:11XMLWrangler10XMLElementV10AttributesV5IndexV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "!="
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Self"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Self"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "XMLWrangler",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Operator",
+    "symbolKind" : "op",
+    "title" : "!=(_:_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "static"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "!="
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "lhs"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Self"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "rhs"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Self"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A value to compare.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "lhs"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Another value to compare.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "rhs"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Inequality is the inverse of equality. For any values ",
+              "type" : "text"
+            },
+            {
+              "code" : "a",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "code" : "b",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "code" : "a != b",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "implies that ",
+              "type" : "text"
+            },
+            {
+              "code" : "a == b",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is ",
+              "type" : "text"
+            },
+            {
+              "code" : "false",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "This is the default implementation of the not-equal-to operator (",
+              "type" : "text"
+            },
+            {
+              "code" : "!=",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ")",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "for any type that conforms to ",
+              "type" : "text"
+            },
+            {
+              "code" : "Equatable",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/!=(_:_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://XMLWrangler/documentation/XMLWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "XMLWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct": {
+  "abstract" : [
+    {
+      "text" : "Contains the attributes of an ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Attributes"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Attributes"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Attributes",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Collection-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Collection-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Collection Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/collection-implementations"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index": {
+  "abstract" : [
+    {
+      "text" : "The index for attributes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Index"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Index"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Attributes.Index",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/!=(_:_:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a Boolean value indicating whether two values are not equal.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "!="
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/!=(_:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "!=(_:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/!=(_:_:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/equatable-implementations"
+}
+}
+}

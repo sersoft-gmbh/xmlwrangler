@@ -1,0 +1,350 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/ExpressibleByStringInterpolation-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/init(stringInterpolation:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "XMLWrangler",
+    "externalID" : "s:11XMLWrangler10XMLElementV7ContentV19stringInterpolationA2E06StringE0V_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "stringInterpolation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+        "text" : "XMLElement"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
+        "text" : "Content"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV19StringInterpolationV",
+        "text" : "StringInterpolation"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "XMLWrangler"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(stringInterpolation:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "stringInterpolation"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+              "text" : "XMLElement"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
+              "text" : "Content"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/StringInterpolation",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV19StringInterpolationV",
+              "text" : "StringInterpolation"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(stringinterpolation:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://XMLWrangler/documentation/XMLWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "XMLWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct": {
+  "abstract" : [
+    {
+      "text" : "A collection implementation that represents the contents of an XML element.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Content"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Content"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Content",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/ExpressibleByStringInterpolation-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/ExpressibleByStringInterpolation-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "ExpressibleByStringInterpolation Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/expressiblebystringinterpolation-implementations"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/StringInterpolation": {
+  "abstract" : [
+    {
+      "text" : "The string interpolation type for ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "StringInterpolation"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/StringInterpolation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StringInterpolation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.Content.StringInterpolation",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/stringinterpolation"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init(stringInterpolation:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringInterpolation"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
+      "text" : "Content"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV19StringInterpolationV",
+      "text" : "StringInterpolation"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/init(stringInterpolation:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringInterpolation:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(stringinterpolation:)"
+}
+}
+}

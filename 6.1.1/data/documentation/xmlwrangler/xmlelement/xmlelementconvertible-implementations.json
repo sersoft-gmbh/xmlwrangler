@@ -1,0 +1,348 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/XMLElementConvertible-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "XMLWrangler"
+      }
+    ],
+    "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
+    "title" : "XMLElementConvertible Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/xml"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/serializeAsXML(with:)",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/serializeAsXMLDocument(at:in:with:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/xmlwrangler\/xmlelement\/xmlelementconvertible-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://XMLWrangler/documentation/XMLWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "XMLWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/serializeAsXML(with:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a String by serializing the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/xml",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " element.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "serializeAsXML"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
+      "text" : "SerializationOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/serializeAsXML(with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "serializeAsXML(with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializeasxml(with:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/serializeAsXMLDocument(at:in:with:)": {
+  "abstract" : [
+    {
+      "text" : "Creates an XML String by serializing the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/xml",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "  as root and adding the ",
+      "type" : "text"
+    },
+    {
+      "code" : "<?xml ...?>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " document header.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "serializeAsXMLDocument"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV15DocumentVersionV",
+      "text" : "DocumentVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "in"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV16DocumentEncodingV",
+      "text" : "DocumentEncoding"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "with"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
+      "text" : "SerializationOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/serializeAsXMLDocument(at:in:with:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "serializeAsXMLDocument(at:in:with:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializeasxmldocument(at:in:with:)"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/xml": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "xml"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/xml",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "xml",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/xml"
+}
+}
+}

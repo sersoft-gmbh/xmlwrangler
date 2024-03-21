@@ -1,0 +1,412 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9lxb6"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9t88v"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Self",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "RawRepresentable",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " and ",
+          "type" : "text"
+        },
+        {
+          "code" : "RawValue",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "LosslessStringConvertible",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "XMLWrangler",
+    "externalID" : "s:11XMLWrangler23ExpressibleByXMLElementPAASYRzs25LosslessStringConvertible8RawValueSYRpzrlE3xmlxAA0D0V_tKcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "xml"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+        "text" : "XMLElement"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "XMLWrangler"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(xml:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "xml"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+              "text" : "XMLElement"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9t88v"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://XMLWrangler/documentation/XMLWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "XMLWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement": {
+  "abstract" : [
+    {
+      "text" : "Describes a type that can be initialized with an ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ExpressibleByXMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ExpressibleByXMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/init(xml:)-9lxb6": {
+  "abstract" : [
+    {
+      "text" : "Creates a new instance using the given ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "defaultImplementations" : 3,
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "xml"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9lxb6",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "init(xml:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9lxb6"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/init(xml:)-9t88v": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "RawRepresentable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "RawValue",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "LosslessStringConvertible",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "xml"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9t88v",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(xml:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9t88v"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
+  "abstract" : [
+    {
+      "text" : "Represents an element in an XML structure.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XMLElement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement"
+}
+}
+}
