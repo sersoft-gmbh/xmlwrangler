@@ -123,7 +123,10 @@ extension XMLElement {
                 let leftTrimmed = string.drop(while: { $0.isNewline || $0.isWhitespace })
                 currentElem.content.append(.string(String(leftTrimmed)))
             } else {
-                currentElem.appendString(string.trimmingCharacters(in: .whitespaces))
+                // We must not trim whitespaces here!
+                // For e.g. "One &amp; Two", the parser passes us "One ", "&", " Two".
+                // Cleanup of the string will be taken care of at the end of the element.
+                currentElem.appendString(string)
             }
             elementStack.append(currentElem)
         }
