@@ -18,12 +18,12 @@
                   {
                     "children" : [
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3j6bp",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-94r05",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3j6bp",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
