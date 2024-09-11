@@ -53,6 +53,10 @@
         "text" : "XMLElementConvertible"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "XMLElementProtocols.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/XMLElementProtocols.swift#L9"
+    },
     "role" : "symbol",
     "roleHeading" : "Protocol",
     "symbolKind" : "protocol",

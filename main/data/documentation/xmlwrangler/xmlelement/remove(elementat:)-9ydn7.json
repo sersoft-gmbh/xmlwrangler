@@ -96,6 +96,10 @@
         "name" : "XMLWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "XMLElement+Mutation.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/XMLElement+Mutation.swift#L104"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",

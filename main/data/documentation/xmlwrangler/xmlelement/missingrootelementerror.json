@@ -54,6 +54,10 @@
         "text" : "MissingRootElementError"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Parsing.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/Parsing.swift#L73"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",

@@ -80,6 +80,10 @@
         "name" : "XMLWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "XMLElementContent+Lookup.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/XMLElementContent+Lookup.swift#L4"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",

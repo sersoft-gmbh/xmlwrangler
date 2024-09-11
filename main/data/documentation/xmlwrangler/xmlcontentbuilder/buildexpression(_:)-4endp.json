@@ -68,6 +68,10 @@
         "name" : "XMLWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "XMLContentBuilder.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/XMLContentBuilder.swift#L15"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Method",
     "symbolKind" : "method",

@@ -34,6 +34,10 @@
         "name" : "XMLWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Serialization.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/Serialization.swift#L88"
+    },
     "role" : "symbol",
     "roleHeading" : "Case",
     "symbolKind" : "case",

@@ -74,6 +74,10 @@
         "name" : "XMLWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Parsing.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/Parsing.swift#L18"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Method",
     "symbolKind" : "method",

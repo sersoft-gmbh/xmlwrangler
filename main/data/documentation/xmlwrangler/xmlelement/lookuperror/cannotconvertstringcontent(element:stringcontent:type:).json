@@ -146,6 +146,10 @@
         "name" : "XMLWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "LookupError.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/LookupError.swift#L15"
+    },
     "role" : "symbol",
     "roleHeading" : "Case",
     "symbolKind" : "case",

@@ -38,6 +38,10 @@
         "text" : "XMLContentBuilder"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "XMLContentBuilder.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/XMLContentBuilder.swift#L3"
+    },
     "role" : "symbol",
     "roleHeading" : "Enumeration",
     "symbolKind" : "enum",

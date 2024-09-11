@@ -46,6 +46,10 @@
         "text" : "Name"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "XMLElement.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/XMLElement.swift#L89"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",

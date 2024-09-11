@@ -62,6 +62,10 @@
         "text" : "UnknownParsingError"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "Parsing.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/Parsing.swift#L67"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",

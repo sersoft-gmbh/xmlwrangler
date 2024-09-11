@@ -57,6 +57,10 @@
         "name" : "XMLWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "XMLElementProtocols.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/XMLElementProtocols.swift#L11"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Property",

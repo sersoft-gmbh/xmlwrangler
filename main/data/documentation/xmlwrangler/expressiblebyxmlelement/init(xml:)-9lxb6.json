@@ -17,9 +17,9 @@
   "defaultImplementationsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-76pd1",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9t88v",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-3wu3r",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9t88v"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-76pd1"
       ],
       "title" : "ExpressibleByXMLElement Implementations"
     }
@@ -75,6 +75,10 @@
         "name" : "XMLWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "XMLElementProtocols.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/XMLElementProtocols.swift#L5"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Initializer",

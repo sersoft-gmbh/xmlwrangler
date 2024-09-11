@@ -55,6 +55,10 @@
         "text" : "LookupError"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "LookupError.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/Sources\/XMLWrangler\/LookupError.swift#L3"
+    },
     "role" : "symbol",
     "roleHeading" : "Enumeration",
     "symbolKind" : "enum",
