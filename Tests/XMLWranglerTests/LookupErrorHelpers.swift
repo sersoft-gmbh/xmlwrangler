@@ -1,5 +1,9 @@
 import XCTest
+#if swift(>=6.0)
+public import XMLWrangler
+#else
 import XMLWrangler
+#endif
 
 // Only equatable for testing
 extension XWElement.LookupError: Equatable {

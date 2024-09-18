@@ -1,11 +1,11 @@
-import struct Foundation.Data
-import class Foundation.NSObject
+public import struct Foundation.Data
+public import class Foundation.NSObject
 #if canImport(FoundationXML)
-import class FoundationXML.XMLParser
-import protocol FoundationXML.XMLParserDelegate
+private import class FoundationXML.XMLParser
+private import protocol FoundationXML.XMLParserDelegate
 #else
-import class Foundation.XMLParser
-import protocol Foundation.XMLParserDelegate
+public import class Foundation.XMLParser
+public import protocol Foundation.XMLParserDelegate
 #endif
 
 extension XMLElement {

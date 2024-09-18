@@ -61,6 +61,31 @@ public enum XMLContentBuilder: Sendable {
 }
 
 extension XMLElement {
+#if swift(>=6.0)
+    /// Creates a new element using the given name and attributes. The content is built using the ``XMLContentBuilder``.
+    /// - Parameters:
+    ///   - name: The name of the new element.
+    ///   - attributes: The attributes of the new element.
+    ///   - content: The content builder to use for the content.
+    @inlinable
+    public init<E: Error>(name: Name,
+                          attributes: Attributes = .init(),
+                          @XMLContentBuilder content: () throws(E) -> Content) throws(E) {
+        try self.init(name: name, attributes: attributes, content: content())
+    }
+
+    /// Creates a new element using the given name and attributes. The content is built using the ``XMLContentBuilder``.
+    /// - Parameters:
+    ///   - name: The name of the new element.
+    ///   - attributes: The attributes of the new element.
+    ///   - content: The content builder to use for the content.
+    @inlinable
+    public init<E: Error>(name: Name,
+                          attributes: Attributes = .init(),
+                          @XMLContentBuilder content: () async throws(E) -> Content) async throws(E) {
+        try await self.init(name: name, attributes: attributes, content: content())
+    }
+#else
     /// Creates a new element using the given name and attributes. The content is built using the ``XMLContentBuilder``.
     /// - Parameters:
     ///   - name: The name of the new element.
@@ -68,8 +93,21 @@ extension XMLElement {
     ///   - content: The content builder to use for the content.
     @inlinable
     public init(name: Name,
-                attributes: Attributes = .init(), 
+                attributes: Attributes = .init(),
                 @XMLContentBuilder content: () throws -> Content) rethrows {
         try self.init(name: name, attributes: attributes, content: content())
     }
+
+    /// Creates a new element using the given name and attributes. The content is built using the ``XMLContentBuilder``.
+    /// - Parameters:
+    ///   - name: The name of the new element.
+    ///   - attributes: The attributes of the new element.
+    ///   - content: The content builder to use for the content.
+    @inlinable
+    public init(name: Name,
+                attributes: Attributes = .init(),
+                @XMLContentBuilder content: () async throws -> Content) async rethrows {
+        try await self.init(name: name, attributes: attributes, content: content())
+    }
+#endif
 }

@@ -15,7 +15,7 @@ extension XMLElement.Content {
     /// - Throws: Any error that is thrown by the `predicate`.
     /// - Note: ``XMLElement/Content/Element/string(_:)``  elements are skipped.
     @usableFromInline
-    internal func find(recursive: Bool = false, elementsMatching predicate: (XMLElement) throws -> Bool) rethrows -> [XMLElement] {
+    internal func find(recursive: Bool = false, elementsMatching predicate: (XMLElement) throws -> Bool) rethrows -> Array<XMLElement> {
         let elements = allElements
         let matches = try elements.filter(predicate)
         guard recursive else { return matches }

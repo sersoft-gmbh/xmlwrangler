@@ -71,7 +71,7 @@ extension XMLElement.Content {
     }
 
     /// Merges consecutive ``XMLElement/Content/Element/string(_:)`` elements into one.
-    /// /// - SeeAlso: ``XMLElement/Content/compressed()``
+    /// - SeeAlso: ``XMLElement/Content/compressed()``
     @inlinable
     public mutating func compress() {
         _compress(stringSeparator: nil)
