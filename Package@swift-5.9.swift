@@ -9,7 +9,7 @@ let swiftSettings: Array<SwiftSetting> = [
     .enableUpcomingFeature("BareSlashRegexLiterals"),
     .enableUpcomingFeature("DisableOutwardActorInference"),
     .enableExperimentalFeature("StrictConcurrency"),
-//    .enableExperimentalFeature("AccessLevelOnImport"),
+    .enableExperimentalFeature("AccessLevelOnImport"),
 //    .enableExperimentalFeature("VariadicGenerics"),
 ]
 

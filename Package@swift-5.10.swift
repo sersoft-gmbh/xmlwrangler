@@ -12,7 +12,7 @@ let swiftSettings: Array<SwiftSetting> = [
     .enableUpcomingFeature("DeprecateApplicationMain"),
     .enableExperimentalFeature("StrictConcurrency"),
     .enableExperimentalFeature("GlobalConcurrency"),
-//    .enableExperimentalFeature("AccessLevelOnImport"),
+    .enableExperimentalFeature("AccessLevelOnImport"),
 //    .enableExperimentalFeature("VariadicGenerics"),
 ]
 
