@@ -98,6 +98,7 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
         "doc:\/\/XMLWrangler\/SK",
         "doc:\/\/XMLWrangler\/Sl",
+        "doc:\/\/XMLWrangler\/s8CopyableP",
         "doc:\/\/XMLWrangler\/s28CustomDebugStringConvertibleP",
         "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
         "doc:\/\/XMLWrangler\/SQ",
@@ -127,12 +128,16 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/init()"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/allElements",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/allStrings"
@@ -140,6 +145,8 @@
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(contentsOf:)-7tyzf",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(elementOf:)",
@@ -156,12 +163,15 @@
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Enumerations",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element"
       ],
       "title" : "Enumerations"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/BidirectionalCollection-Implementations",
@@ -1137,19 +1147,6 @@
     {
       "text" : " elements into one.",
       "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "\/\/\/ - SeeAlso: ",
-      "type" : "text"
-    },
-    {
-      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/compressed()",
-      "isActive" : true,
-      "type" : "reference"
     }
   ],
   "fragments" : [
@@ -1618,6 +1615,11 @@
 "doc://XMLWrangler/s43ExpressibleByExtendedGraphemeClusterLiteralP": {
   "identifier" : "doc:\/\/XMLWrangler\/s43ExpressibleByExtendedGraphemeClusterLiteralP",
   "title" : "Swift.ExpressibleByExtendedGraphemeClusterLiteral",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s8CopyableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s8CopyableP",
+  "title" : "Swift.Copyable",
   "type" : "unresolvable"
 },
 "doc://XMLWrangler/s8SendableP": {

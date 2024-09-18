@@ -33,6 +33,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Structures",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/StringInterpolation"
@@ -40,6 +41,7 @@
       "title" : "Structures"
     },
     {
+      "anchor" : "Initializers",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/init(stringInterpolation:)"

@@ -107,6 +107,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Enumeration-Cases",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/EscapableContent\/attribute(quotes:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/EscapableContent\/cdata",
@@ -117,24 +119,31 @@
       "title" : "Enumeration Cases"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/EscapableContent\/description"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/EscapableContent\/escape(_:)"
       ],
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Enumerations",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/EscapableContent\/Quotes"
       ],
       "title" : "Enumerations"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/EscapableContent\/Equatable-Implementations"

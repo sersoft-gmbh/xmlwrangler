@@ -34,10 +34,11 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Type-Methods",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/parsedFromXML(_:)-55x14",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/parsedFromXML(_:)-quoz"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/parsedFromXML(_:)-5mwm6"
       ],
       "title" : "Type Methods"
     }
@@ -239,7 +240,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/parsedfromxml(_:)-55x14"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Element/parsedFromXML(_:)-quoz": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Element/parsedFromXML(_:)-5mwm6": {
   "abstract" : [
     {
       "text" : "Tries to parse the given XML data and convert the resulting element.",
@@ -273,7 +274,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:10Foundation4DataV",
+      "preciseIdentifier" : "s:20FoundationEssentials4DataV",
       "text" : "Data"
     },
     {
@@ -293,12 +294,12 @@
       "text" : "Self"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/parsedFromXML(_:)-quoz",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/parsedFromXML(_:)-5mwm6",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "parsedFromXML(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/parsedfromxml(_:)-quoz"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/parsedfromxml(_:)-5mwm6"
 }
 }
 }

@@ -113,15 +113,19 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9lxb6"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Type-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/parsedFromXML(_:)-3qdph",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/parsedFromXML(_:)-twgh"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/parsedFromXML(_:)-x5w6"
       ],
       "title" : "Type Methods"
     }
@@ -311,7 +315,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/parsedfromxml(_:)-3qdph"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/parsedFromXML(_:)-twgh": {
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/parsedFromXML(_:)-x5w6": {
   "abstract" : [
     {
       "text" : "Tries to parse the given XML data and convert the resulting element.",
@@ -345,7 +349,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:10Foundation4DataV",
+      "preciseIdentifier" : "s:20FoundationEssentials4DataV",
       "text" : "Data"
     },
     {
@@ -365,12 +369,12 @@
       "text" : "Self"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/parsedFromXML(_:)-twgh",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/parsedFromXML(_:)-x5w6",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "parsedFromXML(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/parsedfromxml(_:)-twgh"
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/parsedfromxml(_:)-x5w6"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
   "abstract" : [

@@ -1,4 +1,7 @@
 {
+  "includedArchiveIdentifiers" : [
+    "XMLWrangler"
+  ],
   "interfaceLanguages" : {
     "swift" : [
       {
@@ -57,17 +60,17 @@
                   {
                     "children" : [
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9t88v",
-                        "title" : "init(xml: XMLElement) throws",
-                        "type" : "init"
-                      },
-                      {
                         "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-3wu3r",
                         "title" : "init(xml: XMLElement) throws",
                         "type" : "init"
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-76pd1",
+                        "title" : "init(xml: XMLElement) throws",
+                        "type" : "init"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9t88v",
                         "title" : "init(xml: XMLElement) throws",
                         "type" : "init"
                       }
@@ -90,7 +93,7 @@
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/parsedfromxml(_:)-twgh",
+                "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/parsedfromxml(_:)-x5w6",
                 "title" : "static func parsedFromXML(Data) throws -> Self",
                 "type" : "method"
               }
@@ -524,8 +527,18 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/map(_:)-7145q",
-                            "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/indices(of:)",
+                            "title" : "func indices(of: Self.Element) -> RangeSet<Self.Index>",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/indices(where:)",
+                            "title" : "func indices(where: (Self.Element) throws -> Bool) rethrows -> RangeSet<Self.Index>",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/map(_:)-7jjd1",
+                            "title" : "func map<T, E>((Self.Element) throws(E) -> T) throws(E) -> [T]",
                             "type" : "method"
                           },
                           {
@@ -561,6 +574,11 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/ranges(of:)",
                             "title" : "func ranges<C>(of: C) -> [Range<Self.Index>]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/removingsubranges(_:)",
+                            "title" : "func removingSubranges(RangeSet<Self.Index>) -> DiscontiguousSlice<Self>",
                             "type" : "method"
                           },
                           {
@@ -603,6 +621,11 @@
                           {
                             "title" : "Instance Methods",
                             "type" : "groupMarker"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/movesubranges(_:to:)",
+                            "title" : "func moveSubranges(RangeSet<Self.Index>, to: Self.Index) -> Range<Self.Index>",
+                            "type" : "method"
                           },
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/partition(by:)",
@@ -650,6 +673,11 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/compare(_:_:)",
+                            "title" : "func compare<Comparator>(Comparator.Compared, Comparator.Compared) -> ComparisonResult",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/contains(_:)",
                             "title" : "func contains(Self.Element) -> Bool",
                             "type" : "method"
@@ -657,6 +685,11 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/contains(where:)",
                             "title" : "func contains(where: (Self.Element) throws -> Bool) rethrows -> Bool",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/count(where:)",
+                            "title" : "func count<E>(where: (Self.Element) throws(E) -> Bool) throws(E) -> Int",
                             "type" : "method"
                           },
                           {
@@ -675,7 +708,12 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/filter(_:)",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/filter(_:)-9bsqn",
+                            "title" : "func filter(Predicate<Self.Element>) throws -> [Self.Element]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/filter(_:)-k6y9",
                             "title" : "func filter((Self.Element) throws -> Bool) rethrows -> [Self.Element]",
                             "type" : "method"
                           },
@@ -700,13 +738,18 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/formatted(_:)",
+                            "title" : "func formatted<S>(S) -> S.FormatOutput",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/lexicographicallyprecedes(_:by:)",
                             "title" : "func lexicographicallyPrecedes<OtherSequence>(OtherSequence, by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Bool",
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/map(_:)-6ev6n",
-                            "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/map(_:)-96tnu",
+                            "title" : "func map<T, E>((Self.Element) throws(E) -> T) throws(E) -> [T]",
                             "type" : "method"
                           },
                           {
@@ -747,6 +790,16 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/sorted(by:)",
                             "title" : "func sorted(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/sorted(using:)-1xbyf",
+                            "title" : "func sorted<Comparator>(using: Comparator) -> [Self.Element]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/sorted(using:)-2s7ct",
+                            "title" : "func sorted<S, Comparator>(using: S) -> [Self.Element]",
                             "type" : "method"
                           },
                           {
@@ -1112,8 +1165,18 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/map(_:)-53j2n",
-                            "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/indices(of:)",
+                            "title" : "func indices(of: Self.Element) -> RangeSet<Self.Index>",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/indices(where:)",
+                            "title" : "func indices(where: (Self.Element) throws -> Bool) rethrows -> RangeSet<Self.Index>",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/map(_:)-5a30m",
+                            "title" : "func map<T, E>((Self.Element) throws(E) -> T) throws(E) -> [T]",
                             "type" : "method"
                           },
                           {
@@ -1149,6 +1212,11 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/ranges(of:)",
                             "title" : "func ranges<C>(of: C) -> [Range<Self.Index>]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/removingsubranges(_:)",
+                            "title" : "func removingSubranges(RangeSet<Self.Index>) -> DiscontiguousSlice<Self>",
                             "type" : "method"
                           },
                           {
@@ -1228,6 +1296,11 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/compare(_:_:)",
+                            "title" : "func compare<Comparator>(Comparator.Compared, Comparator.Compared) -> ComparisonResult",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/contains(_:)",
                             "title" : "func contains(Self.Element) -> Bool",
                             "type" : "method"
@@ -1235,6 +1308,11 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/contains(where:)",
                             "title" : "func contains(where: (Self.Element) throws -> Bool) rethrows -> Bool",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/count(where:)",
+                            "title" : "func count<E>(where: (Self.Element) throws(E) -> Bool) throws(E) -> Int",
                             "type" : "method"
                           },
                           {
@@ -1253,8 +1331,13 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/filter(_:)",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/filter(_:)-4x5zv",
                             "title" : "func filter((Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/filter(_:)-6vxqu",
+                            "title" : "func filter(Predicate<Self.Element>) throws -> [Self.Element]",
                             "type" : "method"
                           },
                           {
@@ -1278,13 +1361,18 @@
                             "type" : "method"
                           },
                           {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/formatted(_:)",
+                            "title" : "func formatted<S>(S) -> S.FormatOutput",
+                            "type" : "method"
+                          },
+                          {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/lexicographicallyprecedes(_:by:)",
                             "title" : "func lexicographicallyPrecedes<OtherSequence>(OtherSequence, by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Bool",
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/map(_:)-45pcf",
-                            "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/map(_:)-5alsh",
+                            "title" : "func map<T, E>((Self.Element) throws(E) -> T) throws(E) -> [T]",
                             "type" : "method"
                           },
                           {
@@ -1325,6 +1413,16 @@
                           {
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/sorted(by:)",
                             "title" : "func sorted(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/sorted(using:)-4n9k",
+                            "title" : "func sorted<Comparator>(using: Comparator) -> [Self.Element]",
+                            "type" : "method"
+                          },
+                          {
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/sorted(using:)-4yn7j",
+                            "title" : "func sorted<S, Comparator>(using: S) -> [Self.Element]",
                             "type" : "method"
                           },
                           {
@@ -1445,7 +1543,7 @@
                   },
                   {
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/subscript(_:default:)",
-                    "title" : "subscript(XMLElement.Attributes.Key, default _: () -> some XMLAttributeContentConvertible) -> XMLElement.Attributes.Content",
+                    "title" : "subscript(XMLElement.Attributes.Key, default _: @autoclosure () -> some XMLAttributeContentConvertible) -> XMLElement.Attributes.Content",
                     "type" : "subscript"
                   },
                   {
@@ -1639,8 +1737,13 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/map(_:)-5apbc",
-                        "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/indices(where:)",
+                        "title" : "func indices(where: (Self.Element) throws -> Bool) rethrows -> RangeSet<Self.Index>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/map(_:)-9xj4p",
+                        "title" : "func map<T, E>((Self.Element) throws(E) -> T) throws(E) -> [T]",
                         "type" : "method"
                       },
                       {
@@ -1674,6 +1777,11 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/removingsubranges(_:)",
+                        "title" : "func removingSubranges(RangeSet<Self.Index>) -> DiscontiguousSlice<Self>",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/split(maxsplits:omittingemptysubsequences:whereseparator:)",
                         "title" : "func split(maxSplits: Int, omittingEmptySubsequences: Bool, whereSeparator: (Self.Element) throws -> Bool) rethrows -> [Self.SubSequence]",
                         "type" : "method"
@@ -1696,6 +1804,11 @@
                       {
                         "title" : "Subscripts",
                         "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/subscript(_:)-7zahb",
+                        "title" : "subscript(RangeSet<Self.Index>) -> DiscontiguousSlice<Self>",
+                        "type" : "subscript"
                       },
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/subscript(_:)-8ysl2",
@@ -1837,8 +1950,18 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/compare(_:_:)",
+                        "title" : "func compare<Comparator>(Comparator.Compared, Comparator.Compared) -> ComparisonResult",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contains(where:)",
                         "title" : "func contains(where: (Self.Element) throws -> Bool) rethrows -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/count(where:)",
+                        "title" : "func count<E>(where: (Self.Element) throws(E) -> Bool) throws(E) -> Int",
                         "type" : "method"
                       },
                       {
@@ -1872,6 +1995,11 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/formatted(_:)",
+                        "title" : "func formatted<S>(S) -> S.FormatOutput",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/lexicographicallyprecedes(_:by:)",
                         "title" : "func lexicographicallyPrecedes<OtherSequence>(OtherSequence, by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Bool",
                         "type" : "method"
@@ -1882,8 +2010,8 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/map(_:)-6v02m",
-                        "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/map(_:)-5hcvs",
+                        "title" : "func map<T, E>((Self.Element) throws(E) -> T) throws(E) -> [T]",
                         "type" : "method"
                       },
                       {
@@ -1924,6 +2052,16 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/sorted(by:)",
                         "title" : "func sorted(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/sorted(using:)-5swdy",
+                        "title" : "func sorted<S, Comparator>(using: S) -> [Self.Element]",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/sorted(using:)-8mh3v",
+                        "title" : "func sorted<Comparator>(using: Comparator) -> [Self.Element]",
                         "type" : "method"
                       },
                       {
@@ -2181,7 +2319,7 @@
                             "type" : "method"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/parsedfromxml(_:)-quoz",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/parsedfromxml(_:)-5mwm6",
                             "title" : "static func parsedFromXML(Data) throws -> Self",
                             "type" : "method"
                           }
@@ -2370,13 +2508,23 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/indices(of:)",
+                        "title" : "func indices(of: Self.Element) -> RangeSet<Self.Index>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/indices(where:)",
+                        "title" : "func indices(where: (Self.Element) throws -> Bool) rethrows -> RangeSet<Self.Index>",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/makeiterator()",
                         "title" : "func makeIterator() -> IndexingIterator<Self>",
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/map(_:)-34vrq",
-                        "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/map(_:)-7mehe",
+                        "title" : "func map<T, E>((Self.Element) throws(E) -> T) throws(E) -> [T]",
                         "type" : "method"
                       },
                       {
@@ -2412,6 +2560,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/ranges(of:)",
                         "title" : "func ranges<C>(of: C) -> [Range<Self.Index>]",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/removingsubranges(_:)",
+                        "title" : "func removingSubranges(RangeSet<Self.Index>) -> DiscontiguousSlice<Self>",
                         "type" : "method"
                       },
                       {
@@ -2702,7 +2855,7 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/parsedfromxml(_:)-7ufsn",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/parsedfromxml(_:)-5p21z",
                         "title" : "static func parsedFromXML(Data) throws -> Self",
                         "type" : "method"
                       },
@@ -2723,6 +2876,11 @@
                         "type" : "groupMarker"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/movesubranges(_:to:)",
+                        "title" : "func moveSubranges(RangeSet<Self.Index>, to: Self.Index) -> Range<Self.Index>",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/partition(by:)-22mry",
                         "title" : "func partition(by: (Self.Element) throws -> Bool) rethrows -> Self.Index",
                         "type" : "method"
@@ -2730,6 +2888,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/partition(by:)-6omqc",
                         "title" : "func partition(by: (Self.Element) throws -> Bool) rethrows -> Self.Index",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/removesubranges(_:)-5a3zm",
+                        "title" : "func removeSubranges(RangeSet<Self.Index>)",
                         "type" : "method"
                       },
                       {
@@ -2750,6 +2913,16 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/sort(by:)",
                         "title" : "func sort(by: (Self.Element, Self.Element) throws -> Bool) rethrows",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/sort(using:)-1zdlr",
+                        "title" : "func sort<Comparator>(using: Comparator)",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/sort(using:)-82hoj",
+                        "title" : "func sort<S, Comparator>(using: S)",
                         "type" : "method"
                       },
                       {
@@ -2913,6 +3086,11 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/removesubranges(_:)-56xzy",
+                        "title" : "func removeSubranges(RangeSet<Self.Index>)",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/replace(_:with:maxreplacements:)",
                         "title" : "func replace<C, Replacement>(C, with: Replacement, maxReplacements: Int)",
                         "type" : "method"
@@ -2993,6 +3171,11 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/compare(_:_:)",
+                        "title" : "func compare<Comparator>(Comparator.Compared, Comparator.Compared) -> ComparisonResult",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/contains(_:)",
                         "title" : "func contains(Self.Element) -> Bool",
                         "type" : "method"
@@ -3000,6 +3183,11 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/contains(where:)",
                         "title" : "func contains(where: (Self.Element) throws -> Bool) rethrows -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/count(where:)",
+                        "title" : "func count<E>(where: (Self.Element) throws(E) -> Bool) throws(E) -> Int",
                         "type" : "method"
                       },
                       {
@@ -3038,13 +3226,18 @@
                         "type" : "method"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/formatted(_:)",
+                        "title" : "func formatted<S>(S) -> S.FormatOutput",
+                        "type" : "method"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/lexicographicallyprecedes(_:by:)",
                         "title" : "func lexicographicallyPrecedes<OtherSequence>(OtherSequence, by: (Self.Element, Self.Element) throws -> Bool) rethrows -> Bool",
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/map(_:)-54h7v",
-                        "title" : "func map<T>((Self.Element) throws -> T) rethrows -> [T]",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/map(_:)-12xfk",
+                        "title" : "func map<T, E>((Self.Element) throws(E) -> T) throws(E) -> [T]",
                         "type" : "method"
                       },
                       {
@@ -3080,6 +3273,16 @@
                       {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/sorted(by:)",
                         "title" : "func sorted(by: (Self.Element, Self.Element) throws -> Bool) rethrows -> [Self.Element]",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/sorted(using:)-2qxab",
+                        "title" : "func sorted<S, Comparator>(using: S) -> [Self.Element]",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/sorted(using:)-5odpt",
+                        "title" : "func sorted<Comparator>(using: Comparator) -> [Self.Element]",
                         "type" : "method"
                       },
                       {
@@ -3764,13 +3967,18 @@
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-123k0",
-                "title" : "init(name: XMLElement.Name, attributes: XMLElement.Attributes, content: () throws -> XMLElement.Content) rethrows",
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-5rtdv",
+                "title" : "init(name: XMLElement.Name, attributes: XMLElement.Attributes, content: XMLElement.Content.Element...)",
                 "type" : "init"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-5rtdv",
-                "title" : "init(name: XMLElement.Name, attributes: XMLElement.Attributes, content: XMLElement.Content.Element...)",
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-81fri",
+                "title" : "init<E>(name: XMLElement.Name, attributes: XMLElement.Attributes, content: () async throws(E) -> XMLElement.Content) async throws(E)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/init(name:attributes:content:)-86ua4",
+                "title" : "init<E>(name: XMLElement.Name, attributes: XMLElement.Attributes, content: () throws(E) -> XMLElement.Content) throws(E)",
                 "type" : "init"
               },
               {
@@ -4001,13 +4209,13 @@
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-3057l",
-                "title" : "static func parse(Data) throws -> XMLElement",
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-3lced",
+                "title" : "static func parse(some StringProtocol) throws -> XMLElement",
                 "type" : "method"
               },
               {
-                "path" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-3lced",
-                "title" : "static func parse(some StringProtocol) throws -> XMLElement",
+                "path" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-43xl1",
+                "title" : "static func parse(Data) throws -> XMLElement",
                 "type" : "method"
               },
               {
@@ -4243,7 +4451,7 @@
                     "type" : "groupMarker"
                   },
                   {
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/parsedfromxml(_:)-4a13r",
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/parsedfromxml(_:)-42ard",
                     "title" : "static func parsedFromXML(Data) throws -> Self",
                     "type" : "method"
                   },
@@ -4495,6 +4703,6 @@
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,
-    "patch" : 1
+    "patch" : 2
   }
 }

@@ -377,19 +377,6 @@
     {
       "text" : " elements into one.",
       "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "\/\/\/ - SeeAlso: ",
-      "type" : "text"
-    },
-    {
-      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/compressed()",
-      "isActive" : true,
-      "type" : "reference"
     }
   ],
   "fragments" : [

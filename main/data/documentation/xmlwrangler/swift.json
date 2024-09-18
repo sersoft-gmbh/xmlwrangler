@@ -33,12 +33,16 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Extended-Protocols",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Sequence"
       ],
       "title" : "Extended Protocols"
     },
     {
+      "anchor" : "Extended-Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Dictionary",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String"

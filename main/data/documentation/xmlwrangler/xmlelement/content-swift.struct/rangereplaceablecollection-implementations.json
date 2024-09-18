@@ -33,6 +33,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Operators",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/+(_:_:)-3dh6y",
@@ -43,6 +44,7 @@
       "title" : "Operators"
     },
     {
+      "anchor" : "Initializers",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/init(_:)",
@@ -51,6 +53,7 @@
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Methods",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(_:)",
@@ -70,6 +73,7 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/removeLast(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/removeSubrange(_:)-4b3dl",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/removeSubrange(_:)-5goqi",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/removeSubranges(_:)-56xzy",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/replace(_:with:maxReplacements:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/replaceSubrange(_:with:)-1o7d7",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/replaceSubrange(_:with:)-3qvup",
@@ -1780,6 +1784,64 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/removesubrange(_:)-5goqi"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/removeSubranges(_:)-56xzy": {
+  "abstract" : [
+    {
+      "text" : "Removes the elements at the given indices.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removeSubranges"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8RangeSetV",
+      "text" : "RangeSet"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sl5IndexQa",
+      "text" : "Index"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/removeSubranges(_:)-56xzy",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "removeSubranges(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/removesubranges(_:)-56xzy"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/replace(_:with:maxReplacements:)": {
   "abstract" : [
     {
@@ -2514,15 +2576,15 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/trimPrefix(_:)": {
   "abstract" : [
     {
-      "text" : "Removes the initial elements that satisfy the given predicate from the",
+      "text" : "Removes ",
       "type" : "text"
     },
     {
-      "text" : " ",
-      "type" : "text"
+      "code" : "prefix",
+      "type" : "codeVoice"
     },
     {
-      "text" : "start of the sequence.",
+      "text" : " from the start of the collection.",
       "type" : "text"
     }
   ],

@@ -63,7 +63,15 @@
       },
       {
         "kind" : "text",
-        "text" : " _: () -> some "
+        "text" : " _: "
+      },
+      {
+        "kind" : "attribute",
+        "text" : "@autoclosure "
+      },
+      {
+        "kind" : "text",
+        "text" : "() -> some "
       },
       {
         "kind" : "typeIdentifier",
@@ -270,28 +278,6 @@
             }
           ],
           "name" : "key"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The default value to use if no value exists for the given ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "key",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "default"
         }
       ]
     },
@@ -590,7 +576,15 @@
     },
     {
       "kind" : "text",
-      "text" : " _: () -> some "
+      "text" : " _: "
+    },
+    {
+      "kind" : "attribute",
+      "text" : "@autoclosure "
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> some "
     },
     {
       "kind" : "typeIdentifier",

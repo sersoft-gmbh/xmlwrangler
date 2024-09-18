@@ -111,12 +111,16 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible\/xml"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible\/serializeAsXML(with:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElementConvertible\/serializeAsXMLDocument(at:in:with:)"

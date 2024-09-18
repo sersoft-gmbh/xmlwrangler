@@ -95,6 +95,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
         "doc:\/\/XMLWrangler\/SQ",
         "doc:\/\/XMLWrangler\/s25ExpressibleByArrayLiteralP",
         "doc:\/\/XMLWrangler\/s9OptionSetP",
@@ -117,24 +118,32 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/init(rawValue:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/rawValue-swift.property"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Type-Aliases",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/RawValue-swift.typealias"
       ],
       "title" : "Type Aliases"
     },
     {
+      "anchor" : "Type-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/explicitClosingTag",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/pretty",
@@ -143,6 +152,7 @@
       "title" : "Type Properties"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/Equatable-Implementations",
@@ -624,6 +634,11 @@
 "doc://XMLWrangler/s10SetAlgebraP": {
   "identifier" : "doc:\/\/XMLWrangler\/s10SetAlgebraP",
   "title" : "Swift.SetAlgebra",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s15BitwiseCopyableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
+  "title" : "Swift.BitwiseCopyable",
   "type" : "unresolvable"
 },
 "doc://XMLWrangler/s25ExpressibleByArrayLiteralP": {

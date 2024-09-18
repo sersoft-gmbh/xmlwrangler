@@ -105,6 +105,7 @@
     {
       "identifiers" : [
         "doc:\/\/XMLWrangler\/Sl",
+        "doc:\/\/XMLWrangler\/s8CopyableP",
         "doc:\/\/XMLWrangler\/s28CustomDebugStringConvertibleP",
         "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
         "doc:\/\/XMLWrangler\/SQ",
@@ -127,6 +128,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Content",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Contents-swift.struct",
@@ -136,6 +139,8 @@
       "title" : "Structures"
     },
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/init()",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/init(_:uniquingKeysWith:)",
@@ -145,6 +150,8 @@
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/contents-swift.property",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/keys-swift.property"
@@ -152,6 +159,8 @@
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/filter(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-134z7",
@@ -165,6 +174,8 @@
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Subscripts",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/subscript(_:)-1v9n0",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/subscript(_:default:)"
@@ -172,6 +183,7 @@
       "title" : "Subscripts"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Collection-Implementations",
@@ -2116,7 +2128,15 @@
     },
     {
       "kind" : "text",
-      "text" : " _: () -> some "
+      "text" : " _: "
+    },
+    {
+      "kind" : "attribute",
+      "text" : "@autoclosure "
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> some "
     },
     {
       "kind" : "typeIdentifier",
@@ -2292,6 +2312,11 @@
 "doc://XMLWrangler/s30ExpressibleByDictionaryLiteralP": {
   "identifier" : "doc:\/\/XMLWrangler\/s30ExpressibleByDictionaryLiteralP",
   "title" : "Swift.ExpressibleByDictionaryLiteral",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s8CopyableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s8CopyableP",
+  "title" : "Swift.Copyable",
   "type" : "unresolvable"
 },
 "doc://XMLWrangler/s8SendableP": {

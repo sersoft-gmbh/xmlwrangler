@@ -83,6 +83,7 @@
     {
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent",
+        "doc:\/\/XMLWrangler\/s8CopyableP",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible"
       ],
       "kind" : "relationships",
@@ -100,6 +101,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/ExpressibleByXMLAttributeContent-Implementations",
@@ -313,6 +315,11 @@
   "title" : "XMLElement.Attributes.Content",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content"
+},
+"doc://XMLWrangler/s8CopyableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
 }
 }
 }

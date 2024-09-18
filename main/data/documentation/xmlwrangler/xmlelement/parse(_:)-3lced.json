@@ -268,9 +268,8 @@
                   "type" : "text"
                 },
                 {
-                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parse(_:)-3057l",
-                  "isActive" : true,
-                  "type" : "reference"
+                  "code" : "XMLElement\/parse(_:)-3057l",
+                  "type" : "codeVoice"
                 }
               ],
               "type" : "paragraph"
@@ -442,68 +441,6 @@
   "title" : "XMLElement.UnknownParsingError",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/parse(_:)-3057l": {
-  "abstract" : [
-    {
-      "text" : "Tries to parse the given data as XML.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "static"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "parse"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:10Foundation4DataV",
-      "text" : "Data"
-    },
-    {
-      "kind" : "text",
-      "text" : ") "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "throws"
-    },
-    {
-      "kind" : "text",
-      "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parse(_:)-3057l",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "parse(_:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/parse(_:)-3057l"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/parse(_:)-3lced": {
   "abstract" : [

@@ -97,6 +97,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
         "doc:\/\/XMLWrangler\/SL",
         "doc:\/\/XMLWrangler\/SQ",
         "doc:\/\/XMLWrangler\/s8SendableP"
@@ -116,12 +117,15 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Operators",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_(_:_:)-5fbmx"
       ],
       "title" : "Operators"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/Comparable-Implementations",
@@ -408,6 +412,11 @@
   "title" : "<(_:_:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_(_:_:)-5fbmx"
+},
+"doc://XMLWrangler/s15BitwiseCopyableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
+  "title" : "Swift.BitwiseCopyable",
+  "type" : "unresolvable"
 },
 "doc://XMLWrangler/s8SendableP": {
   "identifier" : "doc:\/\/XMLWrangler\/s8SendableP",

@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "Returns a new collection of the same type by removing initial elements",
+      "text" : "Returns a new collection of the same type by removing ",
+      "type" : "text"
+    },
+    {
+      "code" : "prefix",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " from the start",
       "type" : "text"
     },
     {
@@ -9,7 +17,7 @@
       "type" : "text"
     },
     {
-      "text" : "that satisfy the given predicate from the start.",
+      "text" : "of the collection.",
       "type" : "text"
     }
   ],
@@ -297,30 +305,14 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A closure that takes an element of the sequence",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "as its argument and returns a Boolean value indicating whether the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "element should be removed from the collection.",
+                  "text" : "The collection to remove from this collection.",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "predicate"
+          "name" : "prefix"
         }
       ]
     },
@@ -347,7 +339,7 @@
               "type" : "text"
             },
             {
-              "code" : "predicate",
+              "code" : "prefix",
               "type" : "codeVoice"
             },
             {
@@ -476,7 +468,15 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/trimmingPrefix(_:)": {
   "abstract" : [
     {
-      "text" : "Returns a new collection of the same type by removing initial elements",
+      "text" : "Returns a new collection of the same type by removing ",
+      "type" : "text"
+    },
+    {
+      "code" : "prefix",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " from the start",
       "type" : "text"
     },
     {
@@ -484,7 +484,7 @@
       "type" : "text"
     },
     {
-      "text" : "that satisfy the given predicate from the start.",
+      "text" : "of the collection.",
       "type" : "text"
     }
   ],

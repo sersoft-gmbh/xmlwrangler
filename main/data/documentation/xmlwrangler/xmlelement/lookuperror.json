@@ -115,6 +115,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Enumeration-Cases",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/cannotConvertAttribute(element:key:content:type:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/cannotConvertStringContent(element:stringContent:type:)",
@@ -125,12 +127,15 @@
       "title" : "Enumeration Cases"
     },
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/description"
       ],
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/Error-Implementations"

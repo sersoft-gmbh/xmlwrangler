@@ -291,28 +291,6 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The convertible type. Defaults to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Target.self",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "convertible"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
                   "text" : "The key for which to get the attribute content.",
                   "type" : "text"
                 }

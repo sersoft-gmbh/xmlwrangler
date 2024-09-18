@@ -1,15 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "Removes the initial elements that satisfy the given predicate from the",
+      "text" : "Removes ",
       "type" : "text"
     },
     {
-      "text" : " ",
-      "type" : "text"
+      "code" : "prefix",
+      "type" : "codeVoice"
     },
     {
-      "text" : "start of the sequence.",
+      "text" : " from the start of the collection.",
       "type" : "text"
     }
   ],
@@ -275,30 +275,14 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A closure that takes an element of the sequence",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "as its argument and returns a Boolean value indicating whether the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "element should be removed from the collection.",
+                  "text" : "The collection to remove from this collection.",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "predicate"
+          "name" : "prefix"
         }
       ]
     }
@@ -418,15 +402,15 @@
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/trimPrefix(_:)": {
   "abstract" : [
     {
-      "text" : "Removes the initial elements that satisfy the given predicate from the",
+      "text" : "Removes ",
       "type" : "text"
     },
     {
-      "text" : " ",
-      "type" : "text"
+      "code" : "prefix",
+      "type" : "codeVoice"
     },
     {
-      "text" : "start of the sequence.",
+      "text" : " from the start of the collection.",
       "type" : "text"
     }
   ],

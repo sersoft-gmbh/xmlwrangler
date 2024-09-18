@@ -60,6 +60,14 @@
           "tokens" : [
             {
               "kind" : "attribute",
+              "text" : "@frozen"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "attribute",
               "text" : "@resultBuilder"
             },
             {
@@ -87,6 +95,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
         "doc:\/\/XMLWrangler\/s8SendableP"
       ],
       "kind" : "relationships",
@@ -104,6 +113,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Type-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLContentBuilder\/buildArray(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLContentBuilder\/buildBlock()",
@@ -993,6 +1004,11 @@
   "title" : "buildOptional(_:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlcontentbuilder\/buildoptional(_:)"
+},
+"doc://XMLWrangler/s15BitwiseCopyableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
+  "title" : "Swift.BitwiseCopyable",
+  "type" : "unresolvable"
 },
 "doc://XMLWrangler/s8SendableP": {
   "identifier" : "doc:\/\/XMLWrangler\/s8SendableP",
