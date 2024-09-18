@@ -1,8 +1,8 @@
 public import struct Foundation.Data
 public import class Foundation.NSObject
 #if canImport(FoundationXML)
-private import class FoundationXML.XMLParser
-private import protocol FoundationXML.XMLParserDelegate
+internal import class FoundationXML.XMLParser
+internal import protocol FoundationXML.XMLParserDelegate
 #else
 public import class Foundation.XMLParser
 public import protocol Foundation.XMLParserDelegate
