@@ -10,8 +10,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/UnknownParsingError",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/UnknownParsingError\/Error-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/UnknownParsingError"
       ]
     ]
   },
@@ -225,17 +224,6 @@
   "title" : "XMLElement.UnknownParsingError",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/UnknownParsingError/Error-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/UnknownParsingError\/Error-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Error Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror\/error-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/UnknownParsingError/localizedDescription": {
   "abstract" : [

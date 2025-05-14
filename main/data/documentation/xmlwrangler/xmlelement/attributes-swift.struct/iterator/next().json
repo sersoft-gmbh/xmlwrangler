@@ -5,7 +5,6 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Sequence-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Iterator"
       ]
     ]
@@ -377,17 +376,6 @@
   "title" : "next()",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/iterator\/next()"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Sequence-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Sequence-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Sequence Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/sequence-implementations"
 }
 }
 }

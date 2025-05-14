@@ -30,8 +30,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/RawRepresentable-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct"
       ]
     ]
   },
@@ -352,17 +351,6 @@
   "title" : "XMLElement.Name",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/RawRepresentable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/RawRepresentable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "RawRepresentable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/rawrepresentable-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/encode(to:)": {
   "abstract" : [

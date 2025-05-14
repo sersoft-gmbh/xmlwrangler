@@ -10,8 +10,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/MissingRootElementError",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/MissingRootElementError\/Error-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/MissingRootElementError"
       ]
     ]
   },
@@ -217,17 +216,6 @@
   "title" : "XMLElement.MissingRootElementError",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/missingrootelementerror"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/MissingRootElementError/Error-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/MissingRootElementError\/Error-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Error Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/missingrootelementerror\/error-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/MissingRootElementError/localizedDescription": {
   "abstract" : [

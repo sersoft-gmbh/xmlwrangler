@@ -5,8 +5,7 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/ExpressibleByUnicodeScalarLiteral-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element"
       ]
     ]
   },
@@ -299,17 +298,6 @@
   "title" : "XMLElement.Content.Element",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Element/ExpressibleByUnicodeScalarLiteral-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/ExpressibleByUnicodeScalarLiteral-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/expressiblebyunicodescalarliteral-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Element/init(unicodeScalarLiteral:)": {
   "abstract" : [

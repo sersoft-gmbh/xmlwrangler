@@ -158,7 +158,7 @@
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/Equatable-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByExtendedGraphemeClusterLiteral-Implementations",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByUnicodeScalarLiteral-Implementations",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByStringLiteral-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/RawRepresentable-Implementations"
       ],
       "title" : "Default Implementations"
@@ -420,16 +420,16 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/expressiblebyextendedgraphemeclusterliteral-implementations"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/ExpressibleByUnicodeScalarLiteral-Implementations": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/ExpressibleByStringLiteral-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByUnicodeScalarLiteral-Implementations",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByStringLiteral-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
-  "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
+  "title" : "ExpressibleByStringLiteral Implementations",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/expressiblebyunicodescalarliteral-implementations"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/expressiblebystringliteral-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/RawRepresentable-Implementations": {
   "abstract" : [

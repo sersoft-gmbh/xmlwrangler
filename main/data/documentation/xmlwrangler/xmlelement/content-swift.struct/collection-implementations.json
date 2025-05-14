@@ -94,7 +94,7 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Index",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Indices-swift.typealias",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Indices",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/SubSequence"
       ],
       "title" : "Type Aliases"
@@ -224,7 +224,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/index"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Indices-swift.typealias": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Indices": {
   "abstract" : [
 
   ],
@@ -242,7 +242,7 @@
       "text" : "Indices"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Indices-swift.typealias",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Indices",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
@@ -253,7 +253,7 @@
   "role" : "symbol",
   "title" : "XMLElement.Content.Indices",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/indices-swift.typealias"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/indices"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/SubSequence": {
   "abstract" : [

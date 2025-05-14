@@ -18,8 +18,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/OptionSet-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions"
       ]
     ]
   },
@@ -322,17 +321,6 @@
   "title" : "XMLElement.SerializationOptions",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/OptionSet-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/OptionSet-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "OptionSet Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/optionset-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/formIntersection(_:)": {
   "abstract" : [

@@ -113,7 +113,7 @@
       "anchor" : "Instance-Properties",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible\/xmlAttributeContent-7x6h7"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible\/xmlAttributeContent"
       ],
       "title" : "Instance Properties"
     }
@@ -214,7 +214,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLAttributeContentConvertible/xmlAttributeContent-7x6h7": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLAttributeContentConvertible/xmlAttributeContent": {
   "abstract" : [
     {
       "text" : "The attribute content of this type.",
@@ -263,13 +263,13 @@
       "text" : "Content"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible\/xmlAttributeContent-7x6h7",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible\/xmlAttributeContent",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
   "title" : "xmlAttributeContent",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible\/xmlattributecontent-7x6h7"
+  "url" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible\/xmlattributecontent"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Content": {
   "abstract" : [

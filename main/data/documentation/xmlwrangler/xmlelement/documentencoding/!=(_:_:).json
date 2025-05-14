@@ -10,8 +10,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding\/Equatable-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding"
       ]
     ]
   },
@@ -464,17 +463,6 @@
   "title" : "!=(_:_:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/!=(_:_:)"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentEncoding/Equatable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding\/Equatable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Equatable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/equatable-implementations"
 }
 }
 }

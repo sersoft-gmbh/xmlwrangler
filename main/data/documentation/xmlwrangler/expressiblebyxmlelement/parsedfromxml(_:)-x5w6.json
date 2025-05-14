@@ -223,7 +223,7 @@
                   "type" : "text"
                 },
                 {
-                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9lxb6",
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)",
                   "isActive" : true,
                   "type" : "reference"
                 },
@@ -343,7 +343,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/init(xml:)-9lxb6": {
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/init(xml:)": {
   "abstract" : [
     {
       "text" : "Creates a new instance using the given ",
@@ -391,13 +391,13 @@
       "text" : "throws"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9lxb6",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
   "title" : "init(xml:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9lxb6"
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/parsedFromXML(_:)-x5w6": {
   "abstract" : [

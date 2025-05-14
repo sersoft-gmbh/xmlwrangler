@@ -10,8 +10,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/Error-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError"
       ]
     ]
   },
@@ -218,17 +217,6 @@
   "title" : "XMLElement.LookupError",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/LookupError/Error-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/Error-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Error Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/error-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/LookupError/localizedDescription": {
   "abstract" : [

@@ -26,12 +26,12 @@
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3j6bp",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3j6bp",
+                        "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-57hl",
                         "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       }
@@ -40,7 +40,7 @@
                     "type" : "groupMarker"
                   }
                 ],
-                "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3jl0z",
+                "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)",
                 "title" : "init?(xmlAttributeContent: XMLElement.Attributes.Content)",
                 "type" : "init"
               }
@@ -79,7 +79,7 @@
                     "type" : "groupMarker"
                   }
                 ],
-                "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9lxb6",
+                "path" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)",
                 "title" : "init(xml: XMLElement) throws",
                 "type" : "init"
               },
@@ -122,7 +122,7 @@
                     "type" : "groupMarker"
                   }
                 ],
-                "path" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible\/xmlattributecontent-7x6h7",
+                "path" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible\/xmlattributecontent",
                 "title" : "var xmlAttributeContent: XMLElement.Attributes.Content",
                 "type" : "property"
               }
@@ -268,8 +268,8 @@
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/init(extendedgraphemeclusterliteral:)",
-                            "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/init(unicodescalarliteral:)",
+                            "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
                             "type" : "init"
                           }
                         ],
@@ -300,13 +300,13 @@
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/init(unicodescalarliteral:)",
-                            "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/init(extendedgraphemeclusterliteral:)",
+                            "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
                             "type" : "init"
                           }
                         ],
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/expressiblebyunicodescalarliteral-implementations",
-                        "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/expressiblebystringliteral-implementations",
+                        "title" : "ExpressibleByStringLiteral Implementations",
                         "type" : "symbol"
                       },
                       {
@@ -522,6 +522,7 @@
                             "type" : "method"
                           },
                           {
+                            "deprecated" : true,
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/index(of:)",
                             "title" : "func index(of: Self.Element) -> Self.Index?",
                             "type" : "method"
@@ -723,6 +724,7 @@
                             "type" : "method"
                           },
                           {
+                            "deprecated" : true,
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/flatmap(_:)-2an33",
                             "title" : "func flatMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
                             "type" : "method"
@@ -908,8 +910,8 @@
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/init(extendedgraphemeclusterliteral:)",
-                            "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/init(unicodescalarliteral:)",
+                            "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
                             "type" : "init"
                           }
                         ],
@@ -924,13 +926,13 @@
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/init(unicodescalarliteral:)",
-                            "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/init(extendedgraphemeclusterliteral:)",
+                            "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
                             "type" : "init"
                           }
                         ],
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/expressiblebyunicodescalarliteral-implementations",
-                        "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/key\/expressiblebystringliteral-implementations",
+                        "title" : "ExpressibleByStringLiteral Implementations",
                         "type" : "symbol"
                       },
                       {
@@ -1160,6 +1162,7 @@
                             "type" : "method"
                           },
                           {
+                            "deprecated" : true,
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/index(of:)",
                             "title" : "func index(of: Self.Element) -> Self.Index?",
                             "type" : "method"
@@ -1346,6 +1349,7 @@
                             "type" : "method"
                           },
                           {
+                            "deprecated" : true,
                             "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/flatmap(_:)-124gs",
                             "title" : "func flatMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
                             "type" : "method"
@@ -1563,7 +1567,7 @@
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_(_:_:)-5fbmx",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_(_:_:)",
                             "title" : "static func < (XMLElement.Attributes.Index, XMLElement.Attributes.Index) -> Bool",
                             "type" : "op"
                           },
@@ -1980,6 +1984,7 @@
                         "type" : "method"
                       },
                       {
+                        "deprecated" : true,
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/flatmap(_:)-4yo6e",
                         "title" : "func flatMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
                         "type" : "method"
@@ -2123,7 +2128,7 @@
                     "type" : "groupMarker"
                   },
                   {
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(contentsof:)-7tyzf",
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(contentsof:)",
                     "title" : "func append(contentsOf: some Sequence<XMLElement>)",
                     "type" : "method"
                   },
@@ -2266,8 +2271,8 @@
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/init(extendedgraphemeclusterliteral:)",
-                            "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/init(unicodescalarliteral:)",
+                            "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
                             "type" : "init"
                           }
                         ],
@@ -2298,13 +2303,13 @@
                             "type" : "groupMarker"
                           },
                           {
-                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/init(unicodescalarliteral:)",
-                            "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
+                            "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/init(extendedgraphemeclusterliteral:)",
+                            "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
                             "type" : "init"
                           }
                         ],
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/expressiblebyunicodescalarliteral-implementations",
-                        "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/expressiblebystringliteral-implementations",
+                        "title" : "ExpressibleByStringLiteral Implementations",
                         "type" : "symbol"
                       },
                       {
@@ -2503,6 +2508,7 @@
                         "type" : "method"
                       },
                       {
+                        "deprecated" : true,
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/index(of:)",
                         "title" : "func index(of: Self.Element) -> Self.Index?",
                         "type" : "method"
@@ -2611,7 +2617,7 @@
                         "type" : "typealias"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/indices-swift.typealias",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/indices",
                         "title" : "XMLElement.Content.Indices",
                         "type" : "typealias"
                       },
@@ -2705,8 +2711,8 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(extendedgraphemeclusterliteral:)",
-                        "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(unicodescalarliteral:)",
+                        "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
                         "type" : "init"
                       }
                     ],
@@ -2805,6 +2811,11 @@
                         "type" : "groupMarker"
                       },
                       {
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(extendedgraphemeclusterliteral:)",
+                        "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
+                        "type" : "init"
+                      },
+                      {
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(stringliteral:)",
                         "title" : "init(stringLiteral: XMLElement.Content.StringLiteralType)",
                         "type" : "init"
@@ -2821,22 +2832,6 @@
                     ],
                     "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/expressiblebystringliteral-implementations",
                     "title" : "ExpressibleByStringLiteral Implementations",
-                    "type" : "symbol"
-                  },
-                  {
-                    "children" : [
-                      {
-                        "title" : "Initializers",
-                        "type" : "groupMarker"
-                      },
-                      {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(unicodescalarliteral:)",
-                        "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
-                        "type" : "init"
-                      }
-                    ],
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/expressiblebyunicodescalarliteral-implementations",
-                    "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
                     "type" : "symbol"
                   },
                   {
@@ -3096,7 +3091,7 @@
                         "type" : "method"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/replacesubrange(_:with:)-1o7d7",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/replacesubrange(_:with:)",
                         "title" : "func replaceSubrange(Range<XMLElement.Content.Index>, with: some Collection<XMLElement.Content.Element>)",
                         "type" : "method"
                       },
@@ -3216,6 +3211,7 @@
                         "type" : "method"
                       },
                       {
+                        "deprecated" : true,
                         "path" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/flatmap(_:)-6lar",
                         "title" : "func flatMap<ElementOfResult>((Self.Element) throws -> ElementOfResult?) rethrows -> [ElementOfResult]",
                         "type" : "method"
@@ -3420,7 +3416,7 @@
                     "type" : "groupMarker"
                   },
                   {
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_(_:_:)-6ylwk",
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_(_:_:)",
                     "title" : "static func < (XMLElement.DocumentVersion, XMLElement.DocumentVersion) -> Bool",
                     "type" : "op"
                   },
@@ -3645,8 +3641,8 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/init(extendedgraphemeclusterliteral:)",
-                        "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/init(unicodescalarliteral:)",
+                        "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
                         "type" : "init"
                       }
                     ],
@@ -3661,13 +3657,13 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/init(unicodescalarliteral:)",
-                        "title" : "init(unicodeScalarLiteral: Self.ExtendedGraphemeClusterLiteralType)",
+                        "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/init(extendedgraphemeclusterliteral:)",
+                        "title" : "init(extendedGraphemeClusterLiteral: Self.StringLiteralType)",
                         "type" : "init"
                       }
                     ],
-                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/expressiblebyunicodescalarliteral-implementations",
-                    "title" : "ExpressibleByUnicodeScalarLiteral Implementations",
+                    "path" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/expressiblebystringliteral-implementations",
+                    "title" : "ExpressibleByStringLiteral Implementations",
                     "type" : "symbol"
                   },
                   {
@@ -4653,7 +4649,7 @@
                         "type" : "groupMarker"
                       },
                       {
-                        "path" : "\/documentation\/xmlwrangler\/swift\/string\/init(xmlattributecontent:)-2yjjq",
+                        "path" : "\/documentation\/xmlwrangler\/swift\/string\/init(xmlattributecontent:)",
                         "title" : "init(xmlAttributeContent: XMLElement.Attributes.Content)",
                         "type" : "init"
                       },

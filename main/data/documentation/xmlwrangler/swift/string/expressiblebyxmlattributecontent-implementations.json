@@ -36,7 +36,7 @@
       "anchor" : "Initializers",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/init(xmlAttributeContent:)-2yjjq",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/init(xmlAttributeContent:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/init(xmlAttributeContent:)-85b9j"
       ],
       "title" : "Initializers"
@@ -110,7 +110,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/swift\/string"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/Swift/String/init(xmlAttributeContent:)-2yjjq": {
+"doc://XMLWrangler/documentation/XMLWrangler/Swift/String/init(xmlAttributeContent:)": {
   "abstract" : [
 
   ],
@@ -159,12 +159,12 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/init(xmlAttributeContent:)-2yjjq",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/init(xmlAttributeContent:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(xmlAttributeContent:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/swift\/string\/init(xmlattributecontent:)-2yjjq"
+  "url" : "\/documentation\/xmlwrangler\/swift\/string\/init(xmlattributecontent:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/String/init(xmlAttributeContent:)-85b9j": {
   "abstract" : [

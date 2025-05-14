@@ -111,7 +111,7 @@
       "anchor" : "Operators",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_(_:_:)-6ylwk"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_(_:_:)"
       ],
       "title" : "Operators"
     },
@@ -273,7 +273,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/equatable-implementations"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_(_:_:)-6ylwk": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_(_:_:)": {
   "abstract" : [
 
   ],
@@ -348,12 +348,12 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_(_:_:)-6ylwk",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_(_:_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "<(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_(_:_:)-6ylwk"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_(_:_:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/description": {
   "abstract" : [

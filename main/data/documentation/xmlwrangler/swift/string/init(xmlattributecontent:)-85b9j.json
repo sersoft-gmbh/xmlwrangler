@@ -4,8 +4,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/ExpressibleByXMLAttributeContent-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String"
       ]
     ]
   },
@@ -246,17 +245,6 @@
   "title" : "String",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/swift\/string"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/Swift/String/ExpressibleByXMLAttributeContent-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/ExpressibleByXMLAttributeContent-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "ExpressibleByXMLAttributeContent Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/swift\/string\/expressiblebyxmlattributecontent-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/String/init(xmlAttributeContent:)-85b9j": {
   "abstract" : [

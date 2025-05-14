@@ -117,7 +117,7 @@
       "anchor" : "Initializers",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-3jl0z"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)"
       ],
       "title" : "Initializers"
     }
@@ -190,7 +190,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)-3jl0z": {
+"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)": {
   "abstract" : [
     {
       "text" : "Creates a new instance of the conforming type using the given attribute content.",
@@ -243,13 +243,13 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-3jl0z",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
   "title" : "init(xmlAttributeContent:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)-3jl0z"
+  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlattributecontent\/init(xmlattributecontent:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/String": {
   "abstract" : [

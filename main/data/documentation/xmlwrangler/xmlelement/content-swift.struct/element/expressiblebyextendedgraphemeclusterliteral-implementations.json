@@ -37,7 +37,7 @@
       "anchor" : "Initializers",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/init(extendedGraphemeClusterLiteral:)"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/init(unicodeScalarLiteral:)"
       ],
       "title" : "Initializers"
     }
@@ -178,7 +178,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Element/init(extendedGraphemeClusterLiteral:)": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Element/init(unicodeScalarLiteral:)": {
   "abstract" : [
 
   ],
@@ -205,7 +205,7 @@
         "type" : "text"
       },
       {
-        "code" : "Self.StringLiteralType",
+        "code" : "Self.UnicodeScalarLiteralType",
         "type" : "codeVoice"
       },
       {
@@ -225,7 +225,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "extendedGraphemeClusterLiteral"
+      "text" : "unicodeScalarLiteral"
     },
     {
       "kind" : "text",
@@ -241,20 +241,20 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s26ExpressibleByStringLiteralP0cD4TypeQa",
-      "text" : "StringLiteralType"
+      "preciseIdentifier" : "s:s43ExpressibleByExtendedGraphemeClusterLiteralP0cdeF4TypeQa",
+      "text" : "ExtendedGraphemeClusterLiteralType"
     },
     {
       "kind" : "text",
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/init(extendedGraphemeClusterLiteral:)",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/init(unicodeScalarLiteral:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(extendedGraphemeClusterLiteral:)",
+  "title" : "init(unicodeScalarLiteral:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/init(extendedgraphemeclusterliteral:)"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/element\/init(unicodescalarliteral:)"
 }
 }
 }

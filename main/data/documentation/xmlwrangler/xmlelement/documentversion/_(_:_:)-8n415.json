@@ -18,8 +18,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/Comparable-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion"
       ]
     ]
   },
@@ -354,17 +353,6 @@
   "title" : "XMLElement.DocumentVersion",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/Comparable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/Comparable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Comparable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/comparable-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_(_:_:)-8n415": {
   "abstract" : [

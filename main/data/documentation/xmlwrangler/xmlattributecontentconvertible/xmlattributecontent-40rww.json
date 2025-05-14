@@ -3,8 +3,7 @@
     "paths" : [
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible\/xmlAttributeContent-7x6h7"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible"
       ]
     ]
   },
@@ -361,63 +360,6 @@
   "title" : "xmlAttributeContent",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible\/xmlattributecontent-40rww"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLAttributeContentConvertible/xmlAttributeContent-7x6h7": {
-  "abstract" : [
-    {
-      "text" : "The attribute content of this type.",
-      "type" : "text"
-    }
-  ],
-  "defaultImplementations" : 1,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "xmlAttributeContent"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7ContentV",
-      "text" : "Content"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible\/xmlAttributeContent-7x6h7",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "xmlAttributeContent",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlattributecontentconvertible\/xmlattributecontent-7x6h7"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement": {
   "abstract" : [

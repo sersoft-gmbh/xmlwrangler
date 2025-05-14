@@ -3,8 +3,7 @@
     "paths" : [
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9lxb6"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement"
       ]
     ]
   },
@@ -231,62 +230,6 @@
   "title" : "ExpressibleByXMLElement",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/init(xml:)-9lxb6": {
-  "abstract" : [
-    {
-      "text" : "Creates a new instance using the given ",
-      "type" : "text"
-    },
-    {
-      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-      "isActive" : true,
-      "type" : "reference"
-    },
-    {
-      "text" : ".",
-      "type" : "text"
-    }
-  ],
-  "defaultImplementations" : 3,
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "xml"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : ") "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "throws"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement\/init(xml:)-9lxb6",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "init(xml:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/expressiblebyxmlelement\/init(xml:)-9lxb6"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLElement/init(xml:)-9t88v": {
   "abstract" : [

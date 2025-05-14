@@ -4,8 +4,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding\/RawRepresentable-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding"
       ]
     ]
   },
@@ -287,17 +286,6 @@
   "title" : "XMLElement.DocumentEncoding",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentEncoding/RawRepresentable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentEncoding\/RawRepresentable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "RawRepresentable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/rawrepresentable-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentEncoding/hash(into:)": {
   "abstract" : [

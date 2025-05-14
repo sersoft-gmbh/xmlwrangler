@@ -10,8 +10,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/SetAlgebra-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions"
       ]
     ]
   },
@@ -209,17 +208,6 @@
   "title" : "XMLElement.SerializationOptions",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/SetAlgebra-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/SetAlgebra-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "SetAlgebra Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions\/setalgebra-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/isEmpty": {
   "abstract" : [

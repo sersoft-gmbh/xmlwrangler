@@ -18,8 +18,7 @@
     "paths" : [
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/XMLElementConvertible-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement"
       ]
     ]
   },
@@ -319,17 +318,6 @@
   "title" : "XMLElement.SerializationOptions",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/serializationoptions"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/XMLElementConvertible-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/XMLElementConvertible-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "XMLElementConvertible Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/xmlelementconvertible-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/serialize(with:)": {
   "abstract" : [

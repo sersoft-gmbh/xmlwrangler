@@ -4,8 +4,7 @@
       [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/XMLAttributeContentConvertible-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String"
       ]
     ]
   },
@@ -221,17 +220,6 @@
   "title" : "String",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/swift\/string"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/Swift/String/XMLAttributeContentConvertible-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/String\/XMLAttributeContentConvertible-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "XMLAttributeContentConvertible Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/swift\/string\/xmlattributecontentconvertible-implementations"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/String/xmlAttributeContent": {
   "abstract" : [
