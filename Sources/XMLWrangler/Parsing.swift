@@ -41,9 +41,9 @@ extension XMLElement {
 extension ExpressibleByXMLElement {
     /// Tries to parse the given XML data and convert the resulting element.
     /// - Parameter data: The XML data to parse.
-    /// - Throws: Any error thrown by ``XMLElement/parse(_:)`` or ``ExpressibleByXMLElement/init(xml:)`` of the receiver.
+    /// - Throws: Any error thrown by ``XMLElement/parse(_:)-43xl1`` or ``ExpressibleByXMLElement/init(xml:)`` of the receiver.
     /// - Returns: The parsed element converted to the receiving type.
-    /// - SeeAlso: ``XMLElement/parse(_:)``.
+    /// - SeeAlso: ``XMLElement/parse(_:)-43xl1``.
     @inlinable
     public static func parsedFromXML(_ data: Data) throws -> Self {
         try XMLElement.parse(data).converted(to: Self.self)
