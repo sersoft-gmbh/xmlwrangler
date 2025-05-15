@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XWElement",
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
       "isActive" : true,
       "type" : "reference"
     },
@@ -191,7 +191,7 @@
       "type" : "text"
     },
     {
-      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XWElement",
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
       "isActive" : true,
       "type" : "reference"
     },
