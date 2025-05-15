@@ -115,5 +115,5 @@ extension XMLElement {
 }
 
 /// A typealias for ``XMLWrangler/XMLElement``.
-/// Use this if you run into conflicts with ``Foundation/XMLElement``.
+/// Use this if you run into conflicts with `Foundation/XMLElement`.
 public typealias XWElement = XMLElement

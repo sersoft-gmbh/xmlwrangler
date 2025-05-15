@@ -303,7 +303,7 @@ extension XMLElement.Attributes: Sequence {
     /// Casts the ``XMLElement/Attributes/Element`` tuple to ``XMLElement/Attributes/Storage/Element``.
     /// - Note: Uses `unsafeBitCast` since the tuples only differ in labels.
     @usableFromInline
-    static func _castElement(_ storageElement: Storage.Element) -> Element {
+    internal static func _castElement(_ storageElement: Storage.Element) -> Element {
         unsafeBitCast(storageElement, to: Element.self)
     }
 

@@ -31,7 +31,7 @@ extension XMLElement {
     /// - Throws: Any error reported by ``Foundation/XMLParser``.
     ///           ``XMLElement/UnknownParsingError`` if parsing failed but no error was reported.
     ///           ``XMLElement/MissingRootElementError`` if parsing succeeded but no root element was parsed.
-    /// - SeeAlso: ``XMLElement/parse(_:)-3057l``
+    /// - SeeAlso: ``XMLElement/parse(_:)``
     @inlinable
     public static func parse(_ string: some StringProtocol) throws -> Self {
         try parse(Data(string.utf8))
@@ -41,9 +41,9 @@ extension XMLElement {
 extension ExpressibleByXMLElement {
     /// Tries to parse the given XML data and convert the resulting element.
     /// - Parameter data: The XML data to parse.
-    /// - Throws: Any error thrown by ``XMLElement/parse(_:)-3057l`` or ``ExpressibleByXMLElement/init(xml:)`` of the receiver.
+    /// - Throws: Any error thrown by ``XMLElement/parse(_:)`` or ``ExpressibleByXMLElement/init(xml:)`` of the receiver.
     /// - Returns: The parsed element converted to the receiving type.
-    /// - SeeAlso: ``XMLElement/parse(_:)-3057l``.
+    /// - SeeAlso: ``XMLElement/parse(_:)``.
     @inlinable
     public static func parsedFromXML(_ data: Data) throws -> Self {
         try XMLElement.parse(data).converted(to: Self.self)
