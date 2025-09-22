@@ -1,7 +1,8 @@
-import XCTest
+import Testing
 import XMLWrangler
 
-final class XMLElementProtocolsTests: XCTestCase {
+@Suite
+struct XMLElementProtocolsTests {
     private enum RepresentableEnum: String, RawRepresentable, ExpressibleByXMLElement {
         case a
     }
@@ -26,9 +27,10 @@ final class XMLElementProtocolsTests: XCTestCase {
 
     private let testRoot = XWElement(name: "irrelevant", content: "a")
 
-    func testConvenienceImplementations() {
-        XCTAssertEqual(try testRoot.converted(to: RepresentableEnum.self), .a)
-        XCTAssertEqual(try testRoot.converted(to: ConvertibleStruct.self).description, "a")
-        XCTAssertEqual(try testRoot.converted(to: Both.self), .a)
+    @Test
+    func convenienceImplementations() throws {
+        #expect(try testRoot.converted(to: RepresentableEnum.self) == .a)
+        #expect(try testRoot.converted(to: ConvertibleStruct.self).description == "a")
+        #expect(try testRoot.converted(to: Both.self) == .a)
     }
 }

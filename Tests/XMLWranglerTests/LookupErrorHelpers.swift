@@ -1,9 +1,4 @@
-import XCTest
-#if swift(>=6.0)
 public import XMLWrangler
-#else
-import XMLWrangler
-#endif
 
 // Only equatable for testing
 extension XWElement.LookupError: Equatable {
@@ -25,9 +20,4 @@ extension XWElement.LookupError: Equatable {
             return false
         }
     }
-}
-
-func XCTAssert(_ error: some Error, is expectedError: XWElement.LookupError, file: StaticString = #filePath, line: UInt = #line) {
-    XCTAssertTrue(error is XWElement.LookupError, "\(error) is no \(XWElement.LookupError.self)", file: file, line: line)
-    XCTAssertEqual(error as? XWElement.LookupError, expectedError, file: file, line: line)
 }

@@ -1,8 +1,10 @@
-import XCTest
+import Testing
 @testable import XMLWrangler
 
-final class ErrorsTests: XCTestCase {
-    func testLookupErrorDescription() {
+@Suite
+struct ErrorsTests {
+    @Test
+    func lookupErrorDescription() {
         let testElement = XWElement(name: "Root")
         let testKey = XWElement.Attributes.Key(rawValue: "TestKey")
         let testAttributeContent: XWElement.Attributes.Content = "Test Attribute"
@@ -21,24 +23,32 @@ final class ErrorsTests: XCTestCase {
                                                                                     stringContent: testStringContent,
                                                                                     type: testType)
 
-        XCTAssertEqual(String(describing: missingAttribute),
-                       "Element '\(testElement.name.rawValue)' has no attribute '\(testKey.rawValue)'!\nAttributes: \(testElement.attributes)")
-        XCTAssertEqual(String(describing: cannotConvertAttribute),
-                       "Could not convert attribute '\(testKey.rawValue)' of element '\(testElement.name.rawValue)' to \(testType)!\nAttribute content: \(testAttributeContent)")
-        XCTAssertEqual(String(describing: missingContent),
-                       "Element '\(testElement.name.rawValue)' has no string content!")
-        XCTAssertEqual(String(describing: missingChild),
-                       "Element '\(testElement.name.rawValue)' has no child named '\(testName.rawValue)'")
-        XCTAssertEqual(String(describing: cannotConvertContent),
-                       "Could not convert content of element '\(testElement.name.rawValue)' to \(testType)!\nElement string content: \(testStringContent)")
+        #expect(String(describing: missingAttribute)
+                ==
+                "Element '\(testElement.name.rawValue)' has no attribute '\(testKey.rawValue)'!\nAttributes: \(testElement.attributes)")
+        #expect(String(describing: cannotConvertAttribute)
+                ==
+                "Could not convert attribute '\(testKey.rawValue)' of element '\(testElement.name.rawValue)' to \(testType)!\nAttribute content: \(testAttributeContent)")
+        #expect(String(describing: missingContent)
+                ==
+                "Element '\(testElement.name.rawValue)' has no string content!")
+        #expect(String(describing: missingChild)
+                ==
+                "Element '\(testElement.name.rawValue)' has no child named '\(testName.rawValue)'")
+        #expect(String(describing: cannotConvertContent)
+                ==
+                "Could not convert content of element '\(testElement.name.rawValue)' to \(testType)!\nElement string content: \(testStringContent)")
     }
-    
-    func testParserUnknownParsingError() {
-        XCTAssertEqual(String(describing: XWElement.UnknownParsingError()), "An unknown parsing error occurred!")
+
+    @Test
+    func parserUnknownParsingError() {
+        #expect(String(describing: XWElement.UnknownParsingError()) == "An unknown parsing error occurred!")
     }
-    
-    func testParserMissingRootElementError() {
-        XCTAssertEqual(String(describing: XWElement.MissingRootElementError()),
-                       "Parsing did not yield an element! Please check that the XML is valid!")
+
+    @Test
+    func parserMissingRootElementError() {
+        #expect(String(describing: XWElement.MissingRootElementError())
+                ==
+                "Parsing did not yield an element! Please check that the XML is valid!")
     }
 }

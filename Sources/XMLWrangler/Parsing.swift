@@ -18,8 +18,13 @@ extension XMLElement {
     public static func parse(_ data: Data) throws -> Self {
         let parser = XMLParser(data: data)
         let delegate = ParserDelegate()
+#if compiler(>=6.2)
+        unsafe parser.delegate = delegate
+        defer { unsafe parser.delegate = nil }
+#else
         parser.delegate = delegate
         defer { parser.delegate = nil }
+#endif
         guard parser.parse() else { throw parser.parserError ?? UnknownParsingError() }
         guard let parsedRoot = delegate.parsedRoot else { throw MissingRootElementError() }
         return parsedRoot

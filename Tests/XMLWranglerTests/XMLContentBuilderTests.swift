@@ -1,39 +1,42 @@
-import XCTest
+import Testing
 import XMLWrangler
 
-final class XMLContentBuilderTests: XCTestCase {
+@Suite
+struct XMLContentBuilderTests {
     fileprivate struct Convertible: XMLElementConvertible {
         let xml: XWElement
     }
 
-    func testBuilderMethods() {
-        XCTAssertEqual(XMLContentBuilder.buildExpression(.string("test")), [.string("test")])
-        XCTAssertEqual(XMLContentBuilder.buildExpression("test"), [.string("test")])
-        XCTAssertEqual(XMLContentBuilder.buildExpression(XWElement(name: "test")),
-                       [.element(XWElement(name: "test"))])
-        XCTAssertEqual(XMLContentBuilder.buildExpression(Convertible(xml: XWElement(name: "test"))),
-                       [.element(XWElement(name: "test"))])
+    @Test
+    func builderMethods() {
+        #expect(XMLContentBuilder.buildExpression(.string("test")) == [.string("test")])
+        #expect(XMLContentBuilder.buildExpression("test") == [.string("test")])
+        #expect(XMLContentBuilder.buildExpression(XWElement(name: "test")) == [.element(XWElement(name: "test"))])
+        #expect(XMLContentBuilder.buildExpression(Convertible(xml: XWElement(name: "test"))) == [.element(XWElement(name: "test"))])
 
-        XCTAssertEqual(XMLContentBuilder.buildBlock(), [])
-        XCTAssertEqual(XMLContentBuilder.buildBlock([.element(XWElement(name: "test"))]),
-                       [.element(XWElement(name: "test"))])
-        XCTAssertEqual(XMLContentBuilder.buildBlock([.element(XWElement(name: "test"))], [.string("test")]),
-                       [.element(XWElement(name: "test")), .string("test")])
+        #expect(XMLContentBuilder.buildBlock() == [])
+        #expect(XMLContentBuilder.buildBlock([.element(XWElement(name: "test"))]) == [.element(XWElement(name: "test"))])
+        #expect(XMLContentBuilder.buildBlock([.element(XWElement(name: "test"))], [.string("test")])
+                ==
+                [.element(XWElement(name: "test")), .string("test")])
 
-        XCTAssertEqual(XMLContentBuilder.buildOptional(nil), [])
-        XCTAssertEqual(XMLContentBuilder.buildOptional([.string("test")]), [.string("test")])
+        #expect(XMLContentBuilder.buildOptional(nil) == [])
+        #expect(XMLContentBuilder.buildOptional([.string("test")]) == [.string("test")])
 
-        XCTAssertEqual(XMLContentBuilder.buildEither(first: [.string("test1")]), [.string("test1")])
-        XCTAssertEqual(XMLContentBuilder.buildEither(second: [.string("test1")]), [.string("test1")])
+        #expect(XMLContentBuilder.buildEither(first: [.string("test1")]) == [.string("test1")])
+        #expect(XMLContentBuilder.buildEither(second: [.string("test1")]) == [.string("test1")])
 
-        XCTAssertEqual(XMLContentBuilder.buildArray([[.element(XWElement(name: "test"))], [.string("test")]]),
-                       [.element(XWElement(name: "test")), .string("test")])
+        #expect(XMLContentBuilder.buildArray([[.element(XWElement(name: "test"))], [.string("test")]])
+                ==
+                [.element(XWElement(name: "test")), .string("test")])
 
-        XCTAssertEqual(XMLContentBuilder.buildFinalResult([.element(XWElement(name: "test")), .string("test1"), .string("test2")]),
-                       [.element(XWElement(name: "test")), .string("test1\ntest2")])
+        #expect(XMLContentBuilder.buildFinalResult([.element(XWElement(name: "test")), .string("test1"), .string("test2")])
+                ==
+                [.element(XWElement(name: "test")), .string("test1\ntest2")])
     }
 
-    func testBuilding() {
+    @Test
+    func building() {
         enum Kind: CaseIterable {
             case a, b, c
         }
@@ -98,6 +101,6 @@ final class XMLContentBuilderTests: XCTestCase {
                 .string("String Loop\nLoop line 1\nLoop line 2\nLoop line 3\nLoop line 4\nLoop line 5"),
         ])
 
-        XCTAssertEqual(root, expectedElement)
+        #expect(root == expectedElement)
     }
 }

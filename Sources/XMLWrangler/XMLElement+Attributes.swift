@@ -304,7 +304,11 @@ extension XMLElement.Attributes: Sequence {
     /// - Note: Uses `unsafeBitCast` since the tuples only differ in labels.
     @usableFromInline
     internal static func _castElement(_ storageElement: Storage.Element) -> Element {
+#if compiler(>=6.2)
+        unsafe unsafeBitCast(storageElement, to: Element.self)
+#else
         unsafeBitCast(storageElement, to: Element.self)
+#endif
     }
 
     /// The iterator for iterating over attributes.

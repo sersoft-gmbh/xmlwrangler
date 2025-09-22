@@ -1,8 +1,10 @@
-import XCTest
+import Testing
 import XMLWrangler
 
-final class XMLElementTests: XCTestCase {
-    func testInitialization() {
+@Suite
+struct XMLElementTests {
+    @Test
+    func initialization() {
         let allDefaults = XWElement(name: "test")
         let withAttrs = XWElement(name: "test", attributes: ["test": "test"])
         let withContentNormal = XWElement(name: "test", attributes: ["test": "test"], content: ["test"])
@@ -15,72 +17,78 @@ final class XMLElementTests: XCTestCase {
         let withStringContent = XWElement(name: "test", attributes: ["test": "test"], stringContent: "test")
         let withStringContentNoAttrs = XWElement(name: "test", stringContent: "test")
 
-        XCTAssertEqual(allDefaults.name, "test")
-        XCTAssertTrue(allDefaults.attributes.isEmpty)
-        XCTAssertTrue(allDefaults.content.isEmpty)
+        #expect(allDefaults.name == "test")
+        #expect(allDefaults.attributes.isEmpty)
+        #expect(allDefaults.content.isEmpty)
 
-        XCTAssertEqual(withAttrs.name, "test")
-        XCTAssertEqual(withAttrs.attributes, ["test": "test"])
-        XCTAssertTrue(withAttrs.content.isEmpty)
+        #expect(withAttrs.name == "test")
+        #expect(withAttrs.attributes == ["test": "test"])
+        #expect(withAttrs.content.isEmpty)
 
-        XCTAssertEqual(withContentNormal.name, "test")
-        XCTAssertEqual(withContentNormal.attributes, ["test": "test"])
-        XCTAssertEqual(withContentNormal.content, [.string("test")])
+        #expect(withContentNormal.name == "test")
+        #expect(withContentNormal.attributes == ["test": "test"])
+        #expect(withContentNormal.content == [.string("test")])
 
-        XCTAssertEqual(withContentVariadic.name, "test")
-        XCTAssertEqual(withContentVariadic.attributes, ["test": "test"])
-        XCTAssertEqual(withContentVariadic.content, [.string("test")])
-        XCTAssertEqual(withContentVariadicNoAttrs.name, "test")
-        XCTAssertTrue(withContentVariadicNoAttrs.attributes.isEmpty)
-        XCTAssertEqual(withContentVariadicNoAttrs.content, [.string("test")])
+        #expect(withContentVariadic.name == "test")
+        #expect(withContentVariadic.attributes == ["test": "test"])
+        #expect(withContentVariadic.content == [.string("test")])
+        #expect(withContentVariadicNoAttrs.name == "test")
+        #expect(withContentVariadicNoAttrs.attributes.isEmpty)
+        #expect(withContentVariadicNoAttrs.content == [.string("test")])
 
-        XCTAssertEqual(withElements.name, "test")
-        XCTAssertEqual(withElements.attributes, ["test": "test"])
-        XCTAssertEqual(withElements.content, [.element(XWElement(name: "test"))])
-        XCTAssertEqual(withElementsNoAttrs.name, "test")
-        XCTAssertTrue(withElementsNoAttrs.attributes.isEmpty)
-        XCTAssertEqual(withElementsNoAttrs.content, [.element(XWElement(name: "test"))])
+        #expect(withElements.name == "test")
+        #expect(withElements.attributes == ["test": "test"])
+        #expect(withElements.content == [.element(XWElement(name: "test"))])
+        #expect(withElementsNoAttrs.name == "test")
+        #expect(withElementsNoAttrs.attributes.isEmpty)
+        #expect(withElementsNoAttrs.content == [.element(XWElement(name: "test"))])
 
-        XCTAssertEqual(withVariadicElements.name, "test")
-        XCTAssertEqual(withVariadicElements.attributes, ["test": "test"])
-        XCTAssertEqual(withVariadicElements.content, [.element(XWElement(name: "test"))])
-        XCTAssertEqual(withVariadicElementsNoAttrs.name, "test")
-        XCTAssertTrue(withVariadicElementsNoAttrs.attributes.isEmpty)
-        XCTAssertEqual(withVariadicElementsNoAttrs.content, [.element(XWElement(name: "test"))])
+        #expect(withVariadicElements.name == "test")
+        #expect(withVariadicElements.attributes == ["test": "test"])
+        #expect(withVariadicElements.content == [.element(XWElement(name: "test"))])
+        #expect(withVariadicElementsNoAttrs.name == "test")
+        #expect(withVariadicElementsNoAttrs.attributes.isEmpty)
+        #expect(withVariadicElementsNoAttrs.content == [.element(XWElement(name: "test"))])
 
-        XCTAssertEqual(withStringContent.name, "test")
-        XCTAssertEqual(withStringContent.attributes, ["test": "test"])
-        XCTAssertEqual(withStringContent.content, [.string("test")])
-        XCTAssertEqual(withStringContentNoAttrs.name, "test")
-        XCTAssertTrue(withStringContentNoAttrs.attributes.isEmpty)
-        XCTAssertEqual(withStringContentNoAttrs.content, [.string("test")])
+        #expect(withStringContent.name == "test")
+        #expect(withStringContent.attributes == ["test": "test"])
+        #expect(withStringContent.content == [.string("test")])
+        #expect(withStringContentNoAttrs.name == "test")
+        #expect(withStringContentNoAttrs.attributes.isEmpty)
+        #expect(withStringContentNoAttrs.content == [.string("test")])
     }
 
-    func testIdentifier() {
+    @Test
+    func identifier() {
         let element = XWElement(name: "test")
-        XCTAssertEqual(element.id, element.name)
+        #expect(element.id == element.name)
     }
 
-    func testDescription() {
+    @Test
+    func description() {
         let element = XWElement(name: "abc")
-        XCTAssertEqual(element.description,
-                       "XMLElement '\(element.name)' { \(element.attributes.count) attribute(s), \(element.content.count) content element(s) }")
+        #expect(element.description
+                ==
+                "XMLElement '\(element.name)' { \(element.attributes.count) attribute(s), \(element.content.count) content element(s) }")
     }
 
-    func testDebugDescription() {
+    @Test
+    func debugDescription() {
         let element = XWElement(name: "abc")
-        XCTAssertEqual(element.debugDescription,
-                       """
-                       XMLElement '\(element.name.debugDescription)' {
-                       attributes: \(element.attributes.debugDescription)
-                       contents: \(element.content.debugDescription)
-                       }
-                       """)
+        #expect(element.debugDescription
+                ==
+                """
+                XMLElement '\(element.name.debugDescription)' {
+                attributes: \(element.attributes.debugDescription)
+                contents: \(element.content.debugDescription)
+                }
+                """)
     }
 
-    func testXMLElementRepresentableCoformance() {
+    @Test
+    func xmlElementRepresentableCoformance() {
         let element = XWElement(name: "conv-test")
-        XCTAssertEqual(XWElement(xml: element), element)
-        XCTAssertEqual(element.xml, element)
+        #expect(XWElement(xml: element) == element)
+        #expect(element.xml == element)
     }
 }

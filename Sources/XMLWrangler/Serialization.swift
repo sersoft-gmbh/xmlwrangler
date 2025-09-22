@@ -1,3 +1,5 @@
+fileprivate import Foundation
+
 extension XMLElement {
     /// Represents the version of an XML document.
     public struct DocumentVersion: Sendable, Hashable, Comparable, CustomStringConvertible {

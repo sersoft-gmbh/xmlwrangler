@@ -1,37 +1,38 @@
-import XCTest
+import Testing
 @testable import XMLWrangler
 
-final class XMLElementContentElementTests: XCTestCase {
-    func testExpressibleByStringLiteral() {
-        let content1: XWElement.Content.Element = "test"
-        if case .string(let str) = content1 {
-            XCTAssertEqual(str, "test")
-        } else {
-            XCTFail("Content is not string!")
-        }
+@Suite
+struct XMLElementContentTests {
+    @Test
+    func expressibleByStringLiteral() {
+        let element: XWElement.Content.Element = "test"
+        #expect(element == .string("test"))
     }
 
-    func testAppendingString() {
+    @Test
+    func appendingString() {
         var content: XWElement.Content = []
         var content2: XWElement.Content = ["hello"]
 
         content.appendString("_this")
         content2.appendString(" world")
 
-        XCTAssertEqual(content, [.string("_this")])
-        XCTAssertEqual(content2, [.string("hello world")])
+        #expect(content == [.string("_this")])
+        #expect(content2 == [.string("hello world")])
     }
 
-    func testAppendingObject() {
+    @Test
+    func appendingObject() {
         var content: XWElement.Content = []
         let child = XWElement(name: "_this")
 
         content.appendElement(child)
 
-        XCTAssertEqual(content, [.element(child)])
+        #expect(content == [.element(child)])
     }
 
-    func testAppendingContentOfSequence() {
+    @Test
+    func appendingContentOfSequence() {
         var content: XWElement.Content = []
         let child1 = XWElement(name: "one1")
         let child2 = XWElement(name: "two2")
@@ -39,10 +40,11 @@ final class XMLElementContentElementTests: XCTestCase {
 
         content.append(contentsOf: [child1, child2, child3])
 
-        XCTAssertEqual(content, [.element(child1), .element(child2), .element(child3)])
+        #expect(content == [.element(child1), .element(child2), .element(child3)])
     }
 
-    func testAppendingElements() {
+    @Test
+    func appendingElements() {
         var content: XWElement.Content = []
         let child1 = XWElement(name: "abc1")
         let child2 = XWElement(name: "def2")
@@ -50,10 +52,11 @@ final class XMLElementContentElementTests: XCTestCase {
 
         content.appendElements(child1, child2, child3)
 
-        XCTAssertEqual(content, [.element(child1), .element(child2), .element(child3)])
+        #expect(content == [.element(child1), .element(child2), .element(child3)])
     }
 
-    func testCompression() {
+    @Test
+    func compression() {
         var content1: XWElement.Content = [
             .string("ABC"),
             .string("DEF"),
@@ -106,23 +109,24 @@ final class XMLElementContentElementTests: XCTestCase {
         let compressed2 = content2.compressed()
         content2.compress()
 
-        XCTAssertEqual(content1, expectedContent1)
-        XCTAssertEqual(content2, expectedContent2)
-        XCTAssertEqual(content1, compressed1)
-        XCTAssertEqual(content2, compressed2)
+        #expect(content1 == expectedContent1)
+        #expect(content2 == expectedContent2)
+        #expect(content1 == compressed1)
+        #expect(content2 == compressed2)
     }
 
-    func testInternalHelpers() {
+    @Test
+    func internalHelpers() {
         let strContent = XWElement.Content.Element.string("ABC")
         let elemtContent = XWElement.Content.Element.element(XWElement(name: "some_element"))
 
-        XCTAssertTrue(strContent.isString)
-        XCTAssertFalse(strContent.isElement)
-        XCTAssertEqual(strContent.string, "ABC")
-        XCTAssertNil(strContent.element)
-        XCTAssertFalse(elemtContent.isString)
-        XCTAssertTrue(elemtContent.isElement)
-        XCTAssertNil(elemtContent.string)
-        XCTAssertEqual(elemtContent.element, XWElement(name: "some_element"))
+        #expect(strContent.isString)
+        #expect(!strContent.isElement)
+        #expect(strContent.string == "ABC")
+        #expect(strContent.element == nil)
+        #expect(!elemtContent.isString)
+        #expect(elemtContent.isElement)
+        #expect(elemtContent.string == nil)
+        #expect(elemtContent.element == XWElement(name: "some_element"))
     }
 }

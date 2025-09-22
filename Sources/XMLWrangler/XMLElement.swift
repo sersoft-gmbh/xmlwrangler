@@ -1,4 +1,5 @@
 /// Represents an element in an XML structure.
+@DebugDescription
 public struct XMLElement: Sendable, Equatable, Identifiable, CustomStringConvertible, CustomDebugStringConvertible {
     /// The name of the element.
     public let name: Name
