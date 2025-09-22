@@ -58,7 +58,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L465"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L469"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -110,6 +110,7 @@
         "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
         "doc:\/\/XMLWrangler\/SM",
         "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
         "doc:\/\/XMLWrangler\/ST"
       ],
       "kind" : "relationships",
@@ -213,7 +214,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
@@ -924,6 +928,11 @@
   "title" : "subscript(_:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/contents-swift.struct\/subscript(_:)"
+},
+"doc://XMLWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://XMLWrangler/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",

@@ -48,7 +48,7 @@
     ],
     "remoteSource" : {
       "fileName" : "Serialization.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Serialization.swift#L46"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Serialization.swift#L48"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -91,7 +91,8 @@
         "doc:\/\/XMLWrangler\/SQ",
         "doc:\/\/XMLWrangler\/SH",
         "doc:\/\/XMLWrangler\/SY",
-        "doc:\/\/XMLWrangler\/s8SendableP"
+        "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -183,7 +184,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
@@ -616,6 +620,11 @@
   "title" : "utf8",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentencoding\/utf8"
+},
+"doc://XMLWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://XMLWrangler/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",

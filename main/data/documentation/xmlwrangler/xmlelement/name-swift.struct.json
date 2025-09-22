@@ -48,7 +48,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement.swift#L89"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement.swift#L90"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -107,6 +107,7 @@
         "doc:\/\/XMLWrangler\/SH",
         "doc:\/\/XMLWrangler\/SY",
         "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible"
       ],
       "kind" : "relationships",
@@ -205,7 +206,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
@@ -786,6 +790,11 @@
   "title" : "rawValue",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/rawvalue-swift.property"
+},
+"doc://XMLWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://XMLWrangler/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",

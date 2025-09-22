@@ -49,7 +49,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L339"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L343"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -99,7 +99,8 @@
         "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
         "doc:\/\/XMLWrangler\/SL",
         "doc:\/\/XMLWrangler\/SQ",
-        "doc:\/\/XMLWrangler\/s8SendableP"
+        "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -159,7 +160,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
@@ -404,6 +408,11 @@
 "doc://XMLWrangler/s15BitwiseCopyableP": {
   "identifier" : "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
   "title" : "Swift.BitwiseCopyable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
   "type" : "unresolvable"
 },
 "doc://XMLWrangler/s8SendableP": {

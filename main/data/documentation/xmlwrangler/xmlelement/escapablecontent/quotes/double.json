@@ -37,7 +37,7 @@
     ],
     "remoteSource" : {
       "fileName" : "Serialization.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Serialization.swift#L64"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Serialization.swift#L66"
     },
     "role" : "symbol",
     "roleHeading" : "Case",
@@ -97,7 +97,10 @@
 "references": {
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",

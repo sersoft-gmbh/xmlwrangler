@@ -106,6 +106,7 @@
         "doc:\/\/XMLWrangler\/SH",
         "doc:\/\/XMLWrangler\/SY",
         "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible"
       ],
       "kind" : "relationships",
@@ -197,7 +198,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
@@ -942,6 +946,11 @@
   "title" : "xmlAttributeContent",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content\/xmlattributecontent"
+},
+"doc://XMLWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://XMLWrangler/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",

@@ -325,7 +325,7 @@
           "code" : [
             "let str = \"The rain in Spain stays mainly in the plain.\"",
             "let vowels: Set<Character> = [\"a\", \"e\", \"i\", \"o\", \"u\"]",
-            "let vowelIndices = str.subranges(where: { vowels.contains($0) })",
+            "let vowelIndices = str.indices(where: { vowels.contains($0) })",
             "",
             "let disemvoweled = str.removingSubranges(vowelIndices)",
             "print(String(disemvoweled))",
@@ -404,7 +404,10 @@
 "references": {
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",

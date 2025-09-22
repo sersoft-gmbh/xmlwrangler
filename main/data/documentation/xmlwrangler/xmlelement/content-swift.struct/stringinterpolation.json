@@ -106,6 +106,7 @@
     {
       "identifiers" : [
         "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
         "doc:\/\/XMLWrangler\/s27StringInterpolationProtocolP"
       ],
       "kind" : "relationships",
@@ -169,7 +170,10 @@
 "references": {
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
@@ -991,6 +995,11 @@
   "title" : "XMLElementConvertible",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelementconvertible"
+},
+"doc://XMLWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://XMLWrangler/s27StringInterpolationProtocolP": {
   "identifier" : "doc:\/\/XMLWrangler\/s27StringInterpolationProtocolP",

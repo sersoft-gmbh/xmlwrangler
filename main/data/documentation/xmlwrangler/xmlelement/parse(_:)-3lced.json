@@ -84,7 +84,7 @@
     ],
     "remoteSource" : {
       "fileName" : "Parsing.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Parsing.swift#L36"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Parsing.swift#L41"
     },
     "role" : "symbol",
     "roleHeading" : "Type Method",
@@ -284,8 +284,9 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "XMLElement\/parse(_:)",
-                  "type" : "codeVoice"
+                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+                  "isActive" : true,
+                  "type" : "reference"
                 }
               ],
               "type" : "paragraph"
@@ -323,7 +324,10 @@
 "references": {
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",

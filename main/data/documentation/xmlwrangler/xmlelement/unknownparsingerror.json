@@ -64,7 +64,7 @@
     ],
     "remoteSource" : {
       "fileName" : "Parsing.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Parsing.swift#L67"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Parsing.swift#L72"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -105,7 +105,8 @@
       "identifiers" : [
         "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
         "doc:\/\/XMLWrangler\/s5ErrorP",
-        "doc:\/\/XMLWrangler\/s8SendableP"
+        "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -154,7 +155,10 @@
 "references": {
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
@@ -291,6 +295,11 @@
   "title" : "description",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/unknownparsingerror\/description"
+},
+"doc://XMLWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://XMLWrangler/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",

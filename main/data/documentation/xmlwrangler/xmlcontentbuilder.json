@@ -96,7 +96,8 @@
     {
       "identifiers" : [
         "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
-        "doc:\/\/XMLWrangler\/s8SendableP"
+        "doc:\/\/XMLWrangler\/s8SendableP",
+        "doc:\/\/XMLWrangler\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -148,7 +149,10 @@
 "references": {
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
@@ -1016,6 +1020,11 @@
 "doc://XMLWrangler/s15BitwiseCopyableP": {
   "identifier" : "doc:\/\/XMLWrangler\/s15BitwiseCopyableP",
   "title" : "Swift.BitwiseCopyable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
   "type" : "unresolvable"
 },
 "doc://XMLWrangler/s8SendableP": {

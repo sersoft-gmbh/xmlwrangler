@@ -277,7 +277,7 @@
         {
           "code" : [
             "var numbers = [5, 7, -3, -8, 11, 2, -1, 6]",
-            "let negativeIndices = numbers.subranges(where: { $0 < 0 })",
+            "let negativeIndices = numbers.indices(where: { $0 < 0 })",
             "",
             "numbers.removeSubranges(negativeIndices)",
             "\/\/ numbers == [5, 7, 11, 2, 6]"
@@ -355,7 +355,10 @@
 "references": {
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",

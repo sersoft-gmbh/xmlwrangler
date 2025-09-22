@@ -9,9 +9,9 @@
     {
       "anchor" : "ExpressibleByXMLAttributeContent-Implementations",
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-94r05",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-57hl",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-3j6bp"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-3j6bp",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent\/init(xmlAttributeContent:)-94r05"
       ],
       "title" : "ExpressibleByXMLAttributeContent Implementations"
     }
@@ -197,7 +197,10 @@
 "references": {
 "doc://XMLWrangler/documentation/XMLWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with XMLs in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler",
   "kind" : "symbol",
