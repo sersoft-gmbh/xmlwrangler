@@ -19,7 +19,7 @@ Add the following dependency to your `Package.swift`:
 
 ## Usage
 
-### `XMLElement`
+### Elements
 
 Every element in an XML is represented by the ``XMLElement`` struct. It has three properties, ``XMLElement/name`` which reflects the element's tag name, ``XMLElement/attributes`` which contains all attributes of the element and ``XMLElement/content`` which describes the content of the element.
 The content is an collection whose ``XMLElement/Content/Element`` is an enum. The enum has two cases: ``XMLElement/Content/Element/string(_:)`` and ``XMLElement/Content/Element/element(_:)``. The order in the collection is the order in which the content has been found. So if an element first contains some text, then contains a child element and finally again some text,  ``XMLElement/content`` will contain a ``XMLElement/Content/Element/string(_:)`` whose associated ``XMLElement/Content/Element/StringPart`` is the first text. Next there would be a ``XMLElement/Content/Element/element(_:)`` whose associated ``XMLElement`` would be the child element. Finally, there would be another ``XMLElement/Content/Element/string(_:)`` with the last text.
@@ -52,7 +52,7 @@ do {
 
 In this example, `root.name.rawValue` would of course be `"root"`. `root.content` would contain two `.element`s. The first would have a associated ``XMLElement`` with a `name` of `"child1"` and an empty `content`. The `name` of ``XMLElement`` of the second `.element` would be `"child2"` and its content would contain one `.string` having `"some text"` associated. `root.attributes` would contain the value `"myvalue"` for the key `"myattr"`.
 
-### Serializing XMLElements
+### Serializing Elements
 
 Since you can parse XMLs, you can also convert an ``XMLElement`` to a String. For this, there are two functions on ``XMLElement``.
 The first one just converts an ``XMLElement`` into a `String`. This happens by creating an opening and ending tag (where the beginning tag contains the ``XMLElement/attributes`` if available) and putting the ``XMLElement/content`` of the element in between. Also, ``XMLElement/content`` is compressed (using the aforementioned ``XMLElement/Content/compress()`` function) before being serialized.
@@ -84,7 +84,7 @@ Both functions can take an additional parameter `options` which contains a set o
 -   ``XMLElement/SerializationOptions/singleQuoteAttributes``: When this option is present, then attributes of elements will be enclosed in single quotes (') instead of double quotes (").
 -   ``XMLElement/SerializationOptions/explicitClosingTag``: This option forces empty elements to be serialized with an explicit closing tag instead of using the shorthand `/>` syntax.
 
-### Type safety
+### Type Safety
 
 XMLWrangler will always extract all content and attributes as `String` internally. This is because XML itself does not differentiate between types like e.g. JSON does.
 However, there are many helper functions to safely look up and convert content and attributes of an ``XMLElement``:
