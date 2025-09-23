@@ -284,9 +284,8 @@
                   "type" : "text"
                 },
                 {
-                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-                  "isActive" : true,
-                  "type" : "reference"
+                  "code" : "XMLElement\/parse(_:)",
+                  "type" : "codeVoice"
                 }
               ],
               "type" : "paragraph"

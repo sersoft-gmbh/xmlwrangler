@@ -187,9 +187,9 @@
           "type" : "heading"
         },
         {
-          "anchor" : "XMLElement",
+          "anchor" : "Elements",
           "level" : 3,
-          "text" : "`XMLElement`",
+          "text" : "Elements",
           "type" : "heading"
         },
         {
@@ -784,9 +784,9 @@
           "type" : "paragraph"
         },
         {
-          "anchor" : "Serializing-XMLElements",
+          "anchor" : "Serializing-Elements",
           "level" : 3,
-          "text" : "Serializing XMLElements",
+          "text" : "Serializing Elements",
           "type" : "heading"
         },
         {
@@ -1003,9 +1003,9 @@
           "type" : "unorderedList"
         },
         {
-          "anchor" : "Type-safety",
+          "anchor" : "Type-Safety",
           "level" : 3,
-          "text" : "Type safety",
+          "text" : "Type Safety",
           "type" : "heading"
         },
         {
@@ -1071,9 +1071,8 @@
                       "type" : "text"
                     },
                     {
-                      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-                      "isActive" : true,
-                      "type" : "reference"
+                      "code" : "XMLElement\/element(at:)",
+                      "type" : "codeVoice"
                     }
                   ],
                   "type" : "paragraph"
@@ -1127,9 +1126,8 @@
                       "type" : "text"
                     },
                     {
-                      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-                      "isActive" : true,
-                      "type" : "reference"
+                      "code" : "XMLElement\/convertedAttribute(for:converter:)",
+                      "type" : "codeVoice"
                     }
                   ],
                   "type" : "paragraph"
@@ -1163,9 +1161,8 @@
                       "type" : "text"
                     },
                     {
-                      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-                      "isActive" : true,
-                      "type" : "reference"
+                      "code" : "XMLElement\/convertedStringContent(converter:)",
+                      "type" : "codeVoice"
                     }
                   ],
                   "type" : "paragraph"
