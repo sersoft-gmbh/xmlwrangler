@@ -19,7 +19,7 @@ Add the following dependency to your `Package.swift`:
 
 ## Usage
 
-### ``XMLElement``
+### `XMLElement`
 
 Every element in an XML is represented by the ``XMLElement`` struct. It has three properties, ``XMLElement/name`` which reflects the element's tag name, ``XMLElement/attributes`` which contains all attributes of the element and ``XMLElement/content`` which describes the content of the element.
 The content is an collection whose ``XMLElement/Content/Element`` is an enum. The enum has two cases: ``XMLElement/Content/Element/string(_:)`` and ``XMLElement/Content/Element/element(_:)``. The order in the collection is the order in which the content has been found. So if an element first contains some text, then contains a child element and finally again some text,  ``XMLElement/content`` will contain a ``XMLElement/Content/Element/string(_:)`` whose associated ``XMLElement/Content/Element/StringPart`` is the first text. Next there would be a ``XMLElement/Content/Element/element(_:)`` whose associated ``XMLElement`` would be the child element. Finally, there would be another ``XMLElement/Content/Element/string(_:)`` with the last text.
