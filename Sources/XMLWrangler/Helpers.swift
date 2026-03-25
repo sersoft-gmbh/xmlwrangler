@@ -1,3 +1,4 @@
+#if hasFeature(NonescapableTypes)
 /// Converts a input value into an output value using a given converter. Throws if the converter returns nil (or throws).
 /// - Parameters:
 ///   - input: The input value to convert.
@@ -14,6 +15,24 @@ func _convert<Input: ~Copyable & ~Escapable, Output: ~Copyable>(
     guard let converted = try converter(input) else { throw error() }
     return converted
 }
+#else
+/// Converts a input value into an output value using a given converter. Throws if the converter returns nil (or throws).
+/// - Parameters:
+///   - input: The input value to convert.
+///   - converter: The converter to use for the conversion.
+///   - error: The error to throw in case `converter` returns nil.
+/// - Returns: The output of the converter.
+/// - Throws: `error` in case the `converter` returns nil or any error thrown by `converter`.
+@inlinable
+func _convert<Input: ~Copyable, Output: ~Copyable>(
+    _ input: borrowing Input,
+    using converter: (borrowing Input) throws -> Output?,
+    failingWith error: @autoclosure () -> some Error
+) throws -> Output {
+    guard let converted = try converter(input) else { throw error() }
+    return converted
+}
+#endif
 
 extension RawRepresentable where RawValue: LosslessStringConvertible {
     /// Creates an instance of self from the description of the `RawValue`. Returns nil if nil is returned by `RawValue.init(_:)`

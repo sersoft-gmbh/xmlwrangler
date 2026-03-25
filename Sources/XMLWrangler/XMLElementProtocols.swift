@@ -13,7 +13,7 @@ public protocol XMLElementConvertible: ~Copyable, ~Escapable {
 }
 #else
 /// Describes a type that can be converted to an ``XMLElement``.
-public protocol XMLElementConvertible: ~Copyable, ~Escapable {
+public protocol XMLElementConvertible: ~Copyable {
     /// The ``XMLElement`` representing this instance.
     var xml: XMLElement { get }
 }
