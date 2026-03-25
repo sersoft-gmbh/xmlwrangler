@@ -176,15 +176,9 @@ struct SerializationTests {
         #expect(str4 == expected4)
     }
 
-#if hasFeature(NonescapableTypes)
-    private struct Convertible: XMLElementConvertible, ~Copyable, ~Escapable {
-        let xml: XWElement
-    }
-#else
     private struct Convertible: XMLElementConvertible, ~Copyable {
         let xml: XWElement
     }
-#endif
 
     @Test
     func convertibleSerialization() {
