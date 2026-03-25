@@ -317,7 +317,19 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/xml": {
   "abstract" : [
-
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " representing this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

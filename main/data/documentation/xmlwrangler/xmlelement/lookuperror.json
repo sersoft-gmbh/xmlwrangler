@@ -136,6 +136,14 @@
       "title" : "Instance Properties"
     },
     {
+      "anchor" : "Type-Aliases",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/ConversionType"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
       "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
@@ -292,6 +300,66 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/LookupError/ConversionType": {
+  "abstract" : [
+    {
+      "text" : "The type used as ",
+      "type" : "text"
+    },
+    {
+      "code" : "type",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " parameter in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/cannotConvertAttribute(element:key:content:type:)",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/cannotConvertStringContent(element:stringContent:type:)",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ConversionType"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/ConversionType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ConversionType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "XMLElement.LookupError.ConversionType",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/lookuperror\/conversiontype"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/LookupError/Error-Implementations": {
   "abstract" : [
 
@@ -445,15 +513,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "Any"
-    },
-    {
-      "kind" : "text",
-      "text" : ".Type)"
+      "text" : ": any (~Copyable & ~Escapable).Type)"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/cannotConvertAttribute(element:key:content:type:)",
@@ -579,15 +639,34 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
+      "text" : ": "
     },
     {
-      "kind" : "keyword",
-      "text" : "Any"
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
     },
     {
       "kind" : "text",
-      "text" : ".Type)"
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO",
+      "text" : "LookupError"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO14ConversionTypea",
+      "text" : "ConversionType"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/cannotConvertStringContent(element:stringContent:type:)",
@@ -599,7 +678,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/LookupError/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

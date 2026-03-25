@@ -3368,7 +3368,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/withContiguousStorageIfAvailable(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Executes a closure on the sequence’s contiguous storage.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

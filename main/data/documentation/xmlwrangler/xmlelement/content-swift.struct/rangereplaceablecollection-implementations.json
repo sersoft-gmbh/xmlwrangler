@@ -1968,7 +1968,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/replaceSubrange(_:with:)": {
   "abstract" : [
-
+    {
+      "text" : "Replaces the specified subrange of elements with the given collection.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -2157,7 +2160,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/replaceSubrange(_:with:)-4dxdt": {
   "abstract" : [
-
+    {
+      "text" : "Replaces the specified subrange of elements with the given collection.",
+      "type" : "text"
+    }
   ],
   "deprecated" : true,
   "fragments" : [

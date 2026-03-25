@@ -102,6 +102,7 @@
         "doc:\/\/XMLWrangler\/s28CustomDebugStringConvertibleP",
         "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
         "doc:\/\/XMLWrangler\/SQ",
+        "doc:\/\/XMLWrangler\/s9EscapableP",
         "doc:\/\/XMLWrangler\/s25ExpressibleByArrayLiteralP",
         "doc:\/\/XMLWrangler\/s43ExpressibleByExtendedGraphemeClusterLiteralP",
         "doc:\/\/XMLWrangler\/s32ExpressibleByStringInterpolationP",
@@ -916,6 +917,14 @@
     },
     {
       "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
       "text" : "some"
     },
     {
@@ -929,7 +938,7 @@
     },
     {
       "kind" : "text",
-      "text" : ")"
+      "text" : " & ~Copyable & ~Escapable)"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(elementOf:)",
@@ -1508,7 +1517,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init()": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new, empty collection.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -1638,6 +1650,11 @@
 "doc://XMLWrangler/s8SendableP": {
   "identifier" : "doc:\/\/XMLWrangler\/s8SendableP",
   "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s9EscapableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

@@ -112,7 +112,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L202"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L210"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -460,7 +460,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Element": {
   "abstract" : [
-
+    {
+      "text" : "A type representing the sequence’s elements.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

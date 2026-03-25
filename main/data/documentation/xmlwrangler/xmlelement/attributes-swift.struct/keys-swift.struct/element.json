@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "A type representing the sequence’s elements.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -43,7 +49,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L407"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L415"
     },
     "role" : "symbol",
     "roleHeading" : "Type Alias",
@@ -297,7 +303,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Keys-swift.struct/Element": {
   "abstract" : [
-
+    {
+      "text" : "A type representing the sequence’s elements.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

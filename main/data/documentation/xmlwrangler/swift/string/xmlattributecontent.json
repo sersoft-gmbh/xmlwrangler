@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "The attribute content of this type.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -67,7 +73,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L19"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L27"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
@@ -226,7 +232,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/String/xmlAttributeContent": {
   "abstract" : [
-
+    {
+      "text" : "The attribute content of this type.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

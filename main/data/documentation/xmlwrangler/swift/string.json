@@ -83,7 +83,7 @@
     {
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLAttributeContent",
-        "doc:\/\/XMLWrangler\/s8CopyableP",
+        "doc:\/\/XMLWrangler\/s9EscapableP",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible"
       ],
       "kind" : "relationships",
@@ -319,9 +319,9 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/content"
 },
-"doc://XMLWrangler/s8CopyableP": {
-  "identifier" : "doc:\/\/XMLWrangler\/s8CopyableP",
-  "title" : "Swift.Copyable",
+"doc://XMLWrangler/s9EscapableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

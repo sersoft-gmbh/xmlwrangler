@@ -190,7 +190,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init(stringInterpolation:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates an instance from a string interpolation.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

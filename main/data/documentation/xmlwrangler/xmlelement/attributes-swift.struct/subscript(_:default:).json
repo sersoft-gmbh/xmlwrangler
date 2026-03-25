@@ -20,7 +20,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:11XMLWrangler10XMLElementV10AttributesV_7defaultAE7ContentVAE3KeyV_xyXKtcAA012XMLAttributeE11ConvertibleRzluip",
+    "externalID" : "s:11XMLWrangler10XMLElementV10AttributesV_7defaultAE7ContentVAE3KeyV_xyXKtcAA012XMLAttributeE11ConvertibleRzRi_zluip",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -88,7 +88,7 @@
       },
       {
         "kind" : "text",
-        "text" : ") -> "
+        "text" : " & ~Copyable) -> "
       },
       {
         "kind" : "typeIdentifier",
@@ -121,7 +121,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L191"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L199"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Subscript",
@@ -225,7 +225,7 @@
             },
             {
               "kind" : "text",
-              "text" : ") -> "
+              "text" : " & ~Copyable) -> "
             },
             {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
@@ -620,7 +620,7 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> "
+      "text" : " & ~Copyable) -> "
     },
     {
       "kind" : "typeIdentifier",

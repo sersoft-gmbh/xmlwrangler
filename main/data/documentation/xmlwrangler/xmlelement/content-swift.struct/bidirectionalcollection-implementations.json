@@ -489,7 +489,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/formIndex(before:)": {
   "abstract" : [
-
+    {
+      "text" : "Replaces the given index with its predecessor.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -551,7 +554,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/index(before:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns the position immediately before the given index.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

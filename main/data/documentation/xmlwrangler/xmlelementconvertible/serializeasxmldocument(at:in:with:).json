@@ -37,7 +37,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "XMLWrangler",
-    "externalID" : "s:11XMLWrangler21XMLElementConvertiblePAAE22serializeAsXMLDocument2at2in4withSSAA0B0V15DocumentVersionV_AI0J8EncodingVAI20SerializationOptionsVtF",
+    "externalID" : "s:11XMLWrangler21XMLElementConvertiblePAARi_zRi0_zrlE22serializeAsXMLDocument2at2in4withSSAA0B0V15DocumentVersionV_AI0J8EncodingVAI20SerializationOptionsVtF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -146,7 +146,7 @@
     ],
     "remoteSource" : {
       "fileName" : "Serialization.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Serialization.swift#L230"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/Serialization.swift#L231"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -755,7 +755,19 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/xml": {
   "abstract" : [
-
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " representing this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

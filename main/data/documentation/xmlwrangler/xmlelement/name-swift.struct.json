@@ -160,7 +160,9 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/Equatable-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByExtendedGraphemeClusterLiteral-Implementations",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByStringLiteral-Implementations",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/RawRepresentable-Implementations"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByXMLAttributeContent-Implementations",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/RawRepresentable-Implementations",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/XMLAttributeContentConvertible-Implementations"
       ],
       "title" : "Default Implementations"
     }
@@ -435,6 +437,17 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/expressiblebystringliteral-implementations"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/ExpressibleByXMLAttributeContent-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/ExpressibleByXMLAttributeContent-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "ExpressibleByXMLAttributeContent Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/expressiblebyxmlattributecontent-implementations"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/RawRepresentable-Implementations": {
   "abstract" : [
 
@@ -448,7 +461,18 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/RawValue-swift.typealias": {
   "abstract" : [
-
+    {
+      "text" : "The raw type that can be used to represent all values of the conforming",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "type.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -479,7 +503,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/StringLiteralType": {
   "abstract" : [
-
+    {
+      "text" : "A type that represents a string literal.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -508,9 +535,23 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/stringliteraltype"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/debugDescription": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/XMLAttributeContentConvertible-Implementations": {
   "abstract" : [
 
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Name-swift.struct\/XMLAttributeContentConvertible-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "XMLAttributeContentConvertible Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/name-swift.struct\/xmlattributecontentconvertible-implementations"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/debugDescription": {
+  "abstract" : [
+    {
+      "text" : "A textual representation of this instance, suitable for debugging.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -544,7 +585,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -629,7 +673,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/init(rawValue:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new instance with the specified raw value.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -685,7 +732,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/init(stringLiteral:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates an instance initialized to the given string value.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -741,7 +791,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/rawValue-swift.property": {
   "abstract" : [
-
+    {
+      "text" : "The corresponding value of the raw type.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

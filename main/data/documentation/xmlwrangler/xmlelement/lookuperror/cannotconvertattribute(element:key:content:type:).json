@@ -45,7 +45,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:11XMLWrangler10XMLElementV11LookupErrorO22cannotConvertAttributeyAeC_AC10AttributesV3KeyVAH7ContentVypXptcAEmF",
+    "externalID" : "s:11XMLWrangler10XMLElementV11LookupErrorO22cannotConvertAttributeyAeC_AC10AttributesV3KeyVAH7ContentVypRi_s_Ri0_sXPXptcAEmF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -156,15 +156,7 @@
       },
       {
         "kind" : "text",
-        "text" : ": any "
-      },
-      {
-        "kind" : "keyword",
-        "text" : "Any"
-      },
-      {
-        "kind" : "text",
-        "text" : ".Type)"
+        "text" : ": any (~Copyable & ~Escapable).Type)"
       }
     ],
     "modules" : [
@@ -174,7 +166,7 @@
     ],
     "remoteSource" : {
       "fileName" : "LookupError.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/LookupError.swift#L10"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/LookupError.swift#L17"
     },
     "role" : "symbol",
     "roleHeading" : "Case",
@@ -308,15 +300,7 @@
             },
             {
               "kind" : "text",
-              "text" : ": any "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "Any"
-            },
-            {
-              "kind" : "text",
-              "text" : ".Type)"
+              "text" : ": any (~Copyable & ~Escapable).Type)"
             }
           ]
         }
@@ -733,15 +717,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "Any"
-    },
-    {
-      "kind" : "text",
-      "text" : ".Type)"
+      "text" : ": any (~Copyable & ~Escapable).Type)"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/cannotConvertAttribute(element:key:content:type:)",

@@ -419,7 +419,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/EscapableContent/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

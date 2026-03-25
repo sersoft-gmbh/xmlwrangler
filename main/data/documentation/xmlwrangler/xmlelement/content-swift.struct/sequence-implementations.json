@@ -3077,7 +3077,18 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/underestimatedCount": {
   "abstract" : [
-
+    {
+      "text" : "A value less than or equal to the number of elements in the sequence,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "calculated nondestructively.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -3111,7 +3122,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/withContiguousStorageIfAvailable(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Executes a closure on the sequence’s contiguous storage.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

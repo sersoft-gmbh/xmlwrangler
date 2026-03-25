@@ -248,7 +248,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/MissingRootElementError/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

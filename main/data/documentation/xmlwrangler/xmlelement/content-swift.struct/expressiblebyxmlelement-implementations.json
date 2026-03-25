@@ -44,8 +44,8 @@
       "anchor" : "Type-Methods",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/parsedFromXML(_:)-5p21z",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/parsedFromXML(_:)-8ka0o"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/parsedFromXML(_:)-2f1px",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/parsedFromXML(_:)-42b9a"
       ],
       "title" : "Type Methods"
     }
@@ -148,7 +148,19 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init(xml:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new instance using the given ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -184,68 +196,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/init(xml:)"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/parsedFromXML(_:)-5p21z": {
-  "abstract" : [
-    {
-      "text" : "Tries to parse the given XML data and convert the resulting element.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "static"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "parsedFromXML"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:20FoundationEssentials4DataV",
-      "text" : "Data"
-    },
-    {
-      "kind" : "text",
-      "text" : ") "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "throws"
-    },
-    {
-      "kind" : "text",
-      "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Self"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/parsedFromXML(_:)-5p21z",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "parsedFromXML(_:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/parsedfromxml(_:)-5p21z"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/parsedFromXML(_:)-8ka0o": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/parsedFromXML(_:)-2f1px": {
   "abstract" : [
     {
       "text" : "Tries to parse the given XML string and convert the resulting element.",
@@ -307,12 +258,73 @@
       "text" : "Self"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/parsedFromXML(_:)-8ka0o",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/parsedFromXML(_:)-2f1px",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "parsedFromXML(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/parsedfromxml(_:)-8ka0o"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/parsedfromxml(_:)-2f1px"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/parsedFromXML(_:)-42b9a": {
+  "abstract" : [
+    {
+      "text" : "Tries to parse the given XML data and convert the resulting element.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parsedFromXML"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20FoundationEssentials4DataV",
+      "text" : "Data"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/parsedFromXML(_:)-42b9a",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "parsedFromXML(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/parsedfromxml(_:)-42b9a"
 }
 }
 }

@@ -21,7 +21,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "XMLWrangler",
-    "externalID" : "s:11XMLWrangler10XMLElementV7ContentV6append9elementOfyx_tAA0B11ConvertibleRzlF",
+    "externalID" : "s:11XMLWrangler10XMLElementV7ContentV6append9elementOfyx_tAA0B11ConvertibleRzRi_zRi0_zlF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -49,6 +49,14 @@
       },
       {
         "kind" : "keyword",
+        "text" : "borrowing"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
         "text" : "some"
       },
       {
@@ -62,7 +70,7 @@
       },
       {
         "kind" : "text",
-        "text" : ")"
+        "text" : " & ~Copyable & ~Escapable)"
       }
     ],
     "modules" : [
@@ -72,7 +80,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElementContent+Mutation.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElementContent+Mutation.swift#L31"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElementContent+Mutation.swift#L32"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -132,6 +140,14 @@
             },
             {
               "kind" : "keyword",
+              "text" : "borrowing"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
               "text" : "some"
             },
             {
@@ -146,7 +162,7 @@
             },
             {
               "kind" : "text",
-              "text" : ")"
+              "text" : " & ~Copyable & ~Escapable)"
             }
           ]
         }
@@ -320,6 +336,14 @@
     },
     {
       "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
       "text" : "some"
     },
     {
@@ -333,7 +357,7 @@
     },
     {
       "kind" : "text",
-      "text" : ")"
+      "text" : " & ~Copyable & ~Escapable)"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(elementOf:)",

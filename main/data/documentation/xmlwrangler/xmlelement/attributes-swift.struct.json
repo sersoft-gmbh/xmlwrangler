@@ -57,7 +57,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L56"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L64"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -109,6 +109,7 @@
         "doc:\/\/XMLWrangler\/s28CustomDebugStringConvertibleP",
         "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
         "doc:\/\/XMLWrangler\/SQ",
+        "doc:\/\/XMLWrangler\/s9EscapableP",
         "doc:\/\/XMLWrangler\/s30ExpressibleByDictionaryLiteralP",
         "doc:\/\/XMLWrangler\/s8SendableP",
         "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
@@ -2189,7 +2190,7 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> "
+      "text" : " & ~Copyable) -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -2371,6 +2372,11 @@
 "doc://XMLWrangler/s8SendableP": {
   "identifier" : "doc:\/\/XMLWrangler\/s8SendableP",
   "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s9EscapableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

@@ -148,7 +148,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/init(dictionaryLiteral:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates an instance initialized with the given key-value pairs.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

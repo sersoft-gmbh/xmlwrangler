@@ -86,10 +86,10 @@
     {
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/ExpressibleByXMLElement",
-        "doc:\/\/XMLWrangler\/s8CopyableP",
         "doc:\/\/XMLWrangler\/s28CustomDebugStringConvertibleP",
         "doc:\/\/XMLWrangler\/s23CustomStringConvertibleP",
         "doc:\/\/XMLWrangler\/SQ",
+        "doc:\/\/XMLWrangler\/s9EscapableP",
         "doc:\/\/XMLWrangler\/s12IdentifiableP",
         "doc:\/\/XMLWrangler\/s8SendableP",
         "doc:\/\/XMLWrangler\/s16SendableMetatypeP",
@@ -162,20 +162,20 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/appendString(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/attribute(for:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/converted(to:)",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-1x866",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-29eim",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-3butp",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-3wjco",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-7n67i",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-7pgeq",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-8tt1l",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-j6st",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:converter:)-1pm40",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:converter:)-2tsl",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:converter:)-172af",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:converter:)-7hn02",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent()-44s62",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent()-4i8zf",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent()-6gudh",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-1fj6u",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-5nxzr",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-6vuvu",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-vper",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/element(at:)-45kz",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/element(at:)-7xp8e",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/elements(named:)",
@@ -876,6 +876,14 @@
     },
     {
       "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
       "text" : "some"
     },
     {
@@ -889,7 +897,7 @@
     },
     {
       "kind" : "text",
-      "text" : ")"
+      "text" : " & ~Copyable & ~Escapable)"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/append(elementOf:)",
@@ -1315,101 +1323,6 @@
   "title" : "converted(to:)",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/converted(to:)"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:)-1x866": {
-  "abstract" : [
-    {
-      "text" : "Returns the result of initializing ",
-      "type" : "text"
-    },
-    {
-      "code" : "Target",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " with the attribute for the given key if it exists.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "convertedAttribute"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Target"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "for"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
-      "text" : "Key"
-    },
-    {
-      "kind" : "text",
-      "text" : ") "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "throws"
-    },
-    {
-      "kind" : "text",
-      "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Target"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-1x866",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "convertedAttribute(for:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedattribute(for:)-1x866"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:)-29eim": {
   "abstract" : [
@@ -1934,6 +1847,101 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedattribute(for:)-7pgeq"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:)-8tt1l": {
+  "abstract" : [
+    {
+      "text" : "Returns the result of initializing ",
+      "type" : "text"
+    },
+    {
+      "code" : "Target",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " with the attribute for the given key if it exists.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "convertedAttribute"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "Target"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "for"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
+      "text" : "Attributes"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
+      "text" : "Key"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Target"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:)-8tt1l",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "convertedAttribute(for:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedattribute(for:)-8tt1l"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:)-j6st": {
   "abstract" : [
     {
@@ -2029,7 +2037,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedattribute(for:)-j6st"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:converter:)-1pm40": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:converter:)-172af": {
   "abstract" : [
     {
       "text" : "Returns the result of converting the value for a given attribute key.",
@@ -2160,14 +2168,14 @@
       "text" : "T"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:converter:)-1pm40",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:converter:)-172af",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "convertedAttribute(for:converter:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedattribute(for:converter:)-1pm40"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedattribute(for:converter:)-172af"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:converter:)-2tsl": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedAttribute(for:converter:)-7hn02": {
   "abstract" : [
     {
       "text" : "Returns the result of converting the value for a given attribute key.",
@@ -2298,12 +2306,12 @@
       "text" : "T"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:converter:)-2tsl",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedAttribute(for:converter:)-7hn02",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "convertedAttribute(for:converter:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedattribute(for:converter:)-2tsl"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedattribute(for:converter:)-7hn02"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent()-44s62": {
   "abstract" : [
@@ -2517,7 +2525,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedstringcontent()-6gudh"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent(converter:)-1fj6u": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent(converter:)-6vuvu": {
   "abstract" : [
     {
       "text" : "Returns the result of converting the combined string content.",
@@ -2595,14 +2603,14 @@
       "text" : "T"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-1fj6u",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-6vuvu",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "convertedStringContent(converter:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedstringcontent(converter:)-1fj6u"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedstringcontent(converter:)-6vuvu"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent(converter:)-5nxzr": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent(converter:)-vper": {
   "abstract" : [
     {
       "text" : "Returns the result of converting the combined string content.",
@@ -2680,16 +2688,19 @@
       "text" : "T"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-5nxzr",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-vper",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "convertedStringContent(converter:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedstringcontent(converter:)-5nxzr"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedstringcontent(converter:)-vper"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/debugDescription": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance, suitable for debugging.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -2723,7 +2734,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/description": {
   "abstract" : [
-
+    {
+      "text" : "A textual representation of this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -3000,7 +3014,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/id": {
   "abstract" : [
-
+    {
+      "text" : "The stable identity of the entity associated with this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -4982,14 +4999,14 @@
   "title" : "Swift.CustomDebugStringConvertible",
   "type" : "unresolvable"
 },
-"doc://XMLWrangler/s8CopyableP": {
-  "identifier" : "doc:\/\/XMLWrangler\/s8CopyableP",
-  "title" : "Swift.Copyable",
-  "type" : "unresolvable"
-},
 "doc://XMLWrangler/s8SendableP": {
   "identifier" : "doc:\/\/XMLWrangler\/s8SendableP",
   "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://XMLWrangler/s9EscapableP": {
+  "identifier" : "doc:\/\/XMLWrangler\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

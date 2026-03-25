@@ -29,7 +29,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "XMLWrangler",
-    "externalID" : "s:11XMLWrangler10XMLElementV9converted2toxxm_tKAA013ExpressibleByB0RzlF",
+    "externalID" : "s:11XMLWrangler10XMLElementV9converted2toxxm_tKAA013ExpressibleByB0RzRi_zlF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -194,6 +194,18 @@
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:11XMLWrangler23ExpressibleByXMLElementP",
               "text" : "ExpressibleByXMLElement"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Target"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable"
             }
           ]
         }

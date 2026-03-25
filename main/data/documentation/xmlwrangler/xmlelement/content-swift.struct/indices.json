@@ -1,4 +1,18 @@
 {
+  "abstract" : [
+    {
+      "text" : "A type that represents the indices that are valid for subscripting the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "collection, in ascending order.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -218,7 +232,18 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Indices": {
   "abstract" : [
-
+    {
+      "text" : "A type that represents the indices that are valid for subscripting the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "collection, in ascending order.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

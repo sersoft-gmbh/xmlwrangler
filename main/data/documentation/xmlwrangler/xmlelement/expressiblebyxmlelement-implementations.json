@@ -43,8 +43,8 @@
       "anchor" : "Type-Methods",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parsedFromXML(_:)-42ard",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parsedFromXML(_:)-6bn3s"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parsedFromXML(_:)-1pwk6",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parsedFromXML(_:)-8ra2n"
       ],
       "title" : "Type Methods"
     }
@@ -113,7 +113,19 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/init(xml:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new instance using the given ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -149,7 +161,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/init(xml:)"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/parsedFromXML(_:)-42ard": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/parsedFromXML(_:)-1pwk6": {
   "abstract" : [
     {
       "text" : "Tries to parse the given XML data and convert the resulting element.",
@@ -203,14 +215,14 @@
       "text" : "Self"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parsedFromXML(_:)-42ard",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parsedFromXML(_:)-1pwk6",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "parsedFromXML(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/parsedfromxml(_:)-42ard"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/parsedfromxml(_:)-1pwk6"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/parsedFromXML(_:)-6bn3s": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/parsedFromXML(_:)-8ra2n": {
   "abstract" : [
     {
       "text" : "Tries to parse the given XML string and convert the resulting element.",
@@ -272,12 +284,12 @@
       "text" : "Self"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parsedFromXML(_:)-6bn3s",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/parsedFromXML(_:)-8ra2n",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "parsedFromXML(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/parsedfromxml(_:)-6bn3s"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/parsedfromxml(_:)-8ra2n"
 }
 }
 }

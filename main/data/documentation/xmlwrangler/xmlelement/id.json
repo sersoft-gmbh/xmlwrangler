@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "The stable identity of the entity associated with this instance.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -227,7 +233,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/id": {
   "abstract" : [
-
+    {
+      "text" : "The stable identity of the entity associated with this instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

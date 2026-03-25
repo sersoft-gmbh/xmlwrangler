@@ -406,7 +406,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/StringInterpolation/StringLiteralType": {
   "abstract" : [
-
+    {
+      "text" : "The type that should be used for literal segments.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -900,7 +903,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/StringInterpolation/init(literalCapacity:interpolationCount:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates an empty instance ready to be filled with string literal content.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

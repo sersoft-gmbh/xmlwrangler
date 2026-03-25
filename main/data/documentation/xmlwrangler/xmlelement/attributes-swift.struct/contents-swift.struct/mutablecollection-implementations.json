@@ -489,7 +489,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Contents-swift.struct/withContiguousMutableStorageIfAvailable(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Executes a closure on the collection’s contiguous storage.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

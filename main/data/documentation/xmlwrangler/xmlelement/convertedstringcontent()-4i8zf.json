@@ -333,9 +333,8 @@
                   "type" : "text"
                 },
                 {
-                  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-1fj6u",
-                  "isActive" : true,
-                  "type" : "reference"
+                  "code" : "XMLElement\/convertedStringContent(converter:)-1fj6u",
+                  "type" : "codeVoice"
                 },
                 {
                   "text" : ", ",
@@ -619,15 +618,34 @@
     },
     {
       "kind" : "text",
-      "text" : ": any "
+      "text" : ": "
     },
     {
-      "kind" : "keyword",
-      "text" : "Any"
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
     },
     {
       "kind" : "text",
-      "text" : ".Type)"
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO",
+      "text" : "LookupError"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO14ConversionTypea",
+      "text" : "ConversionType"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/LookupError\/cannotConvertStringContent(element:stringContent:type:)",
@@ -807,91 +825,6 @@
   "title" : "convertedStringContent()",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedstringcontent()-4i8zf"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/convertedStringContent(converter:)-1fj6u": {
-  "abstract" : [
-    {
-      "text" : "Returns the result of converting the combined string content.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "convertedStringContent"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "converter"
-    },
-    {
-      "kind" : "text",
-      "text" : ": ("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
-    },
-    {
-      "kind" : "text",
-      "text" : ") "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "throws"
-    },
-    {
-      "kind" : "text",
-      "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "T"
-    },
-    {
-      "kind" : "text",
-      "text" : "?) "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "throws"
-    },
-    {
-      "kind" : "text",
-      "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "T"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/convertedStringContent(converter:)-1fj6u",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "convertedStringContent(converter:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/convertedstringcontent(converter:)-1fj6u"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/stringContent()": {
   "abstract" : [

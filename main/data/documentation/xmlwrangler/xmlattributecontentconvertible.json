@@ -51,7 +51,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L2"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L3"
     },
     "role" : "symbol",
     "roleHeading" : "Protocol",
@@ -80,6 +80,10 @@
             {
               "kind" : "identifier",
               "text" : "XMLAttributeContentConvertible"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable, ~Escapable"
             }
           ]
         }

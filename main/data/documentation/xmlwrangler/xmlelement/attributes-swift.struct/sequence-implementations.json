@@ -199,7 +199,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Element": {
   "abstract" : [
-
+    {
+      "text" : "A type representing the sequence’s elements.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -1703,7 +1706,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/makeIterator()": {
   "abstract" : [
-
+    {
+      "text" : "Returns an iterator over the elements of this sequence.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -2987,7 +2993,18 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/underestimatedCount": {
   "abstract" : [
-
+    {
+      "text" : "A value less than or equal to the number of elements in the sequence,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "calculated nondestructively.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -3021,7 +3038,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/withContiguousStorageIfAvailable(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Executes a closure on the sequence’s contiguous storage.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

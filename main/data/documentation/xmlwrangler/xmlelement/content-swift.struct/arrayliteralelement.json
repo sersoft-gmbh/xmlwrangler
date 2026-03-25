@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "The type of the elements of an array literal.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -215,7 +221,10 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/ArrayLiteralElement": {
   "abstract" : [
-
+    {
+      "text" : "The type of the elements of an array literal.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
