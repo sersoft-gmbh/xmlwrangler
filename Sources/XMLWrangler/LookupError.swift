@@ -17,7 +17,7 @@ extension XMLElement {
         case cannotConvertAttribute(element: XMLElement,
                                     key: XMLElement.Attributes.Key,
                                     content: XMLElement.Attributes.Content,
-                                    type: any (Any & ~Copyable & ~Escapable).Type)
+                                    type: ConversionType)
 
         /// Thrown when an element is missing string content.
         case missingStringContent(element: XMLElement)
