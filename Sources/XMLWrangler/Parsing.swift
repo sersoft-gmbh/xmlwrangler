@@ -43,7 +43,7 @@ extension XMLElement {
     }
 }
 
-extension ExpressibleByXMLElement {
+extension ExpressibleByXMLElement where Self: ~Copyable {
     /// Tries to parse the given XML data and convert the resulting element.
     /// - Parameter data: The XML data to parse.
     /// - Throws: Any error thrown by ``XMLElement/parse(_:)-43xl1`` or ``ExpressibleByXMLElement/init(xml:)`` of the receiver.

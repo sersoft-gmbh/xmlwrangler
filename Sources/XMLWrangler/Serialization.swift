@@ -210,7 +210,8 @@ extension XMLElement {
     }
 }
 
-extension XMLElementConvertible {
+#if hasFeature(NonescapableTypes)
+extension XMLElementConvertible where Self: ~Copyable, Self: ~Escapable {
     /// Creates a String by serializing the ``xml`` element.
     /// - Parameters:
     ///   - options: The options to use for serializing. Defaults to empty options.
@@ -233,3 +234,28 @@ extension XMLElementConvertible {
         xml.serializeAsDocument(at: version, in: encoding, with: options)
     }
 }
+#else
+extension XMLElementConvertible where Self: ~Copyable {
+    /// Creates a String by serializing the ``xml`` element.
+    /// - Parameters:
+    ///   - options: The options to use for serializing. Defaults to empty options.
+    /// - SeeAlso: ``XMLElement/serialize(with:)``
+    @inlinable
+    public func serializeAsXML(with options: XMLElement.SerializationOptions = []) -> String {
+        xml.serialize(with: options)
+    }
+
+    /// Creates an XML String by serializing the ``xml``  as root and adding the `<?xml ...?>` document header.
+    /// - Parameters:
+    ///   - version: The version of the document. Defaults to `"1.0"`.
+    ///   - encoding: The encoding for the document. Defaults to ``XMLElement/DocumentEncoding/utf8``.
+    ///   - options: The options to use for serializing. Defaults to empty options.
+    /// - SeeAlso: ``XMLElement/serializeAsXMLDocument(at:in:with:)``
+    @inlinable
+    public func serializeAsXMLDocument(at version: XMLElement.DocumentVersion = .init(major: 1),
+                                       in encoding: XMLElement.DocumentEncoding = .utf8,
+                                       with options: XMLElement.SerializationOptions = []) -> String {
+        xml.serializeAsDocument(at: version, in: encoding, with: options)
+    }
+}
+#endif

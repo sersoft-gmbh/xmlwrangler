@@ -1,11 +1,19 @@
+#if hasFeature(NonescapableTypes)
 /// Describes a type that can turn itself into an ``XMLElement/Attributes/Content``
-public protocol XMLAttributeContentConvertible {
+public protocol XMLAttributeContentConvertible: ~Copyable, ~Escapable {
     /// The attribute content of this type.
     var xmlAttributeContent: XMLElement.Attributes.Content { get }
 }
+#else
+/// Describes a type that can turn itself into an ``XMLElement/Attributes/Content``
+public protocol XMLAttributeContentConvertible: ~Copyable {
+    /// The attribute content of this type.
+    var xmlAttributeContent: XMLElement.Attributes.Content { get }
+}
+#endif
 
 /// Describes a type that can be created from an ``XMLElement/Attributes/Content`` instance.
-public protocol ExpressibleByXMLAttributeContent {
+public protocol ExpressibleByXMLAttributeContent: ~Copyable {
     /// Creates a new instance of the conforming type using the given attribute content.
     /// - Parameter xmlAttributeContent: The attribute content from which to create a new instance.
     init?(xmlAttributeContent: XMLElement.Attributes.Content)
@@ -188,7 +196,7 @@ extension XMLElement {
         ///   - default: The default value to use if no value exists for the given `key`.
         /// - Returns: The content for the given key. `default` if none is found.
         @inlinable
-        public subscript(key: Key, default defaultValue: @autoclosure () -> some XMLAttributeContentConvertible) -> Content {
+        public subscript(key: Key, default defaultValue: @autoclosure () -> some XMLAttributeContentConvertible & ~Copyable) -> Content {
             get { storage[key, default: defaultValue().xmlAttributeContent] }
             set { storage[key, default: defaultValue().xmlAttributeContent] = newValue }
         }

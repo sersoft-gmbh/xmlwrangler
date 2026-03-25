@@ -16,10 +16,17 @@ public enum XMLContentBuilder: Sendable {
         .init(storage: [.string(element)])
     }
 
+#if hasFeature(NonescapableTypes)
     @inlinable
-    public static func buildExpression(_ element: some XMLElementConvertible) -> XMLElement.Content {
+    public static func buildExpression<T: XMLElementConvertible & ~Copyable & ~Escapable>(_ element: borrowing T) -> XMLElement.Content {
         .init(storage: [.element(element.xml)])
     }
+#else
+    @inlinable
+    public static func buildExpression<T: XMLElementConvertible & ~Copyable>(_ element: borrowing T) -> XMLElement.Content {
+        .init(storage: [.element(element.xml)])
+    }
+#endif
 
     @inlinable
     public static func buildBlock() -> XMLElement.Content { .init(storage: .init()) }

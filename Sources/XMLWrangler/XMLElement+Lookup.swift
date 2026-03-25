@@ -54,7 +54,7 @@ extension XMLElement {
     /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key or any error thrown by `converter`.
     /// - SeeAlso: ``XMLElement/attribute(for:)``
     @inlinable
-    public func convertedAttribute<T>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T) throws -> T {
+    public func convertedAttribute<T: ~Copyable>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T) throws -> T {
         try converter(attribute(for: key))
     }
 
@@ -66,7 +66,7 @@ extension XMLElement {
     /// - Throws: ``XMLElement/LookupError/missingAttribute(element:key:)`` in case no attribute exists for the given key,
     ///           ``XMLElement/LookupError/cannotConvertAttribute(element:key:content:type:)`` when `converter` returns `nil` or any error thrown by `converter`.
     /// - SeeAlso: ``XMLElement/attribute(for:)``
-    public func convertedAttribute<T>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T?) throws -> T {
+    public func convertedAttribute<T: ~Copyable>(for key: Attributes.Key, converter: (Attributes.Content) throws -> T?) throws -> T {
         let content = try attribute(for: key)
         return try _convert(content, using: converter,
                             failingWith: LookupError.cannotConvertAttribute(element: self, key: key, content: content, type: T.self))
@@ -82,7 +82,7 @@ extension XMLElement {
     /// - SeeAlso: ``XMLElement/attribute(for:)`` and ``ExpressibleByXMLAttributeContent``
     @inlinable
     public func convertedAttribute<Target>(for key: Attributes.Key) throws -> Target
-    where Target: ExpressibleByXMLAttributeContent
+    where Target: ExpressibleByXMLAttributeContent, Target: ~Copyable
     {
         try convertedAttribute(for: key, converter: Target.init)
     }
@@ -196,7 +196,7 @@ extension XMLElement {
     ///           or any error thrown by `converter`.
     /// - SeeAlso: ``XMLElement/stringContent()``
     @inlinable
-    public func convertedStringContent<T>(converter: (String) throws -> T) throws -> T {
+    public func convertedStringContent<T: ~Copyable>(converter: (String) throws -> T) throws -> T {
         try converter(stringContent())
     }
 
@@ -206,7 +206,7 @@ extension XMLElement {
     /// - Throws: ``XMLElement/LookupError/missingStringContent(element:)`` if ``XMLElement/content`` contains no ``XMLElement/Content/Element/string(_:)`` elements,
     ///           ``XMLElement/LookupError/cannotConvertStringContent(element:stringContent:type:)`` if the `converter` returns nil, or any error thrown by `converter`.
     /// - SeeAlso: ``XMLElement/stringContent()``
-    public func convertedStringContent<T>(converter: (String) throws -> T?) throws -> T {
+    public func convertedStringContent<T: ~Copyable>(converter: (String) throws -> T?) throws -> T {
         let content = try stringContent()
         return try _convert(content, using: converter,
                             failingWith: LookupError.cannotConvertStringContent(element: self, stringContent: content, type: T.self))
@@ -253,7 +253,7 @@ extension XMLElement {
     /// - Throws: Any error thrown by ``ExpressibleByXMLElement/init(xml:)`` of `Target`.
     /// - Returns: The target type converted from the receiving XML element.
     @inlinable
-    public func converted<Target: ExpressibleByXMLElement>(to target: Target.Type = Target.self) throws -> Target {
+    public func converted<Target: ExpressibleByXMLElement & ~Copyable>(to target: Target.Type = Target.self) throws -> Target {
         try target.init(xml: self)
     }
 }

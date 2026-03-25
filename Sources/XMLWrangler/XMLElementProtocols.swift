@@ -1,20 +1,28 @@
 /// Describes a type that can be initialized with an ``XMLElement``.
-public protocol ExpressibleByXMLElement {
+public protocol ExpressibleByXMLElement: ~Copyable {
     /// Creates a new instance using the given ``XMLElement``.
     /// - Parameter xml: The xml to initialize from.
     init(xml: XMLElement) throws
 }
 
+#if hasFeature(NonescapableTypes)
 /// Describes a type that can be converted to an ``XMLElement``.
-public protocol XMLElementConvertible {
+public protocol XMLElementConvertible: ~Copyable, ~Escapable {
     /// The ``XMLElement`` representing this instance.
     var xml: XMLElement { get }
 }
+#else
+/// Describes a type that can be converted to an ``XMLElement``.
+public protocol XMLElementConvertible: ~Copyable, ~Escapable {
+    /// The ``XMLElement`` representing this instance.
+    var xml: XMLElement { get }
+}
+#endif
 
 /// A type that can be converted from and to an ``XMLElement``.
 public typealias XMLElementRepresentable = ExpressibleByXMLElement & XMLElementConvertible
 
-extension ExpressibleByXMLElement {
+extension ExpressibleByXMLElement where Self: ~Copyable {
     @usableFromInline
     static func _fromContent(of element: XMLElement, converter: (XMLElement.Content.Element.StringPart) -> Self?) throws -> Self {
         try element.convertedStringContent(converter: converter)

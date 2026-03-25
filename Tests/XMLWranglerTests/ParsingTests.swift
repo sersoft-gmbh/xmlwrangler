@@ -7,7 +7,7 @@ import FoundationXML
 
 @Suite
 struct ParsingTests {
-    private struct Expressible: ExpressibleByXMLElement {
+    private struct Expressible: ExpressibleByXMLElement, ~Copyable {
         let element: XWElement
 
         init(xml: XWElement) throws {

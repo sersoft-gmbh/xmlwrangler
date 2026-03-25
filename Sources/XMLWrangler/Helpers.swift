@@ -6,9 +6,11 @@
 /// - Returns: The output of the converter.
 /// - Throws: `error` in case the `converter` returns nil or any error thrown by `converter`.
 @inlinable
-func _convert<Input, Output>(_ input: Input,
-                             using converter: (Input) throws -> Output?,
-                             failingWith error: @autoclosure () -> some Error) throws -> Output {
+func _convert<Input: ~Copyable & ~Escapable, Output: ~Copyable>(
+    _ input: borrowing Input,
+    using converter: (borrowing Input) throws -> Output?,
+    failingWith error: @autoclosure () -> some Error
+) throws -> Output {
     guard let converted = try converter(input) else { throw error() }
     return converted
 }

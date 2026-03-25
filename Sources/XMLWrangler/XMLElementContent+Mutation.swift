@@ -25,12 +25,21 @@ extension XMLElement.Content {
         storage.append(.element(element))
     }
 
+#if hasFeature(NonescapableTypes)
     /// Appends the xml element of a convertible type.
     /// - Parameter convertible: The type conforming to ``XMLElementConvertible``.
     @inlinable
-    public mutating func append(elementOf convertible: some XMLElementConvertible) {
+    public mutating func append(elementOf convertible: borrowing some XMLElementConvertible & ~Copyable & ~Escapable) {
         appendElement(convertible.xml)
     }
+#else
+    /// Appends the xml element of a convertible type.
+    /// - Parameter convertible: The type conforming to ``XMLElementConvertible``.
+    @inlinable
+    public mutating func append(elementOf convertible: borrowing some XMLElementConvertible & ~Copyable) {
+        appendElement(convertible.xml)
+    }
+#endif
 
     /// Appends the contents of a sequcence of elements wrapped as ``XMLElement/Content/Element/element(_:)``.
     /// - Parameter elements: The sequence of elements to append wrapped in ``XMLElement/Content/Element/element(_:)``.

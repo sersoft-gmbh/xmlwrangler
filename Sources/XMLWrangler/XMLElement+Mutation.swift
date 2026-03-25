@@ -15,13 +15,23 @@ extension XMLElement {
         content.appendElement(element)
     }
 
+#if hasFeature(NonescapableTypes)
     /// Appends the xml element of a convertible type.
     /// - Parameter convertible: The type conforming to ``XMLElementConvertible``.
     /// - SeeAlso: ``XMLElement/Content/append(elementOf:)``
     @inlinable
-    public mutating func append(elementOf convertible: some XMLElementConvertible) {
+    public mutating func append(elementOf convertible: borrowing some XMLElementConvertible & ~Copyable & ~Escapable) {
         content.append(elementOf: convertible)
     }
+#else
+    /// Appends the xml element of a convertible type.
+    /// - Parameter convertible: The type conforming to ``XMLElementConvertible``.
+    /// - SeeAlso: ``XMLElement/Content/append(elementOf:)``
+    @inlinable
+    public mutating func append(elementOf convertible: borrowing some XMLElementConvertible & ~Copyable) {
+        content.append(elementOf: convertible)
+    }
+#endif
 
     /// Appends the contents of a sequence of elements to the content.
     /// - Parameter elements: The sequence of elements to append to the content.
