@@ -267,4 +267,36 @@ extension Sequence where Element == XMLElement {
     public func converted<Target: ExpressibleByXMLElement>(to target: Target.Type = Target.self) throws -> Array<Target> {
         try map(target.init)
     }
+
+#if compiler(>=6.4)
+    /// Convertes the contents of the sequence to the given target type that conforms to ``ExpressibleByXMLElement``.
+    /// - Parameter target: The target type to convert the contents to. Defaults to `Target.self`.
+    /// - Throws: Any error thrown by ``ExpressibleByXMLElement/init(xml:)`` of `Target`.
+    /// - Returns: The list of converted elements.
+    @available(anyAppleOS 27, *)
+    public func converted<Target: ExpressibleByXMLElement & ~Copyable>(to target: Target.Type = Target.self) throws -> UniqueArray<Target> {
+        var array = UniqueArray<Target>(capacity: underestimatedCount)
+        for element in self {
+            try array.append(Target(xml: element))
+        }
+        return array
+    }
+#endif
 }
+
+#if compiler(>=6.4)
+@available(anyAppleOS 27, *)
+extension Iterable where Self: ~Copyable, Self: ~Escapable, Element == XMLElement {
+    /// Convertes the contents of the sequence to the given target type that conforms to ``ExpressibleByXMLElement``.
+    /// - Parameter target: The target type to convert the contents to. Defaults to `Target.self`.
+    /// - Throws: Any error thrown by ``ExpressibleByXMLElement/init(xml:)`` of `Target`.
+    /// - Returns: The list of converted elements.
+    public func converted<Target: ExpressibleByXMLElement & ~Copyable>(to target: Target.Type = Target.self) throws -> UniqueArray<Target> {
+        var array = UniqueArray<Target>(capacity: underestimatedCount)
+        for try element in self {
+            try array.append(Target(xml: element))
+        }
+        return array
+    }
+}
+#endif

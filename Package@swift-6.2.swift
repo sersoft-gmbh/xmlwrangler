@@ -10,8 +10,9 @@ let swiftSettings: Array<SwiftSetting> = [
     // .treatAllWarnings(as: .error),
     .enableUpcomingFeature("ExistentialAny"),
     .enableUpcomingFeature("InternalImportsByDefault"),
-    // .enableUpcomingFeature("NonescapableTypes"), -> not yet fully supported in Swift 6.2 (== operator between meta types)
     .enableUpcomingFeature("MemberImportVisibility"),
+    .enableUpcomingFeature("ImmutableWeakCaptures"),
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
 ]
 
 let package = Package(

@@ -18,12 +18,12 @@ public enum XMLContentBuilder: Sendable {
 
 #if hasFeature(NonescapableTypes)
     @inlinable
-    public static func buildExpression<T: XMLElementConvertible & ~Copyable & ~Escapable>(_ element: borrowing T) -> XMLElement.Content {
+    public static func buildExpression(_ element: borrowing some XMLElementConvertible & ~Copyable & ~Escapable) -> XMLElement.Content {
         .init(storage: [.element(element.xml)])
     }
 #else
     @inlinable
-    public static func buildExpression<T: XMLElementConvertible & ~Copyable>(_ element: borrowing T) -> XMLElement.Content {
+    public static func buildExpression(_ element: borrowing some XMLElementConvertible & ~Copyable) -> XMLElement.Content {
         .init(storage: [.element(element.xml)])
     }
 #endif

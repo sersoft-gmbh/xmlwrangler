@@ -85,6 +85,12 @@ extension XMLElementTests {
             init(xml: XWElement) throws { element = xml }
         }
 
+        private struct NonCopyableElementExpressible: ~Copyable, ExpressibleByXMLElement {
+            let element: XWElement
+
+            init(xml: XWElement) throws { element = xml }
+        }
+
         let sut = XWElement(name: "root", attributes: ["version": "2.3.4"], elements: [
             XWElement(name: "member", elements: [XWElement(name: "kind", content: "value")]),
             XWElement(name: "empty_member", attributes: ["active": "true", "id": "5"]),
@@ -139,21 +145,10 @@ extension XMLElementTests {
 
         @Test
         func nonExistingElementLookupAtPath() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try sut.element(at: ["simple", "simple_child", "nope"])
             }
-#else
-            let error: (any Error)?
-            do {
-                try sut.element(at: ["simple", "simple_child", "nope"])
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .missingChild(element: XWElement(name: "simple_child"), childName: "nope"))
+            #expect(error == .missingChild(element: XWElement(name: "simple_child"), childName: "nope"))
         }
 
         @Test
@@ -164,21 +159,10 @@ extension XMLElementTests {
 
         @Test
         func nonExistingElementLookupAtVariadicPath() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try sut.element(at: "simple", "simple_child", "nope")
             }
-#else
-            let error: (any Error)?
-            do {
-                try sut.element(at: "simple", "simple_child", "nope")
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .missingChild(element: XWElement(name: "simple_child"), childName: "nope"))
+            #expect(error == .missingChild(element: XWElement(name: "simple_child"), childName: "nope"))
         }
 
         // MARK: List of elements
@@ -207,41 +191,19 @@ extension XMLElementTests {
 
         @Test
         func nonExistingAttributeLookup() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try sut.attribute(for: "nope")
             }
-#else
-            let error: (any Error)?
-            do {
-                try sut.attribute(for: "nope")
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .missingAttribute(element: sut, key: "nope"))
+            #expect(error == .missingAttribute(element: sut, key: "nope"))
         }
 
         // MARK: Conversion
         @Test
         func nonExistingAttributeConversion() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try sut.convertedAttribute(for: "nope", converter: { StringInitializable(str: $0.rawValue) })
             }
-#else
-            let error: (any Error)?
-            do {
-                try sut.convertedAttribute(for: "nope", converter: { StringInitializable(str: $0.rawValue) })
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .missingAttribute(element: sut, key: "nope"))
+            #expect(error == .missingAttribute(element: sut, key: "nope"))
         }
 
         @Test
@@ -252,49 +214,24 @@ extension XMLElementTests {
 
         @Test
         func failedExistingAttributeConversion() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try sut.convertedAttribute(for: "version", converter: { NotStringInitializable(str: $0.rawValue) })
             }
-#else
-            let error: (any Error)?
-            do {
-                try sut.convertedAttribute(for: "version", converter: { NotStringInitializable(str: $0.rawValue) })
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .cannotConvertAttribute(element: sut, key: "version", content: "2.3.4", type: NotStringInitializable.self))
+            #expect(error == .cannotConvertAttribute(element: sut, key: "version", content: "2.3.4", type: NotStringInitializable.self))
         }
 
         @Test
         func failedRawRepresentableAttributeConversion() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try sut.convertedAttribute(
                     for: "version",
                     converter: { StringRepresentableWithNotConvertibleRawValue(rawValueDescription: $0.rawValue) }
                 )
             }
-#else
-            let error: (any Error)?
-            do {
-                try sut.convertedAttribute(
-                    for: "version",
-                    converter: { StringRepresentableWithNotConvertibleRawValue(rawValueDescription: $0.rawValue) }
-                )
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .cannotConvertAttribute(element: sut,
-                                                                               key: "version",
-                                                                               content: "2.3.4",
-                                                                               type: StringRepresentableWithNotConvertibleRawValue.self))
+            #expect(error == .cannotConvertAttribute(element: sut,
+                                                     key: "version",
+                                                     content: "2.3.4",
+                                                     type: StringRepresentableWithNotConvertibleRawValue.self))
         }
 
         @Test
@@ -323,21 +260,10 @@ extension XMLElementTests {
         // MARK: Retrieval
         @Test
         func nonExistingStringContentLookup() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try noStringContentSUT.stringContent()
             }
-#else
-            let error: (any Error)?
-            do {
-                try noStringContentSUT.stringContent()
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .missingStringContent(element: noStringContentSUT))
+            #expect(error == .missingStringContent(element: noStringContentSUT))
         }
 
         @Test
@@ -349,21 +275,10 @@ extension XMLElementTests {
         // MARK: Conversion
         @Test
         func nonExistingStringContentConversion() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try noStringContentSUT.convertedStringContent(converter: StringInitializable.init)
             }
-#else
-            let error: (any Error)?
-            do {
-                try noStringContentSUT.convertedStringContent(converter: StringInitializable.init)
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .missingStringContent(element: noStringContentSUT))
+            #expect(error == .missingStringContent(element: noStringContentSUT))
         }
 
         @Test
@@ -374,44 +289,22 @@ extension XMLElementTests {
 
         @Test
         func failedExistingStringContentConversion() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try stringContentSUT.convertedStringContent(converter: NotStringInitializable.init)
             }
-#else
-            let error: (any Error)?
-            do {
-                try stringContentSUT.convertedStringContent(converter: NotStringInitializable.init)
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .cannotConvertStringContent(element: stringContentSUT,
-                                                                                   stringContent: "we have content",
-                                                                                   type: NotStringInitializable.self))
+            #expect(error == .cannotConvertStringContent(element: stringContentSUT,
+                                                         stringContent: "we have content",
+                                                         type: NotStringInitializable.self))
         }
 
         @Test
         func failedRawRepresentableExistingStringContentConversion() {
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try stringContentSUT.convertedStringContent(converter: StringRepresentableWithNotConvertibleRawValue.init)
             }
-#else
-            let error: (any Error)?
-            do {
-                try stringContentSUT.convertedStringContent(converter: StringRepresentableWithNotConvertibleRawValue.init)
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .cannotConvertStringContent(element: stringContentSUT,
-                                                                                   stringContent: "we have content",
-                                                                                   type: StringRepresentableWithNotConvertibleRawValue.self))
+            #expect(error == .cannotConvertStringContent(element: stringContentSUT,
+                                                         stringContent: "we have content",
+                                                         type: StringRepresentableWithNotConvertibleRawValue.self))
         }
 
         @Test
@@ -438,6 +331,27 @@ extension XMLElementTests {
             #expect(try [sut, stringContentSUT, noStringContentSUT].converted(to: ElementExpressible.self).map(\.element)
                     ==
                     [sut, stringContentSUT, noStringContentSUT])
+        }
+
+        @Test
+        @available(anyAppleOS 27, *)
+        func convertingNonCopyableElements() throws {
+#if compiler(>=6.4)
+            let result = try [sut, stringContentSUT, noStringContentSUT].converted(to: NonCopyableElementExpressible.self)
+            let uniqueElements = UniqueArray(copying: [sut, stringContentSUT, noStringContentSUT])
+            var elements = Array<XMLElement>()
+            elements.reserveCapacity(result.count)
+            for r in result {
+                elements.append(r.element)
+            }
+            #expect(elements == [sut, stringContentSUT, noStringContentSUT])
+            elements.removeAll(keepingCapacity: true)
+            let result2 = try uniqueElements.converted(to: NonCopyableElementExpressible.self)
+            for r in result2 {
+                elements.append(r.element)
+            }
+            #expect(elements == [sut, stringContentSUT, noStringContentSUT])
+#endif
         }
     }
 }

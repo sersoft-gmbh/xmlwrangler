@@ -207,8 +207,16 @@ extension XMLElement {
         /// - Throws: Any error thrown by `isIncluded`.
         /// - Returns: The filtered attributes. Only elements for which `isIncluded` returned `true` are contained.
         @inlinable
-        public func filter(_ isIncluded: (Element) throws -> Bool) rethrows -> Self {
-            try .init(storage: storage.filter { try isIncluded((key: $0.key, content: $0.value)) })
+        public func filter<E: Error>(_ isIncluded: (Element) throws(E) -> Bool) throws(E) -> Self {
+#if compiler(>=6.4)
+            try .init(storage: storage.filter { (e) throws(E) in try isIncluded((key: e.key, content: e.value)) })
+#else
+            do {
+                try .init(storage: storage.filter { try isIncluded((key: $0.key, content: $0.value)) })
+            } catch {
+                throw error as! E
+            }
+#endif
         }
 
         /// Updates the content element for a given key.
@@ -238,9 +246,17 @@ extension XMLElement {
         ///              The returned element is used, the other one discarded.
         /// - Throws: Any error thrown by `combine`.
         @inlinable
-        public mutating func merge(_ other: some Sequence<(Key, Content)>,
-                                   uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows {
+        public mutating func merge<E: Error>(_ other: some Sequence<(Key, Content)>,
+                                             uniquingKeysWith combine: (Content, Content) throws(E) -> Content) throws(E) {
+#if compiler(>=6.4)
             try storage.merge(other, uniquingKeysWith: combine)
+#else
+            do {
+                try storage.merge(other, uniquingKeysWith: combine)
+            } catch {
+                throw error as! E
+            }
+#endif
         }
 
         /// Merges another attributes list into the receiving attributes.
@@ -250,8 +266,16 @@ extension XMLElement {
         ///              The returned element is used, the other one discarded.
         /// - Throws: Any error thrown by `combine`.
         @inlinable
-        public mutating func merge(_ other: Self, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows {
+        public mutating func merge<E: Error>(_ other: Self, uniquingKeysWith combine: (Content, Content) throws(E) -> Content) throws(E) {
+#if compiler(>=6.4)
             try storage.merge(other.storage, uniquingKeysWith: combine)
+#else
+            do {
+                try storage.merge(other.storage, uniquingKeysWith: combine)
+            } catch {
+                throw error as! E
+            }
+#endif
         }
 
         /// Returns the result of merging another sequence of key-content-pairs with the receiving attributes.
@@ -262,9 +286,17 @@ extension XMLElement {
         /// - Throws: Any error thrown by `combine`.
         /// - Returns: The merged attributes list.
         @inlinable
-        public func merging(_ other: some Sequence<(Key, Content)>, 
-                            uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows -> Self {
+        public func merging<E: Error>(_ other: some Sequence<(Key, Content)>,
+                                      uniquingKeysWith combine: (Content, Content) throws(E) -> Content) throws(E) -> Self {
+#if compiler(>=6.4)
             try .init(storage: storage.merging(other, uniquingKeysWith: combine))
+#else
+            do {
+                return try .init(storage: storage.merging(other, uniquingKeysWith: combine))
+            } catch {
+                throw error as! E
+            }
+#endif
         }
 
         /// Returns the result of merging another attributes list into the receiving attributes.
@@ -275,8 +307,16 @@ extension XMLElement {
         /// - Throws: Any error thrown by `combine`.
         /// - Returns: The merged attributes list.
         @inlinable
-        public func merging(_ other: Self, uniquingKeysWith combine: (Content, Content) throws -> Content) rethrows -> Self {
+        public func merging<E: Error>(_ other: Self, uniquingKeysWith combine: (Content, Content) throws(E) -> Content) throws(E) -> Self {
+#if compiler(>=6.4)
             try .init(storage: storage.merging(other.storage, uniquingKeysWith: combine))
+#else
+            do {
+                return try .init(storage: storage.merging(other.storage, uniquingKeysWith: combine))
+            } catch {
+                throw error as! E
+            }
+#endif
         }
 
         /// Removes all key-content pairs from the attributes.

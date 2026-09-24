@@ -44,6 +44,21 @@ struct XMLElementContentTests {
     }
 
     @Test
+    @available(anyAppleOS 27, *)
+    func appendingContentOfITerable() {
+#if compiler(>=6.4)
+        var content: XWElement.Content = []
+        let child1 = XWElement(name: "one1")
+        let child2 = XWElement(name: "two2")
+        let child3 = XWElement(name: "three3")
+
+        content.append(contentsOf: UniqueArray(copying: [child1, child2, child3]))
+
+        #expect(content == [.element(child1), .element(child2), .element(child3)])
+#endif
+    }
+
+    @Test
     func appendingElements() {
         var content: XWElement.Content = []
         let child1 = XWElement(name: "abc1")

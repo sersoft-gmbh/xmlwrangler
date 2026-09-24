@@ -55,6 +55,17 @@ extension XMLElement.Content {
         append(contentsOf: elements)
     }
 
+#if compiler(>=6.4)
+    /// Appends the contents of a sequcence of elements wrapped as ``XMLElement/Content/Element/element(_:)``.
+    /// - Parameter elements: The sequence of elements to append wrapped in ``XMLElement/Content/Element/element(_:)``.
+    @available(anyAppleOS 27, *)
+    public mutating func append<E: Error>(contentsOf elements: borrowing some Iterable<XMLElement, E> & ~Copyable & ~Escapable) throws(E) {
+        for try element in elements {
+            storage.append(.element(element))
+        }
+    }
+#endif
+
     @usableFromInline
     mutating func _compress(stringSeparator: Character?) {
         var currentIndex = storage.startIndex

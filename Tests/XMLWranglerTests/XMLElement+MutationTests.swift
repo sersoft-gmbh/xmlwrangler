@@ -68,6 +68,21 @@ extension XMLElementTests {
         }
 
         @Test
+        @available(anyAppleOS 27, *)
+        func appendingContentOfIterable() {
+#if compiler(>=6.4)
+            var element = XWElement(name: "a")
+            let child1 = XWElement(name: "_this1")
+            let child2 = XWElement(name: "_this2")
+            let child3 = XWElement(name: "_this3")
+
+            element.append(contentsOf: UniqueArray(copying: [child1, child2, child3]))
+
+            #expect(element.content == [.element(child1), .element(child2), .element(child3)])
+#endif
+        }
+
+        @Test
         func appendingElements() {
             var element = XWElement(name: "b")
             let child1 = XWElement(name: "_this1")
@@ -82,27 +97,13 @@ extension XMLElementTests {
         @Test
         mutating func mutatingAccessToElementAtInvalidPathThrows() {
             struct InvalidExecutionError: Error {}
-#if swift(>=6.1)
-            let error = #expect(throws: (any Error).self) {
+            let error = #expect(throws: XWElement.LookupError.self) {
                 try sut.withMutatingAccess(toElementAt: "Child1", "InexistentChild",
                                            do: { _ in
                     throw InvalidExecutionError()
                 })
             }
-#else
-            let error: (any Error)?
-            do {
-                try sut.withMutatingAccess(toElementAt: "Child1", "InexistentChild",
-                                           do: { _ in
-                    throw InvalidExecutionError()
-                })
-                error = nil
-            } catch let caughtError {
-                error = caughtError
-            }
-#endif
-            #expect(error is XWElement.LookupError)
-            #expect(error as? XWElement.LookupError == .missingChild(element: sut.content[0]._element, childName: "InexistentChild"))
+            #expect(error == .missingChild(element: sut.content[0]._element, childName: "InexistentChild"))
         }
 
         @Test

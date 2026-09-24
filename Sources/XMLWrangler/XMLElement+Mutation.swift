@@ -41,6 +41,18 @@ extension XMLElement {
         content.append(contentsOf: elements)
     }
 
+#if compiler(>=6.4)
+    /// Appends the contents of a sequence of elements to the content.
+    /// - Parameter elements: The sequence of elements to append to the content.
+    /// - SeeAlso: ``XMLElement/Content/append(contentsOf:)``
+    @available(anyAppleOS 27, *)
+    public mutating func append<E: Error>(contentsOf elements: borrowing some Iterable<XMLElement, E> & ~Copyable & ~Escapable) throws(E) {
+        for try element in elements {
+            content.append(elementOf: element)
+        }
+    }
+#endif
+
     /// Appends one or more elements to the content.
     /// - Parameter elements: The elements to append to the content.
     /// - SeeAlso: ``XMLElement/Content/appendElements(_:)``
@@ -57,8 +69,8 @@ extension XMLElement {
     ///   - work: The closure which is provided with mutating access to the element at the given path.
     /// - Returns: The value returned by `work`.
     /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point. Or any error thrown by `work`
-    public mutating func withMutatingAccess<T>(toElementAt path: some Collection<Name>,
-                                               do work: (inout XMLElement) throws -> T) throws -> T {
+    public mutating func withMutatingAccess<T: ~Copyable>(toElementAt path: some Collection<Name>,
+                                                          do work: (inout XMLElement) throws -> T) throws -> T {
         guard !path.isEmpty else { return try work(&self) }
         guard let index = content.firstIndex(where: { $0.element?.name == path[path.startIndex] }),
               var element = content[index].element // This one should always succeed.
@@ -74,7 +86,7 @@ extension XMLElement {
     /// - Returns: The value returned by `work`.
     /// - Throws: ``XMLElement/LookupError/missingChild(element:childName:)`` in case the path contains an inexistent element at some point. Or any error thrown by `work`
     @inlinable
-    public mutating func withMutatingAccess<T>(toElementAt path: Name..., do work: (inout XMLElement) throws -> T) throws -> T {
+    public mutating func withMutatingAccess<T: ~Copyable>(toElementAt path: Name..., do work: (inout XMLElement) throws -> T) throws -> T {
         try withMutatingAccess(toElementAt: path, do: work)
     }
 
