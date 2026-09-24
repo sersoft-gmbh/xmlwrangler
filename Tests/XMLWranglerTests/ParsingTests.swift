@@ -35,19 +35,9 @@ struct ParsingTests {
 
     @Test
     func parsingErrors() {
-#if swift(>=6.1)
         let error = #expect(throws: (any Error).self) {
             try XWElement.parse("<>Totally not valid XML<!>")
         }
-#else
-        let error: (any Error)?
-        do {
-            try XWElement.parse("<>Totally not valid XML<!>")
-            error = nil
-        } catch let caughtError {
-            error = caughtError
-        }
-#endif
         switch error {
         case is XWElement.UnknownParsingError: break
         case is XWElement.MissingRootElementError: break
