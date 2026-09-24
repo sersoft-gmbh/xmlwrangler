@@ -212,7 +212,7 @@ extension XMLElement {
             try .init(storage: storage.filter { (e) throws(E) in try isIncluded((key: e.key, content: e.value)) })
 #else
             do {
-                try .init(storage: storage.filter { try isIncluded((key: $0.key, content: $0.value)) })
+                return try .init(storage: storage.filter { try isIncluded((key: $0.key, content: $0.value)) })
             } catch {
                 throw error as! E
             }
