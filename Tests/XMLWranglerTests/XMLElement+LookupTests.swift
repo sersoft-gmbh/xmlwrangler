@@ -334,7 +334,7 @@ extension XMLElementTests {
         }
 
         @Test
-        @available(anyAppleOS 27, *)
+        @available(macOS 27, iOS 27, tvOS 27, visionOS 27, watchOS 27, *) // cannot use anyAppleOS yet, since this is also compiled in pre Swift 6.4
         func convertingNonCopyableElements() throws {
 #if compiler(>=6.4)
             let result = try [sut, stringContentSUT, noStringContentSUT].converted(to: NonCopyableElementExpressible.self)
