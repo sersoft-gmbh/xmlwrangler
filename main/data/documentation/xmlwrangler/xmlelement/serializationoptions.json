@@ -293,18 +293,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/RawValue-swift.typealias": {
   "abstract" : [
-    {
-      "text" : "The raw type that can be used to represent all values of the conforming",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -416,10 +405,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/init(rawValue:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new option set from the given raw value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -437,24 +423,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
-      "text" : "SerializationOptions"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -529,10 +497,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/rawValue-swift.property": {
   "abstract" : [
-    {
-      "text" : "The corresponding value of the raw type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -550,24 +515,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
-      "text" : "SerializationOptions"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

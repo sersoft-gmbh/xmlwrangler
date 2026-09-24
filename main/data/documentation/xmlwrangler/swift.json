@@ -36,6 +36,7 @@
       "anchor" : "Extended-Protocols",
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Iterable",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Sequence"
       ],
       "title" : "Extended Protocols"
@@ -120,6 +121,38 @@
   "title" : "Dictionary",
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/swift\/dictionary"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/Swift/Iterable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s8IterableP",
+      "text" : "Iterable"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/Swift\/Iterable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Iterable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Iterable",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/swift\/iterable"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/Sequence": {
   "abstract" : [

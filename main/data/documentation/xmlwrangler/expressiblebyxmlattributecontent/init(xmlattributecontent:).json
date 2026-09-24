@@ -315,10 +315,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)-3j6bp": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance of the conforming type using the given attribute content.",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [
@@ -438,10 +435,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)-57hl": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance of the conforming type using the given attribute content.",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [
@@ -545,10 +539,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/ExpressibleByXMLAttributeContent/init(xmlAttributeContent:)-94r05": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance of the conforming type using the given attribute content.",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [

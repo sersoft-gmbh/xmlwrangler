@@ -41,9 +41,9 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/...(_:_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/.._(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/.._(_:_:)",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_(_:_:)-8n415",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_=(_:_:)-9mt1x",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_=(_:_:)-ctbn"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_(_:_:)-4wa8u",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_=(_:_:)-4vu5i",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_=(_:_:)-5tnvj"
       ],
       "title" : "Operators"
     }
@@ -513,7 +513,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/'.._(_:_:)"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_(_:_:)-8n415": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_(_:_:)-4wa8u": {
   "abstract" : [
     {
       "text" : "Returns a Boolean value indicating whether the value of the first argument",
@@ -558,12 +558,28 @@
       "text" : "("
     },
     {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
       "text" : "Self"
     },
     {
       "kind" : "text",
       "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -579,14 +595,14 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_(_:_:)-8n415",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_(_:_:)-4wa8u",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : ">(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_(_:_:)-8n415"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_(_:_:)-4wa8u"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_=(_:_:)-9mt1x": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_=(_:_:)-4vu5i": {
   "abstract" : [
     {
       "text" : "Returns a Boolean value indicating whether the value of the first argument",
@@ -631,12 +647,28 @@
       "text" : "("
     },
     {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
       "text" : "Self"
     },
     {
       "kind" : "text",
       "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -652,14 +684,14 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_=(_:_:)-9mt1x",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_=(_:_:)-4vu5i",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : ">=(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_=(_:_:)-9mt1x"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_=(_:_:)-4vu5i"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_=(_:_:)-ctbn": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_=(_:_:)-5tnvj": {
   "abstract" : [
     {
       "text" : "Returns a Boolean value indicating whether the value of the first argument",
@@ -704,12 +736,28 @@
       "text" : "("
     },
     {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
       "text" : "Self"
     },
     {
       "kind" : "text",
       "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -725,12 +773,12 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_=(_:_:)-ctbn",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/DocumentVersion\/_=(_:_:)-5tnvj",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "<=(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_=(_:_:)-ctbn"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/documentversion\/_=(_:_:)-5tnvj"
 }
 }
 }

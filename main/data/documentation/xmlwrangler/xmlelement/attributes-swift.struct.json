@@ -165,10 +165,10 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/filter(_:)",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-134z7",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-2dkp4",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merging(_:uniquingKeysWith:)-37s76",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merging(_:uniquingKeysWith:)-7rko5",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-5apy9",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-70o08",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merging(_:uniquingKeysWith:)-4yyt6",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merging(_:uniquingKeysWith:)-67slz",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/removeAll(keepingCapacity:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/removeContent(forKey:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/updateContent(_:forKey:)"
@@ -578,24 +578,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV8ContentsV",
       "text" : "Contents"
     }
@@ -629,25 +611,15 @@
     },
     {
       "kind" : "text",
-      "text" : "(("
+      "text" : "<"
     },
     {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
+      "kind" : "genericParameter",
+      "text" : "E"
     },
     {
       "kind" : "text",
-      "text" : "."
+      "text" : ">(("
     },
     {
       "kind" : "typeIdentifier",
@@ -664,7 +636,16 @@
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV6filteryAESbAE3KeyV3key_AE7ContentV7contentt_txYKXExYKs5ErrorRzlF1EL_xmfp",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -677,11 +658,20 @@
     },
     {
       "kind" : "keyword",
-      "text" : "rethrows"
+      "text" : "throws"
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV6filteryAESbAE3KeyV3key_AE7ContentV7contentt_txYKXExYKs5ErrorRzlF1EL_xmfp",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -764,48 +754,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -826,48 +780,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7ContentV",
       "text" : "Content"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -885,24 +803,6 @@
     {
       "kind" : "text",
       "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1009,48 +909,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1104,24 +968,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV4KeysV",
       "text" : "Keys"
     }
@@ -1133,7 +979,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.property"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/merge(_:uniquingKeysWith:)-134z7": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/merge(_:uniquingKeysWith:)-5apy9": {
   "abstract" : [
     {
       "text" : "Merges another attributes list into the receiving attributes.",
@@ -1155,21 +1001,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
     },
     {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "kind" : "genericParameter",
+      "text" : "E"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
+      "text" : ">(`Self`"
     },
     {
       "kind" : "text",
@@ -1185,48 +1025,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7ContentV",
       "text" : "Content"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1243,25 +1047,16 @@
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV5merge_16uniquingKeysWithyAE_AE7ContentVAI_AItxYKXEtxYKs5ErrorRzlF1EL_xmfp",
+      "text" : "E"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -1274,17 +1069,30 @@
     },
     {
       "kind" : "keyword",
-      "text" : "rethrows"
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV5merge_16uniquingKeysWithyAE_AE7ContentVAI_AItxYKXEtxYKs5ErrorRzlF1EL_xmfp",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-134z7",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-5apy9",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "merge(_:uniquingKeysWith:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merge(_:uniquingkeyswith:)-134z7"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merge(_:uniquingkeyswith:)-5apy9"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/merge(_:uniquingKeysWith:)-2dkp4": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/merge(_:uniquingKeysWith:)-70o08": {
   "abstract" : [
     {
       "text" : "Merges another sequence of key-content-pairs into the receiving attributes.",
@@ -1306,7 +1114,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
     },
     {
       "kind" : "keyword",
@@ -1327,48 +1143,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1389,48 +1169,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7ContentV",
       "text" : "Content"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1447,25 +1191,16 @@
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV5merge_16uniquingKeysWithyq__AE7ContentVAI_AItxYKXEtxYKs5ErrorRzSTR_AE3KeyV_AIt7ElementRt_r0_lF1EL_xmfp",
+      "text" : "E"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -1478,17 +1213,30 @@
     },
     {
       "kind" : "keyword",
-      "text" : "rethrows"
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV5merge_16uniquingKeysWithyq__AE7ContentVAI_AItxYKXEtxYKs5ErrorRzSTR_AE3KeyV_AIt7ElementRt_r0_lF1EL_xmfp",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-2dkp4",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merge(_:uniquingKeysWith:)-70o08",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "merge(_:uniquingKeysWith:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merge(_:uniquingkeyswith:)-2dkp4"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merge(_:uniquingkeyswith:)-70o08"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/merging(_:uniquingKeysWith:)-37s76": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/merging(_:uniquingKeysWith:)-4yyt6": {
   "abstract" : [
     {
       "text" : "Returns the result of merging another attributes list into the receiving attributes.",
@@ -1510,21 +1258,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
     },
     {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "kind" : "genericParameter",
+      "text" : "E"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
+      "text" : ">(`Self`"
     },
     {
       "kind" : "text",
@@ -1540,48 +1282,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7ContentV",
       "text" : "Content"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1598,25 +1304,16 @@
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7merging_16uniquingKeysWithA2E_AE7ContentVAI_AItxYKXEtxYKs5ErrorRzlF1EL_xmfp",
+      "text" : "E"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -1629,11 +1326,20 @@
     },
     {
       "kind" : "keyword",
-      "text" : "rethrows"
+      "text" : "throws"
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7merging_16uniquingKeysWithA2E_AE7ContentVAI_AItxYKXEtxYKs5ErrorRzlF1EL_xmfp",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -1650,14 +1356,14 @@
       "text" : "Attributes"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merging(_:uniquingKeysWith:)-37s76",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merging(_:uniquingKeysWith:)-4yyt6",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "merging(_:uniquingKeysWith:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merging(_:uniquingkeyswith:)-37s76"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merging(_:uniquingkeyswith:)-4yyt6"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/merging(_:uniquingKeysWith:)-7rko5": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/merging(_:uniquingKeysWith:)-67slz": {
   "abstract" : [
     {
       "text" : "Returns the result of merging another sequence of key-content-pairs with the receiving attributes.",
@@ -1679,7 +1385,15 @@
     },
     {
       "kind" : "text",
-      "text" : "("
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
     },
     {
       "kind" : "keyword",
@@ -1700,48 +1414,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1762,48 +1440,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7ContentV",
       "text" : "Content"
     },
     {
       "kind" : "text",
       "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1820,25 +1462,16 @@
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7merging_16uniquingKeysWithAEq__AE7ContentVAI_AItxYKXEtxYKs5ErrorRzSTR_AE3KeyV_AIt7ElementRt_r0_lF1EL_xmfp",
+      "text" : "E"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -1851,11 +1484,20 @@
     },
     {
       "kind" : "keyword",
-      "text" : "rethrows"
+      "text" : "throws"
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7merging_16uniquingKeysWithAEq__AE7ContentVAI_AItxYKXEtxYKs5ErrorRzSTR_AE3KeyV_AIt7ElementRt_r0_lF1EL_xmfp",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -1872,12 +1514,12 @@
       "text" : "Attributes"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merging(_:uniquingKeysWith:)-7rko5",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/merging(_:uniquingKeysWith:)-67slz",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "merging(_:uniquingKeysWith:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merging(_:uniquingkeyswith:)-7rko5"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/merging(_:uniquingkeyswith:)-67slz"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/removeAll(keepingCapacity:)": {
   "abstract" : [
@@ -1970,48 +1612,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
       "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -2056,48 +1662,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
       "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -2134,24 +1704,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
@@ -2169,11 +1721,11 @@
     },
     {
       "kind" : "attribute",
-      "text" : "@autoclosure "
+      "text" : "@autoclosure"
     },
     {
       "kind" : "text",
-      "text" : "() -> "
+      "text" : " () -> "
     },
     {
       "kind" : "keyword",
@@ -2190,25 +1742,16 @@
     },
     {
       "kind" : "text",
-      "text" : " & ~Copyable) -> "
+      "text" : " & ~"
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "preciseIdentifier" : "s:s8CopyableP",
+      "text" : "Copyable"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -2249,24 +1792,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV7ContentV",
       "text" : "Content"
     },
@@ -2284,48 +1809,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
       "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

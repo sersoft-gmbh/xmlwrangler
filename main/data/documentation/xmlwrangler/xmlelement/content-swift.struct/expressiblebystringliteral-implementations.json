@@ -148,10 +148,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/StringLiteralType": {
   "abstract" : [
-    {
-      "text" : "A type that represents a string literal.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -260,10 +257,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init(stringLiteral:)": {
   "abstract" : [
-    {
-      "text" : "Creates an instance initialized to the given string value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -281,24 +275,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

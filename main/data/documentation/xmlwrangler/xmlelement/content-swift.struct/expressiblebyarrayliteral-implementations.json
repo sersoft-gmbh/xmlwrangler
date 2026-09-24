@@ -147,10 +147,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/ArrayLiteralElement": {
   "abstract" : [
-    {
-      "text" : "The type of the elements of an array literal.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -181,10 +178,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init(arrayLiteral:)": {
   "abstract" : [
-    {
-      "text" : "Creates an instance initialized with the given elements.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -202,24 +196,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

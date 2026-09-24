@@ -54,8 +54,7 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/elementsEqual(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/elementsEqual(_:by:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/enumerated()",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/filter(_:)-4x5zv",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/filter(_:)-6vxqu",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/filter(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/first(where:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/flatMap(_:)-124gs",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/flatMap(_:)-5tdij",
@@ -1181,106 +1180,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/enumerated()"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Keys-swift.struct/filter(_:)-4x5zv": {
-  "abstract" : [
-    {
-      "text" : "Returns an array containing, in order, the elements of the sequence",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "that satisfy the given predicate.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "filter"
-    },
-    {
-      "kind" : "text",
-      "text" : "(("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Self"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:ST7ElementQa",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : ") "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "throws"
-    },
-    {
-      "kind" : "text",
-      "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
-    },
-    {
-      "kind" : "text",
-      "text" : ") "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "rethrows"
-    },
-    {
-      "kind" : "text",
-      "text" : " -> ["
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Self"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:ST7ElementQa",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : "]"
-    }
-  ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/filter(_:)-4x5zv",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "filter(_:)",
-  "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/filter(_:)-4x5zv"
-},
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Keys-swift.struct/filter(_:)-6vxqu": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Keys-swift.struct/filter(_:)": {
   "abstract" : [
 
   ],
@@ -1353,12 +1253,12 @@
       "text" : "]"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/filter(_:)-6vxqu",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Keys-swift.struct\/filter(_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "filter(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/filter(_:)-6vxqu"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/keys-swift.struct\/filter(_:)"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Keys-swift.struct/first(where:)": {
   "abstract" : [
@@ -3364,10 +3264,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Keys-swift.struct/withContiguousStorageIfAvailable(_:)": {
   "abstract" : [
-    {
-      "text" : "Executes a closure on the sequence’s contiguous storage.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

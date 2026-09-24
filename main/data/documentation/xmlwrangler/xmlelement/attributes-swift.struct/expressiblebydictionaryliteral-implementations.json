@@ -148,10 +148,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/init(dictionaryLiteral:)": {
   "abstract" : [
-    {
-      "text" : "Creates an instance initialized with the given key-value pairs.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -172,30 +169,20 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
-      "text" : ", any "
+      "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",

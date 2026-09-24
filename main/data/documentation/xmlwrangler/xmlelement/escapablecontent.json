@@ -334,24 +334,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV16EscapableContentO",
-      "text" : "EscapableContent"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV16EscapableContentO6QuotesO",
       "text" : "Quotes"
     },
@@ -419,10 +401,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/EscapableContent/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

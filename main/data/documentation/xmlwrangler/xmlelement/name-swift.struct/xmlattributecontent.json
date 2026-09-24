@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "The attribute content of this type.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -379,10 +373,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/xmlAttributeContent": {
   "abstract" : [
-    {
-      "text" : "The attribute content of this type.",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [

@@ -106,7 +106,33 @@
             },
             {
               "kind" : "text",
-              "text" : " = any (~Copyable & ~Escapable).Type"
+              "text" : " = "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "any"
+            },
+            {
+              "kind" : "text",
+              "text" : " (~"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8CopyableP",
+              "text" : "Copyable"
+            },
+            {
+              "kind" : "text",
+              "text" : " & ~"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s9EscapableP",
+              "text" : "Escapable"
+            },
+            {
+              "kind" : "text",
+              "text" : ").Type"
             }
           ]
         }
@@ -476,24 +502,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO",
-      "text" : "LookupError"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO14ConversionTypea",
       "text" : "ConversionType"
     },
@@ -626,24 +634,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO",
-      "text" : "LookupError"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

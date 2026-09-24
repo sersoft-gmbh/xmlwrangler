@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Accesses the element at the specified position.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -33,48 +27,12 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-        "text" : "XMLElement"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-        "text" : "Content"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV5Indexa",
         "text" : "Index"
       },
       {
         "kind" : "text",
         "text" : ") -> "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-        "text" : "XMLElement"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-        "text" : "Content"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
       },
       {
         "kind" : "typeIdentifier",
@@ -124,26 +82,6 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-              "text" : "XMLElement"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-              "text" : "Content"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Index",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV5Indexa",
@@ -152,26 +90,6 @@
             {
               "kind" : "text",
               "text" : ") -> "
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-              "text" : "XMLElement"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-              "text" : "Content"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
             },
             {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element",
@@ -203,135 +121,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The position of the element to access. ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "position",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "must be a valid index of the collection that is not equal to the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "endIndex",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " property.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "position"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "overview",
-          "level" : 2,
-          "text" : "Overview",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example accesses an element of an array through its",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "subscript to print its value:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var streets = [\"Adams\", \"Bryant\", \"Channing\", \"Douglas\", \"Evarts\"]",
-            "print(streets[1])",
-            "\/\/ Prints \"Bryant\""
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can subscript a collection with any valid index other than the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "collection’s end index. The end index refers to the position one past",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the last element of a collection, so it doesn’t correspond with an",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "element.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "O(1)",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Complexity",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -483,10 +272,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Index": {
   "abstract" : [
-    {
-      "text" : "A type that represents a position in the collection.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -517,10 +303,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/subscript(_:)": {
   "abstract" : [
-    {
-      "text" : "Accesses the element at the specified position.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -533,48 +316,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV5Indexa",
       "text" : "Index"
     },
     {
       "kind" : "text",
       "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

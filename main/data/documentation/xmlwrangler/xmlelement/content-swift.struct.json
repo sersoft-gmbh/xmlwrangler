@@ -150,7 +150,8 @@
       "anchor" : "Instance-Methods",
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(contentsOf:)",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(contentsOf:)-7tyzf",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(contentsOf:)-89f5c",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(elementOf:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/appendElement(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/appendElements(_:)",
@@ -522,33 +523,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO10StringParta",
       "text" : "StringPart"
     },
@@ -793,8 +767,17 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO10StringParta",
+      "text" : "StringPart"
     },
     {
       "kind" : "text",
@@ -808,7 +791,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/allstrings"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/append(contentsOf:)": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/append(contentsOf:)-7tyzf": {
   "abstract" : [
     {
       "text" : "Appends the contents of a sequcence of elements wrapped as ",
@@ -876,12 +859,147 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(contentsOf:)",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(contentsOf:)-7tyzf",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "append(contentsOf:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(contentsof:)"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(contentsof:)-7tyzf"
+},
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/append(contentsOf:)-89f5c": {
+  "abstract" : [
+    {
+      "text" : "Appends the contents of a sequcence of elements wrapped as ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/element(_:)",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "append"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "contentsOf"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8IterableP",
+      "text" : "Iterable"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
+      "text" : "XMLElement"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV6append10contentsOfyq__txYK7FailureQy_Rszs8IterableR_AC7ElementRt_Ri__Ri0__r0_lF1EL_xmfp",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : "> & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8CopyableP",
+      "text" : "Copyable"
+    },
+    {
+      "kind" : "text",
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s9EscapableP",
+      "text" : "Escapable"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV6append10contentsOfyq__txYK7FailureQy_Rszs8IterableR_AC7ElementRt_Ri__Ri0__r0_lF1EL_xmfp",
+      "text" : "E"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(contentsOf:)-89f5c",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "append(contentsOf:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/content-swift.struct\/append(contentsof:)-89f5c"
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/append(elementOf:)": {
   "abstract" : [
@@ -938,7 +1056,25 @@
     },
     {
       "kind" : "text",
-      "text" : " & ~Copyable & ~Escapable)"
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8CopyableP",
+      "text" : "Copyable"
+    },
+    {
+      "kind" : "text",
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s9EscapableP",
+      "text" : "Escapable"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(elementOf:)",
@@ -1105,24 +1241,6 @@
     {
       "kind" : "text",
       "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -1517,10 +1635,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/init()": {
   "abstract" : [
-    {
-      "text" : "Creates a new, empty collection.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

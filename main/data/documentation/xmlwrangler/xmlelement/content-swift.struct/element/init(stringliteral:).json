@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Creates an instance initialized to the given string value.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -38,33 +32,6 @@
       {
         "kind" : "text",
         "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-        "text" : "XMLElement"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-        "text" : "Content"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
-        "text" : "Element"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
       },
       {
         "kind" : "typeIdentifier",
@@ -126,36 +93,6 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-              "text" : "XMLElement"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-              "text" : "Content"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
-              "text" : "Element"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/Element\/StringLiteralType",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO17StringLiteralTypea",
@@ -169,25 +106,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The value of the new instance.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "value"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -339,10 +257,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Element/StringLiteralType": {
   "abstract" : [
-    {
-      "text" : "A type that represents a string literal.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -373,10 +288,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/Element/init(stringLiteral:)": {
   "abstract" : [
-    {
-      "text" : "Creates an instance initialized to the given string value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -394,33 +306,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

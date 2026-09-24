@@ -64,15 +64,6 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-        "text" : "XMLElement"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
         "text" : "Attributes"
       },
@@ -99,6 +90,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV18convertedAttribute3forxAC10AttributesV3KeyV_tKSYRzAA32ExpressibleByXMLAttributeContentRzs25LosslessStringConvertible8RawValueSYRpzlF6TargetL_xmfp",
         "text" : "Target"
       }
     ],
@@ -168,16 +160,6 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-              "text" : "XMLElement"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
@@ -207,6 +189,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV18convertedAttribute3forxAC10AttributesV3KeyV_tKSYRzAA32ExpressibleByXMLAttributeContentRzs25LosslessStringConvertible8RawValueSYRpzlF6TargetL_xmfp",
               "text" : "Target"
             },
             {
@@ -833,15 +816,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
       "text" : "Attributes"
     },
@@ -865,15 +839,6 @@
     {
       "kind" : "text",
       "text" : " -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -947,15 +912,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
       "text" : "Attributes"
     },
@@ -982,6 +938,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV18convertedAttribute3forxAC10AttributesV3KeyV_tKSYRzAA32ExpressibleByXMLAttributeContentRzs25LosslessStringConvertible8RawValueSYRpzlF6TargetL_xmfp",
       "text" : "Target"
     }
   ],

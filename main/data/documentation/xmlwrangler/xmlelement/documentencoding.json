@@ -288,18 +288,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentEncoding/RawValue-swift.typealias": {
   "abstract" : [
-    {
-      "text" : "The raw type that can be used to represent all values of the conforming",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -384,10 +373,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentEncoding/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -421,10 +407,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentEncoding/init(rawValue:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance with the specified raw value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -445,24 +428,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV16DocumentEncodingV",
-      "text" : "DocumentEncoding"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV16DocumentEncodingV8RawValuea",
       "text" : "RawValue"
     },
@@ -480,10 +445,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentEncoding/rawValue-swift.property": {
   "abstract" : [
-    {
-      "text" : "The corresponding value of the raw type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -501,24 +463,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV16DocumentEncodingV",
-      "text" : "DocumentEncoding"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

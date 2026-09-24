@@ -264,10 +264,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/UnknownParsingError/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

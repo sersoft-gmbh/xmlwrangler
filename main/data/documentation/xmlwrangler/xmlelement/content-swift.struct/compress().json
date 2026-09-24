@@ -56,7 +56,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElementContent+Mutation.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElementContent+Mutation.swift#L85"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElementContent+Mutation.swift#L96"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -263,33 +263,6 @@
     {
       "kind" : "text",
       "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

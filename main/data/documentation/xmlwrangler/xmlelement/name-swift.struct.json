@@ -461,18 +461,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/RawValue-swift.typealias": {
   "abstract" : [
-    {
-      "text" : "The raw type that can be used to represent all values of the conforming",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -503,10 +492,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/StringLiteralType": {
   "abstract" : [
-    {
-      "text" : "A type that represents a string literal.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -548,10 +534,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/debugDescription": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance, suitable for debugging.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -585,10 +568,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -638,24 +618,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
-      "text" : "Name"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV8RawValuea",
       "text" : "RawValue"
     },
@@ -673,10 +635,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/init(rawValue:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance with the specified raw value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -694,24 +653,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
-      "text" : "Name"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -732,10 +673,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/init(stringLiteral:)": {
   "abstract" : [
-    {
-      "text" : "Creates an instance initialized to the given string value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -756,24 +694,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
-      "text" : "Name"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV17StringLiteralTypea",
       "text" : "StringLiteralType"
     },
@@ -791,10 +711,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/rawValue-swift.property": {
   "abstract" : [
-    {
-      "text" : "The corresponding value of the raw type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -812,24 +729,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV4NameV",
-      "text" : "Name"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

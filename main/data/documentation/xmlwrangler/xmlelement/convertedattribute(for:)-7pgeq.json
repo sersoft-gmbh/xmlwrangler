@@ -64,15 +64,6 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-        "text" : "XMLElement"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
         "text" : "Attributes"
       },
@@ -99,6 +90,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV18convertedAttribute3forxAC10AttributesV3KeyV_tKs25LosslessStringConvertibleRzlF1TL_xmfp",
         "text" : "T"
       }
     ],
@@ -168,16 +160,6 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-              "text" : "XMLElement"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
@@ -207,6 +189,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV18convertedAttribute3forxAC10AttributesV3KeyV_tKs25LosslessStringConvertibleRzlF1TL_xmfp",
               "text" : "T"
             },
             {
@@ -712,24 +695,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO",
-      "text" : "LookupError"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO14ConversionTypea",
       "text" : "ConversionType"
     },
@@ -895,15 +860,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
       "text" : "Attributes"
     },
@@ -930,6 +886,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV18convertedAttribute3forxAC10AttributesV3KeyV_tKs25LosslessStringConvertibleRzlF1TL_xmfp",
       "text" : "T"
     }
   ],

@@ -183,10 +183,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Key/xmlAttributeContent": {
   "abstract" : [
-    {
-      "text" : "The attribute content of this type.",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [

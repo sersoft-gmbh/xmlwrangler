@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "The corresponding value of the raw type.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -37,24 +31,6 @@
       {
         "kind" : "text",
         "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-        "text" : "XMLElement"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
-        "text" : "SerializationOptions"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
       },
       {
         "kind" : "typeIdentifier",
@@ -104,26 +80,6 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-              "text" : "XMLElement"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
-              "text" : "SerializationOptions"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/SerializationOptions\/RawValue-swift.typealias",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV8RawValuea",
@@ -133,58 +89,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A new instance initialized with ",
-              "type" : "text"
-            },
-            {
-              "code" : "rawValue",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will be equivalent to this",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "instance. For example:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "enum PaperSize: String {",
-            "    case A4, A5, Letter, Legal",
-            "}",
-            "",
-            "let selectedSize = PaperSize.Letter",
-            "print(selectedSize.rawValue)",
-            "\/\/ Prints \"Letter\"",
-            "",
-            "print(selectedSize == PaperSize(rawValue: selectedSize.rawValue)!)",
-            "\/\/ Prints \"true\""
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -293,18 +197,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/RawValue-swift.typealias": {
   "abstract" : [
-    {
-      "text" : "The raw type that can be used to represent all values of the conforming",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -335,10 +228,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/SerializationOptions/rawValue-swift.property": {
   "abstract" : [
-    {
-      "text" : "The corresponding value of the raw type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -356,24 +246,6 @@
     {
       "kind" : "text",
       "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
-      "text" : "SerializationOptions"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",

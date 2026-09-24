@@ -70,7 +70,25 @@
       },
       {
         "kind" : "text",
-        "text" : " & ~Copyable & ~Escapable)"
+        "text" : " & ~"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s8CopyableP",
+        "text" : "Copyable"
+      },
+      {
+        "kind" : "text",
+        "text" : " & ~"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s9EscapableP",
+        "text" : "Escapable"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
       }
     ],
     "modules" : [
@@ -162,7 +180,25 @@
             },
             {
               "kind" : "text",
-              "text" : " & ~Copyable & ~Escapable)"
+              "text" : " & ~"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8CopyableP",
+              "text" : "Copyable"
+            },
+            {
+              "kind" : "text",
+              "text" : " & ~"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s9EscapableP",
+              "text" : "Escapable"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
             }
           ]
         }
@@ -357,7 +393,25 @@
     },
     {
       "kind" : "text",
-      "text" : " & ~Copyable & ~Escapable)"
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8CopyableP",
+      "text" : "Copyable"
+    },
+    {
+      "kind" : "text",
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s9EscapableP",
+      "text" : "Escapable"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
     }
   ],
   "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Content-swift.struct\/append(elementOf:)",

@@ -115,10 +115,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/String/init(xmlAttributeContent:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance of the conforming type using the given attribute content.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -174,10 +171,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/String/init(xmlAttributeContent:)-85b9j": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance of the conforming type using the given attribute content.",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [

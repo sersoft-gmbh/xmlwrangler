@@ -290,10 +290,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLAttributeContentConvertible/xmlAttributeContent-40rww": {
   "abstract" : [
-    {
-      "text" : "The attribute content of this type.",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [

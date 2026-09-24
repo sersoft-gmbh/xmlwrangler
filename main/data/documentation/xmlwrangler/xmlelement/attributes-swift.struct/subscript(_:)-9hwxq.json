@@ -23,16 +23,16 @@
       },
       {
         "kind" : "text",
-        "text" : "(("
+        "text" : "("
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:s15UnboundedRange_O",
-        "text" : "UnboundedRange_"
+        "preciseIdentifier" : "s:s14UnboundedRangea",
+        "text" : "UnboundedRange"
       },
       {
         "kind" : "text",
-        "text" : ") -> ()) -> "
+        "text" : ") -> "
       },
       {
         "kind" : "typeIdentifier",
@@ -86,16 +86,16 @@
             },
             {
               "kind" : "text",
-              "text" : ": ("
+              "text" : ": "
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:s15UnboundedRange_O",
-              "text" : "UnboundedRange_"
+              "preciseIdentifier" : "s:s14UnboundedRangea",
+              "text" : "UnboundedRange"
             },
             {
               "kind" : "text",
-              "text" : ") -> ()) -> "
+              "text" : ") -> "
             },
             {
               "kind" : "typeIdentifier",
@@ -252,16 +252,16 @@
     },
     {
       "kind" : "text",
-      "text" : "(("
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s15UnboundedRange_O",
-      "text" : "UnboundedRange_"
+      "preciseIdentifier" : "s:s14UnboundedRangea",
+      "text" : "UnboundedRange"
     },
     {
       "kind" : "text",
-      "text" : ") -> ()) -> "
+      "text" : ") -> "
     },
     {
       "kind" : "typeIdentifier",

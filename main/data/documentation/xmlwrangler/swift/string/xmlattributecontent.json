@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "The attribute content of this type.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -232,10 +226,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/Swift/String/xmlAttributeContent": {
   "abstract" : [
-    {
-      "text" : "The attribute content of this type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

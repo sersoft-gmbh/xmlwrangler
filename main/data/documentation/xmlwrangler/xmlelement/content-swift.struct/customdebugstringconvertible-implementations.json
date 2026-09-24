@@ -139,10 +139,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/debugDescription": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance, suitable for debugging.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

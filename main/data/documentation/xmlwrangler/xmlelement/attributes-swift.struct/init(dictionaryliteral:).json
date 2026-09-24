@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Creates an instance initialized with the given key-value pairs.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -41,30 +35,20 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-        "text" : "XMLElement"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-        "text" : "Attributes"
-      },
-      {
-        "kind" : "text",
-        "text" : "."
-      },
-      {
-        "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
         "text" : "Key"
       },
       {
         "kind" : "text",
-        "text" : ", any "
+        "text" : ", "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "any"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
       },
       {
         "kind" : "typeIdentifier",
@@ -83,7 +67,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L303"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L343"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",
@@ -126,26 +110,6 @@
               "text" : ": ("
             },
             {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-              "text" : "XMLElement"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
-              "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-              "text" : "Attributes"
-            },
-            {
-              "kind" : "text",
-              "text" : "."
-            },
-            {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Key",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
@@ -153,7 +117,15 @@
             },
             {
               "kind" : "text",
-              "text" : ", any "
+              "text" : ", "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "any"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLAttributeContentConvertible",
@@ -393,10 +365,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/init(dictionaryLiteral:)": {
   "abstract" : [
-    {
-      "text" : "Creates an instance initialized with the given key-value pairs.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -417,30 +386,20 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV3KeyV",
       "text" : "Key"
     },
     {
       "kind" : "text",
-      "text" : ", any "
+      "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",

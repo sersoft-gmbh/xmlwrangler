@@ -279,18 +279,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/_(_:_:)": {
   "abstract" : [
-    {
-      "text" : "Returns a Boolean value indicating whether the value of the first",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "argument is less than that of the second argument.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -319,39 +308,11 @@
     },
     {
       "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "text" : "(`Self`"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV15DocumentVersionV",
-      "text" : "DocumentVersion"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV15DocumentVersionV",
-      "text" : "DocumentVersion"
+      "text" : ", `Self`"
     },
     {
       "kind" : "text",
@@ -372,10 +333,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/DocumentVersion/description": {
   "abstract" : [
-    {
-      "text" : "A textual representation of this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

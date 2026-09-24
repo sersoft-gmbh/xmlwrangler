@@ -43,9 +43,9 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/...(_:_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/.._(_:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/.._(_:_:)",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_(_:_:)-6ycbk",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_=(_:_:)-5oumv",
-        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_=(_:_:)-9ekje"
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_(_:_:)-1yzwj",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_=(_:_:)-60n9f",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_=(_:_:)-9x4vv"
       ],
       "title" : "Operators"
     }
@@ -569,7 +569,7 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/'.._(_:_:)"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/_(_:_:)-6ycbk": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/_(_:_:)-1yzwj": {
   "abstract" : [
     {
       "text" : "Returns a Boolean value indicating whether the value of the first argument",
@@ -614,12 +614,28 @@
       "text" : "("
     },
     {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
       "text" : "Self"
     },
     {
       "kind" : "text",
       "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -635,14 +651,14 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_(_:_:)-6ycbk",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_(_:_:)-1yzwj",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : ">(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_(_:_:)-6ycbk"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_(_:_:)-1yzwj"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/_=(_:_:)-5oumv": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/_=(_:_:)-60n9f": {
   "abstract" : [
     {
       "text" : "Returns a Boolean value indicating whether the value of the first argument",
@@ -687,12 +703,28 @@
       "text" : "("
     },
     {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
       "text" : "Self"
     },
     {
       "kind" : "text",
       "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -708,14 +740,14 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_=(_:_:)-5oumv",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_=(_:_:)-60n9f",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : ">=(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_=(_:_:)-5oumv"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_=(_:_:)-60n9f"
 },
-"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/_=(_:_:)-9ekje": {
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/_=(_:_:)-9x4vv": {
   "abstract" : [
     {
       "text" : "Returns a Boolean value indicating whether the value of the first argument",
@@ -760,12 +792,28 @@
       "text" : "("
     },
     {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
       "text" : "Self"
     },
     {
       "kind" : "text",
       "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -781,12 +829,12 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_=(_:_:)-9ekje",
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/Index\/_=(_:_:)-9x4vv",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "<=(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_=(_:_:)-9ekje"
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/index\/_=(_:_:)-9x4vv"
 }
 }
 }

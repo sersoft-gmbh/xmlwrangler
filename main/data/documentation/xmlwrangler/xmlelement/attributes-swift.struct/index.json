@@ -49,7 +49,7 @@
     ],
     "remoteSource" : {
       "fileName" : "XMLElement+Attributes.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L351"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/xmlwrangler\/blob\/refs\/heads\/main\/Sources\/XMLWrangler\/XMLElement+Attributes.swift#L391"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -307,18 +307,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Index/_(_:_:)": {
   "abstract" : [
-    {
-      "text" : "Returns a Boolean value indicating whether the value of the first",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "argument is less than that of the second argument.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -347,57 +336,11 @@
     },
     {
       "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
+      "text" : "(`Self`"
     },
     {
       "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV5IndexV",
-      "text" : "Index"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV5IndexV",
-      "text" : "Index"
+      "text" : ", `Self`"
     },
     {
       "kind" : "text",

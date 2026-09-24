@@ -60,6 +60,7 @@
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/count(where:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/elementsEqual(_:by:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/enumerated()",
+        "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/filter(_:)-1ksqp",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/first(where:)",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/flatMap(_:)-4yo6e",
         "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/flatMap(_:)-8fhwg",
@@ -199,10 +200,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/Element": {
   "abstract" : [
-    {
-      "text" : "A type representing the sequence’s elements.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -1035,6 +1033,86 @@
   "type" : "topic",
   "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/enumerated()"
 },
+"doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/filter(_:)-1ksqp": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "filter"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20FoundationEssentials9PredicateV",
+      "text" : "Predicate"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement\/Attributes-swift.struct\/filter(_:)-1ksqp",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "filter(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/xmlwrangler\/xmlelement\/attributes-swift.struct\/filter(_:)-1ksqp"
+},
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/first(where:)": {
   "abstract" : [
     {
@@ -1706,10 +1784,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/makeIterator()": {
   "abstract" : [
-    {
-      "text" : "Returns an iterator over the elements of this sequence.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -1727,24 +1802,6 @@
     {
       "kind" : "text",
       "text" : "() -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV10AttributesV",
-      "text" : "Attributes"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
     },
     {
       "kind" : "typeIdentifier",
@@ -2993,18 +3050,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/underestimatedCount": {
   "abstract" : [
-    {
-      "text" : "A value less than or equal to the number of elements in the sequence,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "calculated nondestructively.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -3038,10 +3084,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Attributes-swift.struct/withContiguousStorageIfAvailable(_:)": {
   "abstract" : [
-    {
-      "text" : "Executes a closure on the sequence’s contiguous storage.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

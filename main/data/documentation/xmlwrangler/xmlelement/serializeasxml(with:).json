@@ -356,15 +356,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV20SerializationOptionsV",
       "text" : "SerializationOptions"
     },
@@ -459,19 +450,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/xml": {
   "abstract" : [
-    {
-      "text" : "The ",
-      "type" : "text"
-    },
-    {
-      "identifier" : "doc:\/\/XMLWrangler\/documentation\/XMLWrangler\/XMLElement",
-      "isActive" : true,
-      "type" : "reference"
-    },
-    {
-      "text" : " representing this instance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

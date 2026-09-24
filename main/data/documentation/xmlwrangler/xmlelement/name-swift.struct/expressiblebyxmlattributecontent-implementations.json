@@ -139,10 +139,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Name-swift.struct/init(xmlAttributeContent:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new instance of the conforming type using the given attribute content.",
-      "type" : "text"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [

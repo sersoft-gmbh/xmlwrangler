@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Replaces the given index with its predecessor.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -158,45 +152,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A valid index of the collection. ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "i",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " must be greater than",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "startIndex",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "i"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -305,10 +260,7 @@
 },
 "doc://XMLWrangler/documentation/XMLWrangler/XMLElement/Content-swift.struct/formIndex(before:)": {
   "abstract" : [
-    {
-      "text" : "Replaces the given index with its predecessor.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

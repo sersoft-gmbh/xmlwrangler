@@ -73,6 +73,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV22convertedStringContent9converterxxSgSSKXE_tKRi_zlF1TL_xmfp",
         "text" : "T"
       },
       {
@@ -89,6 +90,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:11XMLWrangler10XMLElementV22convertedStringContent9converterxxSgSSKXE_tKRi_zlF1TL_xmfp",
         "text" : "T"
       }
     ],
@@ -168,6 +170,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV22convertedStringContent9converterxxSgSSKXE_tKRi_zlF1TL_xmfp",
               "text" : "T"
             },
             {
@@ -184,6 +187,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:11XMLWrangler10XMLElementV22convertedStringContent9converterxxSgSSKXE_tKRi_zlF1TL_xmfp",
               "text" : "T"
             },
             {
@@ -451,33 +455,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV7ElementO10StringParta",
       "text" : "StringPart"
     },
@@ -613,24 +590,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO",
-      "text" : "LookupError"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV11LookupErrorO14ConversionTypea",
       "text" : "ConversionType"
     },
@@ -721,15 +680,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV",
-      "text" : "XMLElement"
-    },
-    {
-      "kind" : "text",
-      "text" : "."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:11XMLWrangler10XMLElementV7ContentV",
       "text" : "Content"
     }
@@ -800,6 +750,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV22convertedStringContent9converterxxSgSSKXE_tKRi_zlF1TL_xmfp",
       "text" : "T"
     },
     {
@@ -816,6 +767,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:11XMLWrangler10XMLElementV22convertedStringContent9converterxxSgSSKXE_tKRi_zlF1TL_xmfp",
       "text" : "T"
     }
   ],
